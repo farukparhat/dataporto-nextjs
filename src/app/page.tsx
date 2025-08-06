@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import FlowDiagram from "@/components/FlowDiagram";
 import {
   Database,
   Share2,
@@ -112,6 +113,9 @@ export default function Home() {
               How it Works
             </h2>
             <div className="max-w-4xl mx-auto">
+              <FlowDiagram />
+            </div>
+            <div className="max-w-4xl mx-auto mt-8">
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
                 Dataporto enables you to serve your data to your clients whether
                 it&apos;s through sFTP, Snowflake Data Sharing, or Databricks.
