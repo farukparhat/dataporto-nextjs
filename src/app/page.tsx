@@ -69,7 +69,8 @@ export default function Home() {
           Multi-Platform Data Sharing as a Service
         </Badge>
         <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-          The Fastest, Easiest, and Most Secure Way to Share Live Data
+          The Fastest, Easiest, and Most Secure Way to Share Live Data with
+          Clients
         </h1>
         <p className="text-xl text-slate-600 mb-8 max-w-4xl mx-auto">
           <strong>
