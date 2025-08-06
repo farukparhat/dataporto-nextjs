@@ -39,9 +39,6 @@ export default function Home() {
             <span className="text-2xl font-bold text-slate-900">Dataporto</span>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <a href="#why-now" className="text-slate-600 hover:text-slate-900">
-              Why Now
-            </a>
             <a
               href="#how-it-works"
               className="text-slate-600 hover:text-slate-900"
@@ -53,6 +50,12 @@ export default function Home() {
               className="text-slate-600 hover:text-slate-900"
             >
               Ideal For
+            </a>
+            <a
+              href="#why-dataporto"
+              className="text-slate-600 hover:text-slate-900"
+            >
+              Why Dataporto?
             </a>
           </nav>
           <Button>Schedule a Demo</Button>
@@ -345,7 +348,7 @@ export default function Home() {
       </section>
 
       {/* Why Use Dataporto */}
-      <section className="py-20 bg-white">
+      <section id="why-dataporto" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -522,7 +525,7 @@ export default function Home() {
           </div>
           <Separator className="my-8 bg-slate-700" />
           <p className="text-center text-slate-400">
-            © 2024 Dataporto. All rights reserved. Multi-Platform Data Sharing
+            © 2025 Dataporto. All rights reserved. Multi-Platform Data Sharing
             as a Service.
           </p>
         </div>
