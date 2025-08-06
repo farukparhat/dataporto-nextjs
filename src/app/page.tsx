@@ -61,7 +61,7 @@ export default function Home() {
               Why Dataporto?
             </a>
           </nav>
-          <Button>Schedule a Demo</Button>
+          <Button>Schedule Demo</Button>
         </div>
       </header>
 
@@ -101,7 +101,7 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" className="text-lg px-8">
-            Schedule a Demo
+            Schedule Demo
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
