@@ -63,17 +63,17 @@ export default function Home() {
       <section className="container mx-auto px-4 py-20 text-center">
         <Badge variant="secondary" className="mb-4">
           <Share2 className="h-4 w-4 mr-2" />
-          Multi-Platform Data Sharing
+          Multi-Platform Data Sharing as a Service
         </Badge>
         <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
           The Fastest, Easiest, and Most Secure Way to Share Live Data
         </h1>
         <p className="text-xl text-slate-600 mb-8 max-w-4xl mx-auto">
           <strong>
-            Dataporto lets you securely share live data with your clients
+            Dataporto delivers multi-platform data sharing as a service
           </strong>{" "}
-          through Snowflake, sFTP, or Databricks — without building or
-          maintaining custom pipelines.
+          — securely share live data with your clients through Snowflake, sFTP,
+          or Databricks without building or maintaining custom pipelines.
         </p>
 
         {/* Platform Icons */}
@@ -94,18 +94,38 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" className="text-lg px-8">
-            Start Sharing Data <ArrowRight className="ml-2 h-5 w-5" />
+            Schedule a Demo
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </section>
 
-      {/* Why Now Section */}
-      <section id="why-now" className="bg-white py-20">
+      {/* How it Works Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              🧠 Why Now?
+            <h2 className="text-4xl font-bold text-slate-900 mb-8">
+              How it Works
             </h2>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+                Dataporto enables you to serve your data to your clients whether
+                it&apos;s through sFTP, Snowflake Data Sharing, or Databricks.
+                This saves you much needed engineering time to focus on higher
+                valued activities rather than building and maintaining custom
+                client data sharing pipelines. This is the true value of
+                Dataporto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Now Section */}
+      <section id="why-now" className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Why Now?</h2>
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg max-w-4xl mx-auto border-l-4 border-blue-500">
               <p className="text-2xl font-semibold text-slate-800 italic">
                 &quot;Enterprise clients are demanding flexible, secure data
@@ -139,7 +159,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              🔑 What Does Dataporto Do?
+              What Does Dataporto Do?
             </h2>
           </div>
 
@@ -156,7 +176,11 @@ export default function Home() {
                 <ul className="space-y-2 text-slate-600">
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
-                    Postgres, MySQL, Redshift
+                    Postgres, MySQL
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-500 mr-2" />
+                    Snowflake, Databricks, Redshift
                   </li>
                   <li className="flex items-center">
                     <Check className="h-4 w-4 text-green-500 mr-2" />
@@ -266,7 +290,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              🎯 Why Use Dataporto?
+              Why Use Dataporto?
             </h2>
           </div>
 
@@ -335,7 +359,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              ⚙️ Ideal For
+              Ideal For
             </h2>
           </div>
 
@@ -394,7 +418,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              🧩 What Dataporto Manages for You
+              What Dataporto Manages for You
             </h2>
             <p className="text-xl text-slate-600">
               Complete end-to-end multi-platform data sharing infrastructure
@@ -463,21 +487,14 @@ export default function Home() {
             Ready to Share Data the Way Clients Expect It?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join forward-thinking organizations who are already delivering live,
-            governed data to their clients across Snowflake, Databricks, and
-            sFTP — without the complexity of building and maintaining custom
-            integrations.
+            Join forward-thinking organizations who are already using our
+            multi-platform data sharing service to deliver live, governed data
+            to their clients across Snowflake, Databricks, and sFTP — without
+            the complexity of building and maintaining custom integrations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8">
               Start Sharing Data <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 text-white border-white hover:bg-white hover:text-blue-600"
-            >
-              Schedule Demo
             </Button>
           </div>
         </div>
@@ -505,8 +522,8 @@ export default function Home() {
           </div>
           <Separator className="my-8 bg-slate-700" />
           <p className="text-center text-slate-400">
-            © 2024 Dataporto. All rights reserved. Multi-Platform Data Sharing,
-            Delivered as a Service.
+            © 2024 Dataporto. All rights reserved. Multi-Platform Data Sharing
+            as a Service.
           </p>
         </div>
       </footer>

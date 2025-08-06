@@ -6,6 +6,14 @@ Dataporto lets you securely share live data with your clients through Snowflake,
 
 ---
 
+## How it works
+
+Dataporto enables you to serve your data to your clients whether its through sFTP, Snowflake Datasharing, or Databricks, saving you much needed engineering time to focus on higher valued activities rather than building and maintaining custom client data sharing pipelines.
+
+This is the true value of Dataporto.
+
+---
+
 ## 🧠 Why Now?
 
 > **Enterprise clients are demanding flexible, secure data sharing options that fit their existing infrastructure.**
@@ -45,7 +53,7 @@ Dataporto gives you enterprise-level data sharing capabilities across multiple p
 ## 🏷️ Tagline Options
 
 - *"Share live data the way clients expect it — securely and instantly."*
-- *"Multi-Platform Data Sharing, Delivered as a Service."*
+- *"Multi-Platform Data Sharing as a Service."*
 - *"Your Data. Their Platform. Our Infrastructure."*
 - *"Live data delivery — Snowflake, sFTP, or Databricks — without the complexity."*
 
