@@ -19,23 +19,28 @@ import {
   Cloud,
   Zap,
   Target,
-  DollarSign,
+  Building2,
+  FileText,
+  Globe,
   Lock,
+  TrendingUp,
+  Snowflake,
+  Server,
+  HardDrive,
 } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b sticky top-0 z-50">
+      <header className="bg-white/90 backdrop-blur-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Database className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-slate-900">DataPorto</span>
+            <span className="text-2xl font-bold text-slate-900">Dataporto</span>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <a href="#features" className="text-slate-600 hover:text-slate-900">
-              Features
+            <a href="#why-now" className="text-slate-600 hover:text-slate-900">
+              Why Now
             </a>
             <a
               href="#how-it-works"
@@ -43,8 +48,11 @@ export default function Home() {
             >
               How it Works
             </a>
-            <a href="#pricing" className="text-slate-600 hover:text-slate-900">
-              Pricing
+            <a
+              href="#ideal-for"
+              className="text-slate-600 hover:text-slate-900"
+            >
+              Ideal For
             </a>
           </nav>
           <Button>Get Started</Button>
@@ -54,326 +62,394 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 text-center">
         <Badge variant="secondary" className="mb-4">
-          Data Distribution Platform
+          <Share2 className="h-4 w-4 mr-2" />
+          Multi-Platform Data Sharing
         </Badge>
-        <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-          Make Your Data <span className="text-blue-600">Self-Serve</span>
+        <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+          The Fastest, Easiest, and Most Secure Way to Share Live Data
         </h1>
-        <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-          Enable customers to set up and manage automated data feeds through
-          their preferred protocols. No more brittle APIs or manual data
-          exports.
+        <p className="text-xl text-slate-600 mb-8 max-w-4xl mx-auto">
+          <strong>
+            Dataporto lets you securely share live data with your clients
+          </strong>{" "}
+          through Snowflake, sFTP, or Databricks — without building or
+          maintaining custom pipelines.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-lg px-8">
-            Start Free Trial <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8">
-            Watch Demo
-          </Button>
+
+        {/* Platform Icons */}
+        <div className="flex justify-center items-center space-x-8 mb-8">
+          <div className="flex flex-col items-center">
+            <Snowflake className="h-12 w-12 text-blue-600 mb-2" />
+            <span className="text-sm text-slate-600">Snowflake</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <Server className="h-12 w-12 text-orange-600 mb-2" />
+            <span className="text-sm text-slate-600">Databricks</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <HardDrive className="h-12 w-12 text-green-600 mb-2" />
+            <span className="text-sm text-slate-600">sFTP</span>
+          </div>
         </div>
 
-        {/* Supported Protocols */}
-        <div className="mt-16">
-          <p className="text-slate-500 mb-6">
-            Supported Data Sharing Protocols
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Badge variant="outline" className="text-sm py-2 px-4">
-              Snowflake Data Share
-            </Badge>
-            <Badge variant="outline" className="text-sm py-2 px-4">
-              Databricks Delta Share
-            </Badge>
-            <Badge variant="outline" className="text-sm py-2 px-4">
-              sFTP / FTP
-            </Badge>
-            <Badge variant="outline" className="text-sm py-2 px-4">
-              OneDrive
-            </Badge>
-            <Badge variant="outline" className="text-sm py-2 px-4">
-              Google Drive
-            </Badge>
-          </div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button size="lg" className="text-lg px-8">
+            Start Sharing Data <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </section>
 
       {/* Why Now Section */}
-      <section className="bg-white py-20">
+      <section id="why-now" className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Why Now?</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Two major trends have converged to create the perfect opportunity
-              for data distribution
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              🧠 Why Now?
+            </h2>
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg max-w-4xl mx-auto border-l-4 border-blue-500">
+              <p className="text-2xl font-semibold text-slate-800 italic">
+                &quot;Enterprise clients are demanding flexible, secure data
+                sharing options that fit their existing infrastructure.&quot;
+              </p>
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              Modern enterprises use diverse data platforms — Snowflake,
+              Databricks, traditional file systems, and more. If you can&apos;t
+              deliver data in their preferred format, you&apos;re falling behind
+              competitors who can.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <Card className="p-8">
-              <Cloud className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl font-semibold mb-4">
-                Cloud Data Warehouse Adoption
-              </h3>
-              <p className="text-slate-600">
-                Enterprises have massively adopted cloud data warehouses like
-                Snowflake, BigQuery, and Databricks. Data is no longer trapped
-                in on-prem systems — it&apos;s queryable, scalable, and
-                API-accessible.
-              </p>
-            </Card>
-
-            <Card className="p-8">
-              <Zap className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-2xl font-semibold mb-4">
-                Real-time Data Collaboration Demand
-              </h3>
-              <p className="text-slate-600">
-                The demand for real-time, governed data collaboration across
-                organizations has exploded. The old way — APIs, CSVs, FTPs — is
-                too slow, brittle, and insecure.
-              </p>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Badge variant="default" className="text-lg py-2 px-6">
-              Now is the first time infrastructure, expectations, and
-              opportunity have aligned
-            </Badge>
+            <p className="text-xl text-slate-600 mb-12 leading-relaxed">
+              Dataporto gives you{" "}
+              <strong>
+                enterprise-level data sharing capabilities across multiple
+                platforms
+              </strong>{" "}
+              — without requiring you to build or maintain complex integrations
+              yourself.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Value Propositions */}
+      {/* What Dataporto Does */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
-            <div>
-              <Target className="h-12 w-12 text-green-600 mb-4" />
-              <h3 className="text-3xl font-bold mb-4">For Investors</h3>
-              <p className="text-lg text-slate-600">
-                Data is the new API — and companies are realizing they
-                can&apos;t build partnerships, revenue streams, or client
-                stickiness without a data-sharing strategy. We&apos;re enabling
-                the next layer of the cloud data stack:{" "}
-                <strong>data distribution</strong>.
-              </p>
-            </div>
-
-            <div>
-              <Users className="h-12 w-12 text-purple-600 mb-4" />
-              <h3 className="text-3xl font-bold mb-4">For Customers</h3>
-              <p className="text-lg text-slate-600">
-                Clients expect self-serve, up-to-date data from vendors. Instead
-                of building brittle APIs or dashboards, vendors can now offer{" "}
-                <strong>direct, governed access to the raw truth</strong>.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section id="how-it-works" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              How It Works
+              🔑 What Does Dataporto Do?
             </h2>
-            <p className="text-xl text-slate-600">
-              A multi-tenant SaaS platform for secure data sharing
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Vendors */}
-            <Card className="p-8">
-              <CardHeader className="px-0 pt-0">
-                <CardTitle className="flex items-center text-2xl">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <Card className="p-8">
+                <div className="flex items-center mb-4">
                   <Database className="h-8 w-8 text-blue-600 mr-3" />
-                  Vendors (Your Customers)
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="px-0">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    Upload or replicate their data into Snowflake
+                  <h3 className="text-xl font-semibold">Connect Your Data</h3>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Connect your existing data source:
+                </p>
+                <ul className="space-y-2 text-slate-600">
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-500 mr-2" />
+                    Postgres, MySQL, Redshift
                   </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    Define what they want to share and with whom
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    Monitor usage, revoke access, manage clients
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-500 mr-2" />
+                    BigQuery, S3, and more
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </Card>
 
-            {/* Clients */}
-            <Card className="p-8">
-              <CardHeader className="px-0 pt-0">
-                <CardTitle className="flex items-center text-2xl">
-                  <Users className="h-8 w-8 text-purple-600 mr-3" />
-                  Clients (Data Consumers)
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="px-0">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    Get secure, live, read-only access to data
+              <Card className="p-8">
+                <div className="flex items-center mb-4">
+                  <Target className="h-8 w-8 text-green-600 mr-3" />
+                  <h3 className="text-xl font-semibold">
+                    Define What to Share
+                  </h3>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Define what data to share:
+                </p>
+                <ul className="space-y-2 text-slate-600">
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-500 mr-2" />
+                    Tables, views, schemas
                   </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    Access through their own Snowflake accounts
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    Or via managed Reader Accounts
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-500 mr-2" />
+                    Reports and analytics
                   </li>
                 </ul>
-              </CardContent>
+              </Card>
+
+              <Card className="p-8">
+                <div className="flex items-center mb-4">
+                  <Share2 className="h-8 w-8 text-purple-600 mr-3" />
+                  <h3 className="text-xl font-semibold">
+                    Choose Delivery Method
+                  </h3>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Select your client&apos;s preferred platform:
+                </p>
+                <ul className="space-y-2 text-slate-600">
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-500 mr-2" />
+                    Snowflake Data Shares
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-500 mr-2" />
+                    sFTP transfers
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="h-4 w-4 text-green-500 mr-2" />
+                    Databricks connectivity
+                  </li>
+                </ul>
+              </Card>
+            </div>
+
+            <Card className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  We Handle the Rest
+                </h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div>
+                    <Shield className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+                    <p className="text-slate-700">
+                      Secure data staging and transformation
+                    </p>
+                  </div>
+                  <div>
+                    <Users className="h-8 w-8 text-green-600 mx-auto mb-2" />
+                    <p className="text-slate-700">
+                      Platform-specific provisioning and access management
+                    </p>
+                  </div>
+                  <div>
+                    <Zap className="h-8 w-8 text-orange-600 mx-auto mb-2" />
+                    <p className="text-slate-700">
+                      Automated data delivery in your client&apos;s preferred
+                      format
+                    </p>
+                  </div>
+                  <div>
+                    <BarChart3 className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+                    <p className="text-slate-700">
+                      Governance, monitoring, and audit logging
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-8 p-4 bg-white rounded-lg border">
+                  <p className="text-lg font-semibold text-slate-800">
+                    Result:{" "}
+                    <span className="text-blue-600">
+                      Your clients get live data access
+                    </span>{" "}
+                    in their platform of choice
+                  </p>
+                </div>
+              </div>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Features */}
-      <section id="features" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Key Features
-            </h2>
-            <p className="text-xl text-slate-600">
-              Built on Snowflake&apos;s enterprise-grade infrastructure
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="p-6 text-center">
-              <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <CardTitle className="mb-2">Secure Sharing</CardTitle>
-              <CardDescription>
-                Zero-copy data sharing with enterprise-grade security
-              </CardDescription>
-            </Card>
-
-            <Card className="p-6 text-center">
-              <Lock className="h-12 w-12 text-green-600 mx-auto mb-4" />
-              <CardTitle className="mb-2">Fine-grained Access</CardTitle>
-              <CardDescription>
-                RBAC and schema-level access control per customer
-              </CardDescription>
-            </Card>
-
-            <Card className="p-6 text-center">
-              <BarChart3 className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-              <CardTitle className="mb-2">Usage Tracking</CardTitle>
-              <CardDescription>
-                Monitor compute usage and bill accordingly
-              </CardDescription>
-            </Card>
-
-            <Card className="p-6 text-center">
-              <Share2 className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-              <CardTitle className="mb-2">Marketplace Ready</CardTitle>
-              <CardDescription>
-                Publish datasets on Snowflake Data Exchange
-              </CardDescription>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases */}
+      {/* Why Use Dataporto */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Use Cases
+              🎯 Why Use Dataporto?
             </h2>
-            <p className="text-xl text-slate-600">
-              Enable various data monetization strategies
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="p-6">
-              <CardTitle className="mb-3">B2B Analytics Platform</CardTitle>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+              <div className="flex justify-center space-x-2 mb-4">
+                <Snowflake className="h-8 w-8 text-blue-600" />
+                <Server className="h-8 w-8 text-orange-600" />
+                <HardDrive className="h-8 w-8 text-green-600" />
+              </div>
+              <CardTitle className="mb-2">Multi-Platform Support</CardTitle>
               <CardDescription>
-                Deliver insights/data directly into client Snowflake accounts
+                Snowflake Data Sharing, sFTP, Databricks — deliver data how your
+                clients want it
               </CardDescription>
             </Card>
 
-            <Card className="p-6">
-              <CardTitle className="mb-3">Data Aggregator</CardTitle>
+            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+              <Zap className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
+              <CardTitle className="mb-2">Zero-Code Onboarding</CardTitle>
               <CardDescription>
-                Sell industry or benchmarking data to subscribers
+                Get started quickly without complex technical setup or
+                development
               </CardDescription>
             </Card>
 
-            <Card className="p-6">
-              <CardTitle className="mb-3">API-less Reporting</CardTitle>
+            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+              <TrendingUp className="h-12 w-12 text-green-600 mx-auto mb-4" />
+              <CardTitle className="mb-2">Live Data Feeds</CardTitle>
               <CardDescription>
-                Offer data &quot;feeds&quot; to clients without building APIs
+                Share real-time data — not static files or limited dashboards
               </CardDescription>
             </Card>
 
-            <Card className="p-6">
-              <CardTitle className="mb-3">Data Monetization</CardTitle>
+            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+              <Building2 className="h-12 w-12 text-indigo-600 mx-auto mb-4" />
+              <CardTitle className="mb-2">Enterprise Expectations</CardTitle>
               <CardDescription>
-                Let vendors resell their own data via your platform
+                Meet client demands for secure, governed data sharing
+              </CardDescription>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+              <Lock className="h-12 w-12 text-red-600 mx-auto mb-4" />
+              <CardTitle className="mb-2">Full Governance</CardTitle>
+              <CardDescription>
+                Complete governance and audit logging for compliance and
+                security
+              </CardDescription>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
+              <Users className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+              <CardTitle className="mb-2">Multi-Client Support</CardTitle>
+              <CardDescription>
+                Support multiple clients with unique permissions and delivery
+                preferences
               </CardDescription>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="py-20 bg-slate-50">
+      {/* Ideal For Section */}
+      <section id="ideal-for" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Flexible Pricing
+              ⚙️ Ideal For
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <BarChart3 className="h-12 w-12 text-blue-600 mb-4" />
+              <CardTitle className="mb-3">SaaS Vendors</CardTitle>
+              <CardDescription className="text-base">
+                Delivering customer-level analytics or reports to enterprise
+                clients
+              </CardDescription>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <TrendingUp className="h-12 w-12 text-green-600 mb-4" />
+              <CardTitle className="mb-3">Agencies</CardTitle>
+              <CardDescription className="text-base">
+                Providing live dashboards or metrics to clients without building
+                complex infrastructure
+              </CardDescription>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <Building2 className="h-12 w-12 text-purple-600 mb-4" />
+              <CardTitle className="mb-3">Franchisors & Platforms</CardTitle>
+              <CardDescription className="text-base">
+                Data-rich marketplaces needing to share operational data with
+                partners
+              </CardDescription>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <Globe className="h-12 w-12 text-orange-600 mb-4" />
+              <CardTitle className="mb-3">Data Providers</CardTitle>
+              <CardDescription className="text-base">
+                Selling access to curated data products and industry datasets
+              </CardDescription>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <Share2 className="h-12 w-12 text-indigo-600 mb-4" />
+              <CardTitle className="mb-3">
+                Multi-Platform Organizations
+              </CardTitle>
+              <CardDescription className="text-base">
+                Organizations with clients across different data platforms and
+                infrastructure needs
+              </CardDescription>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* What Dataporto Manages */}
+      <section id="how-it-works" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              🧩 What Dataporto Manages for You
             </h2>
             <p className="text-xl text-slate-600">
-              Choose the model that works for your business
+              Complete end-to-end multi-platform data sharing infrastructure
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <Card className="p-6 text-center">
-              <DollarSign className="h-8 w-8 text-green-600 mx-auto mb-3" />
-              <CardTitle className="text-lg mb-2">Per Client Seat</CardTitle>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <Card className="p-6">
+              <Database className="h-8 w-8 text-blue-600 mb-3" />
+              <CardTitle className="text-lg mb-2">Data Ingestion</CardTitle>
               <CardDescription>
-                Charge vendors for each client they share with
+                Secure data ingestion from your existing systems
               </CardDescription>
             </Card>
 
-            <Card className="p-6 text-center">
-              <Cloud className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-              <CardTitle className="text-lg mb-2">Storage & Compute</CardTitle>
-              <CardDescription>Markup on infrastructure costs</CardDescription>
-            </Card>
-
-            <Card className="p-6 text-center">
-              <Zap className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-              <CardTitle className="text-lg mb-2">Premium Features</CardTitle>
+            <Card className="p-6">
+              <Cloud className="h-8 w-8 text-indigo-600 mb-3" />
+              <CardTitle className="text-lg mb-2">
+                Multi-Platform Staging
+              </CardTitle>
               <CardDescription>
-                Alerts, dashboards, transformations
+                Multi-platform data staging and transformation
               </CardDescription>
             </Card>
 
-            <Card className="p-6 text-center">
-              <BarChart3 className="h-8 w-8 text-orange-600 mx-auto mb-3" />
-              <CardTitle className="text-lg mb-2">Usage-based</CardTitle>
+            <Card className="p-6">
+              <Share2 className="h-8 w-8 text-green-600 mb-3" />
+              <CardTitle className="text-lg mb-2">Platform Delivery</CardTitle>
               <CardDescription>
-                Based on query volume or rows scanned
+                Platform-specific delivery mechanisms (Snowflake Shares, sFTP,
+                Databricks)
+              </CardDescription>
+            </Card>
+
+            <Card className="p-6">
+              <Users className="h-8 w-8 text-purple-600 mb-3" />
+              <CardTitle className="text-lg mb-2">Client Management</CardTitle>
+              <CardDescription>
+                Client provisioning and access management
+              </CardDescription>
+            </Card>
+
+            <Card className="p-6">
+              <Shield className="h-8 w-8 text-red-600 mb-3" />
+              <CardTitle className="text-lg mb-2">Access Control</CardTitle>
+              <CardDescription>
+                Access control, masking, and data partitioning
+              </CardDescription>
+            </Card>
+
+            <Card className="p-6">
+              <FileText className="h-8 w-8 text-orange-600 mb-3" />
+              <CardTitle className="text-lg mb-2">Usage Tracking</CardTitle>
+              <CardDescription>
+                Usage tracking and comprehensive audit logs
               </CardDescription>
             </Card>
           </div>
@@ -381,25 +457,27 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">
-            Ready to Transform Your Data Strategy?
+            Ready to Share Data the Way Clients Expect It?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join the next layer of the cloud data stack and enable seamless data
-            distribution for your organization.
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Join forward-thinking organizations who are already delivering live,
+            governed data to their clients across Snowflake, Databricks, and
+            sFTP — without the complexity of building and maintaining custom
+            integrations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8">
-              Start Free Trial
+              Start Sharing Data <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="text-lg px-8 text-white border-white hover:bg-white hover:text-blue-600"
             >
-              Contact Sales
+              Schedule Demo
             </Button>
           </div>
         </div>
@@ -411,7 +489,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Database className="h-6 w-6" />
-              <span className="text-xl font-bold">DataPorto</span>
+              <span className="text-xl font-bold">Dataporto</span>
             </div>
             <div className="flex space-x-6">
               <a href="#" className="text-slate-400 hover:text-white">
@@ -427,8 +505,8 @@ export default function Home() {
           </div>
           <Separator className="my-8 bg-slate-700" />
           <p className="text-center text-slate-400">
-            © 2024 DataPorto. All rights reserved. Enabling the next layer of
-            the cloud data stack.
+            © 2024 Dataporto. All rights reserved. Multi-Platform Data Sharing,
+            Delivered as a Service.
           </p>
         </div>
       </footer>
