@@ -55,7 +55,7 @@ export default function Home() {
               Ideal For
             </a>
           </nav>
-          <Button>Get Started</Button>
+          <Button>Schedule a Demo</Button>
         </div>
       </header>
 
@@ -150,6 +150,65 @@ export default function Home() {
               — without requiring you to build or maintain complex integrations
               yourself.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For Section */}
+      <section id="ideal-for" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Ideal For
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <BarChart3 className="h-12 w-12 text-blue-600 mb-4" />
+              <CardTitle className="mb-3">SaaS Vendors</CardTitle>
+              <CardDescription className="text-base">
+                Delivering customer-level analytics or reports to enterprise
+                clients
+              </CardDescription>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <TrendingUp className="h-12 w-12 text-green-600 mb-4" />
+              <CardTitle className="mb-3">Agencies</CardTitle>
+              <CardDescription className="text-base">
+                Providing live dashboards or metrics to clients without building
+                complex infrastructure
+              </CardDescription>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <Building2 className="h-12 w-12 text-purple-600 mb-4" />
+              <CardTitle className="mb-3">Franchisors & Platforms</CardTitle>
+              <CardDescription className="text-base">
+                Data-rich marketplaces needing to share operational data with
+                partners
+              </CardDescription>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <Globe className="h-12 w-12 text-orange-600 mb-4" />
+              <CardTitle className="mb-3">Data Providers</CardTitle>
+              <CardDescription className="text-base">
+                Selling access to curated data products and industry datasets
+              </CardDescription>
+            </Card>
+
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <Share2 className="h-12 w-12 text-indigo-600 mb-4" />
+              <CardTitle className="mb-3">
+                Multi-Platform Organizations
+              </CardTitle>
+              <CardDescription className="text-base">
+                Organizations with clients across different data platforms and
+                infrastructure needs
+              </CardDescription>
+            </Card>
           </div>
         </div>
       </section>
@@ -354,67 +413,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ideal For Section */}
-      <section id="ideal-for" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Ideal For
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 hover:shadow-lg transition-shadow">
-              <BarChart3 className="h-12 w-12 text-blue-600 mb-4" />
-              <CardTitle className="mb-3">SaaS Vendors</CardTitle>
-              <CardDescription className="text-base">
-                Delivering customer-level analytics or reports to enterprise
-                clients
-              </CardDescription>
-            </Card>
-
-            <Card className="p-8 hover:shadow-lg transition-shadow">
-              <TrendingUp className="h-12 w-12 text-green-600 mb-4" />
-              <CardTitle className="mb-3">Agencies</CardTitle>
-              <CardDescription className="text-base">
-                Providing live dashboards or metrics to clients without building
-                complex infrastructure
-              </CardDescription>
-            </Card>
-
-            <Card className="p-8 hover:shadow-lg transition-shadow">
-              <Building2 className="h-12 w-12 text-purple-600 mb-4" />
-              <CardTitle className="mb-3">Franchisors & Platforms</CardTitle>
-              <CardDescription className="text-base">
-                Data-rich marketplaces needing to share operational data with
-                partners
-              </CardDescription>
-            </Card>
-
-            <Card className="p-8 hover:shadow-lg transition-shadow">
-              <Globe className="h-12 w-12 text-orange-600 mb-4" />
-              <CardTitle className="mb-3">Data Providers</CardTitle>
-              <CardDescription className="text-base">
-                Selling access to curated data products and industry datasets
-              </CardDescription>
-            </Card>
-
-            <Card className="p-8 hover:shadow-lg transition-shadow">
-              <Share2 className="h-12 w-12 text-indigo-600 mb-4" />
-              <CardTitle className="mb-3">
-                Multi-Platform Organizations
-              </CardTitle>
-              <CardDescription className="text-base">
-                Organizations with clients across different data platforms and
-                infrastructure needs
-              </CardDescription>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* What Dataporto Manages */}
-      <section id="how-it-works" className="py-20 bg-white">
+      <section id="how-it-works" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
