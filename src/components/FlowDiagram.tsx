@@ -423,6 +423,7 @@ export default function FlowDiagram() {
         zoomOnPinch={false}
         zoomOnDoubleClick={false}
         preventScrolling={false}
+        minZoom={0.1}
       >
         <Background color="#f1f5f9" gap={16} />
       </ReactFlow>

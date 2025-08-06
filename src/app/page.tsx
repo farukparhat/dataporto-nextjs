@@ -25,10 +25,12 @@ import {
   Globe,
   Lock,
   TrendingUp,
-  Snowflake,
   Server,
   HardDrive,
+  FolderOpen,
+  Folder,
 } from "lucide-react";
+import { DataBricks, Snowflake } from "@/components/brand-icons";
 
 export default function Home() {
   return (
@@ -88,11 +90,11 @@ export default function Home() {
             <span className="text-sm text-slate-600">Snowflake</span>
           </div>
           <div className="flex flex-col items-center">
-            <Server className="h-12 w-12 text-orange-600 mb-2" />
+            <DataBricks className="h-12 w-12 text-orange-600 mb-2" />
             <span className="text-sm text-slate-600">Databricks</span>
           </div>
           <div className="flex flex-col items-center">
-            <HardDrive className="h-12 w-12 text-green-600 mb-2" />
+            <Folder className="h-12 w-12 text-green-600 mb-2" />
             <span className="text-sm text-slate-600">sFTP</span>
           </div>
         </div>
@@ -121,8 +123,10 @@ export default function Home() {
                 it&apos;s through sFTP, Snowflake Data Sharing, or Databricks.
                 This saves you much needed engineering time to focus on higher
                 valued activities rather than building and maintaining custom
-                client data sharing pipelines. This is the true value of
-                Dataporto.
+                client data sharing pipelines.
+                <br />
+                <br />
+                This is the true value of Dataporto.
               </p>
             </div>
           </div>
