@@ -45,52 +45,54 @@ export default function WaitlistModal({
       <form action={onSubmit} className="space-y-4">
         <input type="hidden" name="source" value={source} />
 
-        <div className="grid gap-1">
-          <label className="text-sm font-medium text-slate-700">
-            Full Name *
-          </label>
-          <input
-            name="name"
-            required
-            className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-            placeholder="Jane Doe"
-          />
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid gap-1">
+            <label className="text-sm font-medium text-slate-700">
+              Full Name *
+            </label>
+            <input
+              name="name"
+              required
+              className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              placeholder="Jane Doe"
+            />
+          </div>
 
-        <div className="grid gap-1">
-          <label className="text-sm font-medium text-slate-700">
-            Work Email *
-          </label>
-          <input
-            type="email"
-            name="email"
-            required
-            className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-            placeholder="jane@company.com"
-          />
-        </div>
+          <div className="grid gap-1">
+            <label className="text-sm font-medium text-slate-700">
+              Work Email *
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              placeholder="jane@company.com"
+            />
+          </div>
 
-        <div className="grid gap-1">
-          <label className="text-sm font-medium text-slate-700">
-            Company *
-          </label>
-          <input
-            name="company"
-            required
-            className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-            placeholder="Acme Inc."
-          />
-        </div>
+          <div className="grid gap-1">
+            <label className="text-sm font-medium text-slate-700">
+              Company *
+            </label>
+            <input
+              name="company"
+              required
+              className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              placeholder="Acme Inc."
+            />
+          </div>
 
-        <div className="grid gap-1">
-          <label className="text-sm font-medium text-slate-700">
-            Job Title
-          </label>
-          <input
-            name="title"
-            className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-            placeholder="Data Engineer, CTO, etc."
-          />
+          <div className="grid gap-1">
+            <label className="text-sm font-medium text-slate-700">
+              Job Title
+            </label>
+            <input
+              name="title"
+              className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              placeholder="Data Engineer, CTO, etc."
+            />
+          </div>
         </div>
 
         <div className="grid gap-1">
@@ -105,7 +107,7 @@ export default function WaitlistModal({
           />
         </div>
 
-        <div className="grid gap-1">
+        <div className="grid gap-1 md:max-w-xs">
           <label className="text-sm font-medium text-slate-700">
             Number of Clients
           </label>

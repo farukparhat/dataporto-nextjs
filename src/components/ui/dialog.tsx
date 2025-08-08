@@ -13,7 +13,7 @@ export function Dialog({ open, onOpenChange, children }: DialogProps) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-50 flex items-center justify-center p-4 transition",
+        "fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 transition",
         open ? "visible" : "invisible"
       )}
       aria-hidden={!open}
@@ -27,7 +27,7 @@ export function Dialog({ open, onOpenChange, children }: DialogProps) {
       />
       <div
         className={cn(
-          "relative z-10 w-full max-w-md rounded-xl border bg-white p-6 shadow-xl",
+          "relative z-10 w-full max-w-lg sm:max-w-xl md:max-w-2xl mx-auto rounded-xl border bg-white p-6 shadow-xl",
           "data-[state=open]:animate-in data-[state=closed]:animate-out",
           open ? "scale-100 opacity-100" : "scale-95 opacity-0"
         )}
