@@ -117,7 +117,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Before & After
+              Stop building custom pipelines for each client
             </h2>
             <p className="text-lg text-slate-600">
               Replace dozens of fragile pipelines with a single control plane
@@ -494,7 +494,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8">
-              Start Saving Engineering Resources{" "}
+              Modernize your Data Sharing{" "}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
