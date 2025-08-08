@@ -6,7 +6,10 @@ import supabaseAdminClient from "@/lib/supabase/admin";
 const WaitlistSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
   email: z.string().email("Invalid email"),
-  company: z.string().trim().max(200).optional().nullable(),
+  company: z.string().trim().min(1, "Company is required").max(200),
+  title: z.string().trim().max(120).optional().nullable(),
+  challenges: z.string().trim().max(1000).optional().nullable(),
+  clientCount: z.string().trim().max(50).optional().nullable(),
   source: z.string().trim().max(120).default("website"),
 });
 
@@ -26,6 +29,9 @@ export async function joinWaitlist(
       name: input.get("name"),
       email: input.get("email"),
       company: input.get("company"),
+      title: input.get("title"),
+      challenges: input.get("challenges"),
+      clientCount: input.get("clientCount"),
       source: input.get("source") ?? "website",
     };
   }
@@ -38,14 +44,18 @@ export async function joinWaitlist(
     };
   }
 
-  const { name, email, company, source } = parsed.data;
+  const { name, email, company, title, challenges, clientCount, source } =
+    parsed.data;
 
   const { error } = await supabaseAdminClient.from("waitlist").upsert(
     [
       {
         name,
         email: email.toLowerCase(),
-        company: company ?? null,
+        company,
+        title: title ?? null,
+        challenges: challenges ?? null,
+        client_count: clientCount ?? null,
         source,
       },
     ],
