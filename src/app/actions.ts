@@ -1,7 +1,7 @@
 "use server";
 
 import { z } from "zod";
-import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
+import supabaseAdminClient from "@/lib/supabase/admin";
 
 const WaitlistSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
@@ -39,9 +39,8 @@ export async function joinWaitlist(
   }
 
   const { name, email, company, source } = parsed.data;
-  const supabase = getSupabaseAdmin();
 
-  const { error } = await supabase.from("waitlist").upsert(
+  const { error } = await supabaseAdminClient.from("waitlist").upsert(
     [
       {
         name,
