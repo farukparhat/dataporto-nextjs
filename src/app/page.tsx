@@ -484,16 +484,18 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">
-            Ready to Share Data the Way Clients Expect It?
+            Stop Wasting Engineering Resources on Custom Data Sharing
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Deliver live, governed data to clients across Snowflake, Databricks,
-            and sFTP — without the complexity of building and maintaining custom
-            integrations.
+            Free up your engineering team to focus on core product development
+            instead of maintaining custom per-client data sharing
+            infrastructure. DataPorto handles the complexity so you can focus on
+            innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8">
-              Start Sharing Data <ArrowRight className="ml-2 h-5 w-5" />
+              Start Saving Engineering Resources{" "}
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>
