@@ -243,37 +243,122 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              DataPorto’s Differentiators
+              Why Teams Choose DataPorto
             </h2>
-            <p className="text-lg text-slate-600">Why teams choose Dataporto</p>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              The only platform that delivers governed, multi-platform data
+              sharing without vendor lock-in or custom engineering
+            </p>
           </div>
-          <div className="max-w-4xl mx-auto">
-            <ul className="space-y-4 text-slate-700">
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                No lock‑in — works even if you don’t use Snowflake or
-                Databricks.
-              </li>
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                Client‑by‑client governance with masking and row/column
-                security.
-              </li>
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                Multi‑method delivery from a single control plane (Shares or
-                sFTP).
-              </li>
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                Lifecycle management for onboarding, schema updates, and
-                revocation.
-              </li>
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                Unified audit and usage visibility across all shares.
-              </li>
-            </ul>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <Card className="p-6 border-l-4 border-l-green-500">
+              <div className="flex items-start mb-4">
+                <div className="p-2 bg-green-100 rounded-lg mr-3">
+                  <Check className="h-5 w-5 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">
+                    No Vendor Lock-in
+                  </h3>
+                  <p className="text-sm text-slate-600">
+                    Works with any data platform — Snowflake, Databricks, or
+                    your existing infrastructure. No forced migrations or
+                    platform dependencies.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 border-l-4 border-l-blue-500">
+              <div className="flex items-start mb-4">
+                <div className="p-2 bg-blue-100 rounded-lg mr-3">
+                  <Check className="h-5 w-5 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">
+                    Client-by-Client Governance
+                  </h3>
+                  <p className="text-sm text-slate-600">
+                    Granular masking, row/column security, and access controls
+                    per client. Meet compliance requirements without custom
+                    code.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 border-l-4 border-l-purple-500">
+              <div className="flex items-start mb-4">
+                <div className="p-2 bg-purple-100 rounded-lg mr-3">
+                  <Check className="h-5 w-5 text-purple-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">
+                    Multi-Method Delivery
+                  </h3>
+                  <p className="text-sm text-slate-600">
+                    Single control plane for Snowflake Shares, Databricks Delta
+                    Sharing, and sFTP. No need to rebuild for each delivery
+                    method.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 border-l-4 border-l-orange-500">
+              <div className="flex items-start mb-4">
+                <div className="p-2 bg-orange-100 rounded-lg mr-3">
+                  <Check className="h-5 w-5 text-orange-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">
+                    Lifecycle Management
+                  </h3>
+                  <p className="text-sm text-slate-600">
+                    Automated onboarding, schema updates, and revocation
+                    workflows. Scale client operations without proportional
+                    engineering overhead.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 border-l-4 border-l-indigo-500">
+              <div className="flex items-start mb-4">
+                <div className="p-2 bg-indigo-100 rounded-lg mr-3">
+                  <Check className="h-5 w-5 text-indigo-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">
+                    Unified Visibility
+                  </h3>
+                  <p className="text-sm text-slate-600">
+                    Single dashboard for audit trails, usage analytics, and
+                    delivery status across all clients and platforms. Complete
+                    operational transparency.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 border-l-4 border-l-teal-500">
+              <div className="flex items-start mb-4">
+                <div className="p-2 bg-teal-100 rounded-lg mr-3">
+                  <Check className="h-5 w-5 text-teal-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900 mb-2">
+                    Enterprise Ready
+                  </h3>
+                  <p className="text-sm text-slate-600">
+                    SOC 2 compliance, enterprise SSO, role-based access
+                    controls, and API-first architecture for seamless
+                    integration.
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
