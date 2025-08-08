@@ -32,8 +32,11 @@ export default function Home() {
             >
               How it Works
             </a>
-            <a href="#market" className="text-slate-600 hover:text-slate-900">
-              Market
+            <a
+              href="#before-after"
+              className="text-slate-600 hover:text-slate-900"
+            >
+              Before & After
             </a>
             <a
               href="#differentiators"
@@ -41,14 +44,8 @@ export default function Home() {
             >
               Differentiators
             </a>
-            <a href="#segments" className="text-slate-600 hover:text-slate-900">
-              Segments
-            </a>
-            <a
-              href="#before-after"
-              className="text-slate-600 hover:text-slate-900"
-            >
-              Before & After
+            <a href="#market" className="text-slate-600 hover:text-slate-900">
+              Market
             </a>
           </nav>
           <Button>Schedule Demo</Button>
@@ -59,7 +56,7 @@ export default function Home() {
       <section className="container mx-auto px-4 py-20 text-center">
         <Badge variant="secondary" className="mb-4">
           <Share2 className="h-4 w-4 mr-2" />
-          Multi-Platform Data Sharing as a Service
+          Data Sharing as a Service
         </Badge>
         <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
           Governed, Multi-Platform Data Sharing — Without Custom Pipelines

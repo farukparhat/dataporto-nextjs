@@ -234,7 +234,7 @@ const initialNodes: Node[] = [
     id: "dataporto",
     type: "dataporto",
     position: { x: 280, y: 85 },
-    data: { label: "Dataporto" },
+    data: { label: "dataporto" },
   },
 
   // Client Nodes (Between Dataporto and Outputs)
