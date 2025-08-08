@@ -3,16 +3,7 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import FlowDiagram from "@/components/FlowDiagram";
-import {
-  Database,
-  Share2,
-  ArrowRight,
-  Check,
-  Building2,
-  Globe,
-  Folder,
-  Anchor,
-} from "lucide-react";
+import { Share2, ArrowRight, Check, Folder, Anchor } from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
 
 export default function Home() {
