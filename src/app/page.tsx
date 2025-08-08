@@ -67,7 +67,7 @@ export default function Home() {
         <p className="text-xl text-slate-600 mb-8 max-w-4xl mx-auto">
           Securely share live, governed data with each client in their preferred
           platform — Snowflake, Databricks, or sFTP — with client-by-client
-          permissions, masking, and audit.
+          configuration and lifecycle management.
         </p>
 
         {/* Platform Icons */}
@@ -116,147 +116,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Market Context & Competitive Landscape */}
-      <section id="market" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Market Context & Trends
-            </h2>
-            <p className="text-lg text-slate-600 max-w-4xl mx-auto">
-              Enterprise clients expect live, governed access to vendor data —
-              not CSV dumps. Platforms compete for data collaboration dominance
-              while sovereignty and compliance pressures make client-by-client
-              governance non‑optional. Data products are the new norm.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <Card className="p-6">
-              <CardTitle className="mb-2">Native Platform Sharing</CardTitle>
-              <CardDescription className="mb-2">
-                Snowflake Data Share, Databricks Delta Sharing
-              </CardDescription>
-              <p className="text-sm text-slate-600">
-                Assumes vendor uses their platform; no cross‑platform
-                orchestration or lifecycle management.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <CardTitle className="mb-2">ETL/ELT & Pipelines</CardTitle>
-              <CardDescription className="mb-2">
-                Fivetran, Airbyte, Matillion
-              </CardDescription>
-              <p className="text-sm text-slate-600">
-                Move data, but don’t provision governed client access.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <CardTitle className="mb-2">Marketplaces</CardTitle>
-              <CardDescription className="mb-2">
-                Snowflake Marketplace, AWS Data Exchange
-              </CardDescription>
-              <p className="text-sm text-slate-600">
-                Oriented to public distribution; not client‑specific shares.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <CardTitle className="mb-2">SFTP/Legacy</CardTitle>
-              <CardDescription className="mb-2">
-                Manual setups, hosted FTP
-              </CardDescription>
-              <p className="text-sm text-slate-600">
-                Lacks governance, version control, and automation.
-              </p>
-            </Card>
-          </div>
-
-          <div className="max-w-4xl mx-auto mt-10">
-            <div className="p-6 bg-white rounded-lg border">
-              <p className="text-slate-800 text-lg">
-                <strong>Gap:</strong> No single tool orchestrates multi‑source,
-                multi‑destination, client‑specific data sharing with built‑in
-                governance and monitoring.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Strategic Differentiators */}
-      <section id="differentiators" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              DataPorto’s Differentiators
-            </h2>
-            <p className="text-lg text-slate-600">Why teams choose Dataporto</p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <ul className="space-y-4 text-slate-700">
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                No lock‑in — works even if you don’t use Snowflake or
-                Databricks.
-              </li>
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                Client‑by‑client governance with masking and row/column
-                security.
-              </li>
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                Multi‑method delivery from a single control plane (Shares or
-                sFTP).
-              </li>
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                Lifecycle management for onboarding, schema updates, and
-                revocation.
-              </li>
-              <li className="flex">
-                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                Unified audit and usage visibility across all shares.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Target Segments */}
-      <section id="segments" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              High‑Fit Segments
-            </h2>
-            <p className="text-lg text-slate-600">Where the pain is highest</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="p-8 hover:shadow-lg transition-shadow">
-              <Globe className="h-10 w-10 text-orange-600 mb-3" />
-              <CardTitle className="mb-2">
-                Data Providers & SaaS Analytics Vendors
-              </CardTitle>
-              <CardDescription>
-                Multiple customers demanding different delivery methods; avoid
-                maintaining separate pipelines.
-              </CardDescription>
-            </Card>
-            <Card className="p-8 hover:shadow-lg transition-shadow">
-              <Building2 className="h-10 w-10 text-purple-600 mb-3" />
-              <CardTitle className="mb-2">Agencies & Platforms</CardTitle>
-              <CardDescription>
-                Share campaign/performance data securely with many clients
-                without exposing full datasets.
-              </CardDescription>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Before & After */}
-      <section id="before-after" className="py-20 bg-white">
+      <section id="before-after" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -389,28 +250,109 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Benefit & Gap */}
-      <section className="py-20 bg-slate-50">
+      {/* Strategic Differentiators */}
+      <section id="differentiators" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-            <Card className="p-8">
-              <CardTitle className="mb-3">Benefit</CardTitle>
-              <CardDescription className="mb-3">
-                DataPorto connects to any data source and automates secure,
-                client‑specific sharing in their preferred format — Snowflake,
-                Databricks, or sFTP — freeing your engineering team from custom
-                pipelines.
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              DataPorto’s Differentiators
+            </h2>
+            <p className="text-lg text-slate-600">Why teams choose Dataporto</p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <ul className="space-y-4 text-slate-700">
+              <li className="flex">
+                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
+                No lock‑in — works even if you don’t use Snowflake or
+                Databricks.
+              </li>
+              <li className="flex">
+                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
+                Client‑by‑client governance with masking and row/column
+                security.
+              </li>
+              <li className="flex">
+                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
+                Multi‑method delivery from a single control plane (Shares or
+                sFTP).
+              </li>
+              <li className="flex">
+                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
+                Lifecycle management for onboarding, schema updates, and
+                revocation.
+              </li>
+              <li className="flex">
+                <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
+                Unified audit and usage visibility across all shares.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Context & Competitive Landscape */}
+      <section id="market" className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Market Context & Trends
+            </h2>
+            <p className="text-lg text-slate-600 max-w-4xl mx-auto">
+              Enterprise clients expect live, governed access to vendor data —
+              not CSV dumps. Platforms compete for data collaboration dominance
+              while sovereignty and compliance pressures make client-by-client
+              governance non‑optional. Data products are the new norm.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <Card className="p-6">
+              <CardTitle className="mb-2">Native Platform Sharing</CardTitle>
+              <CardDescription className="mb-2">
+                Snowflake Data Share, Databricks Delta Sharing
               </CardDescription>
+              <p className="text-sm text-slate-600">
+                Assumes vendor uses their platform; no cross‑platform
+                orchestration or lifecycle management.
+              </p>
             </Card>
-            <Card className="p-8">
-              <CardTitle className="mb-3">Market Gap in One Sentence</CardTitle>
-              <blockquote className="text-slate-800 italic">
-                Vendors can deliver data, but no existing solution lets them
-                manage multi‑source, multi‑destination, client‑specific sharing
-                with built‑in governance and automation — DataPorto fills that
-                gap.
-              </blockquote>
+            <Card className="p-6">
+              <CardTitle className="mb-2">ETL/ELT & Pipelines</CardTitle>
+              <CardDescription className="mb-2">
+                Fivetran, Airbyte, Matillion
+              </CardDescription>
+              <p className="text-sm text-slate-600">
+                Move data, but don’t provision governed client access.
+              </p>
             </Card>
+            <Card className="p-6">
+              <CardTitle className="mb-2">Marketplaces</CardTitle>
+              <CardDescription className="mb-2">
+                Snowflake Marketplace, AWS Data Exchange
+              </CardDescription>
+              <p className="text-sm text-slate-600">
+                Oriented to public distribution; not client‑specific shares.
+              </p>
+            </Card>
+            <Card className="p-6">
+              <CardTitle className="mb-2">SFTP/Legacy</CardTitle>
+              <CardDescription className="mb-2">
+                Manual setups, hosted FTP
+              </CardDescription>
+              <p className="text-sm text-slate-600">
+                Lacks governance, version control, and automation.
+              </p>
+            </Card>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-10">
+            <div className="p-6 bg-white rounded-lg border">
+              <p className="text-slate-800 text-lg">
+                <strong>Solution:</strong> DataPorto is the single platform that
+                orchestrates multi‑source, multi‑destination, client‑specific
+                data sharing with built‑in governance and monitoring.
+              </p>
+            </div>
           </div>
         </div>
       </section>
