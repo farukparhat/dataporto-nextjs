@@ -1,17 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import WaitlistButton from "@/components/WaitlistButton";
 import { Separator } from "@/components/ui/separator";
 import FlowDiagram from "@/components/FlowDiagram";
-import {
-  Share2,
-  ArrowRight,
-  Check,
-  Folder,
-  Anchor,
-  Database,
-  Globe,
-} from "lucide-react";
+import { Share2, ArrowRight, Check, Folder, Anchor } from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
 
 export default function Home() {
@@ -47,7 +39,7 @@ export default function Home() {
               Market
             </a>
           </nav>
-          <Button>Schedule Demo</Button>
+          <WaitlistButton>Schedule a Demo</WaitlistButton>
         </div>
       </header>
 
@@ -83,10 +75,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-lg px-8">
-            Schedule Demo
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <WaitlistButton size="lg" className="text-lg px-8">
+            Schedule a Demo <ArrowRight className="ml-2 h-5 w-5" />
+          </WaitlistButton>
         </div>
       </section>
 
@@ -493,10 +484,14 @@ export default function Home() {
             innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8">
+            <WaitlistButton
+              size="lg"
+              variant="secondary"
+              className="text-lg px-8"
+            >
               Modernize your Data Sharing{" "}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            </WaitlistButton>
           </div>
         </div>
       </section>
