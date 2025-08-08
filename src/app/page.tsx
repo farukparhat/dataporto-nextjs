@@ -3,7 +3,15 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import FlowDiagram from "@/components/FlowDiagram";
-import { Share2, ArrowRight, Check, Folder, Anchor } from "lucide-react";
+import {
+  Share2,
+  ArrowRight,
+  Check,
+  Folder,
+  Anchor,
+  Database,
+  Globe,
+} from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
 
 export default function Home() {
@@ -368,63 +376,105 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Market Context & Trends
+              The Evolution of Data Sharing
             </h2>
             <p className="text-lg text-slate-600 max-w-4xl mx-auto">
-              Enterprise clients expect live, governed access to vendor data —
-              not CSV dumps. Platforms compete for data collaboration dominance
-              while sovereignty and compliance pressures make client-by-client
-              governance non‑optional. Data products are the new norm.
+              Enterprises have escalating demands for data access — from weekly
+              batch files to real-time feeds. Some clients require traditional
+              FTP delivery while others expect modern direct-to-warehouse
+              sharing. Engineering teams struggle to maintain custom pipelines
+              for each client, diverting resources from core product development
+              and innovation.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <Card className="p-6">
-              <CardTitle className="mb-2">Native Platform Sharing</CardTitle>
-              <CardDescription className="mb-2">
-                Snowflake Data Share, Databricks Delta Sharing
-              </CardDescription>
-              <p className="text-sm text-slate-600">
-                Assumes vendor uses their platform; no cross‑platform
-                orchestration or lifecycle management.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <CardTitle className="mb-2">ETL/ELT & Pipelines</CardTitle>
-              <CardDescription className="mb-2">
-                Fivetran, Airbyte, Matillion
-              </CardDescription>
-              <p className="text-sm text-slate-600">
-                Move data, but don’t provision governed client access.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <CardTitle className="mb-2">Marketplaces</CardTitle>
-              <CardDescription className="mb-2">
-                Snowflake Marketplace, AWS Data Exchange
-              </CardDescription>
-              <p className="text-sm text-slate-600">
-                Oriented to public distribution; not client‑specific shares.
-              </p>
-            </Card>
-            <Card className="p-6">
-              <CardTitle className="mb-2">SFTP/Legacy</CardTitle>
-              <CardDescription className="mb-2">
-                Manual setups, hosted FTP
-              </CardDescription>
-              <p className="text-sm text-slate-600">
-                Lacks governance, version control, and automation.
-              </p>
-            </Card>
+          {/* Competitive Landscape */}
+          <div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">
+              Why Current Solutions Fall Short
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <Card className="p-6 border-l-4 border-l-red-500">
+                <CardTitle className="mb-2 text-red-700">
+                  Native Platform Sharing
+                </CardTitle>
+                <CardDescription className="mb-2">
+                  Snowflake Data Share, Databricks Delta Sharing
+                </CardDescription>
+                <p className="text-sm text-slate-600">
+                  Platform lock-in, no cross-platform orchestration, limited
+                  lifecycle management, and vendor dependency.
+                </p>
+              </Card>
+
+              <Card className="p-6 border-l-4 border-l-orange-500">
+                <CardTitle className="mb-2 text-orange-700">
+                  ETL/ELT & Pipelines
+                </CardTitle>
+                <CardDescription className="mb-2">
+                  Fivetran, Airbyte, Matillion
+                </CardDescription>
+                <p className="text-sm text-slate-600">
+                  Data movement without governance, no client-specific access
+                  controls, and complex custom development for each client.
+                </p>
+              </Card>
+
+              <Card className="p-6 border-l-4 border-l-yellow-500">
+                <CardTitle className="mb-2 text-yellow-700">
+                  Marketplaces
+                </CardTitle>
+                <CardDescription className="mb-2">
+                  Snowflake Marketplace, AWS Data Exchange
+                </CardDescription>
+                <p className="text-sm text-slate-600">
+                  Public distribution focus, no client-specific governance,
+                  limited customization, and platform-specific limitations.
+                </p>
+              </Card>
+
+              <Card className="p-6 border-l-4 border-l-gray-500">
+                <CardTitle className="mb-2 text-gray-700">
+                  SFTP/Legacy
+                </CardTitle>
+                <CardDescription className="mb-2">
+                  Manual setups, hosted FTP
+                </CardDescription>
+                <p className="text-sm text-slate-600">
+                  No governance, manual processes, security risks, no version
+                  control, and operational overhead.
+                </p>
+              </Card>
+            </div>
           </div>
 
-          <div className="max-w-4xl mx-auto mt-10">
-            <div className="p-6 bg-white rounded-lg border">
-              <p className="text-slate-800 text-lg">
-                <strong>Solution:</strong> DataPorto is the single platform that
-                orchestrates multi‑source, multi‑destination, client‑specific
-                data sharing with built‑in governance and monitoring.
-              </p>
+          <div className="max-w-4xl mx-auto mt-12">
+            <div className="p-8 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-lg text-white">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-4">
+                  DataPorto: The Complete Solution
+                </h3>
+                <p className="text-lg text-blue-100 mb-6">
+                  The only platform that orchestrates multi-source,
+                  multi-destination, client-specific data sharing with built-in
+                  governance, monitoring, and lifecycle management — without
+                  vendor lock-in.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 text-sm">
+                  <span className="px-3 py-1 bg-white/20 rounded-full">
+                    Multi-Platform Support
+                  </span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full">
+                    Client-by-Client Governance
+                  </span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full">
+                    Enterprise Security
+                  </span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full">
+                    No Vendor Lock-in
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
