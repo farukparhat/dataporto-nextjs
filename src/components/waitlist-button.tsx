@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import WaitlistModal from "@/components/WaitlistModal";
+import WaitlistModal from "@/components/waitlist-modal";
 
 type Props = React.ComponentProps<typeof Button> & {
   source?: string;

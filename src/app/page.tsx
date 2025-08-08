@@ -1,8 +1,8 @@
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import WaitlistButton from "@/components/WaitlistButton";
+import WaitlistButton from "@/components/waitlist-button";
 import { Separator } from "@/components/ui/separator";
-import FlowDiagram from "@/components/FlowDiagram";
+import FlowDiagram from "@/components/flow-diagram";
 import { Share2, ArrowRight, Check, Folder, Anchor } from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
 
