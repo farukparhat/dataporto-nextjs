@@ -107,7 +107,7 @@ export default function WaitlistModal({
           />
         </div>
 
-        <div className="grid gap-1 md:max-w-xs">
+        <div className="grid gap-1">
           <label className="text-sm font-medium text-slate-700">
             Number of Clients
           </label>
