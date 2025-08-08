@@ -53,6 +53,7 @@ export async function joinWaitlist(
   );
 
   if (error) {
+    console.error(error);
     return { ok: false as const, message: "Failed to save. Please try again." };
   }
 
