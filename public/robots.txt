@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://dataporto.com/sitemap.xml
+
+# High-crawl-rate pages
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block specific paths (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow important assets
+Allow: /favicon.ico
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
