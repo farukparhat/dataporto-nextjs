@@ -43,31 +43,33 @@ export default function WaitlistModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Get Started with dataporto</DialogTitle>
-          <DialogDescription>
+      <DialogContent className="w-[95vw] max-w-[425px] max-h-[90vh] overflow-y-auto sm:max-w-lg">
+        <DialogHeader className="space-y-3">
+          <DialogTitle className="text-lg sm:text-xl">
+            Get Started with dataporto
+          </DialogTitle>
+          <DialogDescription className="text-sm sm:text-base">
             Schedule a personalized demo to see how dataporto can transform your
             data sharing operations.
           </DialogDescription>
         </DialogHeader>
-        <form action={onSubmit} className="space-y-4">
+        <form action={onSubmit} className="space-y-4 sm:space-y-5">
           <input type="hidden" name="source" value={source} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="grid gap-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid gap-2">
               <label className="text-sm font-medium text-slate-700">
                 Full Name *
               </label>
               <input
                 name="name"
                 required
-                className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                className="h-11 rounded-md border px-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-blue-500 sm:h-10 sm:text-sm"
                 placeholder="Jane Doe"
               />
             </div>
 
-            <div className="grid gap-1">
+            <div className="grid gap-2">
               <label className="text-sm font-medium text-slate-700">
                 Work Email *
               </label>
@@ -75,54 +77,54 @@ export default function WaitlistModal({
                 type="email"
                 name="email"
                 required
-                className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                className="h-11 rounded-md border px-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-blue-500 sm:h-10 sm:text-sm"
                 placeholder="jane@company.com"
               />
             </div>
 
-            <div className="grid gap-1">
+            <div className="grid gap-2">
               <label className="text-sm font-medium text-slate-700">
                 Company *
               </label>
               <input
                 name="company"
                 required
-                className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                className="h-11 rounded-md border px-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-blue-500 sm:h-10 sm:text-sm"
                 placeholder="Acme Inc."
               />
             </div>
 
-            <div className="grid gap-1">
+            <div className="grid gap-2">
               <label className="text-sm font-medium text-slate-700">
                 Job Title
               </label>
               <input
                 name="title"
-                className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                className="h-11 rounded-md border px-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-blue-500 sm:h-10 sm:text-sm"
                 placeholder="Data Engineer, CTO, etc."
               />
             </div>
           </div>
 
-          <div className="grid gap-1">
+          <div className="grid gap-2">
             <label className="text-sm font-medium text-slate-700">
               Current Data Sharing Challenges
             </label>
             <textarea
               name="challenges"
               rows={3}
-              className="rounded-md border px-3 py-2 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              className="rounded-md border px-3 py-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-blue-500 sm:py-2 sm:text-sm"
               placeholder="Tell us about your current data sharing setup and pain points..."
             />
           </div>
 
-          <div className="grid gap-1">
+          <div className="grid gap-2">
             <label className="text-sm font-medium text-slate-700">
               Number of Clients
             </label>
             <select
               name="clientCount"
-              className="h-10 rounded-md border px-3 outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              className="h-11 rounded-md border px-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-blue-500 sm:h-10 sm:text-sm"
             >
               <option value="">Select range</option>
               <option value="1-10">1-10 clients</option>
@@ -133,18 +135,25 @@ export default function WaitlistModal({
           </div>
 
           {message && (
-            <p className="text-sm text-slate-600" role="status">
+            <p
+              className="text-sm text-slate-600 p-3 bg-slate-50 rounded-md"
+              role="status"
+            >
               {message}
             </p>
           )}
 
           <div className="pt-2">
-            <Button type="submit" disabled={pending} className="w-full">
+            <Button
+              type="submit"
+              disabled={pending}
+              className="w-full h-11 text-base sm:h-10 sm:text-sm"
+            >
               {pending ? "Submitting..." : "Schedule Demo"}
             </Button>
           </div>
 
-          <p className="text-xs text-slate-500 text-center">
+          <p className="text-xs text-slate-500 text-center leading-relaxed">
             By submitting this form, you agree to receive communications from
             dataporto about our services.
           </p>
