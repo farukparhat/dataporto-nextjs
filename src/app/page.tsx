@@ -53,9 +53,9 @@ export default function Home() {
           Governed, Multi-Platform Data Sharing — Without Custom Pipelines
         </h1>
         <p className="text-xl text-slate-600 mb-8 max-w-4xl mx-auto">
-          Securely share live, governed data with each client in their preferred
-          platform — Snowflake, Databricks, or sFTP — with client-by-client
-          configuration and lifecycle management.
+          Securely share live, governed data with each of your clients in their
+          preferred platform — Snowflake, Databricks, or sFTP — with
+          client-by-client configuration and lifecycle management.
         </p>
 
         {/* Platform Icons */}
