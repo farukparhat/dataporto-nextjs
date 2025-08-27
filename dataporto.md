@@ -62,8 +62,8 @@ Dataporto gives you enterprise-level data sharing capabilities across multiple p
 ## ⚙️ Ideal For
 
 - SaaS vendors delivering customer-level analytics or reports
+- Companies who want to offer direct data sharing across warehouse platforms as a differentiator
 - Agencies providing live dashboards or metrics
-- Franchisors, platforms, or data-rich marketplaces
 - Data providers selling access to curated data products
 - Organizations with clients across different data platforms
 

@@ -4,7 +4,7 @@ import React from "react";
 import { ReactFlow, Node, Edge, Background, Handle, Position } from "reactflow";
 import "reactflow/dist/style.css";
 import { LucideIcon, Anchor, Folder, Users } from "lucide-react";
-import { DataBricks, Postgres, Snowflake } from "./brand-icons";
+import { Aws, DataBricks, Postgres, Snowflake } from "./brand-icons";
 
 interface NodeData {
   label: string;
@@ -44,9 +44,7 @@ const DataportoNode = ({ data }: { data: NodeData }) => {
         <Anchor className="h-6 w-6 text-white" />
         <div className="text-lg font-bold text-white">{data.label}</div>
       </div>
-      <div className="text-sm text-blue-100 mt-1">
-        Multi-Platform Data Sharing
-      </div>
+      <div className="text-sm text-blue-100 mt-1">Manage your data shares</div>
       <Handle
         type="target"
         position={Position.Left}
@@ -203,8 +201,8 @@ const initialNodes: Node[] = [
     type: "dataSource",
     position: { x: 50, y: 50 },
     data: {
-      label: "PostgreSQL",
-      icon: Postgres,
+      label: "AWS",
+      icon: Aws,
       iconColor: "text-blue-600",
     },
   },
