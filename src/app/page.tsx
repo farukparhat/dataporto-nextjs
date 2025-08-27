@@ -49,6 +49,9 @@ export default function Home() {
             <Link href="/blog" className="text-slate-600 hover:text-slate-900">
               Blog
             </Link>
+            <Link href="/demo" className="text-slate-600 hover:text-slate-900">
+              Demo
+            </Link>
           </nav>
           <WaitlistButton>Schedule a Demo</WaitlistButton>
         </div>
