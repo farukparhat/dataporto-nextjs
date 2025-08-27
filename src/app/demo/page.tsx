@@ -210,7 +210,7 @@ export default function DemoPage() {
               <span className="text-xl font-bold">dataporto</span>
             </div>
             <div className="flex space-x-6">
-              <Link href="#" className="text-slate-400 hover:text-white">
+              <Link href="/privacy" className="text-slate-400 hover:text-white">
                 Privacy
               </Link>
               <Link href="#" className="text-slate-400 hover:text-white">

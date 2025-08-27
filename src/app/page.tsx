@@ -511,9 +511,9 @@ export default function Home() {
               <span className="text-xl font-bold">dataporto</span>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-slate-400 hover:text-white">
+              <Link href="/privacy" className="text-slate-400 hover:text-white">
                 Privacy
-              </a>
+              </Link>
               <a href="#" className="text-slate-400 hover:text-white">
                 Terms
               </a>

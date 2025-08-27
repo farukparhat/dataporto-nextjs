@@ -132,12 +132,13 @@ export default function MobileSidebar() {
                 </a>
               </div>
               <div className="flex space-x-6 text-sm">
-                <a
-                  href="#"
+                <Link
+                  href="/privacy"
                   className="text-slate-600 hover:text-slate-900 transition-colors"
+                  onClick={() => setOpen(false)}
                 >
                   Privacy
-                </a>
+                </Link>
                 <a
                   href="#"
                   className="text-slate-600 hover:text-slate-900 transition-colors"
