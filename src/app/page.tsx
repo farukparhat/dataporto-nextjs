@@ -93,10 +93,11 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto mt-8">
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                One connection to your data source, one control plane for
-                governance, and multiple delivery methods out of the box —
-                Snowflake Data Share, Databricks Delta Sharing, and sFTP —
-                without rebuilding pipelines for each client.
+                Connect your data sources, then use our control plane to
+                provision per-client Snowflake Data Shares, Databricks Delta
+                Shares, or sFTP feeds. Every client gets secure, isolated data
+                access in their preferred format — without your team rebuilding
+                or maintaining separate pipelines.
               </p>
             </div>
           </div>
@@ -207,7 +208,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Stop building custom pipelines for each client
+              Stop Building Custom Pipelines for Each Client
             </h2>
             <p className="text-lg text-slate-600">
               Replace dozens of fragile pipelines with a single control plane
