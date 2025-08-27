@@ -10,9 +10,10 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import WaitlistButton from "@/components/waitlist-button";
 
 export default function MobileSidebar() {
   const [open, setOpen] = useState(false);
@@ -91,6 +92,31 @@ export default function MobileSidebar() {
               ))}
             </div>
           </nav>
+
+          {/* CTA Section */}
+          <div className="px-6 py-6 border-t border-b bg-gradient-to-r from-blue-50 to-indigo-50">
+            <div className="text-center space-y-4">
+              <div className="flex items-center justify-center space-x-2 text-blue-600 mb-2">
+                <Calendar className="h-5 w-5" />
+                <span className="font-semibold text-sm">
+                  Ready to get started?
+                </span>
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">
+                Schedule a Demo
+              </h3>
+              <p className="text-sm text-slate-600">
+                See how dataporto can transform your data sharing operations
+              </p>
+              <WaitlistButton
+                source="mobile-sidebar"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                onClick={() => setOpen(false)}
+              >
+                Schedule Demo
+              </WaitlistButton>
+            </div>
+          </div>
 
           {/* Footer */}
           <SheetFooter className="px-6 py-4 border-t bg-slate-50">
