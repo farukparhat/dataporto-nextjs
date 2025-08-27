@@ -4,35 +4,11 @@ import { Separator } from "@/components/ui/separator";
 import { Calendar, Clock, ArrowRight, Anchor } from "lucide-react";
 import Link from "next/link";
 
-// Sample blog posts data - in a real app, this would come from a CMS or database
-const blogPosts = [
-  {
-    id: "multi-platform-data-sharing-guide",
-    title: "The Complete Guide to Multi-Platform Data Sharing",
-    excerpt:
-      "Learn how to implement governed data sharing across Snowflake, Databricks, and sFTP without building custom pipelines for each client.",
-    author: "DataPorto Team",
-    date: "2025-08-15",
-    readTime: "8 min read",
-    category: "Best Practices",
-    featured: true,
-  },
-  {
-    id: "enterprise-security-compliance",
-    title: "Enterprise Security and Compliance in Data Sharing",
-    excerpt:
-      "SOC 2, GDPR, and industry-specific compliance requirements for modern data sharing platforms.",
-    author: "DataPorto Team",
-    date: "2025-06-12",
-    readTime: "9 min read",
-    category: "Security",
-    featured: false,
-  },
-];
+import { getFeaturedPost, getRegularPosts } from "@/content/blog";
 
 export default function BlogPage() {
-  const featuredPost = blogPosts.find((post) => post.featured);
-  const regularPosts = blogPosts.filter((post) => !post.featured);
+  const featuredPost = getFeaturedPost();
+  const regularPosts = getRegularPosts();
 
   return (
     <div className="min-h-screen bg-slate-50">

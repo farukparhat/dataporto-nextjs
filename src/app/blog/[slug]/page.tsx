@@ -4,119 +4,17 @@ import { Separator } from "@/components/ui/separator";
 import { Calendar, Clock, ArrowLeft, Anchor, Share2 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-
-// Sample blog posts data - in a real app, this would come from a CMS or database
-const blogPosts = {
-  "multi-platform-data-sharing-guide": {
-    id: "multi-platform-data-sharing-guide",
-    title: "The Complete Guide to Multi-Platform Data Sharing",
-    excerpt:
-      "Learn how to implement governed data sharing across Snowflake, Databricks, and sFTP without building custom pipelines for each client.",
-    author: "DataPorto Team",
-    date: "2025-08-15",
-    readTime: "8 min read",
-    category: "Best Practices",
-    content: `
-# The Complete Guide to Multi-Platform Data Sharing
-
-In today's data-driven economy, enterprises need to share data with clients, partners, and subsidiaries across multiple platforms. However, building custom data pipelines for each client and platform combination quickly becomes a maintenance nightmare.
-
-## The Challenge: Platform Fragmentation
-
-Different clients have different preferences and infrastructure setups:
-
-- **Enterprise clients** often prefer Snowflake Data Shares for real-time access
-- **Analytics teams** may request Databricks Delta Sharing for ML workflows  
-- **Legacy systems** still require traditional sFTP file transfers
-- **Compliance requirements** vary by client and industry
-
-Building separate infrastructure for each combination leads to:
-
-- High engineering overhead
-- Inconsistent security controls
-- Difficult change management
-- Operational complexity
-
-## The Solution: Unified Control Plane
-
-A modern approach consolidates all data sharing operations through a single control plane that:
-
-### 1. Source Connectivity
-Connect once to your primary data sources:
-- Snowflake warehouses
-- Databricks clusters
-- PostgreSQL databases
-- Cloud storage (S3, Azure Blob, GCS)
-
-### 2. Governance Layer
-Apply consistent controls across all destinations:
-- Row-level security filters
-- Column masking and encryption
-- Client-specific access policies
-- Audit logging and compliance tracking
-
-### 3. Multi-Destination Delivery
-Automatically deliver to client preferences:
-- **Snowflake Data Share**: Zero-copy sharing for real-time access
-- **Databricks Delta Sharing**: Native integration with Delta Lake
-- **sFTP**: Encrypted file transfers for legacy systems
-
-## Implementation Best Practices
-
-### Security First
-- Implement least-privilege access controls
-- Use client-specific encryption keys
-- Maintain detailed audit trails
-- Regular access reviews and revocation
-
-### Operational Excellence
-- Automate schema change propagation
-- Monitor delivery success rates
-- Set up alerting for failures
-- Document client-specific requirements
-
-### Performance Optimization
-- Cache frequently accessed datasets
-- Optimize data formats per platform
-- Implement intelligent retry logic
-- Monitor and tune delivery times
-
-## Getting Started
-
-1. **Assess Current State**: Document existing data sharing arrangements
-2. **Define Governance**: Establish security and compliance requirements
-3. **Choose Architecture**: Select unified platform vs custom build
-4. **Pilot Implementation**: Start with 2-3 key clients
-5. **Scale Gradually**: Migrate remaining clients systematically
-
-## Conclusion
-
-Multi-platform data sharing doesn't have to mean multi-platform complexity. By implementing a unified control plane with proper governance, you can deliver data to any platform while maintaining security, compliance, and operational efficiency.
-
-The key is to abstract away platform differences while preserving the native benefits each platform provides to your clients.
-    `,
-  },
-  "enterprise-security-compliance": {
-    id: "enterprise-security-compliance",
-    title: "Enterprise Security and Compliance in Data Sharing",
-    excerpt:
-      "SOC 2, GDPR, and industry-specific compliance requirements for modern data sharing platforms.",
-    author: "DataPorto Team",
-    date: "2025-06-12",
-    readTime: "9 min read",
-    category: "Security",
-    content: "",
-  },
-};
+import { blogPosts } from "@/content/blog";
 
 interface BlogPostProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function BlogPost({ params }: BlogPostProps) {
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+export default async function BlogPost({ params }: BlogPostProps) {
+  const { slug } = await params;
+  const post = blogPosts[slug as keyof typeof blogPosts];
 
   if (!post) {
     notFound();
@@ -196,7 +94,72 @@ export default function BlogPost({ params }: BlogPostProps) {
             <div
               className="markdown-content"
               dangerouslySetInnerHTML={{
-                __html: post.content,
+                __html: post.content
+                  .replace(
+                    /^#\s+(.+)$/gm,
+                    '<h1 class="text-3xl font-bold text-slate-900 mb-6 mt-8">$1</h1>'
+                  )
+                  .replace(
+                    /^##\s+(.+)$/gm,
+                    '<h2 class="text-2xl font-bold text-slate-900 mb-4 mt-8">$1</h2>'
+                  )
+                  .replace(
+                    /^###\s+(.+)$/gm,
+                    '<h3 class="text-xl font-semibold text-slate-900 mb-3 mt-6">$1</h3>'
+                  )
+                  .replace(
+                    /^\*\*(.+)\*\*$/gm,
+                    '<strong class="font-semibold text-slate-900">$1</strong>'
+                  )
+                  .replace(
+                    /\*\*(.+?)\*\*/g,
+                    '<strong class="font-semibold text-slate-900">$1</strong>'
+                  )
+                  .replace(/^- (.+)$/gm, '<li class="mb-2">$1</li>')
+                  .replace(
+                    /(\n<li.*<\/li>\n)/g,
+                    '<ul class="list-disc list-inside mb-6 space-y-2 text-slate-700">$1</ul>'
+                  )
+                  .replace(/^(\d+)\.\s+(.+)$/gm, '<li class="mb-2">$2</li>')
+                  .replace(
+                    /(\n<li.*<\/li>\n)/g,
+                    '<ol class="list-decimal list-inside mb-6 space-y-2 text-slate-700">$1</ol>'
+                  )
+                  .replace(
+                    /```(\w+)?\n([\s\S]*?)```/g,
+                    '<pre class="bg-slate-100 rounded-lg p-4 mb-6 overflow-x-auto"><code class="text-sm text-slate-800">$2</code></pre>'
+                  )
+                  .replace(
+                    /`([^`]+)`/g,
+                    '<code class="bg-slate-100 px-2 py-1 rounded text-sm text-slate-800">$1</code>'
+                  )
+                  .replace(/^\|(.+)\|$/gm, (match, content) => {
+                    const cells = content
+                      .split("|")
+                      .map((cell: string) => cell.trim());
+                    return (
+                      "<tr>" +
+                      cells
+                        .map(
+                          (cell: string) =>
+                            `<td class="border border-slate-300 px-4 py-2">${cell}</td>`
+                        )
+                        .join("") +
+                      "</tr>"
+                    );
+                  })
+                  .replace(
+                    /(<tr>.*<\/tr>)/g,
+                    '<table class="w-full border-collapse border border-slate-300 mb-6">$1</table>'
+                  )
+                  .replace(
+                    /\n\n/g,
+                    '</p><p class="mb-4 text-slate-700 leading-relaxed">'
+                  )
+                  .replace(
+                    /^(.+)$/gm,
+                    '<p class="mb-4 text-slate-700 leading-relaxed">$1</p>'
+                  ),
               }}
             />
           </div>
@@ -295,7 +258,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for each blog post
 export async function generateMetadata({ params }: BlogPostProps) {
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+  const { slug } = await params;
+  const post = blogPosts[slug as keyof typeof blogPosts];
 
   if (!post) {
     return {
