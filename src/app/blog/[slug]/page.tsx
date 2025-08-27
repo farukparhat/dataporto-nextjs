@@ -5,6 +5,8 @@ import { Calendar, Clock, ArrowLeft, Anchor, Share2 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/content/blog";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface BlogPostProps {
   params: Promise<{
@@ -91,77 +93,11 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
           {/* Article Content */}
           <div className="prose prose-lg prose-slate max-w-none">
-            <div
-              className="markdown-content"
-              dangerouslySetInnerHTML={{
-                __html: post.content
-                  .replace(
-                    /^#\s+(.+)$/gm,
-                    '<h1 class="text-3xl font-bold text-slate-900 mb-6 mt-8">$1</h1>'
-                  )
-                  .replace(
-                    /^##\s+(.+)$/gm,
-                    '<h2 class="text-2xl font-bold text-slate-900 mb-4 mt-8">$1</h2>'
-                  )
-                  .replace(
-                    /^###\s+(.+)$/gm,
-                    '<h3 class="text-xl font-semibold text-slate-900 mb-3 mt-6">$1</h3>'
-                  )
-                  .replace(
-                    /^\*\*(.+)\*\*$/gm,
-                    '<strong class="font-semibold text-slate-900">$1</strong>'
-                  )
-                  .replace(
-                    /\*\*(.+?)\*\*/g,
-                    '<strong class="font-semibold text-slate-900">$1</strong>'
-                  )
-                  .replace(/^- (.+)$/gm, '<li class="mb-2">$1</li>')
-                  .replace(
-                    /(\n<li.*<\/li>\n)/g,
-                    '<ul class="list-disc list-inside mb-6 space-y-2 text-slate-700">$1</ul>'
-                  )
-                  .replace(/^(\d+)\.\s+(.+)$/gm, '<li class="mb-2">$2</li>')
-                  .replace(
-                    /(\n<li.*<\/li>\n)/g,
-                    '<ol class="list-decimal list-inside mb-6 space-y-2 text-slate-700">$1</ol>'
-                  )
-                  .replace(
-                    /```(\w+)?\n([\s\S]*?)```/g,
-                    '<pre class="bg-slate-100 rounded-lg p-4 mb-6 overflow-x-auto"><code class="text-sm text-slate-800">$2</code></pre>'
-                  )
-                  .replace(
-                    /`([^`]+)`/g,
-                    '<code class="bg-slate-100 px-2 py-1 rounded text-sm text-slate-800">$1</code>'
-                  )
-                  .replace(/^\|(.+)\|$/gm, (match, content) => {
-                    const cells = content
-                      .split("|")
-                      .map((cell: string) => cell.trim());
-                    return (
-                      "<tr>" +
-                      cells
-                        .map(
-                          (cell: string) =>
-                            `<td class="border border-slate-300 px-4 py-2">${cell}</td>`
-                        )
-                        .join("") +
-                      "</tr>"
-                    );
-                  })
-                  .replace(
-                    /(<tr>.*<\/tr>)/g,
-                    '<table class="w-full border-collapse border border-slate-300 mb-6">$1</table>'
-                  )
-                  .replace(
-                    /\n\n/g,
-                    '</p><p class="mb-4 text-slate-700 leading-relaxed">'
-                  )
-                  .replace(
-                    /^(.+)$/gm,
-                    '<p class="mb-4 text-slate-700 leading-relaxed">$1</p>'
-                  ),
-              }}
-            />
+            <div className="markdown-content">
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {post.content}
+              </ReactMarkdown>
+            </div>
           </div>
 
           {/* Article Footer */}
