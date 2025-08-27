@@ -29,6 +29,19 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Google Analytics Setup
+
+This project includes Google Analytics 4 (GA4) integration. To set it up:
+
+1. Create a `.env.local` file in the root directory
+2. Add your Google Analytics Measurement ID:
+   ```
+   NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+   ```
+3. Replace `G-XXXXXXXXXX` with your actual GA4 Measurement ID from Google Analytics
+
+The analytics component will automatically load when the environment variable is set.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
