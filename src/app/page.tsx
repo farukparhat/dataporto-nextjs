@@ -93,10 +93,10 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto mt-8">
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                One connection to your source, one control plane for governance,
-                and multiple delivery methods out of the box — Snowflake Data
-                Share, Databricks Delta Sharing, and sFTP — without rebuilding
-                pipelines for each client.
+                One connection to your data source, one control plane for
+                governance, and multiple delivery methods out of the box —
+                Snowflake Data Share, Databricks Delta Sharing, and sFTP —
+                without rebuilding pipelines for each client.
               </p>
             </div>
           </div>

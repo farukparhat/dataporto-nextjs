@@ -208,7 +208,7 @@ const initialNodes: Node[] = [
     type: "dataSource",
     position: { x: 50, y: 50 },
     data: {
-      label: "AWS",
+      label: "S3, RDS, EFS",
       icon: Aws,
       iconColor: "text-blue-600",
     },

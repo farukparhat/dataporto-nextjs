@@ -10,7 +10,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ArrowRight, Calendar } from "lucide-react";
+import { Menu, ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -67,7 +67,7 @@ export default function MobileSidebar() {
           {/* Navigation */}
           <nav className="flex-1 px-6 py-6">
             <div className="space-y-1">
-              {navigationItems.map((item, index) => (
+              {navigationItems.map((item) => (
                 <div key={item.href}>
                   {item.href.startsWith("/") ? (
                     <Link

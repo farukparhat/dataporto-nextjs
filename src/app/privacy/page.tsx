@@ -24,12 +24,12 @@ export default function PrivacyPage() {
             </Link>
           </div>
           <nav className="hidden md:flex space-x-6">
-            <a
+            <Link
               href="/#how-it-works"
               className="text-slate-600 hover:text-slate-900"
             >
               How it Works
-            </a>
+            </Link>
             <Link href="/blog" className="text-slate-600 hover:text-slate-900">
               Blog
             </Link>
