@@ -3,9 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import WaitlistButton from "@/components/waitlist-button";
 import { Separator } from "@/components/ui/separator";
 import FlowDiagram from "@/components/flow-diagram";
-import { Share2, ArrowRight, Check, Folder, Anchor } from "lucide-react";
+import { Share2, ArrowRight, Check, Folder } from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,7 +15,13 @@ export default function Home() {
       <header className="bg-white/90 backdrop-blur-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Anchor className="h-6 w-6" />
+            <Image
+              src="/icon.png"
+              alt="Dataporto"
+              width={24}
+              height={24}
+              className="h-6 w-6"
+            />
             <span className="text-2xl font-bold text-slate-900">dataporto</span>
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -505,7 +512,13 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Anchor className="h-6 w-6" />
+              <Image
+                src="/icon.png"
+                alt="Dataporto"
+                width={24}
+                height={24}
+                className="h-6 w-6"
+              />
               <span className="text-xl font-bold">dataporto</span>
             </div>
             <div className="flex space-x-6">

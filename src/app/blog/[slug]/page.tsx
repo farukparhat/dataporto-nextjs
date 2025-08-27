@@ -1,12 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Calendar, Clock, ArrowLeft, Anchor, Share2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/content/blog";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import Image from "next/image";
 
 interface BlogPostProps {
   params: Promise<{
@@ -28,7 +29,13 @@ export default async function BlogPost({ params }: BlogPostProps) {
       <header className="bg-white border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <Anchor className="h-6 w-6" />
+            <Image
+              src="/icon.png"
+              alt="Dataporto"
+              width={24}
+              height={24}
+              className="h-6 w-6"
+            />
             <span className="text-2xl font-bold text-slate-900">dataporto</span>
           </Link>
           <nav className="hidden md:flex space-x-6">
@@ -159,7 +166,13 @@ export default async function BlogPost({ params }: BlogPostProps) {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <Link href="/" className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Anchor className="h-6 w-6" />
+              <Image
+                src="/icon.png"
+                alt="Dataporto"
+                width={24}
+                height={24}
+                className="h-6 w-6"
+              />
               <span className="text-xl font-bold">dataporto</span>
             </Link>
             <div className="flex space-x-6">

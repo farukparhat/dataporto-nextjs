@@ -3,8 +3,9 @@
 import React from "react";
 import { ReactFlow, Node, Edge, Background, Handle, Position } from "reactflow";
 import "reactflow/dist/style.css";
-import { LucideIcon, Anchor, Folder, Users } from "lucide-react";
+import { LucideIcon, Folder, Users } from "lucide-react";
 import { Aws, DataBricks, Snowflake } from "./brand-icons";
+import Image from "next/image";
 
 interface NodeData {
   label: string;
@@ -41,7 +42,13 @@ const DataportoNode = ({ data }: { data: NodeData }) => {
   return (
     <div className="w-60 px-6 py-4 shadow-lg rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 border-2 border-blue-300 relative">
       <div className="flex items-center space-x-3">
-        <Anchor className="h-6 w-6 text-white" />
+        <Image
+          src="/icon-transparent-white.png"
+          alt="Dataporto"
+          width={24}
+          height={24}
+          className="h-6 w-6"
+        />
         <div className="text-lg font-bold text-white">{data.label}</div>
       </div>
       <div className="text-sm text-blue-100 mt-1">Manage your data shares</div>
