@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import supabaseAdminClient from "@/lib/supabase/admin";
+import { sendWaitlistNotification } from "@/lib/resend";
 
 const WaitlistSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
@@ -65,6 +66,22 @@ export async function joinWaitlist(
   if (error) {
     console.error(error);
     return { ok: false as const, message: "Failed to save. Please try again." };
+  }
+
+  // Send email notification
+  try {
+    await sendWaitlistNotification({
+      name,
+      email,
+      company,
+      title,
+      challenges,
+      clientCount,
+      source,
+    });
+  } catch (emailError) {
+    console.error("Failed to send email notification:", emailError);
+    // Don't fail the signup if email fails, just log the error
   }
 
   return { ok: true as const };
