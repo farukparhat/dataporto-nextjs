@@ -103,8 +103,107 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Enable Snowflake Data Shares Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge variant="secondary" className="mb-4">
+              Most Popular Use Case
+            </Badge>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Enable Snowflake Data Shares
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Many vendors today store data in Databricks, Postgres, BigQuery,
+              or other platforms, but their enterprise clients increasingly
+              demand Snowflake Data Shares. With Dataporto, vendors can meet
+              this demand — even if they don&apos;t have a Snowflake account.
+            </p>
+            <div className="mt-4">
+              <Badge variant="outline" className="text-sm">
+                Don&apos;t use Snowflake? No Problem
+              </Badge>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8">
+              <CardTitle className="text-xl mb-3">What You Get</CardTitle>
+              <ul className="space-y-3 text-slate-700">
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <span>
+                    Secure data ingestion and staging from any platform
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <span>
+                    Governed Snowflake Data Shares with client-specific controls
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <span>
+                    Snowflake Reader Accounts for clients without Snowflake
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <span>
+                    Live, zero-copy data access in the format clients expect
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <span>No custom pipeline development or maintenance</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card className="p-8">
+              <CardTitle className="text-xl mb-3">How It Works</CardTitle>
+              <div className="space-y-4">
+                <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <h4 className="font-semibold text-blue-900 mb-2">
+                    1. Ingest & Stage Your Data
+                  </h4>
+                  <p className="text-sm text-blue-800">
+                    Connect Dataporto to your data source, whether its
+                    Databricks, AWS S3, or another data stack.
+                  </p>
+                </div>
+                <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                  <h4 className="font-semibold text-green-900 mb-2">
+                    2. Provision Governed Shares
+                  </h4>
+                  <p className="text-sm text-blue-800">
+                    Use Dataporto to provision Snowflake Shares for your clients
+                  </p>
+                </div>
+                <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
+                  <h4 className="font-semibold text-purple-900 mb-2">
+                    3. Clients Get Live Access
+                  </h4>
+                  <p className="text-sm text-blue-800">
+                    Zero-copy data access in Snowflake with full governance
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <div className="text-center mt-8">
+            <WaitlistButton size="lg" className="text-lg px-8">
+              Enable Snowflake Shares from Any Source{" "}
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </WaitlistButton>
+          </div>
+        </div>
+      </section>
+
       {/* Before & After */}
-      <section id="before-after" className="py-20 bg-slate-50">
+      <section id="before-after" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -238,11 +337,11 @@ export default function Home() {
       </section>
 
       {/* Strategic Differentiators */}
-      <section id="differentiators" className="py-20 bg-white">
+      <section id="differentiators" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Why Teams Choose DataPorto
+              Why Teams Choose Dataporto
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               The only platform that delivers governed, multi-platform data
@@ -363,7 +462,7 @@ export default function Home() {
       </section>
 
       {/* Market Context & Competitive Landscape */}
-      <section id="market" className="py-20 bg-slate-50">
+      <section id="market" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -443,7 +542,7 @@ export default function Home() {
             <div className="p-8 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-lg text-white">
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4">
-                  DataPorto: The Complete Solution
+                  Dataporto: The Complete Solution
                 </h3>
                 <p className="text-lg text-blue-100 mb-6">
                   The only platform that orchestrates multi-source,
@@ -480,7 +579,7 @@ export default function Home() {
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Free up your engineering team to focus on core product development
             instead of maintaining custom per-client data sharing
-            infrastructure. DataPorto handles the complexity so you can focus on
+            infrastructure. Dataporto handles the complexity so you can focus on
             innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
