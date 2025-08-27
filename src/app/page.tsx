@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import WaitlistButton from "@/components/waitlist-button";
 import { Separator } from "@/components/ui/separator";
 import FlowDiagram from "@/components/flow-diagram";
-import { Share2, ArrowRight, Check, Folder } from "lucide-react";
+import { Share2, ArrowRight, Check, Folder, Trophy } from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
 import Link from "next/link";
 import Image from "next/image";
@@ -109,6 +109,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="mb-4">
+              <Trophy className="h-4 w-4 mr-2" />
               Most Popular Use Case
             </Badge>
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
