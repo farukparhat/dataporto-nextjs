@@ -2,7 +2,10 @@
 
 import { z } from "zod";
 import supabaseAdminClient from "@/lib/supabase/admin";
-import { sendWaitlistNotification } from "@/lib/resend";
+import {
+  sendWaitlistNotification,
+  sendProspectConfirmation,
+} from "@/lib/resend";
 
 const WaitlistSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
@@ -68,8 +71,9 @@ export async function joinWaitlist(
     return { ok: false as const, message: "Failed to save. Please try again." };
   }
 
-  // Send email notification
+  // Send email notifications
   try {
+    // Send notification to DataPorto team
     await sendWaitlistNotification({
       name,
       email,
@@ -79,8 +83,19 @@ export async function joinWaitlist(
       clientCount,
       source,
     });
+
+    // Send confirmation to prospect
+    await sendProspectConfirmation({
+      name,
+      email,
+      company,
+      title,
+      challenges,
+      clientCount,
+      source,
+    });
   } catch (emailError) {
-    console.error("Failed to send email notification:", emailError);
+    console.error("Failed to send email notifications:", emailError);
     // Don't fail the signup if email fails, just log the error
   }
 
