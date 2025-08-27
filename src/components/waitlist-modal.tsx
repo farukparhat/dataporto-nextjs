@@ -120,34 +120,6 @@ export default function WaitlistModal({
               </div>
             </div>
 
-            <div className="grid gap-2">
-              <label className="text-sm font-medium text-slate-700">
-                Current Data Sharing Challenges
-              </label>
-              <textarea
-                name="challenges"
-                rows={3}
-                className="rounded-md border px-3 py-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-blue-500 sm:py-2 sm:text-sm"
-                placeholder="Tell us about your current data sharing setup and pain points..."
-              />
-            </div>
-
-            <div className="grid gap-2">
-              <label className="text-sm font-medium text-slate-700">
-                Number of Clients
-              </label>
-              <select
-                name="clientCount"
-                className="h-11 rounded-md border px-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-blue-500 sm:h-10 sm:text-sm"
-              >
-                <option value="">Select range</option>
-                <option value="1-10">1-10 clients</option>
-                <option value="11-50">11-50 clients</option>
-                <option value="51-100">51-100 clients</option>
-                <option value="100+">100+ clients</option>
-              </select>
-            </div>
-
             {message && (
               <p
                 className="text-sm text-slate-600 p-3 bg-slate-50 rounded-md"
