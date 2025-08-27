@@ -7,6 +7,7 @@ import { Share2, ArrowRight, Check, Folder } from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
 import Link from "next/link";
 import Image from "next/image";
+import MobileSidebar from "@/components/mobile-sidebar";
 
 export default function Home() {
   return (
@@ -49,11 +50,11 @@ export default function Home() {
             <Link href="/blog" className="text-slate-600 hover:text-slate-900">
               Blog
             </Link>
-            <Link href="/demo" className="text-slate-600 hover:text-slate-900">
-              Demo
-            </Link>
           </nav>
-          <WaitlistButton>Schedule a Demo</WaitlistButton>
+          <div className="flex items-center space-x-4">
+            <MobileSidebar />
+            <WaitlistButton>Schedule a Demo</WaitlistButton>
+          </div>
         </div>
       </header>
 
