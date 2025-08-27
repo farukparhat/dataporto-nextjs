@@ -531,7 +531,10 @@ export default function Home() {
               <a href="#" className="text-slate-400 hover:text-white">
                 Terms
               </a>
-              <a href="#" className="text-slate-400 hover:text-white">
+              <a
+                href="mailto:hello@dataporto.com"
+                className="text-slate-400 hover:text-white"
+              >
                 Contact
               </a>
             </div>

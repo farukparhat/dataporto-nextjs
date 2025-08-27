@@ -182,9 +182,12 @@ export default async function BlogPost({ params }: BlogPostProps) {
               <Link href="#" className="text-slate-400 hover:text-white">
                 Terms
               </Link>
-              <Link href="#" className="text-slate-400 hover:text-white">
+              <a
+                href="mailto:hello@dataporto.com"
+                className="text-slate-400 hover:text-white"
+              >
                 Contact
-              </Link>
+              </a>
             </div>
           </div>
           <Separator className="my-8 bg-slate-700" />
