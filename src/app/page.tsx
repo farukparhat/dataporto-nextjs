@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import FlowDiagram from "@/components/flow-diagram";
 import { Share2, ArrowRight, Check, Folder, Anchor } from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -38,9 +39,9 @@ export default function Home() {
             <a href="#market" className="text-slate-600 hover:text-slate-900">
               Market
             </a>
-            <a href="/blog" className="text-slate-600 hover:text-slate-900">
+            <Link href="/blog" className="text-slate-600 hover:text-slate-900">
               Blog
-            </a>
+            </Link>
           </nav>
           <WaitlistButton>Schedule a Demo</WaitlistButton>
         </div>

@@ -18,52 +18,6 @@ const blogPosts = [
     featured: true,
   },
   {
-    id: "data-governance-at-scale",
-    title: "Data Governance at Scale: Client-by-Client Security Controls",
-    excerpt:
-      "Implement granular data masking, row-level security, and compliance controls that scale with your client base.",
-    author: "DataPorto Team",
-    date: "2025-08-08",
-    readTime: "6 min read",
-    category: "Governance",
-    featured: false,
-  },
-  {
-    id: "snowflake-vs-databricks-sharing",
-    title:
-      "Snowflake Data Share vs Databricks Delta Sharing: When to Use Which",
-    excerpt:
-      "A comprehensive comparison of native sharing capabilities and how to choose the right approach for your clients.",
-    author: "DataPorto Team",
-    date: "2025-07-28",
-    readTime: "10 min read",
-    category: "Technical",
-    featured: false,
-  },
-  {
-    id: "replacing-custom-pipelines",
-    title:
-      "Case Study: Replacing 50+ Custom Pipelines with a Single Control Plane",
-    excerpt:
-      "How a Fortune 500 company reduced engineering overhead by 80% while improving data delivery reliability.",
-    author: "DataPorto Team",
-    date: "2025-07-18",
-    readTime: "7 min read",
-    category: "Case Study",
-    featured: false,
-  },
-  {
-    id: "api-first-data-sharing",
-    title: "Building API-First Data Sharing Workflows",
-    excerpt:
-      "Automate client onboarding, schema updates, and access revocation with programmatic control.",
-    author: "DataPorto Team",
-    date: "2025-06-25",
-    readTime: "5 min read",
-    category: "Technical",
-    featured: false,
-  },
-  {
     id: "enterprise-security-compliance",
     title: "Enterprise Security and Compliance in Data Sharing",
     excerpt:

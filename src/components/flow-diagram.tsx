@@ -4,7 +4,7 @@ import React from "react";
 import { ReactFlow, Node, Edge, Background, Handle, Position } from "reactflow";
 import "reactflow/dist/style.css";
 import { LucideIcon, Anchor, Folder, Users } from "lucide-react";
-import { Aws, DataBricks, Postgres, Snowflake } from "./brand-icons";
+import { Aws, DataBricks, Snowflake } from "./brand-icons";
 
 interface NodeData {
   label: string;
