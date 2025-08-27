@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import WaitlistButton from "@/components/waitlist-button";
 
 export default function MobileSidebar() {
   const [open, setOpen] = useState(false);
@@ -108,13 +107,13 @@ export default function MobileSidebar() {
               <p className="text-sm text-slate-600">
                 See how dataporto can transform your data sharing operations
               </p>
-              <WaitlistButton
-                source="mobile-sidebar"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+              <Link
+                href="/demo"
+                className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors"
                 onClick={() => setOpen(false)}
               >
                 Schedule Demo
-              </WaitlistButton>
+              </Link>
             </div>
           </div>
 
