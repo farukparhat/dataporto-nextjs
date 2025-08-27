@@ -1,9 +1,11 @@
 import { multiPlatformDataSharingGuide } from "./multi-platform-data-sharing-guide";
 import { enterpriseSecurityCompliance } from "./enterprise-security-compliance";
+import { howToShareDataWithClients } from "./how-to-share-data-with-clients";
 
 export const blogPosts = {
   [multiPlatformDataSharingGuide.id]: multiPlatformDataSharingGuide,
   [enterpriseSecurityCompliance.id]: enterpriseSecurityCompliance,
+  [howToShareDataWithClients.id]: howToShareDataWithClients,
 };
 
 export type BlogPost = typeof multiPlatformDataSharingGuide;
