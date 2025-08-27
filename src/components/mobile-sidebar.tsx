@@ -19,9 +19,6 @@ export default function MobileSidebar() {
 
   const navigationItems = [
     { href: "#how-it-works", label: "How it Works" },
-    { href: "#before-after", label: "Before & After" },
-    { href: "#differentiators", label: "Differentiators" },
-    { href: "#market", label: "Market" },
     { href: "/blog", label: "Blog" },
     { href: "/demo", label: "Demo" },
   ];

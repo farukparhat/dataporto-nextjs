@@ -32,21 +32,6 @@ export default function Home() {
             >
               How it Works
             </a>
-            <a
-              href="#before-after"
-              className="text-slate-600 hover:text-slate-900"
-            >
-              Before & After
-            </a>
-            <a
-              href="#differentiators"
-              className="text-slate-600 hover:text-slate-900"
-            >
-              Differentiators
-            </a>
-            <a href="#market" className="text-slate-600 hover:text-slate-900">
-              Market
-            </a>
             <Link href="/blog" className="text-slate-600 hover:text-slate-900">
               Blog
             </Link>
