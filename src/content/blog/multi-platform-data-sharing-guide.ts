@@ -7,7 +7,7 @@ export const multiPlatformDataSharingGuide = {
   date: "2025-08-15",
   readTime: "8 min read",
   category: "Best Practices",
-  featured: true,
+  featured: false,
   content: `
 # The Complete Guide to Multi-Platform Data Sharing
 
