@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { blogPosts } from "@/content/blog";
+import { blogPosts, type BlogPost } from "@/content/blog";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Image from "next/image";
@@ -17,7 +17,7 @@ interface BlogPostProps {
 
 export default async function BlogPost({ params }: BlogPostProps) {
   const { slug } = await params;
-  const post = blogPosts[slug as keyof typeof blogPosts];
+  const post = blogPosts[slug as keyof typeof blogPosts] as BlogPost;
 
   if (!post) {
     notFound();
@@ -97,6 +97,13 @@ export default async function BlogPost({ params }: BlogPostProps) {
           </div>
 
           <Separator className="mb-8" />
+
+          {/* Header Component (if present) */}
+          {post.headerComponent && (
+            <div className="mb-8">
+              <post.headerComponent />
+            </div>
+          )}
 
           {/* Article Content */}
           <div className="prose prose-lg prose-slate max-w-none">
@@ -211,7 +218,7 @@ export async function generateStaticParams() {
 // Generate metadata for each blog post
 export async function generateMetadata({ params }: BlogPostProps) {
   const { slug } = await params;
-  const post = blogPosts[slug as keyof typeof blogPosts];
+  const post = blogPosts[slug as keyof typeof blogPosts] as BlogPost;
 
   if (!post) {
     return {

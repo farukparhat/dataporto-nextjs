@@ -1,3 +1,4 @@
+import React from "react";
 import { multiPlatformDataSharingGuide } from "./multi-platform-data-sharing-guide";
 import { enterpriseSecurityCompliance } from "./enterprise-security-compliance";
 import { howToShareDataWithClients } from "./how-to-share-data-with-clients";
@@ -10,7 +11,9 @@ export const blogPosts = {
   [snowflakeFromDatabricks.id]: snowflakeFromDatabricks,
 };
 
-export type BlogPost = typeof multiPlatformDataSharingGuide;
+export type BlogPost = typeof multiPlatformDataSharingGuide & {
+  headerComponent?: React.ComponentType;
+};
 
 export const getAllBlogPosts = () => Object.values(blogPosts);
 

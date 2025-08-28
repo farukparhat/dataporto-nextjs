@@ -1,3 +1,5 @@
+import DataSharingWorkflowDiagramClient from "@/components/data-sharing-workflow-diagram-client";
+
 export const snowflakeFromDatabricks = {
   id: "snowflake-data-shares-from-databricks",
   title: "How to Enable Snowflake Data Shares from Databricks (AWS RDS Source)",
@@ -8,6 +10,7 @@ export const snowflakeFromDatabricks = {
   readTime: "11 min read",
   category: "Technical Guide",
   featured: true,
+  headerComponent: DataSharingWorkflowDiagramClient,
   content: `
 # How to Enable Snowflake Data Shares from Databricks (AWS RDS Source)
 
