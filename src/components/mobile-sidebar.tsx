@@ -14,10 +14,28 @@ import { Menu, ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
+type NavigationItem = {
+  href?: string;
+  label: string;
+  children?: { href: string; label: string }[];
+  isExpanded?: boolean;
+};
+
 export default function MobileSidebar() {
   const [open, setOpen] = useState(false);
 
-  const navigationItems = [
+  const navigationItems: NavigationItem[] = [
+    {
+      label: "Solutions",
+      isExpanded: true,
+      children: [
+        { href: "#snowflake-shares", label: "Snowflake Data Shares" },
+        { href: "#databricks-sharing", label: "Databricks Delta Sharing" },
+        { href: "#sftp-delivery", label: "sFTP File Delivery" },
+        { href: "#multi-platform", label: "Multi-Platform Orchestration" },
+        { href: "#governance", label: "Data Governance & Security" },
+      ],
+    },
     { href: "#how-it-works", label: "How it Works" },
     { href: "/blog", label: "Blog" },
     { href: "/demo", label: "Demo" },
@@ -68,8 +86,27 @@ export default function MobileSidebar() {
           <nav className="flex-1 px-6 py-6">
             <div className="space-y-1">
               {navigationItems.map((item) => (
-                <div key={item.href}>
-                  {item.href.startsWith("/") ? (
+                <div key={item.href || item.label}>
+                  {item.children ? (
+                    // Solutions section with children
+                    <div className="space-y-1">
+                      <div className="px-4 py-3 text-base font-semibold text-slate-900 bg-slate-50 rounded-lg">
+                        {item.label}
+                      </div>
+                      <div className="ml-4 space-y-1">
+                        {item.children.map((child) => (
+                          <button
+                            key={child.href}
+                            onClick={() => handleNavClick(child.href)}
+                            className="flex items-center w-full px-4 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-all duration-200 text-left group"
+                          >
+                            <span className="flex-1">{child.label}</span>
+                            <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ) : item.href?.startsWith("/") ? (
                     <Link
                       href={item.href}
                       className="flex items-center px-4 py-3 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-all duration-200 group"
@@ -80,7 +117,7 @@ export default function MobileSidebar() {
                     </Link>
                   ) : (
                     <button
-                      onClick={() => handleNavClick(item.href)}
+                      onClick={() => handleNavClick(item.href!)}
                       className="flex items-center w-full px-4 py-3 text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-all duration-200 text-left group"
                     >
                       <span className="flex-1">{item.label}</span>

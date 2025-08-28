@@ -195,3 +195,23 @@
     @apply border-slate-300 my-8;
   }
 }
+
+a {
+  @apply cursor-pointer;
+}
+
+/* Enhanced dropdown styling */
+.dropdown-content {
+  animation-duration: 0.15s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Smooth hover transitions for dropdown items */
+[data-slot="dropdown-menu-item"] {
+  transition: all 0.15s ease-in-out;
+}
+
+/* Enhanced focus styles for better accessibility */
+[data-slot="dropdown-menu-trigger"]:focus-visible {
+  @apply ring-2 ring-blue-500/50 ring-offset-2;
+}

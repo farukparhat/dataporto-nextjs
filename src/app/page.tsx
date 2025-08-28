@@ -3,11 +3,24 @@ import { Badge } from "@/components/ui/badge";
 import WaitlistButton from "@/components/waitlist-button";
 import { Separator } from "@/components/ui/separator";
 import FlowDiagram from "@/components/flow-diagram";
-import { Share2, ArrowRight, Check, Folder, Trophy } from "lucide-react";
+import {
+  Share2,
+  ArrowRight,
+  Check,
+  Folder,
+  Trophy,
+  ChevronDown,
+} from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
 import Link from "next/link";
 import Image from "next/image";
 import MobileSidebar from "@/components/mobile-sidebar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Home() {
   return (
@@ -25,14 +38,119 @@ export default function Home() {
             />
             <span className="text-2xl font-bold text-slate-900">dataporto</span>
           </div>
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex space-x-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="cursor-pointer group flex items-center gap-1 px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50">
+                <span className="font-medium">Solutions</span>
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="start"
+                className="w-64 mt-2 bg-white border border-slate-200 shadow-lg rounded-lg p-2"
+                sideOffset={8}
+              >
+                <DropdownMenuItem asChild>
+                  <a
+                    href="#snowflake-shares"
+                    className="flex items-start gap-3 p-3 rounded-md hover:bg-blue-50 transition-colors group"
+                  >
+                    <div className="p-1.5 bg-blue-100 rounded-md group-hover:bg-blue-200 transition-colors">
+                      <Snowflake className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-slate-900">
+                        Snowflake Data Shares
+                      </div>
+                      <div className="text-xs text-slate-500 mt-0.5">
+                        Zero-copy data sharing
+                      </div>
+                    </div>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="#databricks-sharing"
+                    className="flex items-start gap-3 p-3 rounded-md hover:bg-orange-50 transition-colors group"
+                  >
+                    <div className="p-1.5 bg-orange-100 rounded-md group-hover:bg-orange-200 transition-colors">
+                      <DataBricks className="h-4 w-4 text-orange-600" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-slate-900">
+                        Databricks Delta Sharing
+                      </div>
+                      <div className="text-xs text-slate-500 mt-0.5">
+                        Live data in Databricks
+                      </div>
+                    </div>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="#sftp-delivery"
+                    className="flex items-start gap-3 p-3 rounded-md hover:bg-green-50 transition-colors group"
+                  >
+                    <div className="p-1.5 bg-green-100 rounded-md group-hover:bg-green-200 transition-colors">
+                      <Folder className="h-4 w-4 text-green-600" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-slate-900">
+                        sFTP File Delivery
+                      </div>
+                      <div className="text-xs text-slate-500 mt-0.5">
+                        Automated file transfers
+                      </div>
+                    </div>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="#multi-platform"
+                    className="flex items-start gap-3 p-3 rounded-md hover:bg-purple-50 transition-colors group"
+                  >
+                    <div className="p-1.5 bg-purple-100 rounded-md group-hover:bg-purple-200 transition-colors">
+                      <Share2 className="h-4 w-4 text-purple-600" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-slate-900">
+                        Multi-Platform Orchestration
+                      </div>
+                      <div className="text-xs text-slate-500 mt-0.5">
+                        Unified control plane
+                      </div>
+                    </div>
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a
+                    href="#governance"
+                    className="flex items-start gap-3 p-3 rounded-md hover:bg-indigo-50 transition-colors group"
+                  >
+                    <div className="p-1.5 bg-indigo-100 rounded-md group-hover:bg-indigo-200 transition-colors">
+                      <Check className="h-4 w-4 text-indigo-600" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-slate-900">
+                        Data Governance & Security
+                      </div>
+                      <div className="text-xs text-slate-500 mt-0.5">
+                        Enterprise-grade controls
+                      </div>
+                    </div>
+                  </a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a
               href="#how-it-works"
-              className="text-slate-600 hover:text-slate-900"
+              className="flex items-center px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50 font-medium"
             >
               How it Works
             </a>
-            <Link href="/blog" className="text-slate-600 hover:text-slate-900">
+            <Link
+              href="/blog"
+              className="flex items-center px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-slate-50 font-medium"
+            >
               Blog
             </Link>
           </nav>
@@ -105,7 +223,7 @@ export default function Home() {
       </section>
 
       {/* Enable Snowflake Data Shares Section */}
-      <section className="py-20 bg-slate-50">
+      <section id="snowflake-shares" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <Badge variant="secondary" className="mb-4">
@@ -339,7 +457,7 @@ export default function Home() {
       </section>
 
       {/* Strategic Differentiators */}
-      <section id="differentiators" className="py-20 bg-slate-50">
+      <section id="governance" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -463,8 +581,199 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Databricks Delta Sharing Section */}
+      <section id="databricks-sharing" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Databricks Delta Sharing
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Enable secure, governed data sharing through Databricks Delta
+              Sharing protocol, allowing clients to access live data directly in
+              their Databricks workspaces.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8">
+              <CardTitle className="text-xl mb-3">
+                Delta Sharing Benefits
+              </CardTitle>
+              <ul className="space-y-3 text-slate-700">
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <span>Zero-copy data access in Databricks</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <span>Real-time data synchronization</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <span>Built-in versioning and lineage</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <span>Client-specific access controls</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card className="p-8">
+              <CardTitle className="text-xl mb-3">Use Cases</CardTitle>
+              <div className="space-y-4">
+                <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
+                  <h4 className="font-semibold text-orange-900 mb-2">
+                    ML Model Training Data
+                  </h4>
+                  <p className="text-sm text-orange-800">
+                    Share training datasets directly to client Databricks
+                    environments
+                  </p>
+                </div>
+                <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <h4 className="font-semibold text-blue-900 mb-2">
+                    Analytics & BI
+                  </h4>
+                  <p className="text-sm text-blue-800">
+                    Enable real-time analytics on shared data tables
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* sFTP File Delivery Section */}
+      <section id="sftp-delivery" className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              sFTP File Delivery
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Automated, secure file transfer for clients who require
+              traditional file-based data delivery with modern governance and
+              monitoring capabilities.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <Card className="p-6">
+              <h3 className="font-semibold text-slate-900 mb-3">
+                Automated Scheduling
+              </h3>
+              <p className="text-sm text-slate-600 mb-4">
+                Configure daily, weekly, or custom delivery schedules with
+                automatic retry logic
+              </p>
+              <div className="text-xs text-slate-500">
+                ✓ Flexible scheduling
+                <br />
+                ✓ Failure handling
+                <br />✓ Delivery confirmation
+              </div>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className="font-semibold text-slate-900 mb-3">
+                Format Flexibility
+              </h3>
+              <p className="text-sm text-slate-600 mb-4">
+                Support for CSV, Parquet, JSON, and custom formats with data
+                transformation
+              </p>
+              <div className="text-xs text-slate-500">
+                ✓ Multiple formats
+                <br />
+                ✓ Data transformation
+                <br />✓ Compression options
+              </div>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className="font-semibold text-slate-900 mb-3">
+                Enterprise Security
+              </h3>
+              <p className="text-sm text-slate-600 mb-4">
+                Encrypted transfers with audit logs and client-specific access
+                controls
+              </p>
+              <div className="text-xs text-slate-500">
+                ✓ End-to-end encryption
+                <br />
+                ✓ Audit trails
+                <br />✓ Access management
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Multi-Platform Orchestration Section */}
+      <section id="multi-platform" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Multi-Platform Orchestration
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Unified control plane for managing data delivery across Snowflake,
+              Databricks, sFTP, and more - all from a single interface.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-8 bg-gradient-to-r from-slate-50 to-blue-50 border-blue-200">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">
+                    One Control Plane, Every Platform
+                  </h3>
+                  <ul className="space-y-3 text-slate-700">
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                      <span>Snowflake Data Shares</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                      <span>Databricks Delta Sharing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                      <span>sFTP File Delivery</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                      <span>REST API Access</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-800 mb-3">
+                    Smart Routing & Governance
+                  </h4>
+                  <p className="text-sm text-slate-600 mb-4">
+                    Automatically route data to the right platform with
+                    consistent governance policies applied across all delivery
+                    methods.
+                  </p>
+                  <div className="text-center">
+                    <WaitlistButton>
+                      Learn More About Multi-Platform
+                    </WaitlistButton>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Market Context & Competitive Landscape */}
-      <section id="market" className="py-20 bg-white">
+      <section id="market" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
