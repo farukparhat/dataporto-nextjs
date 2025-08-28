@@ -1,13 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts, type BlogPost } from "@/content/blog";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Image from "next/image";
+import { ShareButton } from "@/components/share-button";
 
 interface BlogPostProps {
   params: Promise<{
@@ -80,10 +81,12 @@ export default async function BlogPost({ params }: BlogPostProps) {
                 {post.readTime}
               </div>
               <div className="ml-auto">
-                <button className="flex items-center text-slate-600 hover:text-slate-900">
-                  <Share2 className="h-4 w-4 mr-1" />
-                  Share
-                </button>
+                <ShareButton
+                  title={post.title}
+                  text={post.excerpt}
+                  size="sm"
+                  variant="ghost"
+                />
               </div>
             </div>
 
@@ -121,9 +124,12 @@ export default async function BlogPost({ params }: BlogPostProps) {
                 Written by {post.author}
               </div>
               <div className="flex items-center space-x-4">
-                <button className="text-slate-600 hover:text-slate-900">
-                  <Share2 className="h-5 w-5" />
-                </button>
+                <ShareButton
+                  title={post.title}
+                  text={post.excerpt}
+                  size="md"
+                  variant="ghost"
+                />
               </div>
             </div>
           </div>
