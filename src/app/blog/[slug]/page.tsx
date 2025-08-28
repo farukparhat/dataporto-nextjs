@@ -3,12 +3,13 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { blogPosts, type BlogPost } from "@/content/blog";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Image from "next/image";
 import { ShareButton } from "@/components/share-button";
+import Header from "@/components/header";
 
 interface BlogPostProps {
   params: Promise<{
@@ -26,29 +27,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/icon.png"
-              alt="Dataporto"
-              width={24}
-              height={24}
-              className="h-6 w-6"
-            />
-            <span className="text-2xl font-bold text-slate-900">dataporto</span>
-          </Link>
-          <nav className="hidden md:flex space-x-6">
-            <Link href="/" className="text-slate-600 hover:text-slate-900">
-              Home
-            </Link>
-            <Link href="/blog" className="text-slate-600 hover:text-slate-900">
-              Blog
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Back to Blog */}
       <div className="container mx-auto px-4 py-6">

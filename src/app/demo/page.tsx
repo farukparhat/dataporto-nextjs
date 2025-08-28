@@ -11,48 +11,12 @@ import { Check, Calendar, Users, Shield, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import DemoSignupForm from "@/components/demo-signup-form";
+import Header from "@/components/header";
 
 export default function DemoPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/icon.png"
-              alt="Dataporto"
-              width={24}
-              height={24}
-              className="h-6 w-6"
-            />
-            <span className="text-2xl font-bold text-slate-900">dataporto</span>
-          </Link>
-          <nav className="hidden md:flex space-x-6">
-            <Link
-              href="/#how-it-works"
-              className="text-slate-600 hover:text-slate-900"
-            >
-              How it Works
-            </Link>
-            <Link
-              href="/#before-after"
-              className="text-slate-600 hover:text-slate-900"
-            >
-              Before & After
-            </Link>
-            <Link
-              href="/#differentiators"
-              className="text-slate-600 hover:text-slate-900"
-            >
-              Differentiators
-            </Link>
-            <Link href="/blog" className="text-slate-600 hover:text-slate-900">
-              Blog
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 text-center">

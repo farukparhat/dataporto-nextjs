@@ -39,6 +39,7 @@ export default function MobileSidebar() {
     { href: "#how-it-works", label: "How it Works" },
     { href: "/blog", label: "Blog" },
     { href: "/demo", label: "Demo" },
+    { href: "/login", label: "Log In" },
   ];
 
   const handleNavClick = (href: string) => {

@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import Header from "@/components/header";
 
 import { getFeaturedPost, getRegularPosts } from "@/content/blog";
 
@@ -13,29 +14,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Header */}
-      <header className="bg-white border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/icon.png"
-              alt="Dataporto"
-              width={24}
-              height={24}
-              className="h-6 w-6"
-            />
-            <span className="text-2xl font-bold text-slate-900">dataporto</span>
-          </Link>
-          <nav className="hidden md:flex space-x-6">
-            <Link href="/" className="text-slate-600 hover:text-slate-900">
-              Home
-            </Link>
-            <Link href="/blog" className="text-slate-900 font-medium">
-              Blog
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="bg-white pt-16 pb-8">

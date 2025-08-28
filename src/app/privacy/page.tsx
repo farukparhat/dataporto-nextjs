@@ -1,41 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
-import Image from "next/image";
+import Header from "@/components/header";
 
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/icon.png"
-                alt="Dataporto"
-                width={24}
-                height={24}
-                className="h-6 w-6"
-              />
-              <span className="text-2xl font-bold text-slate-900">
-                dataporto
-              </span>
-            </Link>
-          </div>
-          <nav className="hidden md:flex space-x-6">
-            <Link
-              href="/#how-it-works"
-              className="text-slate-600 hover:text-slate-900"
-            >
-              How it Works
-            </Link>
-            <Link href="/blog" className="text-slate-600 hover:text-slate-900">
-              Blog
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Privacy Policy Content */}
       <div className="container mx-auto px-4 py-12">
