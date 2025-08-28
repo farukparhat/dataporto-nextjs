@@ -194,14 +194,38 @@ const OutputNode = ({ data }: { data: NodeData }) => {
   );
 };
 
+// Custom node component for grouping labels
+const GroupLabelNode = ({ data }: { data: NodeData }) => {
+  return (
+    <div className="w-52 h-64 bg-white/50 border border-gray-200 rounded-lg p-4 pb-8 relative">
+      <div className="absolute bottom-2 left-0 right-0 text-sm font-medium text-gray-600 text-center">
+        {data.label}
+      </div>
+    </div>
+  );
+};
+
 const nodeTypes = {
   dataSource: DataSourceNode,
   dataporto: DataportoNode,
   client: ClientNode,
   output: OutputNode,
+  groupLabel: GroupLabelNode,
 };
 
 const initialNodes: Node[] = [
+  // Data Sources Group Label (Background)
+  {
+    id: "data-sources-group",
+    type: "groupLabel",
+    position: { x: 25, y: 25 },
+    data: {
+      label: "Your Data Sources",
+    },
+    draggable: false,
+    selectable: false,
+  },
+
   // Data Source Nodes (Left side)
   {
     id: "postgres",
@@ -380,7 +404,7 @@ const initialEdges: Edge[] = [
 
 export default function FlowDiagram() {
   return (
-    <div className="w-full h-96 bg-gray-50 rounded-lg border">
+    <div className="w-full h-96 bg-gray-50 rounded-lg border relative">
       <style jsx global>{`
         .react-flow__node {
           border: none !important;
@@ -401,6 +425,10 @@ export default function FlowDiagram() {
           cursor: default !important;
         }
         .react-flow__node-client {
+          border: none !important;
+          cursor: default !important;
+        }
+        .react-flow__node-groupLabel {
           border: none !important;
           cursor: default !important;
         }
