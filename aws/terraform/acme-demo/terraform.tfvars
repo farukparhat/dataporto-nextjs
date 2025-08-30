@@ -1,0 +1,6 @@
+project     = "acme"
+aws_region  = "us-west-1"
+db_username = "demo_user"
+db_password = "ChangeMe123!Strong"
+# Put YOUR IP with /32. Find it via https://ifconfig.me or "curl ifconfig.me"
+my_ip_cidr  = "95.98.37.17/32"
