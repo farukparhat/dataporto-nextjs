@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": false,
+                    "requestCert": false
+                }
+            },
+            "previewLimit": 50,
+            "server": "acme-demo-ewxf.cnqi0220mnox.us-west-1.rds.amazonaws.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Sandbox Acme RDS",
+            "database": "demo",
+            "username": "demo_user"
+        }
+    ]
+}
