@@ -35,7 +35,7 @@ resource "aws_security_group_rule" "rds_ingress_from_dms" {
   protocol                 = "tcp"
   security_group_id        = var.rds_security_group_id
   source_security_group_id = aws_security_group.dms.id
-  description              = "Allow DMS -> RDS"
+  description              = "Allow DMS to connect to RDS"
 }
 
 # Optional: open egress for DMS to S3 and internet (NAT recommended)
@@ -105,6 +105,47 @@ resource "aws_iam_role_policy_attachment" "dms_s3_access" {
   policy_arn = aws_iam_policy.dms_s3_access.arn
 }
 
+# --- IAM for Secrets Manager access (for source endpoint credentials) ---
+data "aws_iam_policy_document" "dms_secrets_trust" {
+  statement {
+    actions = ["sts:AssumeRole"]
+    principals {
+      type        = "Service"
+      identifiers = ["dms.amazonaws.com"]
+    }
+  }
+}
+
+resource "aws_iam_role" "dms_secrets" {
+  name               = "${local.name}-secrets-role"
+  assume_role_policy = data.aws_iam_policy_document.dms_secrets_trust.json
+  tags               = var.tags
+}
+
+data "aws_iam_policy_document" "dms_secrets_access" {
+  statement {
+    sid     = "SecretsManagerRead"
+    effect  = "Allow"
+    actions = [
+      "secretsmanager:GetSecretValue",
+      "secretsmanager:DescribeSecret"
+    ]
+    resources = [
+      var.rds_secrets_manager_secret_arn
+    ]
+  }
+}
+
+resource "aws_iam_policy" "dms_secrets_access" {
+  name   = "${local.name}-secrets-policy"
+  policy = data.aws_iam_policy_document.dms_secrets_access.json
+}
+
+resource "aws_iam_role_policy_attachment" "dms_secrets_access" {
+  role       = aws_iam_role.dms_secrets.name
+  policy_arn = aws_iam_policy.dms_secrets_access.arn
+}
+
 # --- DMS replication instance ---
 resource "aws_dms_replication_instance" "this" {
   replication_instance_id      = "${local.name}-ri"
@@ -127,12 +168,8 @@ resource "aws_dms_endpoint" "source" {
   endpoint_type = "source"
   engine_name   = var.rds_engine # "postgres" or "mysql"
 
-  # Option A: use plaintext creds (recommend storing via TF var files/SSM)
-  username = var.rds_username
-  password = var.rds_password
-
-  # Option B: Secrets Manager (preferred). If provided, DMS will ignore username/password above.
-  secrets_manager_access_role_arn = var.rds_secrets_manager_access_role_arn
+  # Required
+  secrets_manager_access_role_arn = aws_iam_role.dms_secrets.arn
   secrets_manager_arn             = var.rds_secrets_manager_secret_arn
 
   server_name   = var.rds_hostname
@@ -146,30 +183,28 @@ resource "aws_dms_endpoint" "source" {
 }
 
 # --- Target endpoint (S3) ---
-resource "aws_dms_endpoint" "target" {
+resource "aws_dms_s3_endpoint" "target" {
   endpoint_id   = "${local.name}-tgt"
   endpoint_type = "target"
-  engine_name   = "s3"
 
-  s3_settings {
-    bucket_name               = var.s3_bucket
-    bucket_folder             = trim(var.s3_prefix, "/")
-    service_access_role_arn   = aws_iam_role.dms_s3.arn
-    compression_type          = var.s3_compression_type # "GZIP" or "NONE"
-    data_format               = var.s3_data_format      # "parquet" or "csv"
-    encoding_type             = "utf8"
-    date_partition_enabled    = true
-    date_partition_delimiter  = "SLASH"
-    cdc_inserts_only          = false
-    parquet_version           = "PARQUET_2_0"
-    timestamp_column_name     = var.timestamp_column_name # e.g. "_ingested_at"
-    kms_key_arn               = var.s3_kms_key_arn
-    max_file_size             = var.max_file_mb # MB
-    external_table_definition = null
-    cdc_path                  = var.cdc_path # e.g. "cdc/"
-    add_column_name           = false
-    dict_page_size_limit      = 1024
-  }
+  bucket_name               = var.s3_bucket
+  bucket_folder             = trim(var.s3_prefix, "/")
+  service_access_role_arn   = aws_iam_role.dms_s3.arn
+  compression_type          = var.s3_compression_type # "GZIP" or "NONE"
+  data_format               = var.s3_data_format      # "parquet" or "csv"
+  encoding_type             = "plain"
+  date_partition_enabled    = true
+  date_partition_delimiter  = "SLASH"
+  cdc_inserts_only          = false
+  parquet_version           = "parquet-2-0"
+  timestamp_column_name     = var.timestamp_column_name # e.g. "_ingested_at"
+  ssl_mode                  = "require"
+  kms_key_arn               = var.s3_kms_key_arn
+  max_file_size             = var.max_file_mb # MB
+  external_table_definition = null
+  cdc_path                  = var.cdc_path # e.g. "cdc/"
+  add_column_name           = false
+  dict_page_size_limit      = 1024
 
   tags = var.tags
 }
@@ -243,7 +278,7 @@ resource "aws_dms_replication_task" "this" {
   migration_type            = var.enable_cdc ? "full-load-and-cdc" : "full-load"
   replication_instance_arn  = aws_dms_replication_instance.this.replication_instance_arn
   source_endpoint_arn       = aws_dms_endpoint.source.endpoint_arn
-  target_endpoint_arn       = aws_dms_endpoint.target.endpoint_arn
+  target_endpoint_arn       = aws_dms_s3_endpoint.target.endpoint_arn
   table_mappings            = local.table_mappings
   replication_task_settings = local.task_settings
   tags                      = var.tags

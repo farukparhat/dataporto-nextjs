@@ -12,25 +12,9 @@ variable "rds_hostname" { type = string }
 variable "rds_port" { type = number }
 variable "rds_database" { type = string }
 
-# Creds (Option A - plaintext; consider passing via TF Cloud/SSM)
-variable "rds_username" {
-  type    = string
-  default = null
-}
-
-variable "rds_password" {
-  type    = string
-  default = null
-}
-
-# Creds (Option B - Secrets Manager; preferred)
+# Secrets Manager
 variable "rds_secrets_manager_secret_arn" {
   type    = string
-  default = null
-}
-variable "rds_secrets_manager_access_role_arn" {
-  type    = string
-  default = null
 }
 
 # What to move
