@@ -105,7 +105,7 @@ variable "source_extra_connection_attributes" {
 # CDC on/off
 variable "enable_cdc" {
   type    = bool
-  default = false
+  default = true
 }
 
 # Tags
