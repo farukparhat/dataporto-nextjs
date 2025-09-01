@@ -172,8 +172,6 @@ resource "aws_dms_endpoint" "source" {
   secrets_manager_access_role_arn = aws_iam_role.dms_secrets.arn
   secrets_manager_arn             = var.rds_secrets_manager_secret_arn
 
-  server_name   = var.rds_hostname
-  port          = var.rds_port
   database_name = var.rds_database
 
   # Postgres extra attribs commonly useful

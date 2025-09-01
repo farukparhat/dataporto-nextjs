@@ -66,7 +66,7 @@ resource "aws_secretsmanager_secret_version" "rds_credentials" {
 # RDS Parameter Group
 resource "aws_db_parameter_group" "main" {
   count       = var.engine == "postgres" ? 1 : 0
-  family      = "postgres15"
+  family      = "postgres17"
   name        = "${var.name_prefix}-pg-params"
   description = "Parameter group for ${var.name_prefix} PostgreSQL"
 

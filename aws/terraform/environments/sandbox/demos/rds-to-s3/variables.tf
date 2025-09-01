@@ -1,19 +1,4 @@
-# Network configuration
-variable "vpc_id" {
-  description = "VPC ID where resources will be deployed"
-  type        = string
-}
-
-variable "subnet_ids" {
-  description = "List of subnet IDs for RDS and DMS (should be in different AZs)"
-  type        = list(string)
-}
-
-variable "vpc_cidr" {
-  description = "VPC CIDR block for security group rules"
-  type        = string
-  default     = "10.0.0.0/16"
-}
+# Network configuration now comes from the VPC module; no inputs needed here
 
 # S3 configuration
 variable "s3_bucket" {

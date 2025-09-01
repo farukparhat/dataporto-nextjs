@@ -22,7 +22,7 @@ Edit **terraform.tfvars** with your values:
 
 ```hcl
 project     = "dataporto"
-aws_region  = "us-east-1"
+aws_region  = "us-west-1"
 db_username = "demo_user"
 db_password = "ChangeMe123!Strong"
 my_ip_cidr  = "95.98.37.17/32"   # Your IP address with /32

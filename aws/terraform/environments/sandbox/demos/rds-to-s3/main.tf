@@ -2,13 +2,26 @@ provider "aws" {
   region = "us-west-1"
 }
 
+module "network" {
+  source      = "../../../../modules/vpc"
+  name_prefix = "acme-demo"
+  vpc_cidr    = "10.0.0.0/16"
+  num_azs     = 2
+
+  tags = {
+    Project = "Acme"
+    Env     = "demo"
+    Purpose = "RDS-to-S3-migration-demo"
+  }
+}
+
 # Create RDS instance with sample data
 module "rds_with_sample_data" {
   source = "../../../../modules/rds-with-sample-data"
 
   name_prefix = "acme-demo"
-  vpc_id      = var.vpc_id
-  subnet_ids  = var.subnet_ids
+  vpc_id      = module.network.vpc_id
+  subnet_ids  = module.network.private_subnet_ids
 
   # Database configuration
   engine         = "postgres"
@@ -17,10 +30,10 @@ module "rds_with_sample_data" {
   db_username    = "demo_user"
 
   # Network security - allow access from VPC
-  allowed_cidr_blocks = [var.vpc_cidr]
+  allowed_cidr_blocks = [module.network.vpc_cidr]
 
   # Enable sample data population
-  populate_sample_data = true
+  populate_sample_data = false
 
   # Storage configuration
   allocated_storage     = 20
@@ -43,8 +56,8 @@ module "rds_to_s3" {
   source      = "../../../../modules/dms-rds-to-s3"
   name_prefix = "acme-demo"
 
-  vpc_id     = var.vpc_id
-  subnet_ids = var.subnet_ids
+  vpc_id     = module.network.vpc_id
+  subnet_ids = module.network.private_subnet_ids
 
   # Use outputs from the RDS module
   rds_security_group_id = module.rds_with_sample_data.rds_security_group_id

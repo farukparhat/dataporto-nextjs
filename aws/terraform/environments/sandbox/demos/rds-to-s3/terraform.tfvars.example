@@ -1,14 +1,5 @@
 # Copy this file to terraform.tfvars and update the values
 
-# Network configuration
-vpc_id = "vpc-0123456789abcdef0"
-subnet_ids = [
-  "subnet-0123456789abcdef0",  # us-west-1a
-  "subnet-0123456789abcdef1",  # us-west-1b
-  "subnet-0123456789abcdef2"   # us-west-1c
-]
-vpc_cidr = "10.0.0.0/16"
-
 # S3 configuration
 s3_bucket = "your-demo-data-lake-bucket"
 

@@ -173,12 +173,12 @@ locals {
     postgres = 5432
     mysql    = 3306
   }
-  
+
   default_versions = {
-    postgres = "15.4"
+    postgres = "17.6"
     mysql    = "8.0.35"
   }
-  
-  actual_port = var.db_port != null ? var.db_port : local.default_ports[var.engine]
+
+  actual_port    = var.db_port != null ? var.db_port : local.default_ports[var.engine]
   actual_version = var.engine_version != null ? var.engine_version : local.default_versions[var.engine]
 }

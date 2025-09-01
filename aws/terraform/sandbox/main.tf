@@ -58,7 +58,7 @@ resource "random_string" "sfx" {
 }
 
 resource "aws_db_instance" "postgres" {
-  identifier                = "${var.project}-demo-${random_string.sfx.result}"
+  identifier                = "${var.project}-demo"
   engine                    = "postgres"
   engine_version            = "16.3"
   instance_class            = "db.t4g.micro"
