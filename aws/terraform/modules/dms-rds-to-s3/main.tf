@@ -215,10 +215,10 @@ locals {
   table_mappings = jsonencode({
     rules = concat(
       [
-        for s in var.include_schemas : {
+        for idx, s in var.include_schemas : {
           rule-type = "selection"
-          rule-id   = "schema-${s}"
-          rule-name = "schema-${s}"
+          rule-id   = tostring(1000 + idx)
+          rule-name = "include-schema-${s}"
           object-locator = {
             schema-name = s
             table-name  = "%"
@@ -227,10 +227,10 @@ locals {
         }
       ],
       [
-        for ex in var.exclude_tables : {
+        for idx, ex in var.exclude_tables : {
           rule-type = "selection"
-          rule-id   = "exclude-${replace(ex, "/[.*]/", "-")}"
-          rule-name = "exclude-${replace(ex, "/[.*]/", "-")}"
+          rule-id   = tostring(2000 + idx)
+          rule-name = "exclude-${ex.schema}-${ex.table}"
           object-locator = {
             schema-name = ex.schema
             table-name  = ex.table
