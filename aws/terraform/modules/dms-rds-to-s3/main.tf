@@ -55,7 +55,10 @@ data "aws_iam_policy_document" "dms_s3_trust" {
     actions = ["sts:AssumeRole"]
     principals {
       type        = "Service"
-      identifiers = ["dms.amazonaws.com"]
+      identifiers = [
+        "dms.amazonaws.com",
+        "dms.${data.aws_region.region}.amazonaws.com"
+      ]
     }
   }
 }
@@ -111,7 +114,10 @@ data "aws_iam_policy_document" "dms_secrets_trust" {
     actions = ["sts:AssumeRole"]
     principals {
       type        = "Service"
-      identifiers = ["dms.amazonaws.com"]
+      identifiers = [
+        "dms.amazonaws.com",
+        "dms.${data.aws_region.region}.amazonaws.com"
+      ]
     }
   }
 }
@@ -157,7 +163,6 @@ resource "aws_dms_replication_instance" "this" {
   multi_az                     = var.multi_az
   apply_immediately            = true
   auto_minor_version_upgrade   = true
-  engine_version               = var.engine_version # e.g. "3.5.1"
   preferred_maintenance_window = var.maintenance_window
   tags                         = var.tags
 }
@@ -196,7 +201,6 @@ resource "aws_dms_s3_endpoint" "target" {
   cdc_inserts_only          = false
   parquet_version           = "parquet-2-0"
   timestamp_column_name     = var.timestamp_column_name # e.g. "_ingested_at"
-  ssl_mode                  = "require"
   kms_key_arn               = var.s3_kms_key_arn
   max_file_size             = var.max_file_mb # MB
   external_table_definition = null

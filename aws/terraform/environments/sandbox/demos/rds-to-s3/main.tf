@@ -1,16 +1,24 @@
-provider "aws" {
+locals {
+  name_prefix = "acme-demo"
+  project = "Acme"
+  env = "demo"
+  purpose = "RDS-to-S3-migration-demo"
   region = "us-west-1"
+}
+
+provider "aws" {
+  region = local.region
 }
 
 module "network" {
   source      = "../../../../modules/vpc"
-  name_prefix = "acme-demo"
+  name_prefix = local.name_prefix
   vpc_cidr    = "10.0.0.0/16"
   num_azs     = 2
 
   tags = {
-    Project = "Acme"
-    Env     = "demo"
+    Project = local.project
+    Env     = local.env
     Purpose = "RDS-to-S3-migration-demo"
   }
 }
@@ -19,7 +27,7 @@ module "network" {
 module "rds_with_sample_data" {
   source = "../../../../modules/rds-with-sample-data"
 
-  name_prefix = "acme-demo"
+  name_prefix = local.name_prefix
   vpc_id      = module.network.vpc_id
   subnet_ids  = module.network.private_subnet_ids
 
@@ -45,8 +53,8 @@ module "rds_with_sample_data" {
   skip_final_snapshot     = true  # For demo purposes
 
   tags = {
-    Project = "Acme"
-    Env     = "demo"
+    Project = local.project
+    Env     = local.env
     Purpose = "RDS-to-S3-migration-demo"
   }
 }
@@ -54,13 +62,13 @@ module "rds_with_sample_data" {
 # S3 data bucket for Parquet exports
 module "data_bucket" {
   source           = "../../../../modules/s3-data-bucket"
-  name_prefix      = "acme-demo"
+  name_prefix      = local.name_prefix
   versioning_enabled = true
   create_kms_key   = true
 
   tags = {
-    Project = "Acme"
-    Env     = "demo"
+    Project = local.project
+    Env     = local.env
     Purpose = "RDS-to-S3-migration-demo"
   }
 }
@@ -68,7 +76,8 @@ module "data_bucket" {
 # Migrate data from RDS to S3 using DMS
 module "rds_to_s3" {
   source      = "../../../../modules/dms-rds-to-s3"
-  name_prefix = "acme-demo"
+  name_prefix = local.name_prefix
+  region      = local.region
 
   vpc_id     = module.network.vpc_id
   subnet_ids = module.network.private_subnet_ids
@@ -93,15 +102,15 @@ module "rds_to_s3" {
   s3_kms_key_arn = module.data_bucket.kms_key_arn
   s3_data_format = "parquet"
   cdc_path       = "cdc/"
-  enable_cdc     = false  # Start with full load only for demo
+  enable_cdc     = true  # Start with full load only for demo
 
   # DMS instance configuration
   replication_instance_class    = "dms.t3.micro"
   replication_allocated_storage = 20
 
   tags = {
-    Project = "Acme"
-    Env     = "demo"
+    Project = local.project
+    Env     = local.env
     Purpose = "RDS-to-S3-migration-demo"
   }
 

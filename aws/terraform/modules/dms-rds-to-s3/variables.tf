@@ -1,3 +1,8 @@
+variable "region" {
+  type    = string
+  default = "us-west-1"
+}
+
 variable "name_prefix" { type = string }
 
 variable "vpc_id" { type = string }
@@ -14,7 +19,7 @@ variable "rds_database" { type = string }
 
 # Secrets Manager
 variable "rds_secrets_manager_secret_arn" {
-  type    = string
+  type = string
 }
 
 # What to move
