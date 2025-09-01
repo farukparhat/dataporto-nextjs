@@ -250,7 +250,6 @@ locals {
       SupportLobs          = true
       FullLobMode          = false
       LobChunkSize         = 64
-      ParallelApplyThreads = 4
     }
     FullLoadSettings = {
       TargetTablePrepMode = "DO_NOTHING"
