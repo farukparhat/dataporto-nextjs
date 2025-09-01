@@ -51,6 +51,20 @@ module "rds_with_sample_data" {
   }
 }
 
+# S3 data bucket for Parquet exports
+module "data_bucket" {
+  source           = "../../../../modules/s3-data-bucket"
+  name_prefix      = "acme-demo"
+  versioning_enabled = true
+  create_kms_key   = true
+
+  tags = {
+    Project = "Acme"
+    Env     = "demo"
+    Purpose = "RDS-to-S3-migration-demo"
+  }
+}
+
 # Migrate data from RDS to S3 using DMS
 module "rds_to_s3" {
   source      = "../../../../modules/dms-rds-to-s3"
@@ -74,9 +88,9 @@ module "rds_to_s3" {
   exclude_tables  = []  # Include all tables for demo
 
   # S3 destination configuration
-  s3_bucket      = var.s3_bucket
+  s3_bucket      = module.data_bucket.bucket_name
   s3_prefix      = "rds-exports/demo/"
-  s3_kms_key_arn = var.s3_kms_key_arn
+  s3_kms_key_arn = module.data_bucket.kms_key_arn
   s3_data_format = "parquet"
   cdc_path       = "cdc/"
   enable_cdc     = false  # Start with full load only for demo

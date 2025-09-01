@@ -28,7 +28,7 @@ output "dms_replication_task_arn" {
 # S3 outputs
 output "s3_export_location" {
   description = "S3 location where data will be exported"
-  value       = "s3://${var.s3_bucket}/rds-exports/demo/"
+  value       = "s3://${module.data_bucket.bucket_name}/rds-exports/demo/"
 }
 
 # Connection information for manual testing
