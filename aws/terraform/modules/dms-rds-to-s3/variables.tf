@@ -95,11 +95,6 @@ variable "engine_version" {
   default = "3.5.1"
 }
 
-variable "maintenance_window" {
-  type    = string
-  default = "Sun:03:00-Sun:04:00"
-}
-
 # Source endpoint tuning
 variable "source_extra_connection_attributes" {
   type        = string

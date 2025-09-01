@@ -142,7 +142,6 @@ resource "aws_db_instance" "main" {
   # Backup configuration
   backup_retention_period = var.backup_retention_period
   backup_window          = var.backup_window
-  maintenance_window     = var.maintenance_window
 
   # Monitoring
   monitoring_interval = var.monitoring_interval

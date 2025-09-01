@@ -110,12 +110,6 @@ variable "backup_window" {
   default     = "03:00-04:00"
 }
 
-variable "maintenance_window" {
-  description = "Preferred maintenance window"
-  type        = string
-  default     = "Sun:04:00-Sun:05:00"
-}
-
 # Monitoring
 variable "monitoring_interval" {
   description = "Enhanced monitoring interval in seconds (0, 1, 5, 10, 15, 30, 60)"

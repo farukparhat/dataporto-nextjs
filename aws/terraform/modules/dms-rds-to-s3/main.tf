@@ -57,7 +57,7 @@ data "aws_iam_policy_document" "dms_s3_trust" {
       type        = "Service"
       identifiers = [
         "dms.amazonaws.com",
-        "dms.${data.aws_region.region}.amazonaws.com"
+        "dms.${var.region}.amazonaws.com"
       ]
     }
   }
@@ -116,7 +116,7 @@ data "aws_iam_policy_document" "dms_secrets_trust" {
       type        = "Service"
       identifiers = [
         "dms.amazonaws.com",
-        "dms.${data.aws_region.region}.amazonaws.com"
+        "dms.${var.region}.amazonaws.com"
       ]
     }
   }
@@ -163,7 +163,6 @@ resource "aws_dms_replication_instance" "this" {
   multi_az                     = var.multi_az
   apply_immediately            = true
   auto_minor_version_upgrade   = true
-  preferred_maintenance_window = var.maintenance_window
   tags                         = var.tags
 }
 

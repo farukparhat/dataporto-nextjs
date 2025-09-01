@@ -125,7 +125,6 @@ aws dms start-replication-task \
 | `replication_allocated_storage` | `number` | `100` | Storage (GB) for the DMS instance |
 | `multi_az` | `bool` | `false` | Whether to deploy the DMS instance across AZs |
 | `engine_version` | `string` | `"3.5.1"` | DMS engine version |
-| `maintenance_window` | `string` | `"Sun:03:00-Sun:04:00"` | Preferred maintenance window |
 | `source_extra_connection_attributes` | `string` | `""` | DMS extra attributes for source endpoint |
 | `enable_cdc` | `bool` | `false` | Use `full-load-and-cdc` when `true` |
 | `tags` | `map(string)` | `{}` | Tags applied to created resources |
