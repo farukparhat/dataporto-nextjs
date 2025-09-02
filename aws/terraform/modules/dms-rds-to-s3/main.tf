@@ -54,7 +54,7 @@ data "aws_iam_policy_document" "dms_s3_trust" {
   statement {
     actions = ["sts:AssumeRole"]
     principals {
-      type        = "Service"
+      type = "Service"
       identifiers = [
         "dms.amazonaws.com",
         "dms.${var.region}.amazonaws.com"
@@ -113,7 +113,7 @@ data "aws_iam_policy_document" "dms_secrets_trust" {
   statement {
     actions = ["sts:AssumeRole"]
     principals {
-      type        = "Service"
+      type = "Service"
       identifiers = [
         "dms.amazonaws.com",
         "dms.${var.region}.amazonaws.com"
@@ -130,8 +130,8 @@ resource "aws_iam_role" "dms_secrets" {
 
 data "aws_iam_policy_document" "dms_secrets_access" {
   statement {
-    sid     = "SecretsManagerRead"
-    effect  = "Allow"
+    sid    = "SecretsManagerRead"
+    effect = "Allow"
     actions = [
       "secretsmanager:GetSecretValue",
       "secretsmanager:DescribeSecret"
@@ -154,16 +154,16 @@ resource "aws_iam_role_policy_attachment" "dms_secrets_access" {
 
 # --- DMS replication instance ---
 resource "aws_dms_replication_instance" "this" {
-  replication_instance_id      = "${local.name}-ri"
-  replication_instance_class   = var.replication_instance_class
-  allocated_storage            = var.replication_allocated_storage
-  publicly_accessible          = false
-  vpc_security_group_ids       = [aws_security_group.dms.id]
-  replication_subnet_group_id  = aws_dms_replication_subnet_group.this.id
-  multi_az                     = var.multi_az
-  apply_immediately            = true
-  auto_minor_version_upgrade   = true
-  tags                         = var.tags
+  replication_instance_id     = "${local.name}-ri"
+  replication_instance_class  = var.replication_instance_class
+  allocated_storage           = var.replication_allocated_storage
+  publicly_accessible         = false
+  vpc_security_group_ids      = [aws_security_group.dms.id]
+  replication_subnet_group_id = aws_dms_replication_subnet_group.this.id
+  multi_az                    = var.multi_az
+  apply_immediately           = true
+  auto_minor_version_upgrade  = true
+  tags                        = var.tags
 }
 
 # --- Source endpoint (RDS) ---
@@ -177,6 +177,7 @@ resource "aws_dms_endpoint" "source" {
   secrets_manager_arn             = var.rds_secrets_manager_secret_arn
 
   database_name = var.rds_database
+  ssl_mode      = "require"
 
   # Postgres extra attribs commonly useful
   extra_connection_attributes = var.source_extra_connection_attributes
@@ -246,10 +247,10 @@ locals {
 locals {
   task_settings = jsonencode({
     TargetMetadata = {
-      TargetSchema         = ""
-      SupportLobs          = true
-      FullLobMode          = false
-      LobChunkSize         = 64
+      TargetSchema = ""
+      SupportLobs  = true
+      FullLobMode  = false
+      LobChunkSize = 64
     }
     FullLoadSettings = {
       TargetTablePrepMode = "DO_NOTHING"

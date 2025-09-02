@@ -44,7 +44,7 @@ resource "aws_security_group" "rds" {
 # Random password for RDS
 resource "random_password" "db_password" {
   length  = 16
-  special = true
+  special = false
 }
 
 # Secrets Manager secret for RDS credentials
@@ -58,6 +58,9 @@ resource "aws_secretsmanager_secret" "rds_credentials" {
 resource "aws_secretsmanager_secret_version" "rds_credentials" {
   secret_id = aws_secretsmanager_secret.rds_credentials.id
   secret_string = jsonencode({
+    engine   = aws_db_instance.main.engine
+    host     = aws_db_instance.main.address
+    port     = aws_db_instance.main.port
     username = var.db_username
     password = random_password.db_password.result
   })
