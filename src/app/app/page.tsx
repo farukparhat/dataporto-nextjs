@@ -4,10 +4,10 @@ import { redirect } from "next/navigation";
 import { AppSidebar } from "@/components/app-sidebar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  IconUsers, 
-  IconShare2, 
-  IconDatabase, 
+import {
+  IconUsers,
+  IconShare,
+  IconDatabase,
   IconActivity,
   IconTrendingUp,
   IconCircleCheck,
@@ -49,7 +49,7 @@ export default function AppRoot() {
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Active Shares</CardTitle>
-                <IconShare2 className="h-4 w-4 text-slate-600" />
+                <IconShare className="h-4 w-4 text-slate-600" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">12</div>
