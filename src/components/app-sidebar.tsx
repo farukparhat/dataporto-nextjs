@@ -10,7 +10,8 @@ import {
   IconShield,
   IconChartBar,
   IconSettings,
-  IconDatabase
+  IconDatabase,
+  IconBooks
 } from "@tabler/icons-react"
 import Image from "next/image"
 
@@ -39,6 +40,12 @@ const navigationItems = [
     href: "/app/data-sources",
     icon: IconDatabase,
     description: "Manage connected databases (Postgres, Redshift, MySQL, S3)"
+  },
+  {
+    title: "Data Catalog",
+    href: "/app/data-catalog",
+    icon: IconBooks,
+    description: "Browse and discover available datasets and tables"
   },
   {
     title: "Data Shares",
