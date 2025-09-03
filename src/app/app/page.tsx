@@ -1,7 +1,3 @@
-"use client"
-
-import { redirect } from "next/navigation";
-import { AppSidebar } from "@/components/app-sidebar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -13,18 +9,11 @@ import {
   IconCircleCheck,
   IconAlertTriangle
 } from "@tabler/icons-react";
-import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export default function AppRoot() {
-  // Redirect to / if not in dev environment
-  if (process.env.NODE_ENV !== "development") {
-    redirect("/");
-  }
-
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <SidebarInset>
+    <>
         {/* Header */}
         <header className="bg-white border-b border-slate-200 px-6 py-4">
           <div className="flex items-center justify-between">
@@ -198,7 +187,6 @@ export default function AppRoot() {
             </CardContent>
           </Card>
         </main>
-      </SidebarInset>
-    </SidebarProvider>
+    </>
   );
 }
