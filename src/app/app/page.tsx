@@ -7,9 +7,47 @@ import {
   IconActivity,
   IconTrendingUp,
   IconCircleCheck,
-  IconAlertTriangle
+  IconAlertTriangle,
+  IconList
 } from "@tabler/icons-react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { DataVolumeChart } from "@/components/data-volume-chart";
+
+// Sample data for the chart - rows shared by platform
+const chartData = [
+  { date: "2024-01-01", snowflake: 12000, databricks: 8500, sftp: 3200 },
+  { date: "2024-01-02", snowflake: 15000, databricks: 9200, sftp: 3800 },
+  { date: "2024-01-03", snowflake: 18000, databricks: 10100, sftp: 4200 },
+  { date: "2024-01-04", snowflake: 14000, databricks: 8800, sftp: 3600 },
+  { date: "2024-01-05", snowflake: 21000, databricks: 12000, sftp: 4800 },
+  { date: "2024-01-06", snowflake: 19000, databricks: 11200, sftp: 4400 },
+  { date: "2024-01-07", snowflake: 24000, databricks: 13500, sftp: 5200 },
+  { date: "2024-01-08", snowflake: 22000, databricks: 12800, sftp: 4900 },
+  { date: "2024-01-09", snowflake: 28000, databricks: 15200, sftp: 5600 },
+  { date: "2024-01-10", snowflake: 25000, databricks: 14100, sftp: 5300 },
+  { date: "2024-01-11", snowflake: 31000, databricks: 16800, sftp: 6100 },
+  { date: "2024-01-12", snowflake: 29000, databricks: 15900, sftp: 5800 },
+  { date: "2024-01-13", snowflake: 34000, databricks: 18200, sftp: 6500 },
+  { date: "2024-01-14", snowflake: 32000, databricks: 17300, sftp: 6200 },
+  { date: "2024-01-15", snowflake: 37000, databricks: 19800, sftp: 7100 },
+  { date: "2024-01-16", snowflake: 35000, databricks: 18900, sftp: 6800 },
+  { date: "2024-01-17", snowflake: 41000, databricks: 21500, sftp: 7600 },
+  { date: "2024-01-18", snowflake: 38000, databricks: 20400, sftp: 7300 },
+  { date: "2024-01-19", snowflake: 43000, databricks: 22800, sftp: 8100 },
+  { date: "2024-01-20", snowflake: 40000, databricks: 21700, sftp: 7800 },
+  { date: "2024-01-21", snowflake: 46000, databricks: 24200, sftp: 8600 },
+  { date: "2024-01-22", snowflake: 44000, databricks: 23400, sftp: 8300 },
+  { date: "2024-01-23", snowflake: 49000, databricks: 25800, sftp: 9100 },
+  { date: "2024-01-24", snowflake: 47000, databricks: 25000, sftp: 8800 },
+  { date: "2024-01-25", snowflake: 52000, databricks: 27500, sftp: 9600 },
+  { date: "2024-01-26", snowflake: 48000, databricks: 26200, sftp: 9200 },
+  { date: "2024-01-27", snowflake: 55000, databricks: 29100, sftp: 10300 },
+  { date: "2024-01-28", snowflake: 51000, databricks: 27800, sftp: 9900 },
+  { date: "2024-01-29", snowflake: 58000, databricks: 31200, sftp: 11100 },
+  { date: "2024-01-30", snowflake: 54000, databricks: 29800, sftp: 10600 }
+]
+
+// Simple chart data for visualization
 
 export default function AppRoot() {
   return (
@@ -34,7 +72,7 @@ export default function AppRoot() {
         {/* Dashboard Content */}
         <main className="flex-1 overflow-y-auto p-6">
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Active Shares</CardTitle>
@@ -76,6 +114,19 @@ export default function AppRoot() {
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium">Total Rows</CardTitle>
+                <IconList className="h-4 w-4 text-slate-600" />
+              </CardHeader>
+              <CardContent>
+                <div className="text-2xl font-bold">2.4M</div>
+                <p className="text-xs text-slate-600">
+                  across all shares
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Last Sync</CardTitle>
                 <IconActivity className="h-4 w-4 text-slate-600" />
               </CardHeader>
@@ -89,21 +140,19 @@ export default function AppRoot() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Data Volume Chart Placeholder */}
+            {/* Data Volume Chart */}
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <IconTrendingUp className="h-5 w-5 mr-2" />
-                  Data Volume Shared (Last 30 Days)
+                  Rows Shared by Platform (Last 30 Days)
                 </CardTitle>
                 <CardDescription>
-                  Total data transferred to clients
+                  Total rows shared across Snowflake, Databricks, and sFTP
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-64 bg-slate-50 rounded-lg flex items-center justify-center border border-slate-200">
-                  <p className="text-slate-500">Chart visualization coming soon</p>
-                </div>
+                <DataVolumeChart data={chartData} />
               </CardContent>
             </Card>
 
