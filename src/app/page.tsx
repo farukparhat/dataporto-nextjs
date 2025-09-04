@@ -141,6 +141,231 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Core Features Section */}
+      <section id="features" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Catalog → Share → Govern
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              The complete data sharing platform built around three core
+              pillars: know what you have, deliver it flexibly, and keep control
+              at every step.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Catalog */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="mb-6">
+                <div className="p-3 bg-blue-50 rounded-lg w-fit mb-4">
+                  <svg
+                    className="h-8 w-8 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  1. Catalog
+                </h3>
+                <p className="text-gray-600 font-medium mb-4">
+                  Know what you have and control it
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Source Connectivity:</strong> Plug into databases,
+                      warehouses, lakes (RDS, S3, Snowflake, Databricks,
+                      BigQuery)
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Data Catalog:</strong> Auto-discovery of tables,
+                      schemas, and views
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Data Contracts:</strong> Define schemas, SLAs, and
+                      expiration rules
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Metadata & Lineage:</strong> Track data origins
+                      and sharing destinations
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Share */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="mb-6">
+                <div className="p-3 bg-green-50 rounded-lg w-fit mb-4">
+                  <IconShare className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  2. Share
+                </h3>
+                <p className="text-gray-600 font-medium mb-4">
+                  Deliver the data the way clients want it
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Multi-Format Sharing:</strong> Snowflake Data
+                      Share, Databricks Delta Share, sFTP
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Zero-Copy Access:</strong> Native shares without
+                      duplication
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Client Provisioning:</strong> Reader accounts or
+                      managed endpoints
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Live Sync:</strong> Near real-time updates from
+                      source systems
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Govern */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="mb-6">
+                <div className="p-3 bg-purple-50 rounded-lg w-fit mb-4">
+                  <svg
+                    className="h-8 w-8 text-purple-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  3. Govern
+                </h3>
+                <p className="text-gray-600 font-medium mb-4">
+                  Keep control and stay compliant
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Access Control:</strong> Role-based access,
+                      client-specific filters and masking
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Usage Auditing:</strong> Comprehensive logs of
+                      access patterns
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Data Expiration:</strong> Time-bound shares with
+                      instant revocation
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                    <span className="text-sm">
+                      <strong>Schema Safety:</strong> Alerts and versioning to
+                      prevent pipeline breaks
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Supporting Features */}
+          <div className="mt-16 bg-gray-50 rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              ⚡️ Supporting Features
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              <div className="text-center">
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  Monitoring & Alerts
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Detect pipeline breaks, schema drift, or stale data
+                </p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  Billing & Metering
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Track data usage for monetization or chargebacks
+                </p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  Developer API
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Full automation for engineering-heavy teams
+                </p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  White-label Portal
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Let clients self-serve through a branded UI
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <WaitlistButton size="lg" className={darkButtonClasses}>
+              See Platform in Action <ArrowRight className="ml-2 h-5 w-5" />
+            </WaitlistButton>
+          </div>
+        </div>
+      </section>
+
       {/* Enable Snowflake Data Shares Section */}
       <section id="snowflake-shares" className="py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -402,7 +627,7 @@ export default function Home() {
       </section>
 
       {/* Supported Data Sources Section */}
-      <section id="data-sources" className="py-24 bg-white">
+      <section id="data-sources" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -635,7 +860,7 @@ export default function Home() {
       </section>
 
       {/* Multi-Platform Orchestration Section */}
-      <section id="multi-platform" className="py-20 bg-white">
+      <section id="multi-platform" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -698,7 +923,7 @@ export default function Home() {
       </section>
 
       {/* Market Context & Competitive Landscape */}
-      <section id="market" className="py-20 bg-slate-50">
+      <section id="market" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">

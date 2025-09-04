@@ -11,7 +11,7 @@
 
 ## 2. Share — _Deliver the data the way clients want it_
 
-- **Multi-Format Sharing**: Snowflake Data Share, Databricks Delta Share, sFTP, Postgres, APIs
+- **Multi-Format Sharing**: Snowflake Data Share, Databricks Delta Share, sFTP, Postgres
 - **Zero-Copy Access**: Native shares (e.g., Snowflake) without duplication
 - **Client Provisioning**: Reader accounts for Snowflake / Databricks or managed endpoints for sFTP
 - **Multi-Tenant Management**: Share the right slices with the right client securely
