@@ -3,27 +3,26 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import FlowDiagram from "@/components/flow-diagram";
-import { Share2, ArrowRight, Check, Folder, Trophy } from "lucide-react";
+import { ArrowRight, Check, Folder, Trophy } from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/header";
 import WaitlistButton from "@/components/waitlist-button";
+import { IconBrandDatabricks, IconBrandSnowflake, IconFolderShare, IconShare } from "@tabler/icons-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
 
-      {/* Service Badge */}
-      <div className="container mx-auto px-4 pt-8 text-center">
-        <Badge variant="outline" className="text-gray-600 border-gray-300 bg-white">
-          Multi-Platform Data Sharing as a Service
-        </Badge>
-      </div>
-
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 text-center">
+      <div className="container mx-auto px-4 pt-8 text-center">
+        <Badge variant="outline" className="text-gray-600 ">
+          <IconShare className="h-4 w-4 mr-2" /> Multi-Platform Data Sharing as a Service
+        </Badge>
+      </div>
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
           Your one-stop data platform
           <br />
@@ -35,7 +34,7 @@ export default function Home() {
           client-by-client configuration and lifecycle management.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <WaitlistButton size="lg" className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-lg">
             Schedule a Demo
           </WaitlistButton>
@@ -52,17 +51,17 @@ export default function Home() {
         </div>
 
         {/* Platform Integration Logos */}
-        <div className="flex justify-center items-center space-x-12 mb-8 opacity-60">
-          <div className="flex flex-col items-center">
-            <Snowflake className="h-8 w-8 text-gray-600 mb-2" />
+        <div className="flex justify-center items-center gap-12 mb-8 opacity-60">
+          <div className="flex flex-col items-center w-16">
+            <IconBrandSnowflake className="h-8 w-8 mb-2" style={{ color: '#2cb6e8' }} />
             <span className="text-sm text-gray-500 font-medium">Snowflake</span>
           </div>
-          <div className="flex flex-col items-center">
-            <DataBricks className="h-8 w-8 text-gray-600 mb-2" />
+          <div className="flex flex-col items-center w-16">
+            <IconBrandDatabricks className="h-8 w-8 mb-2" style={{ color: '#FF3621' }} />
             <span className="text-sm text-gray-500 font-medium">Databricks</span>
           </div>
-          <div className="flex flex-col items-center">
-            <Folder className="h-8 w-8 text-gray-600 mb-2" />
+          <div className="flex flex-col items-center w-16">
+            <IconFolderShare className="h-8 w-8 mb-2" style={{ color: '#22c55e' }} />
             <span className="text-sm text-gray-500 font-medium">sFTP</span>
           </div>
         </div>
