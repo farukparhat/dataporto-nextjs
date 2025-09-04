@@ -54,15 +54,15 @@ export default function Home() {
         <div className="flex justify-center items-center gap-12 mb-8 opacity-60">
           <div className="flex flex-col items-center w-16">
             <IconBrandSnowflake className="h-8 w-8 mb-2" style={{ color: '#2cb6e8' }} />
-            <span className="text-sm text-gray-500 font-medium">Snowflake</span>
+            <span className="text-sm text-gray-500 font-medium text-center">Snowflake</span>
           </div>
           <div className="flex flex-col items-center w-16">
             <IconBrandDatabricks className="h-8 w-8 mb-2" style={{ color: '#FF3621' }} />
-            <span className="text-sm text-gray-500 font-medium">Databricks</span>
+            <span className="text-sm text-gray-500 font-medium text-center">Databricks</span>
           </div>
           <div className="flex flex-col items-center w-16">
             <IconFolderShare className="h-8 w-8 mb-2" style={{ color: '#22c55e' }} />
-            <span className="text-sm text-gray-500 font-medium">sFTP</span>
+            <span className="text-sm text-gray-500 font-medium text-center">sFTP</span>
           </div>
         </div>
 

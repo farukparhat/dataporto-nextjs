@@ -44,7 +44,7 @@ export default function Header() {
       {/* Desktop Layout */}
       <div className="container mx-auto px-4 py-3 hidden lg:flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center w-64">
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/icon.png"
@@ -187,14 +187,6 @@ export default function Header() {
             >
               <DropdownMenuItem asChild>
                 <Link
-                  href="/blog"
-                  className="flex items-center p-3 rounded-md hover:bg-gray-50 transition-colors cursor-pointer"
-                >
-                  <span className="font-medium text-gray-900">Blog</span>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link
                   href="/#how-it-works"
                   className="flex items-center p-3 rounded-md hover:bg-gray-50 transition-colors cursor-pointer"
                 >
@@ -205,22 +197,22 @@ export default function Header() {
           </DropdownMenu>
 
           <Link
-            href="/docs"
+            href="/blog"
             className="px-3 py-2 text-gray-600 hover:text-gray-900 rounded-md transition-colors duration-200 font-medium"
           >
-            Docs
+            Blog
           </Link>
 
-          <Link
+          {/* <Link
             href="/pricing"
             className="px-3 py-2 text-gray-600 hover:text-gray-900 rounded-md transition-colors duration-200 font-medium"
           >
             Pricing
-          </Link>
+          </Link> */}
         </nav>
 
         {/* Desktop Right side buttons */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 w-64">
           <Link
             href="/login"
             className="px-3 py-2 text-gray-600 hover:text-gray-900 rounded-md transition-colors duration-200 font-medium"
