@@ -159,20 +159,16 @@ export default function Home() {
             {/* Catalog */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
               <div className="mb-6">
-                <div className="p-3 bg-blue-50 rounded-lg w-fit mb-4">
-                  <svg
-                    className="h-8 w-8 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                <div className="mb-6 overflow-hidden rounded-lg">
+                  <div className="transform scale-150 origin-top-left -mt-6">
+                    <Image
+                      src="/screenshot-app-catalog.png"
+                      alt="Dataporto Data Catalog - Browse and manage all your data sources"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
                     />
-                  </svg>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   1. Catalog
@@ -217,8 +213,16 @@ export default function Home() {
             {/* Share */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
               <div className="mb-6">
-                <div className="p-3 bg-green-50 rounded-lg w-fit mb-4">
-                  <IconShare className="h-8 w-8 text-green-600" />
+                <div className="mb-6 overflow-hidden rounded-lg">
+                  <div className="transform scale-150 origin-top-left -mt-6">
+                    <Image
+                      src="/screenshot-app-data-shares.png"
+                      alt="Dataporto Data Shares - Manage client data sharing configurations"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   2. Share
@@ -245,7 +249,7 @@ export default function Home() {
                     <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
                     <span className="text-sm">
                       <strong>Client Provisioning:</strong> Reader accounts or
-                      managed endpoints
+                      managed endpoints with permissions
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -262,20 +266,16 @@ export default function Home() {
             {/* Govern */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
               <div className="mb-6">
-                <div className="p-3 bg-purple-50 rounded-lg w-fit mb-4">
-                  <svg
-                    className="h-8 w-8 text-purple-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                <div className="mb-6 overflow-hidden rounded-lg">
+                  <div className="transform scale-150 origin-top-left -mt-6">
+                    <Image
+                      src="/screenshot-app-govern.png"
+                      alt="Dataporto Governance - Control access and stay compliant"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
                     />
-                  </svg>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   3. Govern
