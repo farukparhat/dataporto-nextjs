@@ -215,3 +215,31 @@ a {
 [data-slot="dropdown-menu-trigger"]:focus-visible {
   @apply ring-2 ring-blue-500/50 ring-offset-2;
 }
+
+/* 3D Perspective Effects for Hero Image */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-x-2 {
+  transform: rotateX(8deg) rotateY(-3deg) rotateZ(1deg);
+}
+
+.rotate-x-1 {
+  transform: rotateX(4deg) rotateY(-1.5deg) rotateZ(0.5deg);
+}
+
+/* Mobile optimizations for hero image */
+@media (max-width: 640px) {
+  .perspective-1000 {
+    perspective: 800px;
+  }
+  
+  .rotate-x-2 {
+    transform: rotateX(5deg) rotateY(-2deg) rotateZ(0.5deg);
+  }
+  
+  .rotate-x-1 {
+    transform: rotateX(2.5deg) rotateY(-1deg) rotateZ(0.25deg);
+  }
+}

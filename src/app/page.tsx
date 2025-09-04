@@ -3,8 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import FlowDiagram from "@/components/flow-diagram";
-import { ArrowRight, Check, Folder, Trophy } from "lucide-react";
-import { DataBricks, Snowflake } from "@/components/brand-icons";
+import { ArrowRight, Check, Trophy } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/header";
@@ -66,23 +65,49 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Hero Animation/Visual Placeholder */}
-        <div className="max-w-6xl mx-auto mt-16">
-          <div className="bg-gray-50 rounded-2xl p-8 shadow-sm border border-gray-200">
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="text-left">
-                <div className="mb-4">
-                  <div className="h-4 bg-gray-200 rounded w-1/4 mb-2"></div>
-                  <div className="h-4 bg-gray-200 rounded w-1/3"></div>
+        {/* Hero Screenshot */}
+        <div className="max-w-3xl mx-auto mt-16 px-4">
+          <div className="relative">
+            {/* Background blur effects */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 rounded-3xl blur-3xl transform scale-110"></div>
+
+            {/* Main container with perspective */}
+            <div className="relative perspective-1000">
+              <div className="transform rotate-x-2 hover:rotate-x-1 transition-transform duration-700 ease-out">
+                <div className="bg-white rounded-xl md:rounded-2xl shadow-2xl border border-gray-200/50 overflow-hidden backdrop-blur-sm">
+                  {/* Browser chrome - hidden on mobile */}
+                  <div className="hidden sm:block p-2 bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-200">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                      <div className="flex-1 bg-white rounded-md h-6 mx-4 flex items-center px-3">
+                        <div className="w-3 h-3 bg-gray-300 rounded-sm mr-2"></div>
+                        <div className="text-xs text-gray-500 font-mono hidden md:block">app.dataporto.com</div>
+                        <div className="text-xs text-gray-500 font-mono md:hidden">dataporto</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <Image
+                      src="/screenshot-app-home.png"
+                      alt="Dataporto Dashboard - Multi-platform data sharing interface"
+                      width={1400}
+                      height={900}
+                      className="w-full h-auto"
+                      priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
+                    />
+                    {/* Subtle overlay gradient for depth */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent pointer-events-none"></div>
+                  </div>
                 </div>
-                <div className="grid grid-cols-3 gap-4 mb-4">
-                  <div className="h-20 bg-blue-100 rounded-lg"></div>
-                  <div className="h-20 bg-green-100 rounded-lg"></div>
-                  <div className="h-20 bg-purple-100 rounded-lg"></div>
-                </div>
-                <div className="h-32 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg"></div>
               </div>
             </div>
+
+            {/* Floating elements for visual appeal - responsive sizes */}
+            <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-16 h-16 md:w-24 md:h-24 bg-blue-100 rounded-full blur-xl opacity-60 animate-pulse"></div>
+            <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-20 h-20 md:w-32 md:h-32 bg-purple-100 rounded-full blur-xl opacity-40 animate-pulse delay-1000"></div>
           </div>
         </div>
       </section>
@@ -92,18 +117,18 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              There's a smarter way to share data
+              There&apos;s a smarter way to share data
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Dataporto gives your team a complete data sharing platform. Connect your sources, 
+              Dataporto gives your team a complete data sharing platform. Connect your sources,
               configure governance policies, then deliver to any platform with a single control plane.
             </p>
           </div>
-          
+
           <div className="max-w-5xl mx-auto mb-16">
             <FlowDiagram />
           </div>
-          
+
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-600 leading-relaxed">
               Connect your data sources, then use our control plane to
@@ -229,10 +254,10 @@ export default function Home() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Today's Custom Build */}
+            {/* Today&apos;s Custom Build */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Today's "Custom Build" Approach
+                Today&apos;s &quot;Custom Build&quot; Approach
               </h3>
               <p className="text-gray-600 mb-6">
                 One‑off pipelines per client
