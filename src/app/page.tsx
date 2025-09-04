@@ -9,6 +9,7 @@ import Image from "next/image";
 import Header from "@/components/header";
 import WaitlistButton from "@/components/waitlist-button";
 import ScreenshotWindow from "@/components/screenshot-window";
+import FeatureScreenshot from "@/components/feature-screenshot";
 import { IconShare } from "@tabler/icons-react";
 import {
   SnowflakeIcon,
@@ -159,17 +160,10 @@ export default function Home() {
             {/* Catalog */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
               <div className="mb-6">
-                <div className="mb-6 overflow-hidden rounded-lg">
-                  <div className="transform scale-150 origin-top-left -mt-6">
-                    <Image
-                      src="/screenshot-app-catalog.png"
-                      alt="Dataporto Data Catalog - Browse and manage all your data sources"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </div>
+                <FeatureScreenshot
+                  src="/screenshot-app-catalog.png"
+                  alt="Dataporto Data Catalog - Browse and manage all your data sources"
+                />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   1. Catalog
                 </h3>
@@ -213,17 +207,10 @@ export default function Home() {
             {/* Share */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
               <div className="mb-6">
-                <div className="mb-6 overflow-hidden rounded-lg">
-                  <div className="transform scale-150 origin-top-left -mt-6">
-                    <Image
-                      src="/screenshot-app-data-shares.png"
-                      alt="Dataporto Data Shares - Manage client data sharing configurations"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </div>
+                <FeatureScreenshot
+                  src="/screenshot-app-data-shares.png"
+                  alt="Dataporto Data Shares - Manage client data sharing configurations"
+                />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   2. Share
                 </h3>
@@ -266,17 +253,10 @@ export default function Home() {
             {/* Govern */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
               <div className="mb-6">
-                <div className="mb-6 overflow-hidden rounded-lg">
-                  <div className="transform scale-150 origin-top-left -mt-6">
-                    <Image
-                      src="/screenshot-app-govern.png"
-                      alt="Dataporto Governance - Control access and stay compliant"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </div>
+                <FeatureScreenshot
+                  src="/screenshot-app-govern.png"
+                  alt="Dataporto Governance - Control access and stay compliant"
+                />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   3. Govern
                 </h3>
