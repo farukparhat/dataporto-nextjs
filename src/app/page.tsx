@@ -364,6 +364,108 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Supported Data Sources Section */}
+      <section id="data-sources" className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Connect Any Data Source
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Dataporto integrates with your existing data infrastructure, regardless of where your data lives.
+              No migrations required — work with what you already have.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {/* Cloud Databases */}
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
+              <div className="mb-4">
+                <div className="p-3 bg-blue-50 rounded-lg w-fit mx-auto mb-4">
+                  <Image src="/aws.svg" alt="AWS" width={32} height={32} className="h-8 w-8" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  Cloud Databases
+                </h3>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>AWS RDS</li>
+                  <li>Google Cloud SQL</li>
+                  <li>Azure Database</li>
+                  <li>PostgreSQL</li>
+                  <li>MySQL</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Object Storage */}
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
+              <div className="mb-4">
+                <div className="p-3 bg-orange-50 rounded-lg w-fit mx-auto mb-4">
+                  <Image src="/file.svg" alt="Storage" width={32} height={32} className="h-8 w-8" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  Object Storage
+                </h3>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>Amazon S3</li>
+                  <li>Google Cloud Storage</li>
+                  <li>Azure Blob Storage</li>
+                  <li>MinIO</li>
+                  <li>HDFS</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Data Warehouses */}
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
+              <div className="mb-4">
+                <div className="p-3 bg-indigo-50 rounded-lg w-fit mx-auto mb-4">
+                  <SnowflakeIcon className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  Data Warehouses
+                </h3>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>Snowflake</li>
+                  <li>Databricks</li>
+                  <li>BigQuery</li>
+                  <li>Redshift</li>
+                  <li>Synapse</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Data Lake Formats */}
+            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
+              <div className="mb-4">
+                <div className="p-3 bg-green-50 rounded-lg w-fit mx-auto mb-4">
+                  <Image src="/databricks.svg" alt="Data Lakes" width={32} height={32} className="h-8 w-8" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  Data Lake Formats
+                </h3>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>Apache Iceberg</li>
+                  <li>Delta Lake</li>
+                  <li>Apache Hudi</li>
+                  <li>Parquet</li>
+                  <li>Avro</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-600 mb-6">
+              Don&apos;t see your data source? We&apos;re constantly adding new integrations.
+            </p>
+            <WaitlistButton size="lg" className={darkButtonClasses}>
+              Request Integration
+            </WaitlistButton>
+          </div>
+        </div>
+      </section>
+
       {/* Strategic Differentiators */}
       <section id="governance" className="py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -473,137 +575,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Databricks Delta Sharing Section */}
-      <section id="databricks-sharing" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Databricks Delta Sharing
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Enable secure, governed data sharing through Databricks Delta
-              Sharing protocol, allowing clients to access live data directly in
-              their Databricks workspaces.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8">
-              <CardTitle className="text-xl mb-3">
-                Delta Sharing Benefits
-              </CardTitle>
-              <ul className="space-y-3 text-slate-700">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                  <span>Zero-copy data access in Databricks</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                  <span>Real-time data synchronization</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                  <span>Built-in versioning and lineage</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                  <span>Client-specific access controls</span>
-                </li>
-              </ul>
-            </Card>
-
-            <Card className="p-8">
-              <CardTitle className="text-xl mb-3">Use Cases</CardTitle>
-              <div className="space-y-4">
-                <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
-                  <h4 className="font-semibold text-orange-900 mb-2">
-                    ML Model Training Data
-                  </h4>
-                  <p className="text-sm text-orange-800">
-                    Share training datasets directly to client Databricks
-                    environments
-                  </p>
-                </div>
-                <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-                  <h4 className="font-semibold text-blue-900 mb-2">
-                    Analytics & BI
-                  </h4>
-                  <p className="text-sm text-blue-800">
-                    Enable real-time analytics on shared data tables
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* sFTP File Delivery Section */}
-      <section id="sftp-delivery" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              sFTP File Delivery
-            </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Automated, secure file transfer for clients who require
-              traditional file-based data delivery with modern governance and
-              monitoring capabilities.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="p-6">
-              <h3 className="font-semibold text-slate-900 mb-3">
-                Automated Scheduling
-              </h3>
-              <p className="text-sm text-slate-600 mb-4">
-                Configure daily, weekly, or custom delivery schedules with
-                automatic retry logic
-              </p>
-              <div className="text-xs text-slate-500">
-                ✓ Flexible scheduling
-                <br />
-                ✓ Failure handling
-                <br />✓ Delivery confirmation
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <h3 className="font-semibold text-slate-900 mb-3">
-                Format Flexibility
-              </h3>
-              <p className="text-sm text-slate-600 mb-4">
-                Support for CSV, Parquet, JSON, and custom formats with data
-                transformation
-              </p>
-              <div className="text-xs text-slate-500">
-                ✓ Multiple formats
-                <br />
-                ✓ Data transformation
-                <br />✓ Compression options
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <h3 className="font-semibold text-slate-900 mb-3">
-                Enterprise Security
-              </h3>
-              <p className="text-sm text-slate-600 mb-4">
-                Encrypted transfers with audit logs and client-specific access
-                controls
-              </p>
-              <div className="text-xs text-slate-500">
-                ✓ End-to-end encryption
-                <br />
-                ✓ Audit trails
-                <br />✓ Access management
-              </div>
-            </Card>
           </div>
         </div>
       </section>
@@ -781,7 +752,7 @@ export default function Home() {
       <section className="py-24 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Stop Wasting Engineering Resources on Custom Data Sharing
+            Stop Wasting Engineering Resources on Custom Data Sharing Infrastructure
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Free up your engineering team to focus on core product development
