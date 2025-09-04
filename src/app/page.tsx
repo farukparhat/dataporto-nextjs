@@ -51,8 +51,37 @@ export default function Home() {
           </Button>
         </div>
 
+        {/* Hero Screenshot */}
+        <div className="max-w-4xl mx-auto mt-16 px-4">
+          <div className="relative">
+            {/* Background blur effects */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 rounded-3xl blur-3xl transform scale-110"></div>
+
+            {/* Main container with perspective */}
+            <div className="relative perspective-1000">
+              {/* Data Shares Screenshot */}
+              <div className="transform rotate-x-2 rotate-y-3 hover:rotate-x-1 hover:rotate-y-2 transition-transform duration-700 ease-out">
+                <ScreenshotWindow
+                  src="/screenshot-app-data-shares.png"
+                  alt="Dataporto Data Shares - Client data sharing management"
+                  url="app.dataporto.com/data-shares"
+                  urlShort="data-shares"
+                  priority
+                  overlayIntensity="light"
+                />
+              </div>
+            </div>
+
+            {/* Enhanced floating elements for visual appeal */}
+            <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-16 h-16 md:w-24 md:h-24 bg-blue-100 rounded-full blur-xl opacity-60 animate-pulse"></div>
+            <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-20 h-20 md:w-32 md:h-32 bg-purple-100 rounded-full blur-xl opacity-40 animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 -left-8 w-12 h-12 md:w-16 md:h-16 bg-indigo-100 rounded-full blur-lg opacity-30 animate-pulse delay-500"></div>
+            <div className="absolute top-1/4 -right-6 w-14 h-14 md:w-20 md:h-20 bg-cyan-100 rounded-full blur-xl opacity-50 animate-pulse delay-2000"></div>
+          </div>
+        </div>
+
         {/* Platform Integration Logos */}
-        <div className="flex justify-center items-center gap-12 mb-8 opacity-60">
+        <div className="flex justify-center items-center gap-12 mt-16 opacity-60">
           <div className="flex flex-col items-center w-16">
             <SnowflakeIcon className="h-8 w-8 mb-2" />
             <span className="text-sm text-gray-500 font-medium text-center">Snowflake</span>
@@ -64,46 +93,6 @@ export default function Home() {
           <div className="flex flex-col items-center w-16">
             <SftpIcon className="h-8 w-8 mb-2" />
             <span className="text-sm text-gray-500 font-medium text-center">sFTP</span>
-          </div>
-        </div>
-
-        {/* Hero Screenshot */}
-        <div className="max-w-4xl mx-auto mt-16 px-4">
-          <div className="relative">
-            {/* Background blur effects */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 rounded-3xl blur-3xl transform scale-110"></div>
-
-            {/* Main container with perspective */}
-            <div className="relative perspective-1000">
-              {/* Back Screenshot - Home Dashboard */}
-              <div className="transform rotate-x-2 rotate-y-3 hover:rotate-x-1 hover:rotate-y-2 transition-transform duration-700 ease-out">
-                <ScreenshotWindow
-                  src="/screenshot-app-home.png"
-                  alt="Dataporto Dashboard - Multi-platform data sharing interface"
-                  url="app.dataporto.com"
-                  urlShort="dataporto"
-                  priority
-                  overlayIntensity="light"
-                />
-              </div>
-
-              {/* Front Screenshot - Data Shares - Same Size */}
-              <div className="absolute top-8 right-8 md:top-12 md:right-12 lg:top-16 lg:right-16 w-l transform rotate-x-1 -rotate-y-6 rotate-z-3 hover:-rotate-y-4 hover:rotate-z-2 transition-all duration-700 ease-out shadow-2xl">
-                <ScreenshotWindow
-                  src="/screenshot-app-data-shares.png"
-                  alt="Dataporto Data Shares - Client data sharing management"
-                  url="app.dataporto.com/data-shares"
-                  urlShort="data-shares"
-                  overlayIntensity="medium"
-                />
-              </div>
-            </div>
-
-            {/* Enhanced floating elements for visual appeal */}
-            <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-16 h-16 md:w-24 md:h-24 bg-blue-100 rounded-full blur-xl opacity-60 animate-pulse"></div>
-            <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-20 h-20 md:w-32 md:h-32 bg-purple-100 rounded-full blur-xl opacity-40 animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 -left-8 w-12 h-12 md:w-16 md:h-16 bg-indigo-100 rounded-full blur-lg opacity-30 animate-pulse delay-500"></div>
-            <div className="absolute top-1/4 -right-6 w-14 h-14 md:w-20 md:h-20 bg-cyan-100 rounded-full blur-xl opacity-50 animate-pulse delay-2000"></div>
           </div>
         </div>
       </section>
