@@ -27,25 +27,25 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-24 text-center">
-        <div className="container mx-auto px-4 pt-8 text-center">
+      <section className="container mx-auto px-4 py-12 sm:py-24 text-center">
+        <div className="container mx-auto px-4 pt-4 sm:pt-8 text-center">
           <Badge variant="outline" className="text-gray-600 ">
             <IconShare className="h-4 w-4 mr-2" /> Multi-Platform Data Sharing
             as a Service
           </Badge>
         </div>
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
-          Your one-stop data platform
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
+          Your one-stop <br />data platform
           <br />
           for client data sharing
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
           Securely share live, governed data with each of your clients in their
           preferred platform — Snowflake, Databricks, or sFTP — with
           client-by-client configuration and lifecycle management.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-16">
           <WaitlistButton size="lg" className={darkButtonClasses}>
             Schedule a Demo
           </WaitlistButton>
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         {/* Hero Screenshot */}
-        <div className="max-w-6xl mx-auto mt-16 sm:px-4">
+        <div className="max-w-6xl mx-auto mt-8 sm:mt-16 sm:px-4">
           <div className="relative">
             {/* Background blur effects */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 rounded-3xl blur-3xl transform scale-110"></div>
