@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         {/* Hero Screenshot */}
-        <div className="max-w-4xl mx-auto mt-16 px-4">
+        <div className="max-w-6xl mx-auto mt-16 sm:px-4">
           <div className="relative">
             {/* Background blur effects */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 rounded-3xl blur-3xl transform scale-110"></div>
@@ -68,7 +68,7 @@ export default function Home() {
             {/* Main container with perspective */}
             <div className="relative perspective-1000">
               {/* Data Shares Screenshot */}
-              <div className="transform rotate-x-2 rotate-y-3 hover:rotate-x-1 hover:rotate-y-2 transition-transform duration-700 ease-out">
+              <div className="transform rotate-x-2 rotate-y-3 hover:rotate-x-1 hover:rotate-y-2 transition-transform duration-700 ease-out animate-[tiltIn_1.2s_ease-out_0.5s_both]">
                 <ScreenshotWindow
                   src="/screenshot-app-data-shares.png"
                   alt="Dataporto Data Shares - Client data sharing management"
