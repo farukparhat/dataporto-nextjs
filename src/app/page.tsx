@@ -13,6 +13,10 @@ import { IconShare } from "@tabler/icons-react";
 import { SnowflakeIcon, DatabricksIcon, SftpIcon } from "@/components/brand-icons";
 
 export default function Home() {
+  // Standardized button styles
+  const darkButtonClasses = "bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-lg";
+  const lightButtonOnDarkClasses = "bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 text-lg font-medium rounded-lg";
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -36,7 +40,7 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <WaitlistButton size="lg" className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-lg">
+          <WaitlistButton size="lg" className={darkButtonClasses}>
             Schedule a Demo
           </WaitlistButton>
           <Button
@@ -64,7 +68,7 @@ export default function Home() {
                 <ScreenshotWindow
                   src="/screenshot-app-data-shares.png"
                   alt="Dataporto Data Shares - Client data sharing management"
-                  url="app.dataporto.com/data-shares"
+                  url="dataporto.com/app/data-shares"
                   urlShort="data-shares"
                   priority
                   overlayIntensity="light"
@@ -218,8 +222,8 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <WaitlistButton className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-lg">
-              Enable Snowflake Shares from Any Source{" "}
+            <WaitlistButton size="lg" className={darkButtonClasses}>
+              Enable Snowflake Shares{" "}
               <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
           </div>
@@ -653,8 +657,8 @@ export default function Home() {
                     methods.
                   </p>
                   <div className="text-center">
-                    <WaitlistButton>
-                      Learn More About Multi-Platform
+                    <WaitlistButton size="lg" className={darkButtonClasses + " mt-4"}>
+                      Learn More
                     </WaitlistButton>
                   </div>
                 </div>
@@ -788,7 +792,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WaitlistButton
               size="lg"
-              className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 text-lg font-medium rounded-lg"
+              className={lightButtonOnDarkClasses}
             >
               Modernize your Data Sharing{" "}
               <ArrowRight className="ml-2 h-5 w-5" />
