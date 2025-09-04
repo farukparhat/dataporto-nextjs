@@ -26,10 +26,11 @@ import {
   IconEye,
   IconEdit,
   IconTrash,
-  IconServer,
   IconFileText,
   IconTrendingUp,
-  IconDownload
+  IconDownload,
+  IconFolderUp,
+  IconFolderDown
 } from "@tabler/icons-react";
 import { SnowflakeIcon, DatabricksIcon, SftpIcon } from "@/components/brand-icons";
 import { SidebarTrigger } from "@/components/ui/sidebar";
@@ -65,14 +66,14 @@ const dataShares = [
   {
     id: 3,
     name: "Financial Reports Q1",
-    type: "sftp",
+    type: "sftp-pull",
     client: "DataCo Ltd",
     status: "pending",
     lastSync: "1 hour ago",
     rowCount: "500K",
     tables: 4,
     created: "2024-01-20",
-    access: "download",
+    access: "pull-delivery",
     description: "Quarterly financial data and reports"
   },
   {
@@ -104,14 +105,14 @@ const dataShares = [
   {
     id: 6,
     name: "Inventory Data Export",
-    type: "sftp",
+    type: "sftp-push",
     client: "Supply Chain Pro",
     status: "active",
     lastSync: "30 minutes ago",
     rowCount: "800K",
     tables: 3,
     created: "2024-01-18",
-    access: "download",
+    access: "push-delivery",
     description: "Real-time inventory levels and movements"
   }
 ];
@@ -119,26 +120,49 @@ const dataShares = [
 function getShareTypeIcon(type: string) {
   switch (type) {
     case "snowflake":
-      return <SnowflakeIcon className="h-4 w-4" />;
+      return <SnowflakeIcon className="h-6 w-6" />;
     case "databricks":
-      return <DatabricksIcon className="h-4 w-4" />;
+      return <DatabricksIcon className="h-6 w-6" />;
+    case "sftp-pull":
+      return <IconFolderDown className="h-6 w-6 text-green-600" />;
+    case "sftp-push":
+      return <IconFolderUp className="h-6 w-6 text-green-600" />;
     case "sftp":
-      return <SftpIcon className="h-4 w-4" />;
+      return <SftpIcon className="h-6 w-6" />;
     default:
-      return <IconShare className="h-4 w-4" />;
+      return <IconShare className="h-6 w-6" />;
   }
 }
 
 function getShareTypeName(type: string) {
   switch (type) {
     case "snowflake":
-      return "Snowflake Share";
+      return "Snowflake";
     case "databricks":
-      return "Databricks Delta Share";
+      return "Databricks";
+    case "sftp-pull":
+    case "sftp-push":
     case "sftp":
-      return "sFTP Delivery";
+      return "sFTP";
     default:
       return "Data Share";
+  }
+}
+
+function getShareSubType(type: string) {
+  switch (type) {
+    case "snowflake":
+      return "Private Share";
+    case "databricks":
+      return "Delta Share";
+    case "sftp-pull":
+      return "Pull";
+    case "sftp-push":
+      return "Push";
+    case "sftp":
+      return "Delivery";
+    default:
+      return "";
   }
 }
 
@@ -271,12 +295,15 @@ export default function DataSharesPage() {
                         <div className="text-sm text-slate-500">{share.description}</div>
                       </div>
                     </TableCell>
-                    <TableCell>
-                      <div className="flex items-center space-x-2">
-                        {getShareTypeIcon(share.type)}
-                        <span className="text-sm">{getShareTypeName(share.type)}</span>
-                      </div>
-                    </TableCell>
+                    <TableCell className="whitespace-nowrap">
+                        <div className="flex items-center space-x-2">
+                          {getShareTypeIcon(share.type)}
+                       <div>
+                         <div className="font-medium">{getShareTypeName(share.type)}</div>
+                         <div className="text-sm text-slate-500">{getShareSubType(share.type)}</div>
+                       </div>
+                        </div>
+                      </TableCell>
                     <TableCell>
                       <div className="font-medium">{share.client}</div>
                       <div className="text-sm text-slate-500">{share.access}</div>
@@ -308,10 +335,10 @@ export default function DataSharesPage() {
                             <IconEdit className="h-4 w-4 mr-2" />
                             Edit Share
                           </DropdownMenuItem>
-                          {share.type === "sftp" && (
+                          {(share.type === "sftp" || share.type === "sftp-pull" || share.type === "sftp-push") && (
                             <DropdownMenuItem>
                               <IconDownload className="h-4 w-4 mr-2" />
-                              Download Latest
+                              {share.type === "sftp-push" ? "View Delivery Status" : "Download Latest"}
                             </DropdownMenuItem>
                           )}
                           <DropdownMenuItem>
