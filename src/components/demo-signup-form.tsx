@@ -4,8 +4,13 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { joinWaitlist } from "@/app/actions";
 import CalSignupDialog from "./cal-signup-dialog";
+import { cn } from "@/lib/utils";
 
-export default function DemoSignupForm() {
+interface DemoSignupFormProps {
+  className?: string;
+}
+
+export default function DemoSignupForm({ className }: DemoSignupFormProps) {
   const [pending, setPending] = React.useState(false);
   const [message, setMessage] = React.useState<string | undefined>();
   const [showCalDialog, setShowCalDialog] = React.useState(false);
@@ -43,7 +48,7 @@ export default function DemoSignupForm() {
 
   return (
     <>
-      <form action={onSubmit} className="space-y-6">
+      <form action={onSubmit} className={cn("space-y-6", className)}>
         <input type="hidden" name="source" value="demo-page" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

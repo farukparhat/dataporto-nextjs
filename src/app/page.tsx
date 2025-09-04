@@ -11,11 +11,11 @@ import WaitlistButton from "@/components/waitlist-button";
 import ScreenshotWindow from "@/components/screenshot-window";
 import { IconShare } from "@tabler/icons-react";
 import { SnowflakeIcon, DatabricksIcon, SftpIcon } from "@/components/brand-icons";
+import DemoSignupForm from "@/components/demo-signup-form";
 
 export default function Home() {
   // Standardized button styles
   const darkButtonClasses = "bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-lg";
-  const lightButtonOnDarkClasses = "bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 text-lg font-medium rounded-lg";
 
   return (
     <div className="min-h-screen bg-white">
@@ -750,24 +750,20 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-24 bg-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Stop Wasting Engineering Resources on Custom Data Sharing Infrastructure
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Free up your engineering team to focus on core product development
-            instead of maintaining custom per-client data sharing
-            infrastructure. Dataporto handles the complexity so you can focus on
-            innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <WaitlistButton
-              size="lg"
-              className={lightButtonOnDarkClasses}
-            >
-              Modernize your Data Sharing{" "}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </WaitlistButton>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Stop Wasting Engineering Resources on Custom Data Sharing Infrastructure
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Free up your engineering team to focus on core product development
+              instead of maintaining custom per-client data sharing
+              infrastructure. Dataporto handles the complexity so you can focus on
+              innovation.
+            </p>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <DemoSignupForm className="bg-white p-8 rounded-lg shadow-lg text-black" />
           </div>
         </div>
       </section>
