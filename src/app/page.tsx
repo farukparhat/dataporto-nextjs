@@ -8,7 +8,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/header";
 import WaitlistButton from "@/components/waitlist-button";
-import { IconBrandDatabricks, IconBrandSnowflake, IconFolderShare, IconShare } from "@tabler/icons-react";
+import { IconShare } from "@tabler/icons-react";
+import { SnowflakeIcon, DatabricksIcon, SftpIcon } from "@/components/brand-icons";
 
 export default function Home() {
   return (
@@ -52,15 +53,15 @@ export default function Home() {
         {/* Platform Integration Logos */}
         <div className="flex justify-center items-center gap-12 mb-8 opacity-60">
           <div className="flex flex-col items-center w-16">
-            <IconBrandSnowflake className="h-8 w-8 mb-2" style={{ color: '#2cb6e8' }} />
+            <SnowflakeIcon className="h-8 w-8 mb-2" />
             <span className="text-sm text-gray-500 font-medium text-center">Snowflake</span>
           </div>
           <div className="flex flex-col items-center w-16">
-            <IconBrandDatabricks className="h-8 w-8 mb-2" style={{ color: '#FF3621' }} />
+            <DatabricksIcon className="h-8 w-8 mb-2" />
             <span className="text-sm text-gray-500 font-medium text-center">Databricks</span>
           </div>
           <div className="flex flex-col items-center w-16">
-            <IconFolderShare className="h-8 w-8 mb-2" style={{ color: '#22c55e' }} />
+            <SftpIcon className="h-8 w-8 mb-2" />
             <span className="text-sm text-gray-500 font-medium text-center">sFTP</span>
           </div>
         </div>
