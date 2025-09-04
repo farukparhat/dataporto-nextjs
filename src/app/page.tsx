@@ -230,7 +230,7 @@ export default function Home() {
                   <li className="flex items-start">
                     <Check className="h-4 w-4 text-gray-600 mt-1 mr-3 flex-shrink-0" />
                     <span className="text-sm">
-                      <strong>Multi-Format Sharing:</strong> Snowflake Data
+                      <strong>Multiple Delivery Options:</strong> Snowflake Data
                       Share, Databricks Delta Share, sFTP
                     </span>
                   </li>

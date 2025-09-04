@@ -6,12 +6,13 @@
 - **Data Catalog / Inventory**: Auto-discovery of tables, schemas, and views
 - **Data Contracts**: Define schemas, SLAs, and expiration rules for shared data
 - **Metadata & Lineage**: Track where data comes from and where it’s being shared
+- **Versioning**: Manage versions of schemas and datasets to ensure compatibility across clients
 
 ---
 
 ## 2. Share — _Deliver the data the way clients want it_
 
-- **Multi-Format Sharing**: Snowflake Data Share, Databricks Delta Share, sFTP, Postgres
+- **Multiple Delivery Options**: Snowflake Data Share, Databricks Delta Share, sFTP, Postgres, APIs
 - **Zero-Copy Access**: Native shares (e.g., Snowflake) without duplication
 - **Client Provisioning**: Reader accounts for Snowflake / Databricks or managed endpoints for sFTP
 - **Multi-Tenant Management**: Share the right slices with the right client securely
