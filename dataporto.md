@@ -52,10 +52,10 @@ Dataporto gives you enterprise-level data sharing capabilities across multiple p
 
 ## 🏷️ Tagline Options
 
-- *"Share live data the way clients expect it — securely and instantly."*
-- *"Multi-Platform Data Sharing as a Service."*
-- *"Your Data. Their Platform. Our Infrastructure."*
-- *"Live data delivery — Snowflake, sFTP, or Databricks — without the complexity."*
+- _"Share live data the way clients expect it — securely and instantly."_
+- _"Multi-Platform Data Sharing as a Service."_
+- _"Your Data. Their Platform. Our Infrastructure."_
+- _"Live data delivery — Snowflake, sFTP, or Databricks — without the complexity."_
 
 ---
 

@@ -3,6 +3,7 @@
 ## 1. Market Context & Trends
 
 **Growing demand for governed, multi-platform data sharing**
+
 - **Enterprise clients expect live, governed access** to vendor data — not CSV dumps.
 - Snowflake, Databricks, and cloud warehouses are competing for **data collaboration dominance**.
 - **Data sovereignty & compliance pressures** (GDPR, HIPAA, industry-specific regulations) mean that **client-by-client governance is no longer optional**.
@@ -12,12 +13,12 @@
 
 ## 2. Competitive Landscape
 
-| Category | Example Players | Where They Stop Short |
-|----------|----------------|-----------------------|
-| **Native platform sharing** | Snowflake Data Share, Databricks Delta Sharing | Assume vendor uses their platform; no cross-platform orchestration; minimal lifecycle management |
-| **ETL/ELT & pipeline tools** | Fivetran, Airbyte, Matillion | Focus on moving data, not provisioning governed client access |
-| **Data marketplace / distribution** | Snowflake Marketplace, AWS Data Exchange | Marketplace-oriented, not designed for one-off client-specific shares |
-| **SFTP/legacy delivery** | Manual setups, hosted FTP | Lacks governance, version control, automation |
+| Category                            | Example Players                                | Where They Stop Short                                                                            |
+| ----------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Native platform sharing**         | Snowflake Data Share, Databricks Delta Sharing | Assume vendor uses their platform; no cross-platform orchestration; minimal lifecycle management |
+| **ETL/ELT & pipeline tools**        | Fivetran, Airbyte, Matillion                   | Focus on moving data, not provisioning governed client access                                    |
+| **Data marketplace / distribution** | Snowflake Marketplace, AWS Data Exchange       | Marketplace-oriented, not designed for one-off client-specific shares                            |
+| **SFTP/legacy delivery**            | Manual setups, hosted FTP                      | Lacks governance, version control, automation                                                    |
 
 **Gap:** No single tool orchestrates **multi-source, multi-destination, client-specific** data sharing with built-in governance and monitoring.
 
@@ -35,10 +36,10 @@
 
 ## 4. Target Segments (High Pain, High Fit)
 
-| Segment | Why They Need DataPorto |
-|---------|-------------------------|
+| Segment                                     | Why They Need DataPorto                                                                               |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | **Data providers & SaaS analytics vendors** | Multiple customers demanding different delivery methods; need to avoid maintaining separate pipelines |
-| **Agencies & platforms** | Share campaign / performance data securely with many clients without exposing full datasets |
+| **Agencies & platforms**                    | Share campaign / performance data securely with many clients without exposing full datasets           |
 
 ---
 
@@ -51,4 +52,3 @@ DataPorto connects to any data source and automates secure, client-specific shar
 ## 7. Market Gap in One Sentence
 
 > **Vendors can deliver data, but no existing solution lets them manage multi-source, multi-destination, client-specific sharing with built-in governance and automation—DataPorto fills that gap.**
-

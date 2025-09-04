@@ -9,6 +9,7 @@ This document outlines the different types of data sharing methods supported by 
 Snowflake Private Shares enable secure, real-time data sharing between Snowflake accounts without the need to copy or move data. This method provides instant access to live data with built-in governance and security controls.
 
 **Key Features:**
+
 - Real-time data access without data duplication
 - Native Snowflake security and governance
 - Instant provisioning and access
@@ -16,6 +17,7 @@ Snowflake Private Shares enable secure, real-time data sharing between Snowflake
 - Granular access controls at database, schema, and table levels
 
 **Use Cases:**
+
 - Sharing live datasets with trusted partners
 - Providing real-time analytics to clients
 - Cross-organizational data collaboration
@@ -28,6 +30,7 @@ Snowflake Private Shares enable secure, real-time data sharing between Snowflake
 Delta Share is an open protocol for secure data sharing that enables organizations to share live data from their Databricks lakehouse with any computing platform securely.
 
 **Key Features:**
+
 - Open standard protocol for data sharing
 - Cross-platform compatibility
 - Real-time data access
@@ -36,6 +39,7 @@ Delta Share is an open protocol for secure data sharing that enables organizatio
 - Version control and lineage tracking
 
 **Use Cases:**
+
 - Multi-cloud data sharing
 - Cross-platform analytics
 - Data marketplace participation
@@ -51,6 +55,7 @@ sFTP (Secure File Transfer Protocol) provides a secure method for file-based dat
 This method allows clients to securely download data files from DataPorto's managed file server infrastructure.
 
 **Key Features:**
+
 - Secure encrypted file transfers
 - Scheduled data exports
 - Multiple file format support
@@ -58,6 +63,7 @@ This method allows clients to securely download data files from DataPorto's mana
 - Bandwidth throttling and optimization
 
 **Use Cases:**
+
 - Batch data exports
 - Scheduled reporting
 - Legacy system integration
@@ -68,6 +74,7 @@ This method allows clients to securely download data files from DataPorto's mana
 This method involves DataPorto securely uploading data files directly to the client's designated sFTP server.
 
 **Key Features:**
+
 - Push-based data delivery
 - Client infrastructure compatibility
 - Flexible scheduling options
@@ -75,6 +82,7 @@ This method involves DataPorto securely uploading data files directly to the cli
 - Secure credential management
 
 **Use Cases:**
+
 - Integration with client's existing workflows
 - Compliance with client security policies
 - Automated data pipeline integration
@@ -82,14 +90,14 @@ This method involves DataPorto securely uploading data files directly to the cli
 
 ## Comparison Matrix
 
-| Feature | Snowflake Private Share | Databricks Delta Share | Pull-Based Delivery | Push-Based Delivery |
-|---------|------------------------|----------------------|---------------|-------------|
-| Real-time Access | ✅ | ✅ | ❌ | ❌ |
-| Data Movement | None | None | Required | Required |
-| Platform Dependency | Snowflake | Multi-platform | Any | Any |
-| Setup Complexity | Low | Medium | Low | Low |
-| Governance | Native | Built-in | Manual | Manual |
-| Cost Efficiency | High | High | Medium | Medium |
+| Feature             | Snowflake Private Share | Databricks Delta Share | Pull-Based Delivery | Push-Based Delivery |
+| ------------------- | ----------------------- | ---------------------- | ------------------- | ------------------- |
+| Real-time Access    | ✅                      | ✅                     | ❌                  | ❌                  |
+| Data Movement       | None                    | None                   | Required            | Required            |
+| Platform Dependency | Snowflake               | Multi-platform         | Any                 | Any                 |
+| Setup Complexity    | Low                     | Medium                 | Low                 | Low                 |
+| Governance          | Native                  | Built-in               | Manual              | Manual              |
+| Cost Efficiency     | High                    | High                   | Medium              | Medium              |
 
 ## Security Considerations
 

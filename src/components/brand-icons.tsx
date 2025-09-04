@@ -1,5 +1,9 @@
 import Image from "next/image";
-import { IconBrandDatabricks, IconBrandSnowflake, IconFolderUp } from "@tabler/icons-react";
+import {
+  IconBrandDatabricks,
+  IconBrandSnowflake,
+  IconFolderUp,
+} from "@tabler/icons-react";
 
 export const DataBricks = ({ className }: { className?: string }) => (
   <Image
@@ -44,7 +48,7 @@ interface IconProps {
 export const SnowflakeIcon = ({ className = "h-8 w-8", size }: IconProps) => (
   <IconBrandSnowflake
     className={className}
-    style={{ color: '#2cb6e8' }}
+    style={{ color: "#2cb6e8" }}
     size={size}
   />
 );
@@ -52,7 +56,7 @@ export const SnowflakeIcon = ({ className = "h-8 w-8", size }: IconProps) => (
 export const DatabricksIcon = ({ className = "h-8 w-8", size }: IconProps) => (
   <IconBrandDatabricks
     className={className}
-    style={{ color: '#FF3621' }}
+    style={{ color: "#FF3621" }}
     size={size}
   />
 );
@@ -60,7 +64,7 @@ export const DatabricksIcon = ({ className = "h-8 w-8", size }: IconProps) => (
 export const SftpIcon = ({ className = "h-8 w-8", size }: IconProps) => (
   <IconFolderUp
     className={className}
-    style={{ color: '#22c55e' }}
+    style={{ color: "#22c55e" }}
     size={size}
   />
 );

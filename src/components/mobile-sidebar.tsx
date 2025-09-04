@@ -86,7 +86,7 @@ export default function MobileSidebar() {
           {/* Navigation */}
           <nav className="flex-1 px-6 py-6">
             <div className="space-y-1">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item => (
                 <div key={item.href || item.label}>
                   {item.children ? (
                     // Solutions section with children
@@ -95,7 +95,7 @@ export default function MobileSidebar() {
                         {item.label}
                       </div>
                       <div className="ml-4 space-y-1">
-                        {item.children.map((child) => (
+                        {item.children.map(child => (
                           <button
                             key={child.href}
                             onClick={() => handleNavClick(child.href)}

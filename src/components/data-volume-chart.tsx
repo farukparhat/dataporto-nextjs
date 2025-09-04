@@ -1,6 +1,14 @@
-"use client"
+"use client";
 
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 interface DataVolumeChartProps {
   data: Array<{
@@ -47,7 +55,7 @@ export function DataVolumeChart({ data, className }: DataVolumeChartProps) {
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
             <XAxis
               dataKey="date"
-              tickFormatter={(value) => {
+              tickFormatter={value => {
                 return new Date(value).toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
@@ -57,17 +65,21 @@ export function DataVolumeChart({ data, className }: DataVolumeChartProps) {
               fontSize={12}
             />
             <YAxis
-              tickFormatter={(value) => `${value.toLocaleString()}`}
+              tickFormatter={value => `${value.toLocaleString()}`}
               stroke="#64748b"
               fontSize={12}
             />
             <Tooltip
               formatter={(value: number, name: string) => {
-                const shareType = name === 'databricks' ? 'Databricks' : 
-                                name === 'snowflake' ? 'Snowflake' : 'sFTP';
+                const shareType =
+                  name === "databricks"
+                    ? "Databricks"
+                    : name === "snowflake"
+                      ? "Snowflake"
+                      : "sFTP";
                 return [`${value.toLocaleString()} rows`, shareType];
               }}
-              labelFormatter={(label) => {
+              labelFormatter={label => {
                 return new Date(label).toLocaleDateString("en-US", {
                   weekday: "long",
                   year: "numeric",

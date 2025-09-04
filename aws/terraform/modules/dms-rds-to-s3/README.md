@@ -100,44 +100,44 @@ aws dms start-replication-task \
 
 ## Inputs
 
-| Name | Type | Default | Description |
-|------|------|---------|-------------|
-| `name_prefix` | `string` | n/a | Prefix for all created resources |
-| `vpc_id` | `string` | n/a | VPC ID hosting the DMS instance |
-| `subnet_ids` | `list(string)` | n/a | Private subnet IDs for the DMS subnet group |
-| `rds_security_group_id` | `string` | n/a | Existing RDS SG to allow DMS ingress into |
-| `rds_engine` | `string` | n/a | `postgres` or `mysql` |
-| `rds_hostname` | `string` | n/a | RDS endpoint hostname |
-| `rds_port` | `number` | n/a | RDS port |
-| `rds_database` | `string` | n/a | Database name |
-| `rds_secrets_manager_secret_arn` | `string` | n/a | ARN of Secrets Manager secret with DB credentials |
-| `include_schemas` | `list(string)` | n/a | Schemas to include, e.g., `["public"]` |
-| `exclude_tables` | `list(object({ schema = string, table = string }))` | `[]` | Tables to exclude (supports wildcards like `audit_*`) |
-| `s3_bucket` | `string` | n/a | Destination S3 bucket name |
-| `s3_prefix` | `string` | `"rds_exports/"` | Prefix/folder under the bucket |
-| `s3_kms_key_arn` | `string` | `null` | KMS key ARN for S3 server-side encryption |
-| `s3_data_format` | `string` | `"parquet"` | `parquet` or `csv` |
-| `s3_compression_type` | `string` | `"GZIP"` | `GZIP` or `NONE` |
-| `cdc_path` | `string` | `"cdc/"` | Path for CDC files under `s3_prefix` |
-| `timestamp_column_name` | `string` | `"_ingested_at"` | Column name for DMS-added ingestion timestamp |
-| `max_file_mb` | `number` | `128` | Max file size for S3 target files (MB) |
-| `replication_instance_class` | `string` | `"dms.t3.medium"` | DMS instance class |
-| `replication_allocated_storage` | `number` | `100` | Storage (GB) for the DMS instance |
-| `multi_az` | `bool` | `false` | Whether to deploy the DMS instance across AZs |
-| `engine_version` | `string` | `"3.5.1"` | DMS engine version |
-| `source_extra_connection_attributes` | `string` | `""` | DMS extra attributes for source endpoint |
-| `enable_cdc` | `bool` | `false` | Use `full-load-and-cdc` when `true` |
-| `tags` | `map(string)` | `{}` | Tags applied to created resources |
+| Name                                 | Type                                                | Default           | Description                                           |
+| ------------------------------------ | --------------------------------------------------- | ----------------- | ----------------------------------------------------- |
+| `name_prefix`                        | `string`                                            | n/a               | Prefix for all created resources                      |
+| `vpc_id`                             | `string`                                            | n/a               | VPC ID hosting the DMS instance                       |
+| `subnet_ids`                         | `list(string)`                                      | n/a               | Private subnet IDs for the DMS subnet group           |
+| `rds_security_group_id`              | `string`                                            | n/a               | Existing RDS SG to allow DMS ingress into             |
+| `rds_engine`                         | `string`                                            | n/a               | `postgres` or `mysql`                                 |
+| `rds_hostname`                       | `string`                                            | n/a               | RDS endpoint hostname                                 |
+| `rds_port`                           | `number`                                            | n/a               | RDS port                                              |
+| `rds_database`                       | `string`                                            | n/a               | Database name                                         |
+| `rds_secrets_manager_secret_arn`     | `string`                                            | n/a               | ARN of Secrets Manager secret with DB credentials     |
+| `include_schemas`                    | `list(string)`                                      | n/a               | Schemas to include, e.g., `["public"]`                |
+| `exclude_tables`                     | `list(object({ schema = string, table = string }))` | `[]`              | Tables to exclude (supports wildcards like `audit_*`) |
+| `s3_bucket`                          | `string`                                            | n/a               | Destination S3 bucket name                            |
+| `s3_prefix`                          | `string`                                            | `"rds_exports/"`  | Prefix/folder under the bucket                        |
+| `s3_kms_key_arn`                     | `string`                                            | `null`            | KMS key ARN for S3 server-side encryption             |
+| `s3_data_format`                     | `string`                                            | `"parquet"`       | `parquet` or `csv`                                    |
+| `s3_compression_type`                | `string`                                            | `"GZIP"`          | `GZIP` or `NONE`                                      |
+| `cdc_path`                           | `string`                                            | `"cdc/"`          | Path for CDC files under `s3_prefix`                  |
+| `timestamp_column_name`              | `string`                                            | `"_ingested_at"`  | Column name for DMS-added ingestion timestamp         |
+| `max_file_mb`                        | `number`                                            | `128`             | Max file size for S3 target files (MB)                |
+| `replication_instance_class`         | `string`                                            | `"dms.t3.medium"` | DMS instance class                                    |
+| `replication_allocated_storage`      | `number`                                            | `100`             | Storage (GB) for the DMS instance                     |
+| `multi_az`                           | `bool`                                              | `false`           | Whether to deploy the DMS instance across AZs         |
+| `engine_version`                     | `string`                                            | `"3.5.1"`         | DMS engine version                                    |
+| `source_extra_connection_attributes` | `string`                                            | `""`              | DMS extra attributes for source endpoint              |
+| `enable_cdc`                         | `bool`                                              | `false`           | Use `full-load-and-cdc` when `true`                   |
+| `tags`                               | `map(string)`                                       | `{}`              | Tags applied to created resources                     |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| `replication_instance_arn` | ARN of the DMS replication instance |
-| `replication_task_arn` | ARN of the DMS replication task |
-| `source_endpoint_arn` | ARN of the DMS source endpoint (RDS) |
-| `target_endpoint_arn` | ARN of the DMS target endpoint (S3) |
-| `dms_security_group_id` | Security group ID attached to the DMS instance |
+| Name                       | Description                                    |
+| -------------------------- | ---------------------------------------------- |
+| `replication_instance_arn` | ARN of the DMS replication instance            |
+| `replication_task_arn`     | ARN of the DMS replication task                |
+| `source_endpoint_arn`      | ARN of the DMS source endpoint (RDS)           |
+| `target_endpoint_arn`      | ARN of the DMS target endpoint (S3)            |
+| `dms_security_group_id`    | Security group ID attached to the DMS instance |
 
 ## Notes and tips
 

@@ -20,7 +20,7 @@ export default function WaitlistButton({
     <>
       <Button
         {...props}
-        onClick={(e) => {
+        onClick={e => {
           onClick?.(e);
           setOpen(true);
         }}

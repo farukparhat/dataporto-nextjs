@@ -124,9 +124,9 @@ export default async function BlogPost({ params }: BlogPostProps) {
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               {Object.values(blogPosts)
-                .filter((p) => p.id !== post.id)
+                .filter(p => p.id !== post.id)
                 .slice(0, 2)
-                .map((relatedPost) => (
+                .map(relatedPost => (
                   <Card
                     key={relatedPost.id}
                     className="p-6 hover:shadow-lg transition-shadow"
@@ -195,7 +195,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
-  return Object.keys(blogPosts).map((slug) => ({
+  return Object.keys(blogPosts).map(slug => ({
     slug,
   }));
 }

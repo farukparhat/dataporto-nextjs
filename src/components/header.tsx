@@ -35,7 +35,10 @@ export default function Header() {
         {/* Mobile Right side buttons */}
         <div className="flex items-center space-x-3">
           <MobileSidebar />
-          <WaitlistButton size="sm" className="bg-gray-900 hover:bg-gray-800 text-white">
+          <WaitlistButton
+            size="sm"
+            className="bg-gray-900 hover:bg-gray-800 text-white"
+          >
             Book a Live Demo
           </WaitlistButton>
         </div>
@@ -190,7 +193,9 @@ export default function Header() {
                   href="/#how-it-works"
                   className="flex items-center p-3 rounded-md hover:bg-gray-50 transition-colors cursor-pointer"
                 >
-                  <span className="font-medium text-gray-900">How it Works</span>
+                  <span className="font-medium text-gray-900">
+                    How it Works
+                  </span>
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>

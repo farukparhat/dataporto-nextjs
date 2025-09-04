@@ -1,6 +1,12 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,13 +15,13 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow
+  TableRow,
 } from "@/components/ui/table";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
   IconShare,
@@ -31,9 +37,13 @@ import {
   IconFolderUp,
   IconFolderDown,
   IconClock,
-  IconAlertTriangle
+  IconAlertTriangle,
 } from "@tabler/icons-react";
-import { SnowflakeIcon, DatabricksIcon, SftpIcon } from "@/components/brand-icons";
+import {
+  SnowflakeIcon,
+  DatabricksIcon,
+  SftpIcon,
+} from "@/components/brand-icons";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 
 // Sample data for data shares
@@ -50,7 +60,7 @@ const dataShares = [
     created: "2024-01-15",
     access: "read-only",
     description: "Complete customer behavior and transaction analytics",
-    expiresAt: "2026-01-15"
+    expiresAt: "2026-01-15",
   },
   {
     id: 2,
@@ -64,7 +74,7 @@ const dataShares = [
     created: "2024-01-10",
     access: "read-only",
     description: "Product usage metrics and performance indicators",
-    expiresAt: "2026-03-10"
+    expiresAt: "2026-03-10",
   },
   {
     id: 3,
@@ -78,7 +88,7 @@ const dataShares = [
     created: "2024-01-20",
     access: "pull-delivery",
     description: "Quarterly financial data and reports",
-    expiresAt: "2026-04-20"
+    expiresAt: "2026-04-20",
   },
   {
     id: 4,
@@ -92,7 +102,7 @@ const dataShares = [
     created: "2024-01-08",
     access: "read-only",
     description: "Campaign performance and attribution data",
-    expiresAt: "2026-06-08"
+    expiresAt: "2026-06-08",
   },
   {
     id: 5,
@@ -106,7 +116,7 @@ const dataShares = [
     created: "2024-01-05",
     access: "read-only",
     description: "User behavior and engagement metrics",
-    expiresAt: "2024-03-05"
+    expiresAt: "2024-03-05",
   },
   {
     id: 6,
@@ -120,8 +130,8 @@ const dataShares = [
     created: "2024-01-18",
     access: "push-delivery",
     description: "Real-time inventory levels and movements",
-    expiresAt: "2026-12-18"
-  }
+    expiresAt: "2026-12-18",
+  },
 ];
 
 function getShareTypeIcon(type: string) {
@@ -198,7 +208,9 @@ function isExpired(expiresAt: string): boolean {
 function isExpiringSoon(expiresAt: string): boolean {
   const expirationDate = new Date(expiresAt);
   const today = new Date();
-  const thirtyDaysFromNow = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000));
+  const thirtyDaysFromNow = new Date(
+    today.getTime() + 30 * 24 * 60 * 60 * 1000
+  );
   return expirationDate <= thirtyDaysFromNow && expirationDate >= today;
 }
 
@@ -222,14 +234,27 @@ function formatExpirationDate(expiresAt: string): string {
 }
 
 export default function DataSharesPage() {
-  const activeShares = dataShares.filter(share => share.status === "active").length;
-  const expiredShares = dataShares.filter(share => share.status === "expired" || isExpired(share.expiresAt)).length;
-  const expiringSoonShares = dataShares.filter(share => share.status !== "expired" && !isExpired(share.expiresAt) && isExpiringSoon(share.expiresAt)).length;
+  const activeShares = dataShares.filter(
+    share => share.status === "active"
+  ).length;
+  const expiredShares = dataShares.filter(
+    share => share.status === "expired" || isExpired(share.expiresAt)
+  ).length;
+  const expiringSoonShares = dataShares.filter(
+    share =>
+      share.status !== "expired" &&
+      !isExpired(share.expiresAt) &&
+      isExpiringSoon(share.expiresAt)
+  ).length;
   const totalClients = new Set(dataShares.map(share => share.client)).size;
   const totalRows = dataShares.reduce((sum, share) => {
     const value = parseFloat(share.rowCount.replace(/[KM]/g, ""));
-    const multiplier = share.rowCount.includes("M") ? 1000000 : share.rowCount.includes("K") ? 1000 : 1;
-    return sum + (value * multiplier);
+    const multiplier = share.rowCount.includes("M")
+      ? 1000000
+      : share.rowCount.includes("K")
+        ? 1000
+        : 1;
+    return sum + value * multiplier;
   }, 0);
 
   return (
@@ -240,8 +265,12 @@ export default function DataSharesPage() {
           <div className="flex items-center space-x-4">
             <SidebarTrigger className="md:hidden" />
             <div>
-              <h1 className="text-2xl font-semibold text-slate-900">Data Shares</h1>
-              <p className="text-slate-600">Manage your outgoing data shares across all platforms</p>
+              <h1 className="text-2xl font-semibold text-slate-900">
+                Data Shares
+              </h1>
+              <p className="text-slate-600">
+                Manage your outgoing data shares across all platforms
+              </p>
             </div>
           </div>
           <Button>
@@ -257,7 +286,9 @@ export default function DataSharesPage() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Active Shares</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Active Shares
+              </CardTitle>
               <IconShare className="h-4 w-4 text-slate-600" />
             </CardHeader>
             <CardContent>
@@ -270,14 +301,14 @@ export default function DataSharesPage() {
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Total Clients</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Total Clients
+              </CardTitle>
               <IconUsers className="h-4 w-4 text-slate-600" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{totalClients}</div>
-              <p className="text-xs text-slate-600">
-                across all platforms
-              </p>
+              <p className="text-xs text-slate-600">across all platforms</p>
             </CardContent>
           </Card>
 
@@ -287,22 +318,26 @@ export default function DataSharesPage() {
               <IconTrendingUp className="h-4 w-4 text-slate-600" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{(totalRows / 1000000).toFixed(1)}M</div>
-              <p className="text-xs text-slate-600">
-                rows shared
-              </p>
+              <div className="text-2xl font-bold">
+                {(totalRows / 1000000).toFixed(1)}M
+              </div>
+              <p className="text-xs text-slate-600">rows shared</p>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Expiring Soon</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Expiring Soon
+              </CardTitle>
               <IconAlertTriangle className="h-4 w-4 text-slate-600" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{expiringSoonShares}</div>
               <p className="text-xs text-slate-600">
-                {expiredShares > 0 ? `${expiredShares} already expired` : "shares need attention"}
+                {expiredShares > 0
+                  ? `${expiredShares} already expired`
+                  : "shares need attention"}
               </p>
             </CardContent>
           </Card>
@@ -332,26 +367,34 @@ export default function DataSharesPage() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {dataShares.map((share) => (
+                {dataShares.map(share => (
                   <TableRow key={share.id}>
                     <TableCell>
                       <div>
                         <div className="font-medium">{share.name}</div>
-                        <div className="text-sm text-slate-500">{share.description}</div>
+                        <div className="text-sm text-slate-500">
+                          {share.description}
+                        </div>
                       </div>
                     </TableCell>
                     <TableCell className="whitespace-nowrap">
-                        <div className="flex items-center space-x-2">
-                          {getShareTypeIcon(share.type)}
-                       <div>
-                         <div className="font-medium">{getShareTypeName(share.type)}</div>
-                         <div className="text-sm text-slate-500">{getShareSubType(share.type)}</div>
-                       </div>
+                      <div className="flex items-center space-x-2">
+                        {getShareTypeIcon(share.type)}
+                        <div>
+                          <div className="font-medium">
+                            {getShareTypeName(share.type)}
+                          </div>
+                          <div className="text-sm text-slate-500">
+                            {getShareSubType(share.type)}
+                          </div>
                         </div>
-                      </TableCell>
+                      </div>
+                    </TableCell>
                     <TableCell className="whitespace-nowrap">
                       <div className="font-medium">{share.client}</div>
-                      <div className="text-sm text-slate-500">{share.access}</div>
+                      <div className="text-sm text-slate-500">
+                        {share.access}
+                      </div>
                     </TableCell>
                     <TableCell>
                       <Badge
@@ -373,13 +416,15 @@ export default function DataSharesPage() {
                         ) : (
                           <IconClock className="h-4 w-4 text-slate-400" />
                         )}
-                        <span className={`text-sm ${
-                          isExpired(share.expiresAt) 
-                            ? "text-red-600 font-medium" 
-                            : isExpiringSoon(share.expiresAt) 
-                            ? "text-yellow-600 font-medium" 
-                            : "text-slate-600"
-                        }`}>
+                        <span
+                          className={`text-sm ${
+                            isExpired(share.expiresAt)
+                              ? "text-red-600 font-medium"
+                              : isExpiringSoon(share.expiresAt)
+                                ? "text-yellow-600 font-medium"
+                                : "text-slate-600"
+                          }`}
+                        >
                           {formatExpirationDate(share.expiresAt)}
                         </span>
                       </div>
@@ -404,10 +449,14 @@ export default function DataSharesPage() {
                             <IconClock className="h-4 w-4 mr-2" />
                             Extend Expiration
                           </DropdownMenuItem>
-                          {(share.type === "sftp" || share.type === "sftp-pull" || share.type === "sftp-push") && (
+                          {(share.type === "sftp" ||
+                            share.type === "sftp-pull" ||
+                            share.type === "sftp-push") && (
                             <DropdownMenuItem>
                               <IconDownload className="h-4 w-4 mr-2" />
-                              {share.type === "sftp-push" ? "View Delivery Status" : "Download Latest"}
+                              {share.type === "sftp-push"
+                                ? "View Delivery Status"
+                                : "Download Latest"}
                             </DropdownMenuItem>
                           )}
                           <DropdownMenuItem>

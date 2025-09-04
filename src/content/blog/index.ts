@@ -22,9 +22,9 @@ export const getBlogPost = (id: string): BlogPost | undefined => {
 };
 
 export const getFeaturedPost = (): BlogPost | undefined => {
-  return Object.values(blogPosts).find((post) => post.featured);
+  return Object.values(blogPosts).find(post => post.featured);
 };
 
 export const getRegularPosts = (): BlogPost[] => {
-  return Object.values(blogPosts).filter((post) => !post.featured);
+  return Object.values(blogPosts).filter(post => !post.featured);
 };

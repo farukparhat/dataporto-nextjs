@@ -87,7 +87,7 @@ export default function BlogPage() {
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regularPosts.map((post) => (
+              {regularPosts.map(post => (
                 <Card
                   key={post.id}
                   className="overflow-hidden hover:shadow-lg transition-shadow"

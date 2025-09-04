@@ -10,12 +10,17 @@ import Header from "@/components/header";
 import WaitlistButton from "@/components/waitlist-button";
 import ScreenshotWindow from "@/components/screenshot-window";
 import { IconShare } from "@tabler/icons-react";
-import { SnowflakeIcon, DatabricksIcon, SftpIcon } from "@/components/brand-icons";
+import {
+  SnowflakeIcon,
+  DatabricksIcon,
+  SftpIcon,
+} from "@/components/brand-icons";
 import DemoSignupForm from "@/components/demo-signup-form";
 
 export default function Home() {
   // Standardized button styles
-  const darkButtonClasses = "bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-lg";
+  const darkButtonClasses =
+    "bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-lg";
 
   return (
     <div className="min-h-screen bg-white">
@@ -23,11 +28,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 text-center">
-      <div className="container mx-auto px-4 pt-8 text-center">
-        <Badge variant="outline" className="text-gray-600 ">
-          <IconShare className="h-4 w-4 mr-2" /> Multi-Platform Data Sharing as a Service
-        </Badge>
-      </div>
+        <div className="container mx-auto px-4 pt-8 text-center">
+          <Badge variant="outline" className="text-gray-600 ">
+            <IconShare className="h-4 w-4 mr-2" /> Multi-Platform Data Sharing
+            as a Service
+          </Badge>
+        </div>
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
           Your one-stop data platform
           <br />
@@ -49,9 +55,7 @@ export default function Home() {
             asChild
             className="px-8 py-4 text-lg font-medium rounded-lg"
           >
-            <Link href="/#how-it-works">
-              See how it works
-            </Link>
+            <Link href="/#how-it-works">See how it works</Link>
           </Button>
         </div>
 
@@ -88,15 +92,21 @@ export default function Home() {
         <div className="flex justify-center items-center gap-12 mt-16 opacity-60">
           <div className="flex flex-col items-center w-16">
             <SnowflakeIcon className="h-8 w-8 mb-2" />
-            <span className="text-sm text-gray-500 font-medium text-center">Snowflake</span>
+            <span className="text-sm text-gray-500 font-medium text-center">
+              Snowflake
+            </span>
           </div>
           <div className="flex flex-col items-center w-16">
             <DatabricksIcon className="h-8 w-8 mb-2" />
-            <span className="text-sm text-gray-500 font-medium text-center">Databricks</span>
+            <span className="text-sm text-gray-500 font-medium text-center">
+              Databricks
+            </span>
           </div>
           <div className="flex flex-col items-center w-16">
             <SftpIcon className="h-8 w-8 mb-2" />
-            <span className="text-sm text-gray-500 font-medium text-center">sFTP</span>
+            <span className="text-sm text-gray-500 font-medium text-center">
+              sFTP
+            </span>
           </div>
         </div>
       </section>
@@ -109,8 +119,9 @@ export default function Home() {
               There&apos;s a smarter way to share data
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Dataporto gives your team a complete data sharing platform. Connect your sources,
-              configure governance policies, then deliver to any platform with a single control plane.
+              Dataporto gives your team a complete data sharing platform.
+              Connect your sources, configure governance policies, then deliver
+              to any platform with a single control plane.
             </p>
           </div>
 
@@ -120,11 +131,11 @@ export default function Home() {
 
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-600 leading-relaxed">
-              Connect your data sources, then use our control plane to
-              provision per-client Snowflake Data Shares, Databricks Delta
-              Shares, or sFTP feeds. Every client gets secure, isolated data
-              access in their preferred format — without your team rebuilding
-              or maintaining separate pipelines.
+              Connect your data sources, then use our control plane to provision
+              per-client Snowflake Data Shares, Databricks Delta Shares, or sFTP
+              feeds. Every client gets secure, isolated data access in their
+              preferred format — without your team rebuilding or maintaining
+              separate pipelines.
             </p>
           </div>
         </div>
@@ -156,7 +167,9 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">What You Get</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                What You Get
+              </h3>
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
@@ -190,7 +203,9 @@ export default function Home() {
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">How It Works</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                How It Works
+              </h3>
               <div className="space-y-6">
                 <div className="p-6 bg-gray-50 rounded-lg">
                   <h4 className="font-semibold text-gray-900 mb-2">
@@ -223,8 +238,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <WaitlistButton size="lg" className={darkButtonClasses}>
-              Enable Snowflake Shares{" "}
-              <ArrowRight className="ml-2 h-5 w-5" />
+              Enable Snowflake Shares <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
           </div>
         </div>
@@ -248,9 +262,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Today&apos;s &quot;Custom Build&quot; Approach
               </h3>
-              <p className="text-gray-600 mb-6">
-                One‑off pipelines per client
-              </p>
+              <p className="text-gray-600 mb-6">One‑off pipelines per client</p>
               <ol className="list-decimal list-inside space-y-3 text-gray-700">
                 <li>
                   Gather client requirements (e.g., S3 parquet, nightly sFTP
@@ -274,40 +286,54 @@ export default function Home() {
 
             {/* Pain Points */}
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Pain Points</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Pain Points
+              </h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-gray-50 rounded-lg">
-                  <p className="font-semibold text-gray-900 mb-1">High engineering load</p>
+                  <p className="font-semibold text-gray-900 mb-1">
+                    High engineering load
+                  </p>
                   <p className="text-sm text-gray-600">
                     Each client becomes a separate project.
                   </p>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-lg">
-                  <p className="font-semibold text-gray-900 mb-1">Inconsistent governance</p>
+                  <p className="font-semibold text-gray-900 mb-1">
+                    Inconsistent governance
+                  </p>
                   <p className="text-sm text-gray-600">
                     Controls and masking scattered across code.
                   </p>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-lg">
-                  <p className="font-semibold text-gray-900 mb-1">Slow onboarding</p>
+                  <p className="font-semibold text-gray-900 mb-1">
+                    Slow onboarding
+                  </p>
                   <p className="text-sm text-gray-600">
                     Infra + pipeline + security steps are manual.
                   </p>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-lg">
-                  <p className="font-semibold text-gray-900 mb-1">Schema change chaos</p>
+                  <p className="font-semibold text-gray-900 mb-1">
+                    Schema change chaos
+                  </p>
                   <p className="text-sm text-gray-600">
                     One change breaks many bespoke pipelines.
                   </p>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-lg">
-                  <p className="font-semibold text-gray-900 mb-1">Siloed monitoring</p>
+                  <p className="font-semibold text-gray-900 mb-1">
+                    Siloed monitoring
+                  </p>
                   <p className="text-sm text-gray-600">
                     No single view of deliveries and failures.
                   </p>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-lg">
-                  <p className="font-semibold text-gray-900 mb-1">Platform mismatch</p>
+                  <p className="font-semibold text-gray-900 mb-1">
+                    Platform mismatch
+                  </p>
                   <p className="text-sm text-gray-600">
                     Buying Snowflake/Databricks just for one client.
                   </p>
@@ -326,26 +352,37 @@ export default function Home() {
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>One connection to your source (Snowflake, Databricks,
-                      Postgres, AWS, and more)</span>
+                      <span>
+                        One connection to your source (Snowflake, Databricks,
+                        Postgres, AWS, and more)
+                      </span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>One control plane for governance, masking, filtering,
-                      client permissions</span>
+                      <span>
+                        One control plane for governance, masking, filtering,
+                        client permissions
+                      </span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>Multiple delivery methods out of the box (Shares or sFTP)</span>
+                      <span>
+                        Multiple delivery methods out of the box (Shares or
+                        sFTP)
+                      </span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>Automated lifecycle management for onboarding, schema
-                      changes, revocation</span>
+                      <span>
+                        Automated lifecycle management for onboarding, schema
+                        changes, revocation
+                      </span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>Unified audit and monitoring across all deliveries</span>
+                      <span>
+                        Unified audit and monitoring across all deliveries
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -372,8 +409,9 @@ export default function Home() {
               Connect Any Data Source
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Dataporto integrates with your existing data infrastructure, regardless of where your data lives.
-              No migrations required — work with what you already have.
+              Dataporto integrates with your existing data infrastructure,
+              regardless of where your data lives. No migrations required — work
+              with what you already have.
             </p>
           </div>
 
@@ -382,7 +420,13 @@ export default function Home() {
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
               <div className="mb-4">
                 <div className="p-3 bg-blue-50 rounded-lg w-fit mx-auto mb-4">
-                  <Image src="/aws.svg" alt="AWS" width={32} height={32} className="h-8 w-8" />
+                  <Image
+                    src="/aws.svg"
+                    alt="AWS"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8"
+                  />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">
                   Cloud Databases
@@ -401,7 +445,13 @@ export default function Home() {
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
               <div className="mb-4">
                 <div className="p-3 bg-orange-50 rounded-lg w-fit mx-auto mb-4">
-                  <Image src="/file.svg" alt="Storage" width={32} height={32} className="h-8 w-8" />
+                  <Image
+                    src="/file.svg"
+                    alt="Storage"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8"
+                  />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">
                   Object Storage
@@ -439,7 +489,13 @@ export default function Home() {
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
               <div className="mb-4">
                 <div className="p-3 bg-green-50 rounded-lg w-fit mx-auto mb-4">
-                  <Image src="/databricks.svg" alt="Data Lakes" width={32} height={32} className="h-8 w-8" />
+                  <Image
+                    src="/databricks.svg"
+                    alt="Data Lakes"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8"
+                  />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">
                   Data Lake Formats
@@ -457,7 +513,8 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <p className="text-lg text-gray-600 mb-6">
-              Don&apos;t see your data source? We&apos;re constantly adding new integrations.
+              Don&apos;t see your data source? We&apos;re constantly adding new
+              integrations.
             </p>
             <WaitlistButton size="lg" className={darkButtonClasses}>
               Request Integration
@@ -489,9 +546,9 @@ export default function Home() {
                   No Vendor Lock-in
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Works with any data platform — Snowflake, Databricks, or
-                  your existing infrastructure. No forced migrations or
-                  platform dependencies.
+                  Works with any data platform — Snowflake, Databricks, or your
+                  existing infrastructure. No forced migrations or platform
+                  dependencies.
                 </p>
               </div>
             </div>
@@ -505,9 +562,8 @@ export default function Home() {
                   Client-by-Client Governance
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Granular masking, row/column security, and access controls
-                  per client. Meet compliance requirements without custom
-                  code.
+                  Granular masking, row/column security, and access controls per
+                  client. Meet compliance requirements without custom code.
                 </p>
               </div>
             </div>
@@ -569,9 +625,8 @@ export default function Home() {
                   Enterprise Ready
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  SOC 2 compliance, enterprise SSO, role-based access
-                  controls, and API-first architecture for seamless
-                  integration.
+                  SOC 2 compliance, enterprise SSO, role-based access controls,
+                  and API-first architecture for seamless integration.
                 </p>
               </div>
             </div>
@@ -628,7 +683,10 @@ export default function Home() {
                     methods.
                   </p>
                   <div className="text-center">
-                    <WaitlistButton size="lg" className={darkButtonClasses + " mt-4"}>
+                    <WaitlistButton
+                      size="lg"
+                      className={darkButtonClasses + " mt-4"}
+                    >
                       Learn More
                     </WaitlistButton>
                   </div>
@@ -753,13 +811,14 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Stop Wasting Engineering Resources on Custom Data Sharing Infrastructure
+              Stop Wasting Engineering Resources on Custom Data Sharing
+              Infrastructure
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Free up your engineering team to focus on core product development
               instead of maintaining custom per-client data sharing
-              infrastructure. Dataporto handles the complexity so you can focus on
-              innovation.
+              infrastructure. Dataporto handles the complexity so you can focus
+              on innovation.
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
@@ -783,10 +842,16 @@ export default function Home() {
               <span className="text-xl font-bold">dataporto</span>
             </div>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Privacy
               </Link>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 Terms
               </a>
               <a

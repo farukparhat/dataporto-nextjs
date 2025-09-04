@@ -81,25 +81,25 @@ module "dms_migration" {
 
 ## Variables
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|----------|
-| name_prefix | Prefix for all resource names | string | - | yes |
-| vpc_id | VPC ID where RDS will be deployed | string | - | yes |
-| subnet_ids | List of subnet IDs for RDS subnet group | list(string) | - | yes |
-| engine | Database engine (postgres or mysql) | string | "postgres" | no |
-| instance_class | RDS instance class | string | "db.t3.micro" | no |
-| populate_sample_data | Whether to populate with sample data | bool | true | no |
+| Name                 | Description                             | Type         | Default       | Required |
+| -------------------- | --------------------------------------- | ------------ | ------------- | -------- |
+| name_prefix          | Prefix for all resource names           | string       | -             | yes      |
+| vpc_id               | VPC ID where RDS will be deployed       | string       | -             | yes      |
+| subnet_ids           | List of subnet IDs for RDS subnet group | list(string) | -             | yes      |
+| engine               | Database engine (postgres or mysql)     | string       | "postgres"    | no       |
+| instance_class       | RDS instance class                      | string       | "db.t3.micro" | no       |
+| populate_sample_data | Whether to populate with sample data    | bool         | true          | no       |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| rds_endpoint | RDS instance endpoint |
-| rds_hostname | RDS instance hostname |
-| rds_port | RDS instance port |
-| rds_engine | RDS engine type |
-| rds_database | RDS database name |
-| rds_security_group_id | Security group ID for RDS |
+| Name                           | Description                       |
+| ------------------------------ | --------------------------------- |
+| rds_endpoint                   | RDS instance endpoint             |
+| rds_hostname                   | RDS instance hostname             |
+| rds_port                       | RDS instance port                 |
+| rds_engine                     | RDS engine type                   |
+| rds_database                   | RDS database name                 |
+| rds_security_group_id          | Security group ID for RDS         |
 | rds_secrets_manager_secret_arn | ARN of the Secrets Manager secret |
 
 ## Notes

@@ -18,6 +18,7 @@ This demo showcases a complete end-to-end data migration pipeline from RDS (Post
 ## What This Demo Creates
 
 ### 1. RDS Instance with Sample Data
+
 - **Engine**: PostgreSQL 15.4
 - **Instance**: db.t3.micro (cost-effective for demo)
 - **Sample Data**: E-commerce dataset with customers, products, orders, and order items
@@ -25,6 +26,7 @@ This demo showcases a complete end-to-end data migration pipeline from RDS (Post
 - **Networking**: Deployed in private subnets with appropriate security groups
 
 ### 2. DMS Migration Pipeline
+
 - **Replication Instance**: dms.t3.micro
 - **Migration Type**: Full load (CDC disabled for demo simplicity)
 - **Source**: PostgreSQL RDS instance
@@ -37,7 +39,7 @@ The demo creates realistic e-commerce data:
 
 - **customers** (5 sample records)
   - customer_id, name, email, created_at
-- **products** (5 sample records)  
+- **products** (5 sample records)
   - product_id, name, description, price_cents, category, created_at
 - **orders** (6 sample records)
   - order_id, customer_id, order_date, status, total_cents, created_at
@@ -93,6 +95,7 @@ terraform apply
 ### 3. Monitor the Migration
 
 The deployment will:
+
 1. Create the RDS instance (~5-10 minutes)
 2. Populate it with sample data (~1-2 minutes)
 3. Create DMS resources (~5 minutes)
@@ -109,6 +112,7 @@ aws s3 ls s3://your-demo-data-lake-bucket/rds-exports/demo/ --recursive
 ```
 
 Expected output structure:
+
 ```
 rds-exports/demo/demo/customers/
 rds-exports/demo/demo/products/
@@ -148,7 +152,7 @@ SELECT count(*) FROM demo.orders;
 SELECT count(*) FROM demo.order_items;
 
 -- Join query example
-SELECT 
+SELECT
   c.name as customer_name,
   o.order_date,
   o.status,
@@ -178,6 +182,7 @@ terraform destroy
 ## Cost Estimation
 
 This demo uses cost-effective resources:
+
 - **db.t3.micro RDS**: ~$13/month (if left running)
 - **dms.t3.micro DMS**: ~$25/month (if left running)
 - **S3 storage**: Minimal for demo data
