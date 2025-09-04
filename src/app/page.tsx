@@ -35,7 +35,7 @@ export default function Home() {
           </Badge>
         </div>
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
-          Your one-stop <br />data platform
+          Your one-stop data platform
           <br />
           for client data sharing
         </h1>
@@ -849,7 +849,7 @@ export default function Home() {
                 Privacy
               </Link>
               <a
-                href="#"
+                href="/terms"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Terms
