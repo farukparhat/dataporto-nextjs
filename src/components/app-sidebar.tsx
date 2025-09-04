@@ -85,22 +85,22 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
-        <div className="flex items-center space-x-2 px-2">
+        <div className="flex items-center space-x-3 px-3 py-3">
           <Image
             src="/icon.png"
             alt="Dataporto"
-            width={24}
-            height={24}
-            className="h-6 w-6"
+            width={28}
+            height={28}
+            className="h-7 w-7"
           />
-          <span className="text-lg font-semibold text-slate-900">dataporto</span>
+          <span className="text-xl font-bold tracking-tight text-slate-900">dataporto</span>
         </div>
       </SidebarHeader>
 
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="space-y-1">
               {navigationItems.map((item) => {
                 const isActive = pathname === item.href
                 const Icon = item.icon
@@ -111,10 +111,15 @@ export function AppSidebar() {
                       asChild
                       isActive={isActive}
                       tooltip={item.title}
+                      className={`group relative transition-all duration-200 ${
+                        isActive 
+                          ? 'bg-blue-50 border-l-3 border-l-blue-500 text-blue-700 font-semibold shadow-sm' 
+                          : 'hover:bg-slate-50 font-medium text-slate-700 hover:text-slate-900'
+                      }`}
                     >
-                      <Link href={item.href}>
-                        <Icon className="h-4 w-4" />
-                        <span>{item.title}</span>
+                      <Link href={item.href} className="flex items-center gap-3 w-full">
+                        <Icon className={`h-4 w-4 ${isActive ? 'text-blue-600' : 'text-slate-500'}`} />
+                        <span className="text-sm leading-tight">{item.title}</span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -127,12 +132,12 @@ export function AppSidebar() {
 
       <SidebarFooter>
         <SidebarSeparator />
-        <div className="p-2">
-          <div className="rounded-md bg-slate-50 p-3">
-            <p className="text-xs text-slate-600">
+        <div className="p-3">
+          <div className="rounded-lg bg-slate-50/50 border border-slate-100 p-4">
+            <p className="text-xs text-slate-600 leading-relaxed font-medium">
               Multi‑Platform Data Sharing as a Service
             </p>
-            <p className="mt-1 text-xs font-medium text-slate-900">
+            <p className="mt-2 text-xs font-semibold text-slate-800 tracking-wide">
               v1.0.0
             </p>
           </div>
