@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/header";
 import WaitlistButton from "@/components/waitlist-button";
+import ScreenshotWindow from "@/components/screenshot-window";
 import { IconShare } from "@tabler/icons-react";
 import { SnowflakeIcon, DatabricksIcon, SftpIcon } from "@/components/brand-icons";
 
@@ -67,48 +68,42 @@ export default function Home() {
         </div>
 
         {/* Hero Screenshot */}
-        <div className="max-w-3xl mx-auto mt-16 px-4">
+        <div className="max-w-4xl mx-auto mt-16 px-4">
           <div className="relative">
             {/* Background blur effects */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-purple-50/50 rounded-3xl blur-3xl transform scale-110"></div>
 
             {/* Main container with perspective */}
             <div className="relative perspective-1000">
-              <div className="transform rotate-x-2 hover:rotate-x-1 transition-transform duration-700 ease-out">
-                <div className="bg-white rounded-xl md:rounded-2xl shadow-2xl border border-gray-200/50 overflow-hidden backdrop-blur-sm">
-                  {/* Browser chrome - hidden on mobile */}
-                  <div className="hidden sm:block p-2 bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-200">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                      <div className="flex-1 bg-white rounded-md h-6 mx-4 flex items-center px-3">
-                        <div className="w-3 h-3 bg-gray-300 rounded-sm mr-2"></div>
-                        <div className="text-xs text-gray-500 font-mono hidden md:block">app.dataporto.com</div>
-                        <div className="text-xs text-gray-500 font-mono md:hidden">dataporto</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="relative">
-                    <Image
-                      src="/screenshot-app-home.png"
-                      alt="Dataporto Dashboard - Multi-platform data sharing interface"
-                      width={1400}
-                      height={900}
-                      className="w-full h-auto"
-                      priority
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1400px"
-                    />
-                    {/* Subtle overlay gradient for depth */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent pointer-events-none"></div>
-                  </div>
-                </div>
+              {/* Back Screenshot - Home Dashboard */}
+              <div className="transform rotate-x-2 rotate-y-3 hover:rotate-x-1 hover:rotate-y-2 transition-transform duration-700 ease-out">
+                <ScreenshotWindow
+                  src="/screenshot-app-home.png"
+                  alt="Dataporto Dashboard - Multi-platform data sharing interface"
+                  url="app.dataporto.com"
+                  urlShort="dataporto"
+                  priority
+                  overlayIntensity="light"
+                />
+              </div>
+
+              {/* Front Screenshot - Data Shares - Same Size */}
+              <div className="absolute top-8 right-8 md:top-12 md:right-12 lg:top-16 lg:right-16 w-l transform rotate-x-1 -rotate-y-6 rotate-z-3 hover:-rotate-y-4 hover:rotate-z-2 transition-all duration-700 ease-out shadow-2xl">
+                <ScreenshotWindow
+                  src="/screenshot-app-data-shares.png"
+                  alt="Dataporto Data Shares - Client data sharing management"
+                  url="app.dataporto.com/data-shares"
+                  urlShort="data-shares"
+                  overlayIntensity="medium"
+                />
               </div>
             </div>
 
-            {/* Floating elements for visual appeal - responsive sizes */}
+            {/* Enhanced floating elements for visual appeal */}
             <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-16 h-16 md:w-24 md:h-24 bg-blue-100 rounded-full blur-xl opacity-60 animate-pulse"></div>
             <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 w-20 h-20 md:w-32 md:h-32 bg-purple-100 rounded-full blur-xl opacity-40 animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 -left-8 w-12 h-12 md:w-16 md:h-16 bg-indigo-100 rounded-full blur-lg opacity-30 animate-pulse delay-500"></div>
+            <div className="absolute top-1/4 -right-6 w-14 h-14 md:w-20 md:h-20 bg-cyan-100 rounded-full blur-xl opacity-50 animate-pulse delay-2000"></div>
           </div>
         </div>
       </section>
