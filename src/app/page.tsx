@@ -1,6 +1,7 @@
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 import FlowDiagram from "@/components/flow-diagram";
 import { Share2, ArrowRight, Check, Folder, Trophy } from "lucide-react";
 import { DataBricks, Snowflake } from "@/components/brand-icons";
@@ -11,163 +12,204 @@ import WaitlistButton from "@/components/waitlist-button";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-white">
       <Header />
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <Badge variant="secondary" className="mb-4">
-          <Share2 className="h-4 w-4 mr-2" />
-          Data Sharing as a Service
+      {/* Service Badge */}
+      <div className="container mx-auto px-4 pt-8 text-center">
+        <Badge variant="outline" className="text-gray-600 border-gray-300 bg-white">
+          Multi-Platform Data Sharing as a Service
         </Badge>
-        <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-          Governed, Multi-Platform Data Sharing Without Custom Pipelines
+      </div>
+
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-24 text-center">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
+          Your one-stop data platform
+          <br />
+          for client data sharing
         </h1>
-        <p className="text-xl text-slate-600 mb-8 max-w-4xl mx-auto">
+        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
           Securely share live, governed data with each of your clients in their
           preferred platform — Snowflake, Databricks, or sFTP — with
           client-by-client configuration and lifecycle management.
         </p>
 
-        {/* Platform Icons */}
-        <div className="flex justify-center items-center space-x-8 mb-8">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <WaitlistButton size="lg" className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-lg">
+            Schedule a Demo
+          </WaitlistButton>
+          <Button
+            variant="outline"
+            size="lg"
+            asChild
+            className="px-8 py-4 text-lg font-medium rounded-lg"
+          >
+            <Link href="/#how-it-works">
+              See how it works
+            </Link>
+          </Button>
+        </div>
+
+        {/* Platform Integration Logos */}
+        <div className="flex justify-center items-center space-x-12 mb-8 opacity-60">
           <div className="flex flex-col items-center">
-            <Snowflake className="h-12 w-12 text-blue-600 mb-2" />
-            <span className="text-sm text-slate-600">Snowflake</span>
+            <Snowflake className="h-8 w-8 text-gray-600 mb-2" />
+            <span className="text-sm text-gray-500 font-medium">Snowflake</span>
           </div>
           <div className="flex flex-col items-center">
-            <DataBricks className="h-12 w-12 text-orange-600 mb-2" />
-            <span className="text-sm text-slate-600">Databricks</span>
+            <DataBricks className="h-8 w-8 text-gray-600 mb-2" />
+            <span className="text-sm text-gray-500 font-medium">Databricks</span>
           </div>
           <div className="flex flex-col items-center">
-            <Folder className="h-12 w-12 text-green-600 mb-2" />
-            <span className="text-sm text-slate-600">sFTP</span>
+            <Folder className="h-8 w-8 text-gray-600 mb-2" />
+            <span className="text-sm text-gray-500 font-medium">sFTP</span>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <WaitlistButton size="lg" className="text-lg px-8">
-            Schedule a Demo <ArrowRight className="ml-2 h-5 w-5" />
-          </WaitlistButton>
+        {/* Hero Animation/Visual Placeholder */}
+        <div className="max-w-6xl mx-auto mt-16">
+          <div className="bg-gray-50 rounded-2xl p-8 shadow-sm border border-gray-200">
+            <div className="bg-white rounded-xl p-6 shadow-sm">
+              <div className="text-left">
+                <div className="mb-4">
+                  <div className="h-4 bg-gray-200 rounded w-1/4 mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-1/3"></div>
+                </div>
+                <div className="grid grid-cols-3 gap-4 mb-4">
+                  <div className="h-20 bg-blue-100 rounded-lg"></div>
+                  <div className="h-20 bg-green-100 rounded-lg"></div>
+                  <div className="h-20 bg-purple-100 rounded-lg"></div>
+                </div>
+                <div className="h-32 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* How it Works Section */}
-      <section id="how-it-works" className="py-20 bg-white">
+      <section id="how-it-works" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-8">
-              How it Works
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              There's a smarter way to share data
             </h2>
-            <div className="max-w-4xl mx-auto">
-              <FlowDiagram />
-            </div>
-            <div className="max-w-4xl mx-auto mt-8">
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Connect your data sources, then use our control plane to
-                provision per-client Snowflake Data Shares, Databricks Delta
-                Shares, or sFTP feeds. Every client gets secure, isolated data
-                access in their preferred format — without your team rebuilding
-                or maintaining separate pipelines.
-              </p>
-            </div>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Dataporto gives your team a complete data sharing platform. Connect your sources, 
+              configure governance policies, then deliver to any platform with a single control plane.
+            </p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto mb-16">
+            <FlowDiagram />
+          </div>
+          
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Connect your data sources, then use our control plane to
+              provision per-client Snowflake Data Shares, Databricks Delta
+              Shares, or sFTP feeds. Every client gets secure, isolated data
+              access in their preferred format — without your team rebuilding
+              or maintaining separate pipelines.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Enable Snowflake Data Shares Section */}
-      <section id="snowflake-shares" className="py-20 bg-slate-50">
+      <section id="snowflake-shares" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Trophy className="h-4 w-4 mr-2" />
               Most Popular Use Case
-            </Badge>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Enable Snowflake Data Shares
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Many vendors today store data in Databricks, Postgres, BigQuery,
               or other platforms, but their enterprise clients increasingly
               demand Snowflake Data Shares. With Dataporto, vendors can meet
               this demand — even if they don&apos;t have a Snowflake account.
             </p>
-            <div className="mt-4">
-              <Badge variant="outline" className="text-sm">
+            <div className="mt-6">
+              <span className="inline-flex items-center border border-gray-200 bg-gray-50 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">
                 Don&apos;t use Snowflake? No Problem
-              </Badge>
+              </span>
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8">
-              <CardTitle className="text-xl mb-3">What You Get</CardTitle>
-              <ul className="space-y-3 text-slate-700">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">What You Get</h3>
+              <ul className="space-y-4 text-gray-700">
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
                   <span>
                     Secure data ingestion and staging from any platform
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
                   <span>
                     Governed Snowflake Data Shares with client-specific controls
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
                   <span>
                     Snowflake Reader Accounts for clients without Snowflake
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
                   <span>
                     Live, zero-copy data access in the format clients expect
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                  <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
                   <span>No custom pipeline development or maintenance</span>
                 </li>
               </ul>
-            </Card>
+            </div>
 
-            <Card className="p-8">
-              <CardTitle className="text-xl mb-3">How It Works</CardTitle>
-              <div className="space-y-4">
-                <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-                  <h4 className="font-semibold text-blue-900 mb-2">
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">How It Works</h3>
+              <div className="space-y-6">
+                <div className="p-6 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">
                     1. Ingest & Stage Your Data
                   </h4>
-                  <p className="text-sm text-blue-800">
+                  <p className="text-gray-600">
                     Connect Dataporto to your data source, whether its
                     Databricks, AWS S3, or another data stack.
                   </p>
                 </div>
-                <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-                  <h4 className="font-semibold text-green-900 mb-2">
+                <div className="p-6 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">
                     2. Provision Governed Shares
                   </h4>
-                  <p className="text-sm text-blue-800">
+                  <p className="text-gray-600">
                     Use Dataporto to provision Snowflake Shares for your clients
                   </p>
                 </div>
-                <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
-                  <h4 className="font-semibold text-purple-900 mb-2">
+                <div className="p-6 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">
                     3. Clients Get Live Access
                   </h4>
-                  <p className="text-sm text-blue-800">
+                  <p className="text-gray-600">
                     Zero-copy data access in Snowflake with full governance
                   </p>
                 </div>
               </div>
-            </Card>
+            </div>
           </div>
 
-          <div className="text-center mt-8">
-            <WaitlistButton size="lg" className="text-lg px-8">
+          <div className="text-center mt-12">
+            <WaitlistButton className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-medium rounded-lg">
               Enable Snowflake Shares from Any Source{" "}
               <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
@@ -176,27 +218,27 @@ export default function Home() {
       </section>
 
       {/* Before & After */}
-      <section id="before-after" className="py-20 bg-white">
+      <section id="before-after" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Stop Building Custom Pipelines for Each Client
             </h2>
-            <p className="text-lg text-slate-600">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Replace dozens of fragile pipelines with a single control plane
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Today’s Custom Build */}
-            <Card className="p-8">
-              <CardTitle className="text-xl mb-3">
-                Today’s “Custom Build” Approach
-              </CardTitle>
-              <CardDescription className="mb-4">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Today's Custom Build */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Today's "Custom Build" Approach
+              </h3>
+              <p className="text-gray-600 mb-6">
                 One‑off pipelines per client
-              </CardDescription>
-              <ol className="list-decimal list-inside space-y-2 text-slate-700">
+              </p>
+              <ol className="list-decimal list-inside space-y-3 text-gray-700">
                 <li>
                   Gather client requirements (e.g., S3 parquet, nightly sFTP
                   CSV, live Snowflake Share)
@@ -215,233 +257,221 @@ export default function Home() {
                 </li>
                 <li>Monitor and troubleshoot pipelines individually</li>
               </ol>
-            </Card>
+            </div>
 
             {/* Pain Points */}
-            <Card className="p-8">
-              <CardTitle className="text-xl mb-3">Pain Points</CardTitle>
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Pain Points</h3>
               <div className="grid sm:grid-cols-2 gap-4">
-                <div className="p-4 bg-slate-50 rounded border">
-                  <p className="font-medium">High engineering load</p>
-                  <p className="text-sm text-slate-600">
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <p className="font-semibold text-gray-900 mb-1">High engineering load</p>
+                  <p className="text-sm text-gray-600">
                     Each client becomes a separate project.
                   </p>
                 </div>
-                <div className="p-4 bg-slate-50 rounded border">
-                  <p className="font-medium">Inconsistent governance</p>
-                  <p className="text-sm text-slate-600">
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <p className="font-semibold text-gray-900 mb-1">Inconsistent governance</p>
+                  <p className="text-sm text-gray-600">
                     Controls and masking scattered across code.
                   </p>
                 </div>
-                <div className="p-4 bg-slate-50 rounded border">
-                  <p className="font-medium">Slow onboarding</p>
-                  <p className="text-sm text-slate-600">
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <p className="font-semibold text-gray-900 mb-1">Slow onboarding</p>
+                  <p className="text-sm text-gray-600">
                     Infra + pipeline + security steps are manual.
                   </p>
                 </div>
-                <div className="p-4 bg-slate-50 rounded border">
-                  <p className="font-medium">Schema change chaos</p>
-                  <p className="text-sm text-slate-600">
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <p className="font-semibold text-gray-900 mb-1">Schema change chaos</p>
+                  <p className="text-sm text-gray-600">
                     One change breaks many bespoke pipelines.
                   </p>
                 </div>
-                <div className="p-4 bg-slate-50 rounded border">
-                  <p className="font-medium">Siloed monitoring</p>
-                  <p className="text-sm text-slate-600">
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <p className="font-semibold text-gray-900 mb-1">Siloed monitoring</p>
+                  <p className="text-sm text-gray-600">
                     No single view of deliveries and failures.
                   </p>
                 </div>
-                <div className="p-4 bg-slate-50 rounded border">
-                  <p className="font-medium">Platform mismatch</p>
-                  <p className="text-sm text-slate-600">
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <p className="font-semibold text-gray-900 mb-1">Platform mismatch</p>
+                  <p className="text-sm text-gray-600">
                     Buying Snowflake/Databricks just for one client.
                   </p>
                 </div>
               </div>
-            </Card>
+            </div>
           </div>
 
-          <div className="max-w-6xl mx-auto mt-8">
-            <Card className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
-              <div className="grid md:grid-cols-2 gap-6 items-center">
+          <div className="max-w-6xl mx-auto mt-16">
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
                     How Dataporto Replaces This
                   </h3>
-                  <ul className="space-y-2 text-slate-700">
-                    <li className="flex">
-                      <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                      One connection to your source (Snowflake, Databricks,
-                      Postgres, AWS, and more)
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                      <span>One connection to your source (Snowflake, Databricks,
+                      Postgres, AWS, and more)</span>
                     </li>
-                    <li className="flex">
-                      <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                      One control plane for governance, masking, filtering,
-                      client permissions
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                      <span>One control plane for governance, masking, filtering,
+                      client permissions</span>
                     </li>
-                    <li className="flex">
-                      <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                      Multiple delivery methods out of the box (Shares or sFTP)
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                      <span>Multiple delivery methods out of the box (Shares or sFTP)</span>
                     </li>
-                    <li className="flex">
-                      <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                      Automated lifecycle management for onboarding, schema
-                      changes, revocation
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                      <span>Automated lifecycle management for onboarding, schema
+                      changes, revocation</span>
                     </li>
-                    <li className="flex">
-                      <Check className="h-5 w-5 text-green-600 mt-1 mr-2" />
-                      Unified audit and monitoring across all deliveries
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-gray-600 mt-1 mr-3 flex-shrink-0" />
+                      <span>Unified audit and monitoring across all deliveries</span>
                     </li>
                   </ul>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-semibold text-slate-800">
+                  <p className="text-xl font-semibold text-gray-900 leading-relaxed">
                     Result:{" "}
-                    <span className="text-blue-600">
+                    <span className="text-gray-700">
                       Live, governed client access
                     </span>{" "}
                     in their platform of choice.
                   </p>
                 </div>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Strategic Differentiators */}
-      <section id="governance" className="py-20 bg-slate-50">
+      <section id="governance" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Teams Choose Dataporto
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               The only platform that delivers governed, multi-platform data
               sharing without vendor lock-in or custom engineering
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="p-6 border-l-4 border-l-green-500">
-              <div className="flex items-start mb-4">
-                <div className="p-2 bg-green-100 rounded-lg mr-3">
-                  <Check className="h-5 w-5 text-green-600" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="mb-4">
+                <div className="p-3 bg-gray-100 rounded-lg w-fit mb-4">
+                  <Check className="h-6 w-6 text-gray-600" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 mb-2">
-                    No Vendor Lock-in
-                  </h3>
-                  <p className="text-sm text-slate-600">
-                    Works with any data platform — Snowflake, Databricks, or
-                    your existing infrastructure. No forced migrations or
-                    platform dependencies.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  No Vendor Lock-in
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Works with any data platform — Snowflake, Databricks, or
+                  your existing infrastructure. No forced migrations or
+                  platform dependencies.
+                </p>
               </div>
-            </Card>
+            </div>
 
-            <Card className="p-6 border-l-4 border-l-blue-500">
-              <div className="flex items-start mb-4">
-                <div className="p-2 bg-blue-100 rounded-lg mr-3">
-                  <Check className="h-5 w-5 text-blue-600" />
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="mb-4">
+                <div className="p-3 bg-gray-100 rounded-lg w-fit mb-4">
+                  <Check className="h-6 w-6 text-gray-600" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 mb-2">
-                    Client-by-Client Governance
-                  </h3>
-                  <p className="text-sm text-slate-600">
-                    Granular masking, row/column security, and access controls
-                    per client. Meet compliance requirements without custom
-                    code.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Client-by-Client Governance
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Granular masking, row/column security, and access controls
+                  per client. Meet compliance requirements without custom
+                  code.
+                </p>
               </div>
-            </Card>
+            </div>
 
-            <Card className="p-6 border-l-4 border-l-purple-500">
-              <div className="flex items-start mb-4">
-                <div className="p-2 bg-purple-100 rounded-lg mr-3">
-                  <Check className="h-5 w-5 text-purple-600" />
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="mb-4">
+                <div className="p-3 bg-gray-100 rounded-lg w-fit mb-4">
+                  <Check className="h-6 w-6 text-gray-600" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 mb-2">
-                    Multi-Method Delivery
-                  </h3>
-                  <p className="text-sm text-slate-600">
-                    Single control plane for Snowflake Shares, Databricks Delta
-                    Sharing, and sFTP. No need to rebuild for each delivery
-                    method.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Multi-Method Delivery
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Single control plane for Snowflake Shares, Databricks Delta
+                  Sharing, and sFTP. No need to rebuild for each delivery
+                  method.
+                </p>
               </div>
-            </Card>
+            </div>
 
-            <Card className="p-6 border-l-4 border-l-orange-500">
-              <div className="flex items-start mb-4">
-                <div className="p-2 bg-orange-100 rounded-lg mr-3">
-                  <Check className="h-5 w-5 text-orange-600" />
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="mb-4">
+                <div className="p-3 bg-gray-100 rounded-lg w-fit mb-4">
+                  <Check className="h-6 w-6 text-gray-600" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 mb-2">
-                    Lifecycle Management
-                  </h3>
-                  <p className="text-sm text-slate-600">
-                    Automated onboarding, schema updates, and revocation
-                    workflows. Scale client operations without proportional
-                    engineering overhead.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Lifecycle Management
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Automated onboarding, schema updates, and revocation
+                  workflows. Scale client operations without proportional
+                  engineering overhead.
+                </p>
               </div>
-            </Card>
+            </div>
 
-            <Card className="p-6 border-l-4 border-l-indigo-500">
-              <div className="flex items-start mb-4">
-                <div className="p-2 bg-indigo-100 rounded-lg mr-3">
-                  <Check className="h-5 w-5 text-indigo-600" />
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="mb-4">
+                <div className="p-3 bg-gray-100 rounded-lg w-fit mb-4">
+                  <Check className="h-6 w-6 text-gray-600" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 mb-2">
-                    Unified Visibility
-                  </h3>
-                  <p className="text-sm text-slate-600">
-                    Single dashboard for audit trails, usage analytics, and
-                    delivery status across all clients and platforms. Complete
-                    operational transparency.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Unified Visibility
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Single dashboard for audit trails, usage analytics, and
+                  delivery status across all clients and platforms. Complete
+                  operational transparency.
+                </p>
               </div>
-            </Card>
+            </div>
 
-            <Card className="p-6 border-l-4 border-l-teal-500">
-              <div className="flex items-start mb-4">
-                <div className="p-2 bg-teal-100 rounded-lg mr-3">
-                  <Check className="h-5 w-5 text-teal-600" />
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <div className="mb-4">
+                <div className="p-3 bg-gray-100 rounded-lg w-fit mb-4">
+                  <Check className="h-6 w-6 text-gray-600" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 mb-2">
-                    Enterprise Ready
-                  </h3>
-                  <p className="text-sm text-slate-600">
-                    SOC 2 compliance, enterprise SSO, role-based access
-                    controls, and API-first architecture for seamless
-                    integration.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Enterprise Ready
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  SOC 2 compliance, enterprise SSO, role-based access
+                  controls, and API-first architecture for seamless
+                  integration.
+                </p>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Databricks Delta Sharing Section */}
-      <section id="databricks-sharing" className="py-20 bg-white">
+      <section id="databricks-sharing" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Databricks Delta Sharing
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Enable secure, governed data sharing through Databricks Delta
               Sharing protocol, allowing clients to access live data directly in
               their Databricks workspaces.
@@ -735,12 +765,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <section className="py-24 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Stop Wasting Engineering Resources on Custom Data Sharing
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Free up your engineering team to focus on core product development
             instead of maintaining custom per-client data sharing
             infrastructure. Dataporto handles the complexity so you can focus on
@@ -749,8 +779,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WaitlistButton
               size="lg"
-              variant="secondary"
-              className="text-lg px-8"
+              className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 text-lg font-medium rounded-lg"
             >
               Modernize your Data Sharing{" "}
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -760,7 +789,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
@@ -774,22 +803,22 @@ export default function Home() {
               <span className="text-xl font-bold">dataporto</span>
             </div>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-slate-400 hover:text-white">
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy
               </Link>
-              <a href="#" className="text-slate-400 hover:text-white">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 Terms
               </a>
               <a
                 href="mailto:hello@dataporto.com"
-                className="text-slate-400 hover:text-white"
+                className="text-gray-400 hover:text-white transition-colors"
               >
                 Contact
               </a>
             </div>
           </div>
-          <Separator className="my-8 bg-slate-700" />
-          <p className="text-center text-slate-400">
+          <Separator className="my-8 bg-gray-700" />
+          <p className="text-center text-gray-400">
             © 2025 Dataporto. All rights reserved. Multi‑Platform Data Sharing
             as a Service.
           </p>
