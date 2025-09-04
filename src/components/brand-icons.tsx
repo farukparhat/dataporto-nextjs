@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IconBrandDatabricks, IconBrandSnowflake, IconFolderShare, IconFolderUp, IconServer } from "@tabler/icons-react";
+import { IconBrandDatabricks, IconBrandSnowflake, IconFolderUp } from "@tabler/icons-react";
 
 export const DataBricks = ({ className }: { className?: string }) => (
   <Image

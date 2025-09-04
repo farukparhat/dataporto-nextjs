@@ -1,3 +1,9 @@
+# Landing Page
+
+- Deployment Options Section
+- Data Contracts Section
+- Data Catalog Section
+
 # Sandbox
 
 - Use terraform & DMS to provision and set up data ingestion from RDS to S3 in Parquet format, later to be used for Snowflake ingestion
