@@ -45,7 +45,7 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-16">
           <WaitlistButton size="lg" className={darkButtonClasses}>
-            Schedule a Demo
+            Talk to Our Team
           </WaitlistButton>
           <Button
             variant="outline"
@@ -337,7 +337,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <WaitlistButton size="lg" className={darkButtonClasses}>
-              See Platform in Action <ArrowRight className="ml-2 h-5 w-5" />
+              Book a Call <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
           </div>
         </div>
@@ -440,7 +440,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <WaitlistButton size="lg" className={darkButtonClasses}>
-              Enable Snowflake Shares <ArrowRight className="ml-2 h-5 w-5" />
+              Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
           </div>
         </div>
@@ -767,7 +767,7 @@ export default function Home() {
                       size="lg"
                       className={darkButtonClasses + " mt-4"}
                     >
-                      Learn More
+                      Explore Solutions
                     </WaitlistButton>
                   </div>
                 </div>
