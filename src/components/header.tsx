@@ -92,24 +92,6 @@ export default function Header() {
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link
-                  href="/#databricks-sharing"
-                  className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
-                >
-                  <div className="p-1.5 bg-orange-100 rounded-md">
-                    <DatabricksIcon className="h-4 w-4 text-orange-600" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">
-                      Databricks Delta Sharing
-                    </div>
-                    <div className="text-sm text-gray-500 mt-0.5">
-                      Live data in Databricks
-                    </div>
-                  </div>
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link
                   href="/#sftp-delivery"
                   className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                 >
