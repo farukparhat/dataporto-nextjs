@@ -5,27 +5,27 @@ import {
   IconFolderUp,
 } from "@tabler/icons-react";
 
-// export const DataBricks = ({ className }: { className?: string }) => (
-//   <Image
-//     src="databricks.svg"
-//     alt="DataBricks"
-//     width={20}
-//     height={20}
-//     className={className}
-//   />
-// );
+export const DataBricksSvg = ({ className }: { className?: string }) => (
+  <Image
+    src="databricks.svg"
+    alt="DataBricks"
+    width={20}
+    height={20}
+    className={className}
+  />
+);
 
-// export const Snowflake = ({ className }: { className?: string }) => (
-//   <Image
-//     src="/snowflake.svg"
-//     alt="Snowflake"
-//     width={20}
-//     height={20}
-//     className={className}
-//   />
-// );
+export const SnowflakeSvg = ({ className }: { className?: string }) => (
+  <Image
+    src="/snowflake.svg"
+    alt="Snowflake"
+    width={20}
+    height={20}
+    className={className}
+  />
+);
 
-export const Postgres = ({ className }: { className?: string }) => (
+export const PostgresSvg = ({ className }: { className?: string }) => (
   <Image
     src="postgresql.svg"
     alt="Postgres"
@@ -35,7 +35,7 @@ export const Postgres = ({ className }: { className?: string }) => (
   />
 );
 
-export const Aws = ({ className }: { className?: string }) => (
+export const AwsSvg = ({ className }: { className?: string }) => (
   <Image
     src="/aws.svg"
     alt="Aws"

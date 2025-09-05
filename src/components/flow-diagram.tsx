@@ -4,7 +4,11 @@ import React from "react";
 import { ReactFlow, Node, Edge, Background, Handle, Position } from "reactflow";
 import "reactflow/dist/style.css";
 import { LucideIcon, Folder, Users } from "lucide-react";
-import { Aws, DatabricksIcon, SnowflakeIcon } from "@/components/brand-icons";
+import {
+  AwsSvg,
+  DatabricksIcon,
+  SnowflakeIcon,
+} from "@/components/brand-icons";
 import Image from "next/image";
 
 interface NodeData {
@@ -233,7 +237,7 @@ const initialNodes: Node[] = [
     position: { x: 50, y: 50 },
     data: {
       label: "S3, RDS, EFS",
-      icon: Aws,
+      icon: AwsSvg,
       iconColor: "text-blue-600",
     },
   },

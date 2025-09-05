@@ -15,6 +15,9 @@ import {
   SnowflakeIcon,
   DatabricksIcon,
   SftpIcon,
+  AwsSvg,
+  DataBricksSvg,
+  PostgresSvg,
 } from "@/components/brand-icons";
 import DemoSignupForm from "@/components/demo-signup-form";
 
@@ -43,7 +46,7 @@ export default function Home() {
           sharing right away — for your biggest customers.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-16">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12">
           <WaitlistButton size="lg" className={darkButtonClasses}>
             Talk to Our Team
           </WaitlistButton>
@@ -55,6 +58,37 @@ export default function Home() {
           >
             <Link href="/#how-it-works">See how it works</Link>
           </Button>
+        </div>
+
+        {/* Trust Bar */}
+        <div className="w-full border-t border-b border-gray-200 py-4 mb-8 sm:mb-16 bg-gray-50/50">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 opacity-60">
+              <span className="text-sm text-gray-600 font-medium">
+                Built on
+              </span>
+              <div className="flex items-center gap-8 flex-wrap justify-center">
+                <div className="flex items-center">
+                  <SnowflakeIcon className="h-5 w-5 grayscale brightness-0 opacity-60" />
+                  <span className="ml-2 text-sm text-gray-600 font-medium">
+                    Snowflake
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <DataBricksSvg className="h-5 w-5 grayscale brightness-0 opacity-60" />
+                  <span className="ml-2 text-sm text-gray-600 font-medium">
+                    Databricks
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <AwsSvg className="h-5 w-5 grayscale brightness-0 opacity-60" />
+                  <span className="ml-2 text-sm text-gray-600 font-medium">
+                    AWS
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Hero Screenshot */}
