@@ -151,7 +151,6 @@ export default function Home() {
               There&apos;s a smarter way to share data
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Dataporto gives your team a complete data sharing platform.
               Connect your sources, configure governance policies, then deliver
               to any platform with a single control plane.
             </p>
@@ -163,11 +162,9 @@ export default function Home() {
 
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-600 leading-relaxed">
-              Connect your data sources, then use our control plane to provision
-              per-client Snowflake Data Shares, Databricks Delta Shares, or sFTP
-              feeds. Every client gets secure, isolated data access in their
-              preferred format — without your team rebuilding or maintaining
-              separate pipelines.
+              Provision per-client access across Snowflake, Databricks, or sFTP
+              with secure, isolated data delivery — no custom pipelines
+              required.
             </p>
           </div>
         </div>
