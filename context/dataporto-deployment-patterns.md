@@ -1,26 +1,42 @@
-## Dataporto Deployment Strategies
+# 🚀 Deployment Patterns
 
-### 1. Fully Managed (SaaS)
-
-- **How it works:** Customer connects their database or S3 bucket; Dataporto runs both control plane and data plane in our managed cloud.
-- **Pros:** Fastest onboarding, no infra for customer to manage, Dataporto handles scaling and upgrades.
-- **Cons:** Requires secure connectivity into customer’s data source; some customers may prefer data not leaving their cloud.
-- **Best for:** SaaS vendors, agencies, or data providers wanting minimal ops overhead.
+Dataporto adapts to your security and compliance requirements.
+Choose the setup that fits your business.
 
 ---
 
-### 2. Hybrid (Control Plane in SaaS, Data Plane in Customer VPC)
+## Fully Managed (Fastest Start)
 
-- **How it works:** Control plane runs in Dataporto SaaS (UI, governance, config), while a lightweight Dataporto Agent runs in the customer’s VPC and keeps all data processing inside their environment/Snowflake.
-- **Pros:** Data never leaves customer’s environment, aligns with compliance/security requirements, flexible governance.
-- **Cons:** Slightly more setup effort; customer manages Snowflake costs and compute.
-- **Best for:** Enterprises with strict data control or existing Snowflake investments.
+**Get going instantly — no infrastructure required.**
+
+- Zero infrastructure to manage
+- Instant setup in Dataporto Cloud
+- We handle scaling, monitoring, and upgrades
+- **Best for:** Startups, SaaS vendors, and fast-moving teams who want to deliver data quickly
 
 ---
 
-### 3. Dedicated Private Deployment (Single-Tenant in Customer Cloud)
+## Hybrid / Control Plane
 
-- **How it works:** Dataporto provisions a fully isolated instance of both control plane and data plane in the customer’s own AWS/Azure/GCP account.
-- **Pros:** Maximum isolation and sovereignty, customer fully controls the environment, satisfies strict regulatory needs.
-- **Cons:** More complex to upgrade/support, higher costs since resources are not shared across tenants.
-- **Best for:** Highly regulated industries (finance, healthcare, government) requiring all software in their own cloud.
+**Keep data in your environment — Dataporto handles the sharing.**
+
+- Data always stays in your environment
+- Lightweight Dataporto Agent connects securely to your sources
+- Works seamlessly with Snowflake and Databricks
+- Balance of security and convenience
+- **Best for:** Enterprise SaaS vendors and companies with strict data residency requirements
+
+---
+
+## Customer-Managed (Private)
+
+**For the most regulated industries — total control in your cloud.**
+
+- Runs fully in your own cloud account
+- Maximum isolation & compliance
+- Ideal for finance, healthcare, and government workloads
+- **Best for:** Highly regulated industries needing full control and compliance guarantees
+
+---
+
+✅ No matter the setup, Dataporto ensures secure, governed, and enterprise-ready data sharing.

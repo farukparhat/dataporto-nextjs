@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown, Check, Share2, Folder } from "lucide-react";
+import { ChevronDown, Check, Share2, Folder, Cloud } from "lucide-react";
 import MobileSidebar from "@/components/mobile-sidebar";
 import WaitlistButton from "@/components/waitlist-button";
 import { DatabricksIcon, SnowflakeIcon } from "./brand-icons";
@@ -104,6 +104,24 @@ export default function Header() {
                     </div>
                     <div className="text-sm text-gray-500 mt-0.5">
                       Automated file transfers
+                    </div>
+                  </div>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link
+                  href="/#deployment"
+                  className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
+                >
+                  <div className="p-1.5 bg-gray-100 rounded-md">
+                    <Cloud className="h-4 w-4 text-gray-600" />
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900">
+                      Deployment Styles
+                    </div>
+                    <div className="text-sm text-gray-500 mt-0.5">
+                      Flexible deployment options
                     </div>
                   </div>
                 </Link>

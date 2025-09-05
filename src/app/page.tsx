@@ -20,6 +20,7 @@ import {
   PostgresSvg,
 } from "@/components/brand-icons";
 import DemoSignupForm from "@/components/demo-signup-form";
+import DeploymentTabs from "@/components/deployment-tabs";
 
 export default function Home() {
   // Standardized button styles
@@ -745,8 +746,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Deployment Options Section */}
+      <section id="deployment" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Choose Your Deployment Style
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Dataporto adapts to your security and compliance requirements.
+              Choose the setup that fits your business.
+            </p>
+          </div>
+
+          <DeploymentTabs />
+
+          <div className="text-center mt-12">
+            <WaitlistButton size="lg" className={darkButtonClasses}>
+              Discuss Your Requirements <ArrowRight className="ml-2 h-5 w-5" />
+            </WaitlistButton>
+          </div>
+        </div>
+      </section>
+
       {/* Multi-Platform Orchestration Section */}
-      <section id="multi-platform" className="py-20 bg-gray-50">
+      <section id="multi-platform" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
