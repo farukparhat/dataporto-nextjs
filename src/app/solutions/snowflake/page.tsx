@@ -2,6 +2,7 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import FlowDiagram from "@/components/flow-diagram";
 import {
   ArrowRight,
   Shield,
@@ -91,7 +92,7 @@ export default function SnowflakeDataShareSolution() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Scenario 1: No Snowflake? No Problem.
+                    No Snowflake? No Problem.
                   </h2>
                   <p className="text-lg font-medium text-gray-600">
                     Use Dataporto's Managed Snowflake
@@ -142,7 +143,7 @@ export default function SnowflakeDataShareSolution() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Scenario 2: Bring Your Own Snowflake
+                    Bring Your Own Snowflake
                   </h2>
                   <p className="text-lg font-medium text-gray-600">
                     Dataporto as Your Control Plane
@@ -188,86 +189,6 @@ export default function SnowflakeDataShareSolution() {
         </div>
       </section>
 
-      {/* Comparison Diagram Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Two Scenarios, Same Great Outcome
-            </h2>
-          </div>
-
-          <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8">
-              {/* Scenario 1 Flow */}
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
-                  Scenario 1: Dataporto-Managed Snowflake
-                </h3>
-                <div className="flex items-center justify-between text-sm text-gray-600">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2 mx-auto">
-                      <Database className="h-6 w-6 text-gray-700" />
-                    </div>
-                    <p>Your Data</p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-gray-400" />
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2 mx-auto">
-                      <Shield className="h-6 w-6 text-gray-700" />
-                    </div>
-                    <p>
-                      Dataporto
-                      <br />
-                      Managed SF
-                    </p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-gray-400" />
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2 mx-auto">
-                      <Users className="h-6 w-6 text-gray-700" />
-                    </div>
-                    <p>Client Access</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Scenario 2 Flow */}
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
-                  Scenario 2: Your Snowflake + Dataporto Control
-                </h3>
-                <div className="flex items-center justify-between text-sm text-gray-600">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2 mx-auto">
-                      <Database className="h-6 w-6 text-gray-700" />
-                    </div>
-                    <p>Your Data</p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-gray-400" />
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2 mx-auto">
-                      <Settings className="h-6 w-6 text-gray-700" />
-                    </div>
-                    <p>
-                      Your SF +<br />
-                      Dataporto
-                    </p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-gray-400" />
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2 mx-auto">
-                      <Users className="h-6 w-6 text-gray-700" />
-                    </div>
-                    <p>Client Access</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Outcome Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -282,38 +203,9 @@ export default function SnowflakeDataShareSolution() {
             </p>
           </div>
 
-          {/* Simple outcome diagram */}
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
-              <div className="flex items-center justify-between text-center">
-                <div>
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-3 mx-auto">
-                    <Database className="h-8 w-8 text-gray-700" />
-                  </div>
-                  <p className="font-medium text-gray-900">Your Data</p>
-                </div>
-                <ArrowRight className="h-6 w-6 text-gray-400" />
-                <div>
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-3 mx-auto">
-                    <Shield className="h-8 w-8 text-gray-700" />
-                  </div>
-                  <p className="font-medium text-gray-900">Dataporto</p>
-                </div>
-                <ArrowRight className="h-6 w-6 text-gray-400" />
-                <div>
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-3 mx-auto">
-                    <SnowflakeIcon className="h-8 w-8 text-gray-700" />
-                  </div>
-                  <p className="font-medium text-gray-900">
-                    Their Snowflake
-                    <br />
-                    <span className="text-sm text-gray-600">
-                      (or Reader Account)
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Interactive flow diagram */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <FlowDiagram />
           </div>
 
           {/* Key benefits */}

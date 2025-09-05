@@ -36,7 +36,13 @@ export const Postgres = ({ className }: { className?: string }) => (
 );
 
 export const Aws = ({ className }: { className?: string }) => (
-  <Image src="aws.svg" alt="Aws" width={20} height={20} className={className} />
+  <Image
+    src="/aws.svg"
+    alt="Aws"
+    width={20}
+    height={20}
+    className={className}
+  />
 );
 
 // Reusable Tabler Icon Components for consistent usage across the app
