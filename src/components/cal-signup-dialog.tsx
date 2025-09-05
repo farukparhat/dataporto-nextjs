@@ -38,7 +38,7 @@ export default function CalSignupDialog({
         <div className="space-y-4">
           <div className="min-h-[400px]">
             <Cal
-              calLink="faruk-parhat-afj3wo/dataporto-introduction"
+              calLink="dataporto/dataporto-introduction"
               style={{ width: "100%", height: "400px", border: "none" }}
               config={{
                 email: userEmail || "",
