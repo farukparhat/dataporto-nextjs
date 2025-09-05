@@ -2,8 +2,8 @@
 
 ## 1. Hero Section (Above the Fold)
 
-- **Headline:** The Fastest Way to Share Data on Snowflake — Without Snowflake
-- **Sub-headline:** Empower your clients with live, governed data in Snowflake — no setup, no engineering overhead.
+- **Headline:** Enterprise-Ready Data Sharing, Out of the Box
+- **Sub-headline:** With Dataporto, you can support Snowflake, Databricks, and sFTP data sharing right away — for your biggest customers.
 - **CTA:** Request Early Access / Join the Waitlist
 - Visual: abstract data flows or Snowflake-style grid
 

@@ -36,14 +36,11 @@ export default function Home() {
           </Badge>
         </div>
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
-          Your one-stop data platform
-          <br />
-          for client data sharing
+          Enterprise-Ready Data Sharing, Out of the Box
         </h1>
         <p className="text-base sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-          Securely share live, governed data with each of your clients in their
-          preferred platform — Snowflake, Databricks, or sFTP — with
-          client-by-client configuration and lifecycle management.
+          With Dataporto, you can support Snowflake, Databricks, and sFTP data
+          sharing right away — for your biggest customers.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-16">
@@ -602,128 +599,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Supported Data Sources Section */}
-      <section id="data-sources" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Connect Any Data Source
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Dataporto integrates with your existing data infrastructure,
-              regardless of where your data lives. No migrations required — work
-              with what you already have.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {/* Cloud Databases */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
-              <div className="mb-4">
-                <div className="p-3 bg-blue-50 rounded-lg w-fit mx-auto mb-4">
-                  <Image
-                    src="/aws.svg"
-                    alt="AWS"
-                    width={32}
-                    height={32}
-                    className="h-8 w-8"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  Cloud Databases
-                </h3>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>AWS RDS</li>
-                  <li>Google Cloud SQL</li>
-                  <li>Azure Database</li>
-                  <li>PostgreSQL</li>
-                  <li>MySQL</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Object Storage */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
-              <div className="mb-4">
-                <div className="p-3 bg-orange-50 rounded-lg w-fit mx-auto mb-4">
-                  <Image
-                    src="/file.svg"
-                    alt="Storage"
-                    width={32}
-                    height={32}
-                    className="h-8 w-8"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  Object Storage
-                </h3>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>Amazon S3</li>
-                  <li>Google Cloud Storage</li>
-                  <li>Azure Blob Storage</li>
-                  <li>MinIO</li>
-                  <li>HDFS</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Data Warehouses */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
-              <div className="mb-4">
-                <div className="p-3 bg-indigo-50 rounded-lg w-fit mx-auto mb-4">
-                  <SnowflakeIcon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  Data Warehouses
-                </h3>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>Snowflake</li>
-                  <li>Databricks</li>
-                  <li>BigQuery</li>
-                  <li>Redshift</li>
-                  <li>Synapse</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Data Lake Formats */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-center">
-              <div className="mb-4">
-                <div className="p-3 bg-green-50 rounded-lg w-fit mx-auto mb-4">
-                  <Image
-                    src="/databricks.svg"
-                    alt="Data Lakes"
-                    width={32}
-                    height={32}
-                    className="h-8 w-8"
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  Data Lake Formats
-                </h3>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>Apache Iceberg</li>
-                  <li>Delta Lake</li>
-                  <li>Apache Hudi</li>
-                  <li>Parquet</li>
-                  <li>Avro</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-lg text-gray-600 mb-6">
-              Don&apos;t see your data source? We&apos;re constantly adding new
-              integrations.
-            </p>
-            <WaitlistButton size="lg" className={darkButtonClasses}>
-              Request Integration
-            </WaitlistButton>
           </div>
         </div>
       </section>
