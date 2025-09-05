@@ -4,7 +4,7 @@ import React from "react";
 import { ReactFlow, Node, Edge, Background, Handle, Position } from "reactflow";
 import "reactflow/dist/style.css";
 import { LucideIcon, Folder, Users } from "lucide-react";
-import { Aws, DataBricks, Snowflake } from "./brand-icons";
+import { Aws, DatabricksIcon, SnowflakeIcon } from "@/components/brand-icons";
 import Image from "next/image";
 
 interface NodeData {
@@ -243,7 +243,7 @@ const initialNodes: Node[] = [
     position: { x: 50, y: 110 },
     data: {
       label: "Snowflake",
-      icon: Snowflake,
+      icon: SnowflakeIcon,
       iconColor: "text-blue-500",
     },
   },
@@ -253,7 +253,7 @@ const initialNodes: Node[] = [
     position: { x: 50, y: 170 },
     data: {
       label: "Databricks",
-      icon: DataBricks,
+      icon: DatabricksIcon,
       iconColor: "text-orange-500",
     },
   },
@@ -302,7 +302,7 @@ const initialNodes: Node[] = [
     position: { x: 800, y: 50 },
     data: {
       label: "Snowflake",
-      icon: Snowflake,
+      icon: SnowflakeIcon,
       iconColor: "text-blue-600",
       outputType: "snowflake",
     },
@@ -313,7 +313,7 @@ const initialNodes: Node[] = [
     position: { x: 800, y: 110 },
     data: {
       label: "Databricks",
-      icon: DataBricks,
+      icon: DatabricksIcon,
       iconColor: "text-orange-600",
       outputType: "databricks",
     },

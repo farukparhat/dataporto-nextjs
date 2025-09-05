@@ -297,7 +297,7 @@ export default function Home() {
           {/* Supporting Features */}
           <div className="mt-16 bg-gray-50 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              ⚡️ Supporting Features
+              Supporting Features
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               <div className="text-center">

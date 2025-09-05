@@ -9,9 +9,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown, Check, Share2, Folder } from "lucide-react";
-import { Snowflake, DataBricks } from "@/components/brand-icons";
 import MobileSidebar from "@/components/mobile-sidebar";
 import WaitlistButton from "@/components/waitlist-button";
+import { DatabricksIcon, SnowflakeIcon } from "./brand-icons";
 
 export default function Header() {
   return (
@@ -78,7 +78,7 @@ export default function Header() {
                   className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                 >
                   <div className="p-1.5 bg-blue-100 rounded-md">
-                    <Snowflake className="h-4 w-4 text-blue-600" />
+                    <SnowflakeIcon className="h-4 w-4 text-blue-600" />
                   </div>
                   <div>
                     <div className="font-medium text-gray-900">
@@ -96,7 +96,7 @@ export default function Header() {
                   className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                 >
                   <div className="p-1.5 bg-orange-100 rounded-md">
-                    <DataBricks className="h-4 w-4 text-orange-600" />
+                    <DatabricksIcon className="h-4 w-4 text-orange-600" />
                   </div>
                   <div>
                     <div className="font-medium text-gray-900">
@@ -153,6 +153,24 @@ export default function Header() {
                     </div>
                     <div className="text-sm text-gray-500 mt-0.5">
                       Unified control plane
+                    </div>
+                  </div>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link
+                  href="/solutions/snowflake"
+                  className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
+                >
+                  <div className="p-1.5 bg-blue-100 rounded-md">
+                    <SnowflakeIcon className="h-4 w-4 text-blue-600" />
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900">
+                      Snowflake Solutions
+                    </div>
+                    <div className="text-sm text-gray-500 mt-0.5">
+                      Enterprise data sharing
                     </div>
                   </div>
                 </Link>
