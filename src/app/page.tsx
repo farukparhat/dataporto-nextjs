@@ -40,7 +40,7 @@ export default function Home() {
           </Badge>
         </div>
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
-          Enterprise-Ready Data Sharing, Out of the Box
+          Unlock Enterprise-Grade Data Sharing for Your Customers
         </h1>
         <p className="text-base sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
           With Dataporto, you can support Snowflake, Databricks, and sFTP data
