@@ -1,6 +1,7 @@
 "use client";
 
-import { Cloud, Database, Shield, Globe, Server } from "lucide-react";
+import { Database, Shield, Globe, Server } from "lucide-react";
+import { IconBox } from "@tabler/icons-react";
 
 export default function ManagedDeploymentDiagram() {
   return (
@@ -64,7 +65,7 @@ export default function ManagedDeploymentDiagram() {
             {/* VPC */}
             <div className="bg-white/10 border border-white/20 rounded-lg p-3">
               <div className="flex items-center justify-center mb-3">
-                <Cloud className="h-4 w-4 text-cyan-300 mr-2" />
+                <IconBox className="h-4 w-4 text-cyan-300 mr-2" />
                 <span className="text-white text-xs font-medium">VPC</span>
               </div>
 

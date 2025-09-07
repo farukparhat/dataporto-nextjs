@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Cloud, Shield, Lock } from "lucide-react";
+import { Check, Shield, Lock } from "lucide-react";
+import { IconBox } from "@tabler/icons-react";
 
 interface DeploymentOption {
   id: string;
@@ -22,7 +23,7 @@ const deploymentOptions: DeploymentOption[] = [
     id: "managed",
     title: "Fully Managed",
     subtitle: "Fastest Start",
-    icon: <Cloud className="h-6 w-6" />,
+    icon: <IconBox className="h-6 w-6" />,
     description: "Get going instantly — no infrastructure required.",
     features: [
       "No servers or infrastructure to maintain",

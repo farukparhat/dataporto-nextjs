@@ -8,7 +8,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown, Check, Share2, Folder, Cloud, Menu } from "lucide-react";
+import {
+  IconChevronDown,
+  IconCheck,
+  IconShare,
+  IconFolder,
+  IconBox,
+  IconMenu,
+} from "@tabler/icons-react";
 import MobileSidebar from "@/components/mobile-sidebar";
 import WaitlistButton from "@/components/waitlist-button";
 import { DatabricksIcon, SnowflakeIcon } from "./brand-icons";
@@ -69,7 +76,7 @@ export default function Header() {
             <DropdownMenu>
               <DropdownMenuTrigger className="cursor-pointer group flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-white/40 dark:hover:bg-gray-800/40 rounded-full transition-all duration-200 focus:outline-none">
                 <span className="font-medium">Products</span>
-                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                <IconChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="start"
@@ -100,7 +107,7 @@ export default function Header() {
                     className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                   >
                     <div className="p-1.5 bg-green-100 rounded-md">
-                      <Folder className="h-4 w-4 text-green-600" />
+                      <IconFolder className="h-4 w-4 text-green-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-900">
@@ -118,14 +125,14 @@ export default function Header() {
                     className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                   >
                     <div className="p-1.5 bg-gray-100 rounded-md">
-                      <Cloud className="h-4 w-4 text-gray-600" />
+                      <IconBox className="h-4 w-4 text-gray-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-900">
-                        Deployment Styles
+                        Deployment Options
                       </div>
                       <div className="text-sm text-gray-500 mt-0.5">
-                        Flexible deployment options
+                        Managed, Hybrid, or BYOC
                       </div>
                     </div>
                   </Link>
@@ -136,7 +143,7 @@ export default function Header() {
             <DropdownMenu>
               <DropdownMenuTrigger className="cursor-pointer group flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-white/40 dark:hover:bg-gray-800/40 rounded-full transition-all duration-200 focus:outline-none">
                 <span className="font-medium">Solutions</span>
-                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                <IconChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="start"
@@ -149,7 +156,7 @@ export default function Header() {
                     className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                   >
                     <div className="p-1.5 bg-purple-100 rounded-md">
-                      <Share2 className="h-4 w-4 text-purple-600" />
+                      <IconShare className="h-4 w-4 text-purple-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-900">
@@ -185,7 +192,7 @@ export default function Header() {
                     className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                   >
                     <div className="p-1.5 bg-indigo-100 rounded-md">
-                      <Check className="h-4 w-4 text-indigo-600" />
+                      <IconCheck className="h-4 w-4 text-indigo-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-900">
@@ -203,7 +210,7 @@ export default function Header() {
             <DropdownMenu>
               <DropdownMenuTrigger className="cursor-pointer group flex items-center gap-1 px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-white/40 dark:hover:bg-gray-800/40 rounded-full transition-all duration-200 focus:outline-none">
                 <span className="font-medium">Resources</span>
-                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                <IconChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="start"
