@@ -21,6 +21,7 @@ import {
 } from "@/components/brand-icons";
 import DemoSignupForm from "@/components/demo-signup-form";
 import DeploymentTabs from "@/components/deployment-tabs";
+import DataSharingMethods from "@/components/data-sharing-methods";
 
 export default function Home() {
   // Standardized button styles
@@ -370,6 +371,32 @@ export default function Home() {
           <div className="text-center mt-12">
             <WaitlistButton size="lg" className={darkButtonClasses}>
               Book a Call <ArrowRight className="ml-2 h-5 w-5" />
+            </WaitlistButton>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Sharing Methods Section */}
+      <section id="data-sharing-methods" className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Three Ways to Deliver Data
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Support your clients' preferred data consumption methods with a
+              single platform. From zero-copy Snowflake shares to traditional
+              sFTP delivery, Dataporto adapts to each client's technical
+              requirements and infrastructure.
+            </p>
+          </div>
+
+          <DataSharingMethods />
+
+          <div className="text-center mt-12">
+            <WaitlistButton size="lg" className={darkButtonClasses}>
+              Explore Data Sharing Options{" "}
+              <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
           </div>
         </div>
@@ -765,69 +792,6 @@ export default function Home() {
             <WaitlistButton size="lg" className={darkButtonClasses}>
               Discuss Your Requirements <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
-          </div>
-        </div>
-      </section>
-
-      {/* Multi-Platform Orchestration Section */}
-      <section id="multi-platform" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Multi-Platform Orchestration
-            </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Unified control plane for managing data delivery across Snowflake,
-              Databricks, sFTP, and more - all from a single interface.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <Card className="p-8 bg-gradient-to-r from-slate-50 to-blue-50 border-blue-200">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    One Control Plane, Every Platform
-                  </h3>
-                  <ul className="space-y-3 text-slate-700">
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>Snowflake Data Shares</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>Databricks Delta Sharing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>sFTP File Delivery</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
-                      <span>REST API Access</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-800 mb-3">
-                    Smart Routing & Governance
-                  </h4>
-                  <p className="text-sm text-slate-600 mb-4">
-                    Automatically route data to the right platform with
-                    consistent governance policies applied across all delivery
-                    methods.
-                  </p>
-                  <div className="text-center">
-                    <WaitlistButton
-                      size="lg"
-                      className={darkButtonClasses + " mt-4"}
-                    >
-                      Explore Solutions
-                    </WaitlistButton>
-                  </div>
-                </div>
-              </div>
-            </Card>
           </div>
         </div>
       </section>
