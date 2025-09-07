@@ -88,7 +88,7 @@ export const SftpIcon = ({ className = "h-8 w-8", size }: IconProps) => (
 // Company/Brand logo components
 export const DHLIcon = ({ className }: { className?: string }) => (
   <Image
-    src="/logo-dhl.svg"
+    src="/brands/dhl.svg"
     alt="DHL"
     width={20}
     height={20}
@@ -98,7 +98,7 @@ export const DHLIcon = ({ className }: { className?: string }) => (
 
 export const McDonaldsIcon = ({ className }: { className?: string }) => (
   <Image
-    src="/logo-mcdonalds.svg"
+    src="/brands/mcdonalds.svg"
     alt="McDonald's"
     width={20}
     height={20}
@@ -108,7 +108,7 @@ export const McDonaldsIcon = ({ className }: { className?: string }) => (
 
 export const MariottIcon = ({ className }: { className?: string }) => (
   <Image
-    src="/logo-mariott.svg"
+    src="/brands/mariott.svg"
     alt="Mariott"
     width={20}
     height={20}

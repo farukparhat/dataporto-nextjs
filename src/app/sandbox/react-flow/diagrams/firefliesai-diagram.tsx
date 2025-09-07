@@ -17,7 +17,7 @@ import {
 const FireFliesAIComponent = ({ className }: { className?: string }) => (
   <div className={`flex items-center space-x-2 ${className}`}>
     <Image
-      src="/logo-firefliesai.svg"
+      src="/brands/firefliesai.svg"
       alt="FireFlies AI"
       width={0}
       height={0}
@@ -31,7 +31,7 @@ const FireFliesAIComponent = ({ className }: { className?: string }) => (
 const ExpediaComponent = ({ className }: { className?: string }) => (
   <div className={`flex items-center space-x-2 ${className}`}>
     <Image
-      src="/logo-expedia.svg"
+      src="/brands/expedia.svg"
       alt="Expedia"
       width={0}
       height={0}
@@ -45,7 +45,7 @@ const ExpediaComponent = ({ className }: { className?: string }) => (
 const DeltaComponent = ({ className }: { className?: string }) => (
   <div className={`flex items-center space-x-2 ${className}`}>
     <Image
-      src="/logo-delta.svg"
+      src="/brands/delta.svg"
       alt="Delta"
       width={0}
       height={0}
@@ -59,7 +59,7 @@ const DeltaComponent = ({ className }: { className?: string }) => (
 const NikeComponent = ({ className }: { className?: string }) => (
   <div className={`flex items-center space-x-2 ${className}`}>
     <Image
-      src="/logo-nike.svg"
+      src="/brands/nike.svg"
       alt="Nike"
       width={0}
       height={0}

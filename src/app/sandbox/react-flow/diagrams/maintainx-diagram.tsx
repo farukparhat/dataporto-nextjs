@@ -17,7 +17,7 @@ import {
 const MaintainXComponent = ({ className }: { className?: string }) => (
   <div className={`flex items-center space-x-2 ${className}`}>
     <Image
-      src="/logo-maintainx.png"
+      src="/brands/maintainx.png"
       alt="MaintainX"
       width={0}
       height={0}
@@ -31,7 +31,7 @@ const MaintainXComponent = ({ className }: { className?: string }) => (
 const DHLComponent = ({ className }: { className?: string }) => (
   <div className={`flex items-center space-x-2 ${className}`}>
     <Image
-      src="/logo-dhl.svg"
+      src="/brands/dhl.svg"
       alt="DHL"
       width={0}
       height={0}
@@ -45,7 +45,7 @@ const DHLComponent = ({ className }: { className?: string }) => (
 const McDonaldsComponent = ({ className }: { className?: string }) => (
   <div className={`flex items-center space-x-2 ${className}`}>
     <Image
-      src="/logo-mcdonalds.svg"
+      src="/brands/mcdonalds.svg"
       alt="McDonald's"
       width={0}
       height={0}
@@ -60,7 +60,7 @@ const McDonaldsComponent = ({ className }: { className?: string }) => (
 const MariottComponent = ({ className }: { className?: string }) => (
   <div className={`flex items-center space-x-2 ${className}`}>
     <Image
-      src="/logo-mariott.svg"
+      src="/brands/mariott.svg"
       alt="Mariott"
       width={0}
       height={0}
