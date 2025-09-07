@@ -145,7 +145,7 @@ const FlexibleNode = ({ data }: { data: FlexibleNodeData }) => {
 
       {data.description && (
         <div
-          className={`absolute -bottom-6 left-0 right-0 text-xs ${variant.text} opacity-70 text-center truncate`}
+          className={`absolute -bottom-6 left-0 right-0 text-xs text-gray-700 opacity-70 text-center truncate`}
         >
           {data.description}
         </div>

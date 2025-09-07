@@ -5,6 +5,16 @@ import {
   IconFolderUp,
 } from "@tabler/icons-react";
 
+export const DataportoIcon = ({ className }: { className?: string }) => (
+  <Image
+    src="/icon-transparent-white.png"
+    alt="Dataporto"
+    width={20}
+    height={20}
+    className={className}
+  />
+);
+
 export const DataBricksSvg = ({ className }: { className?: string }) => (
   <Image
     src="databricks.svg"
@@ -72,5 +82,36 @@ export const SftpIcon = ({ className = "h-8 w-8", size }: IconProps) => (
     className={className}
     style={{ color: "#22c55e" }}
     size={size}
+  />
+);
+
+// Company/Brand logo components
+export const DHLIcon = ({ className }: { className?: string }) => (
+  <Image
+    src="/logo-dhl.svg"
+    alt="DHL"
+    width={20}
+    height={20}
+    className={className}
+  />
+);
+
+export const McDonaldsIcon = ({ className }: { className?: string }) => (
+  <Image
+    src="/logo-mcdonalds.svg"
+    alt="McDonald's"
+    width={20}
+    height={20}
+    className={className}
+  />
+);
+
+export const MariottIcon = ({ className }: { className?: string }) => (
+  <Image
+    src="/logo-mariott.svg"
+    alt="Mariott"
+    width={20}
+    height={20}
+    className={className}
   />
 );

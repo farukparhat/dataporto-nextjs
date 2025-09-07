@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Database, Server, Globe, BarChart3 } from "lucide-react";
+import { DHLIcon, McDonaldsIcon, MariottIcon } from "@/components/brand-icons";
 import FlexibleFlowDiagram, {
   FlexibleDiagramNode,
   FlexibleDiagramConnection,
@@ -184,7 +185,87 @@ export default function ReactFlowDemoPage() {
     },
   ];
 
-  // Example 5: Stage-based pipeline with multiple nodes per stage
+  // Example 5: Customer Data Distribution to Partners
+  const customerDataNodes: FlexibleDiagramNode[] = [
+    {
+      id: "customer-db",
+      label: "Customer Database",
+      icon: Database,
+      variant: "primary",
+      description: "Customer profiles & preferences",
+      size: "lg",
+      stage: 0,
+    },
+    {
+      id: "data-processor",
+      label: "Data Processor",
+      icon: Server,
+      variant: "warning",
+      description: "Clean & transform",
+      size: "md",
+      stage: 1,
+    },
+    {
+      id: "dhl",
+      label: "DHL",
+      icon: DHLIcon,
+      variant: "danger",
+      description: "Shipping partner",
+      size: "md",
+      stage: 2,
+    },
+    {
+      id: "mcdonalds",
+      label: "McDonald's",
+      icon: McDonaldsIcon,
+      variant: "warning",
+      description: "Restaurant partner",
+      size: "md",
+      stage: 2,
+    },
+    {
+      id: "mariott",
+      label: "Mariott",
+      icon: MariottIcon,
+      variant: "success",
+      description: "Hotel partner",
+      size: "md",
+      stage: 2,
+    },
+  ];
+
+  const customerDataConnections: FlexibleDiagramConnection[] = [
+    {
+      from: "customer-db",
+      to: "data-processor",
+      animated: true,
+      color: "#2970ff",
+      label: "Raw Data",
+    },
+    {
+      from: "data-processor",
+      to: "dhl",
+      animated: true,
+      color: "#ef4444",
+      label: "Shipping Data",
+    },
+    {
+      from: "data-processor",
+      to: "mcdonalds",
+      animated: true,
+      color: "#f59e0b",
+      label: "Customer Preferences",
+    },
+    {
+      from: "data-processor",
+      to: "mariott",
+      animated: true,
+      color: "#10b981",
+      label: "Travel Data",
+    },
+  ];
+
+  // Example 6: Stage-based pipeline with multiple nodes per stage
   const pipelineNodes: FlexibleDiagramNode[] = [
     // Stage 0: Data Sources
     {
@@ -393,10 +474,33 @@ export default function ReactFlowDemoPage() {
         </div>
       </div>
 
-      {/* Example 5: Stage-based Pipeline */}
+      {/* Example 5: Customer Data Distribution to Partners */}
       <div>
         <h2 className="text-xl font-semibold text-gray-800 mb-4">
-          Example 5: Stage-based Pipeline Layout
+          Example 5: Customer Data Distribution to Partners
+        </h2>
+        <FlexibleFlowDiagram
+          title="Data Sharing with Business Partners"
+          nodes={customerDataNodes}
+          connections={customerDataConnections}
+          layout="horizontal"
+          height="h-96"
+        />
+        <div className="mt-4 p-4 bg-purple-50 rounded-lg">
+          <p className="text-sm text-purple-800">
+            <strong>Business Case:</strong> This example demonstrates how
+            customer data flows from your database through a processing layer to
+            multiple business partners. DHL receives shipping data, McDonald's
+            gets customer preferences for targeted offers, and Mariott receives
+            travel-related data for hotel recommendations.
+          </p>
+        </div>
+      </div>
+
+      {/* Example 6: Stage-based Pipeline */}
+      <div>
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">
+          Example 6: Stage-based Pipeline Layout
         </h2>
         <FlexibleFlowDiagram
           title="Data Processing Pipeline with Stages"
