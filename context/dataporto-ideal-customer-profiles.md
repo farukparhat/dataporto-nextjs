@@ -103,3 +103,14 @@ Companies whose business is to **sell or license datasets**.
 
 **Why a fit?**
 Their core product is **data delivery**, and they need **secure, governed, multi-tenant data sharing** at scale.
+
+### Restaurant Tech Platforms (Ordering, POS, Engagement)
+
+- **Olo** – powers digital ordering and engagement for major brands like Shake Shack, Five Guys, Wingstop, Applebee’s, and Cheesecake Factory
+- **Tillster** – online ordering and delivery management platform
+- **NovaDine** – enterprise restaurant ordering & POS integration
+- **Onosys** – white-label digital ordering solutions
+- **Deliverect** – middleware connecting POS systems with delivery platforms
+- **Paytronix** – guest engagement, loyalty, and digital ordering
+- **ChowNow** – commission-free ordering for restaurants
+- **Lunchbox** – marketing + ordering platform for restaurants
