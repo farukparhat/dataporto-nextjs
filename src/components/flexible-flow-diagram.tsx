@@ -7,24 +7,26 @@ import { LucideIcon } from "lucide-react";
 
 // Types for our flexible diagram API
 interface FlexibleNodeData {
-  label: string;
+  label?: string;
   icon?: LucideIcon | React.ComponentType<any>;
   iconColor?: string;
   description?: string;
   variant?: "default" | "primary" | "success" | "warning" | "danger";
   size?: "sm" | "md" | "lg";
   showHandles?: boolean;
+  customComponent?: React.ComponentType<{ className?: string }>;
 }
 
 export interface FlexibleDiagramNode {
   id: string;
-  label: string;
+  label?: string;
   icon?: LucideIcon | React.ComponentType<any>;
   iconColor?: string;
   description?: string;
   variant?: "default" | "primary" | "success" | "warning" | "danger";
   size?: "sm" | "md" | "lg";
   stage?: number; // Stage number for horizontal flows (0, 1, 2, etc.)
+  customComponent?: React.ComponentType<{ className?: string }>;
 }
 
 export interface FlexibleDiagramConnection {
@@ -116,23 +118,30 @@ const FlexibleNode = ({ data }: { data: FlexibleNodeData }) => {
   const variant = getVariantStyles(data.variant);
   const size = getSizeStyles(data.size);
   const IconComponent = data.icon;
+  const CustomComponent = data.customComponent;
 
   return (
     <div
       className={`${size.container} flex items-center shadow-md rounded-md ${variant.background} border-2 ${variant.border} ${variant.hover} transition-colors relative`}
     >
-      <div className="flex items-center space-x-2 flex-1">
-        {IconComponent && (
-          <IconComponent
-            className={`${size.icon} ${data.iconColor || variant.text}`}
-          />
-        )}
-        <div
-          className={`${size.text} font-medium ${variant.text} truncate flex-1`}
-        >
-          {data.label}
+      {CustomComponent ? (
+        <CustomComponent className={`flex-1 ${variant.text}`} />
+      ) : (
+        <div className="flex items-center space-x-2 flex-1">
+          {IconComponent && (
+            <div className={`${size.icon} flex items-center justify-center`}>
+              <IconComponent className={`${data.iconColor || variant.text}`} />
+            </div>
+          )}
+          {data.label && (
+            <div
+              className={`${size.text} font-medium ${variant.text} truncate flex-1`}
+            >
+              {data.label}
+            </div>
+          )}
         </div>
-      </div>
+      )}
 
       {data.description && (
         <div
@@ -212,6 +221,7 @@ const generateLayout = (
             description: node.description,
             variant: node.variant || "default",
             size: node.size || "md",
+            customComponent: node.customComponent,
           },
         });
       });
@@ -266,6 +276,7 @@ const generateLayout = (
           description: node.description,
           variant: node.variant || "default",
           size: node.size || "md",
+          customComponent: node.customComponent,
         },
       });
     });
@@ -300,6 +311,7 @@ const generateLayout = (
           description: node.description,
           variant: node.variant || "default",
           size: node.size || "md",
+          customComponent: node.customComponent,
         },
       });
     });

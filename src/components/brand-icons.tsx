@@ -27,7 +27,7 @@ export const SnowflakeSvg = ({ className }: { className?: string }) => (
 
 export const PostgresSvg = ({ className }: { className?: string }) => (
   <Image
-    src="postgresql.svg"
+    src="/postgresql.svg"
     alt="Postgres"
     width={20}
     height={20}
