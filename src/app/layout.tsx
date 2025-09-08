@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dataporto - Multi-Platform Data Sharing Service",
+  title: "Dataporto - Multi-Platform Data Sharing as a Service",
   description:
     "The fastest, easiest, and most secure way to share live data through Snowflake, Databricks, or sFTP — without building or maintaining custom pipelines.",
   keywords:
     "Snowflake, Databricks, sFTP, data sharing, data platform, enterprise data, zero-copy sharing, data governance, multi-platform",
   openGraph: {
-    title: "Dataporto - Multi-Platform Data Sharing Service",
+    title: "Dataporto - Multi-Platform Data Sharing as a Service",
     description:
       "Share live data the way clients expect it — securely and instantly. Multi-platform data sharing delivered as a service.",
     type: "website",
