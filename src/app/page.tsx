@@ -505,6 +505,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Deployment Options Section */}
+      <section id="deployment" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Deployment Options
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Dataporto adapts to your security and compliance requirements.
+              Choose the setup that fits your business.
+            </p>
+          </div>
+
+          <DeploymentTabs />
+
+          <div className="text-center mt-12">
+            <WaitlistButton size="lg" className={darkButtonClasses}>
+              Discuss Your Requirements <ArrowRight className="ml-2 h-5 w-5" />
+            </WaitlistButton>
+          </div>
+        </div>
+      </section>
+
       {/* Before & After */}
       <section id="before-after" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -769,29 +792,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Deployment Options Section */}
-      <section id="deployment" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Deployment Options
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Dataporto adapts to your security and compliance requirements.
-              Choose the setup that fits your business.
-            </p>
-          </div>
-
-          <DeploymentTabs />
-
-          <div className="text-center mt-12">
-            <WaitlistButton size="lg" className={darkButtonClasses}>
-              Discuss Your Requirements <ArrowRight className="ml-2 h-5 w-5" />
-            </WaitlistButton>
           </div>
         </div>
       </section>
