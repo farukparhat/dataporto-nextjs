@@ -201,7 +201,7 @@ const generateLayout = (
 
     stages.forEach((stageNumber, stageIndex) => {
       const stageNodes = stageGroups[stageNumber];
-      const stageX = 100 + stageIndex * 300; // 300px spacing between stages
+      const stageX = 100 + stageIndex * 280; // 250px spacing between stages
 
       // Calculate total height needed for this stage
       const totalNodeHeight = stageNodes.length * 80; // 80px per node

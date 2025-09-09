@@ -175,6 +175,7 @@ export default function MomosDataFlowDiagram() {
       to: "dataporto",
       color: "#2970ff", // Main project color
       animated: true,
+      label: "Raw Tables",
     },
 
     // dataporto to data delivery methods
