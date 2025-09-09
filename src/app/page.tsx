@@ -22,6 +22,7 @@ import {
 import DemoSignupForm from "@/components/demo-signup-form";
 import DeploymentTabs from "@/components/deployment-tabs";
 import DataSharingMethods from "@/components/data-sharing-methods";
+import FAQSection from "@/components/faq-section";
 
 export default function Home() {
   // Standardized button styles
@@ -904,6 +905,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection darkButtonClasses={darkButtonClasses} />
 
       {/* CTA Section */}
       <section className="py-24 bg-gray-900 text-white">

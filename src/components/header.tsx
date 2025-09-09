@@ -223,11 +223,27 @@ export default function Header() {
               >
                 <DropdownMenuItem asChild>
                   <Link
+                    href="/#faq"
+                    className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
+                  >
+                    <div className="p-1.5 bg-purple-100 rounded-md">
+                      <IconQuestionMark className="h-4 w-4 text-purple-600" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">FAQ</div>
+                      <div className="text-sm text-gray-500 mt-0.5">
+                        Frequently asked questions
+                      </div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link
                     href="/#how-it-works"
                     className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                   >
                     <div className="p-1.5 bg-blue-100 rounded-md">
-                      <IconQuestionMark className="h-4 w-4 text-blue-600" />
+                      <IconArticle className="h-4 w-4 text-blue-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-900">
