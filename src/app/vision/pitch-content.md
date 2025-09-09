@@ -36,6 +36,7 @@
 - **Snowflake & Databricks adoption exploding** → warehouse-native sharing is the new gold standard.
 - Enterprises are consolidating all data into centralized warehouses → demand frictionless integration.
 - SaaS vendors producing more valuable, granular data than ever before → need a delivery mechanism.
+- Enterprises need clean, governed, and centralized data from vendors ready to fuel AI.
 - Market gap: No purpose-built “data sharing as a service” platform exists — until now.
 
 ---
@@ -62,8 +63,9 @@
 
 ## Business Model
 
-- SaaS subscription model
+- Combination of
 - Pricing based on **number of client connections / data products shared**
+- Usage based pricing based on tokens/rows shared
 - Predictable for enterprises, scalable with vendor growth
 - Expansion opportunities: premium governance, usage analytics, multi-platform connectors
 
@@ -94,7 +96,9 @@
 
 ## Vision
 
-- In five years, Dataporto becomes the **universal data sharing fabric** for SaaS vendors and data providers.
-- Multi-platform support across Snowflake, Databricks, Postgres, S3, Redshift.
-- Default choice for enterprises to receive governed, zero-copy data feeds.
-- Category-defining company at the intersection of **data integration, governance, and enterprise delivery**.
+Dataporto will be the global standard for how businesses exchange data
+
+- Become the **default way businesses share large-scale data** with each other — secure, governed, and instant.
+- Enable organizations to **leverage their data as a revenue channel** — to trade, exchange, and monetize insights.
+- Set the **standard for compliance and regulatory requirements** in data sharing (SOC 2, HIPAA, GDPR) — the “Vanta for inter-company data exchange.”
+- Expand across platforms — Snowflake, Databricks, Postgres, S3, Redshift — **wherever enterprise data lives.**
