@@ -15,6 +15,10 @@ import {
   IconFolder,
   IconBox,
   IconMenu,
+  IconQuestionMark,
+  IconArticle,
+  IconTrendingUp,
+  IconShield,
 } from "@tabler/icons-react";
 import MobileSidebar from "@/components/mobile-sidebar";
 import WaitlistButton from "@/components/waitlist-button";
@@ -103,18 +107,18 @@ export default function Header() {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link
-                    href="/#sftp-delivery"
+                    href="/#data-sharing-methods"
                     className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                   >
                     <div className="p-1.5 bg-green-100 rounded-md">
-                      <IconFolder className="h-4 w-4 text-green-600" />
+                      <IconShare className="h-4 w-4 text-green-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-900">
-                        sFTP File Delivery
+                        Data Sharing Methods
                       </div>
                       <div className="text-sm text-gray-500 mt-0.5">
-                        Automated file transfers
+                        Snowflake, Databricks & sFTP
                       </div>
                     </div>
                   </Link>
@@ -152,7 +156,7 @@ export default function Header() {
               >
                 <DropdownMenuItem asChild>
                   <Link
-                    href="/#multi-platform"
+                    href="/#features"
                     className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                   >
                     <div className="p-1.5 bg-purple-100 rounded-md">
@@ -160,10 +164,10 @@ export default function Header() {
                     </div>
                     <div>
                       <div className="font-medium text-gray-900">
-                        Multi-Platform Orchestration
+                        Platform Features
                       </div>
                       <div className="text-sm text-gray-500 mt-0.5">
-                        Unified control plane
+                        Catalog, Share & Govern
                       </div>
                     </div>
                   </Link>
@@ -214,17 +218,61 @@ export default function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="start"
-                className="w-60 mt-1 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border border-white/30 dark:border-gray-700/30 shadow-2xl rounded-xl p-1"
+                className="w-72 mt-1 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border border-white/30 dark:border-gray-700/30 shadow-2xl rounded-xl p-1"
                 sideOffset={8}
               >
                 <DropdownMenuItem asChild>
                   <Link
                     href="/#how-it-works"
-                    className="flex items-center p-3 rounded-md hover:bg-gray-50 transition-colors cursor-pointer"
+                    className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
                   >
-                    <span className="font-medium text-gray-900">
-                      How it Works
-                    </span>
+                    <div className="p-1.5 bg-blue-100 rounded-md">
+                      <IconQuestionMark className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">
+                        How it Works
+                      </div>
+                      <div className="text-sm text-gray-500 mt-0.5">
+                        See our data sharing process
+                      </div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link
+                    href="/#market"
+                    className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
+                  >
+                    <div className="p-1.5 bg-green-100 rounded-md">
+                      <IconTrendingUp className="h-4 w-4 text-green-600" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">
+                        Market Analysis
+                      </div>
+                      <div className="text-sm text-gray-500 mt-0.5">
+                        Data sharing evolution
+                      </div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link
+                    href="/#before-after"
+                    className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors group cursor-pointer"
+                  >
+                    <div className="p-1.5 bg-orange-100 rounded-md">
+                      <IconShield className="h-4 w-4 text-orange-600" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">
+                        Why Replace Custom Builds
+                      </div>
+                      <div className="text-sm text-gray-500 mt-0.5">
+                        Stop building custom pipelines
+                      </div>
+                    </div>
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
