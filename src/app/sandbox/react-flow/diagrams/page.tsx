@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import FireFliesAIDataFlowDiagram from "./firefliesai-diagram";
 import MaintainXDataFlowDiagram from "./maintainx-diagram";
 import TattleDataFlowDiagram from "./tattle-diagram";
+import MomosDataFlowDiagram from "./momos-diagram";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,7 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { IconChevronDown } from "@tabler/icons-react";
 
-type DiagramType = "fireflies" | "maintainx" | "tattle";
+type DiagramType = "fireflies" | "maintainx" | "tattle" | "momos";
 
 const diagrams = {
   fireflies: {
@@ -27,6 +28,10 @@ const diagrams = {
   tattle: {
     name: "Tattle",
     component: TattleDataFlowDiagram,
+  },
+  momos: {
+    name: "Momos",
+    component: MomosDataFlowDiagram,
   },
 };
 
