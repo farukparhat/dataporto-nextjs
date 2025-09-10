@@ -12,6 +12,7 @@ import {
   IconSettings,
   IconDatabase,
   IconBooks,
+  IconAnchor,
 } from "@tabler/icons-react";
 import Image from "next/image";
 
@@ -52,6 +53,12 @@ const navigationItems = [
     href: "/app/data-shares",
     icon: IconShare,
     description: "Create/manage Snowflake shares, track usage, revoke",
+  },
+  {
+    title: "Data Dock",
+    href: "/app/data-dock",
+    icon: IconAnchor,
+    description: "Self-serve data sharing portal for enterprise clients",
   },
   {
     title: "Clients",
