@@ -51,7 +51,7 @@ export default function Header() {
               size="sm"
               className="bg-gray-900 hover:bg-gray-800 text-white rounded-full text-sm px-3 py-1.5"
             >
-              Book a Demo
+              Get Started
             </WaitlistButton>
             <MobileSidebar />
           </div>
@@ -311,7 +311,7 @@ export default function Header() {
               Sign In
             </Link>
             <WaitlistButton className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-full font-medium">
-              Book a Live Demo
+              Contact Us
             </WaitlistButton>
           </div>
         </div>

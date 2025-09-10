@@ -508,7 +508,7 @@ export default function SnowflakeDataShareSolution() {
                   development and reduced time-to-market from months to minutes.
                 </p>
                 <WaitlistButton size="lg" className={darkButtonClasses}>
-                  Book a Demo <ArrowRight className="ml-2 h-5 w-5" />
+                  Request a Consultation <ArrowRight className="ml-2 h-5 w-5" />
                 </WaitlistButton>
               </div>
             </div>
@@ -654,8 +654,9 @@ export default function SnowflakeDataShareSolution() {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Enterprise customers expect Snowflake Data Shares. With Dataporto,
               you can meet this demand immediately — regardless of your current
-              infrastructure. Book a demo to see how leading data teams are
-              winning more enterprise deals with governed Snowflake Data Shares.
+              infrastructure. Connect with our team to see how leading data
+              teams are winning more enterprise deals with governed Snowflake
+              Data Shares.
             </p>
           </div>
           <div className="max-w-2xl mx-auto">

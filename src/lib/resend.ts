@@ -89,7 +89,7 @@ export async function sendProspectConfirmation(data: WaitlistSignupData) {
           
           <div style="border: 1px solid #e5e5e5; padding: 20px; border-radius: 4px; margin: 20px 0;">
             <h3 style="margin-top: 0; color: #1a1a1a;">What's Next?</h3>
-            <p>Our team will review your information and reach out within 24 hours to schedule your personalized demo.</p>
+            <p>Our team will review your information and reach out within 24 hours to schedule your personalized call.</p>
           </div>
           
           <div style="border: 1px solid #e5e5e5; padding: 20px; border-radius: 4px; margin: 20px 0;">
@@ -110,7 +110,7 @@ export async function sendProspectConfirmation(data: WaitlistSignupData) {
           
           <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 30px 0;">
           <p style="font-size: 12px; color: #666;">
-            You're receiving this email because you signed up for a DataPorto demo. 
+            You're receiving this email because you signed up to talk to our team. 
             If you didn't sign up, please ignore this email.
           </p>
         </div>

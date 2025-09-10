@@ -41,7 +41,7 @@ export default function SnowflakeDataShareSolution() {
             clients — even if you don't have Snowflake.
           </p>
           <WaitlistButton size="lg" className={darkButtonClasses}>
-            Book a Live Demo
+            Start Your Journey
           </WaitlistButton>
         </div>
       </section>
@@ -247,11 +247,11 @@ export default function SnowflakeDataShareSolution() {
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
               Whether you have Snowflake or not, Dataporto makes enterprise data
-              sharing simple. Book a demo to see how we can help you meet client
-              demands immediately.
+              sharing simple. Talk to our team to see how we can help you meet
+              client demands immediately.
             </p>
             <WaitlistButton size="lg" className={darkButtonClasses}>
-              Book a Live Demo
+              Start Your Journey
             </WaitlistButton>
           </div>
         </div>

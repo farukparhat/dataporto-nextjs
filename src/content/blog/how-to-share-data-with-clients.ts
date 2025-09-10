@@ -243,7 +243,7 @@ Managing multiple data sharing methods, ensuring consistent governance, and scal
 
 Don't let complex data sharing infrastructure slow down your business growth. Whether your clients prefer the simplicity of sFTP, the power of Delta Sharing, or the performance of Snowflake sharing, DataPorto can help you deliver data reliably and securely at scale.
 
-**[Book a Demo Today](/demo)** and see how DataPorto can transform your client data sharing operations. Our team will show you how to:
+**[Connect with Our Team Today](/demo)** and see how DataPorto can transform your client data sharing operations. Our team will show you how to:
 
 - Set up all three sharing methods in one unified platform
 - Implement consistent governance across all delivery channels

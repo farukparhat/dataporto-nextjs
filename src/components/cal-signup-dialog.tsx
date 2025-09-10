@@ -27,10 +27,10 @@ export default function CalSignupDialog({
       <DialogContent className="w-[95vw] max-w-[600px] max-h-[90vh] overflow-y-auto sm:max-w-2xl">
         <DialogHeader className="space-y-3">
           <DialogTitle className="text-lg sm:text-xl">
-            Schedule Your Demo
+            Schedule Your Call
           </DialogTitle>
           <DialogDescription className="text-sm sm:text-base">
-            Great! Now let&apos;s schedule your personalized dataporto demo.
+            Great! Now let&apos;s schedule your personalized call with our team.
             Choose a time that works best for you.
           </DialogDescription>
         </DialogHeader>

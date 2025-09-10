@@ -104,7 +104,7 @@ export default function LoginPage() {
                     href="/demo"
                     className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
                   >
-                    Schedule a demo
+                    Get in touch
                   </Link>{" "}
                   to get started.
                 </p>

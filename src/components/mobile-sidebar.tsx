@@ -233,7 +233,7 @@ export default function MobileSidebar() {
               className="block w-full bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-gray-900 text-center py-3 px-4 rounded-lg font-medium transition-colors"
               onClick={() => setOpen(false)}
             >
-              Book a Demo
+              Get Started
             </Link>
           </div>
 

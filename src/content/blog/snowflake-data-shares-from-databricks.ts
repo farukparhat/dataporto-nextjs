@@ -160,6 +160,6 @@ Engineering teams often spend weeks stitching together replication jobs, externa
 
 Result: **faster onboarding, lower engineering cost, and higher reliability**—while your clients enjoy a native Snowflake experience.
 
-**Want to see it in action?** [Book a demo](/demo) and we’ll configure a Snowflake data share from your Databricks-curated datasets in minutes.
+**Want to see it in action?** [Connect with us](/demo) and we'll configure a Snowflake data share from your Databricks-curated datasets in minutes.
   `,
 };

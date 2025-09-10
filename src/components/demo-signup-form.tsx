@@ -30,7 +30,7 @@ export default function DemoSignupForm({ className }: DemoSignupFormProps) {
           email: formData.get("email") as string,
           name: formData.get("name") as string,
         });
-        setMessage("Thank you! Let's schedule your demo now.");
+        setMessage("Thank you! Let's schedule your call now.");
         // Reset form after successful submission
         const form = document.querySelector("form") as HTMLFormElement;
         if (form) form.reset();
@@ -148,7 +148,7 @@ export default function DemoSignupForm({ className }: DemoSignupFormProps) {
             disabled={pending}
             className="w-full h-12 text-base font-medium"
           >
-            {pending ? "Submitting..." : "Schedule My Demo"}
+            {pending ? "Submitting..." : "Talk to Our Team"}
           </Button>
         </div>
 

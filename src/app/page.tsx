@@ -51,7 +51,7 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12">
           <WaitlistButton size="lg" className={darkButtonClasses}>
-            Talk to Our Team
+            Book a live demo
           </WaitlistButton>
           <Button
             variant="outline"
@@ -371,7 +371,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <WaitlistButton size="lg" className={darkButtonClasses}>
-              Book a Call <ArrowRight className="ml-2 h-5 w-5" />
+              Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
           </div>
         </div>
@@ -396,8 +396,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <WaitlistButton size="lg" className={darkButtonClasses}>
-              Explore Data Sharing Options{" "}
-              <ArrowRight className="ml-2 h-5 w-5" />
+              Learn More <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
           </div>
         </div>
@@ -500,7 +499,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <WaitlistButton size="lg" className={darkButtonClasses}>
-              Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
+              Contact Us <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
           </div>
         </div>
@@ -523,7 +522,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <WaitlistButton size="lg" className={darkButtonClasses}>
-              Discuss Your Requirements <ArrowRight className="ml-2 h-5 w-5" />
+              Schedule a Call <ArrowRight className="ml-2 h-5 w-5" />
             </WaitlistButton>
           </div>
         </div>

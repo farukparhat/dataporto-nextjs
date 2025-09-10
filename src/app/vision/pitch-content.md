@@ -37,7 +37,6 @@
 - Enterprises are consolidating all data into centralized warehouses → demand frictionless integration.
 - SaaS vendors producing more valuable, granular data than ever before → need a delivery mechanism.
 - Enterprises need clean, governed, and centralized data from vendors ready to fuel AI.
-- Market gap: No purpose-built “data sharing as a service” platform exists — until now.
 
 ---
 

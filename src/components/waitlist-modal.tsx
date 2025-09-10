@@ -40,7 +40,7 @@ export default function WaitlistModal({
           email: formData.get("email") as string,
           name: formData.get("name") as string,
         });
-        setMessage("Thank you! Let's schedule your demo now.");
+        setMessage("Thank you! Let's schedule your call now.");
         // Show Cal.com dialog after a short delay
         setTimeout(() => {
           onOpenChange(false);
@@ -63,7 +63,7 @@ export default function WaitlistModal({
               Get Started with dataporto
             </DialogTitle>
             <DialogDescription className="text-sm sm:text-base">
-              Schedule a personalized demo to see how dataporto can transform
+              Schedule a personalized call to see how dataporto can transform
               your data sharing operations.
             </DialogDescription>
           </DialogHeader>
@@ -135,7 +135,7 @@ export default function WaitlistModal({
                 disabled={pending}
                 className="w-full h-11 text-base sm:h-10 sm:text-sm"
               >
-                {pending ? "Submitting..." : "Schedule Demo"}
+                {pending ? "Submitting..." : "Start Conversation"}
               </Button>
             </div>
 

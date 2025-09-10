@@ -22,13 +22,13 @@ export default function DemoPage() {
       <section className="container mx-auto px-4 py-16 text-center">
         <Badge variant="secondary" className="mb-6">
           <Calendar className="h-4 w-4 mr-2" />
-          Schedule Your Demo
+          Schedule Your Call
         </Badge>
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-          See DataPorto in Action
+          Connect with Our Team
         </h1>
         <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-          Get a personalized walkthrough of how DataPorto can transform your
+          Get a personalized consultation about how DataPorto can transform your
           data sharing operations. Our team will show you exactly how to
           eliminate custom pipelines and scale client data delivery.
         </p>
@@ -41,10 +41,12 @@ export default function DemoPage() {
           <div className="order-2 lg:order-1">
             <Card className="p-8">
               <CardHeader className="pb-6">
-                <CardTitle className="text-2xl">Schedule Your Demo</CardTitle>
+                <CardTitle className="text-2xl">
+                  Connect with Our Team
+                </CardTitle>
                 <CardDescription>
                   Fill out the form below and we&apos;ll get back to you within
-                  24 hours to schedule your personalized demo.
+                  24 hours to schedule your personalized call.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -58,11 +60,12 @@ export default function DemoPage() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                  What You&apos;ll See in Your Demo
+                  What You&apos;ll Learn in Your Call
                 </h2>
                 <p className="text-slate-600 mb-6">
-                  Our 30-minute personalized demo will cover everything you need
-                  to know about modernizing your data sharing operations.
+                  Our 30-minute personalized consultation will cover everything
+                  you need to know about modernizing your data sharing
+                  operations.
                 </p>
               </div>
 
@@ -117,7 +120,7 @@ export default function DemoPage() {
 
               <div className="bg-slate-50 p-6 rounded-lg">
                 <h3 className="font-semibold text-slate-900 mb-3">
-                  Demo Agenda
+                  Call Agenda
                 </h3>
                 <ul className="space-y-2 text-sm text-slate-600">
                   <li className="flex items-center">
@@ -148,7 +151,7 @@ export default function DemoPage() {
                   No Commitment Required
                 </h3>
                 <p className="text-sm text-slate-600">
-                  This is a no-pressure demo focused on education and
+                  This is a no-pressure consultation focused on education and
                   understanding your specific use case. We&apos;ll help you
                   evaluate if DataPorto is the right solution for your data
                   sharing needs.
