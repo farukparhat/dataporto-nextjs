@@ -17,3 +17,7 @@ Instead of your team manually provisioning every integration, you set up a **Dat
 
 **Why it matters:**
 Vendors eliminate custom integration overhead, while clients get instant, enterprise-grade data access — all through a branded, embeddable portal powered by Dataporto.
+
+- **For vendors** → Eliminate integration overhead and scale effortlessly — just expose new data, and clients self-serve the rest.
+- **For clients** → A modern, enterprise-grade experience — subscribe to and manage data shares instantly, without waiting on vendor support.
+- **For both** → Faster, smoother data exchange that builds trust and deepens vendor–client relationships.
