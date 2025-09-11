@@ -402,6 +402,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Self-Serve Data Portal Section */}
+      <section id="self-serve-portal" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Self-Service Data Portal
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Embeddable data portals that save you engineering time and
+              resources while delivering a best-in-class, self-service
+              experience that your enterprise clients will love.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Screenshot */}
+            <div className="order-2 lg:order-1">
+              <ScreenshotWindow
+                src="/screenshot-app-embed-datadock.png"
+                alt="Embedded Data Dock Widget Preview - Self-serve data access portal"
+                url="senti.com/data"
+                urlShort="senti.com/data-dock"
+                priority={false}
+                overlayIntensity="light"
+              />
+            </div>
+
+            {/* Benefits */}
+            <div className="order-1 lg:order-2 flex flex-col justify-center h-full space-y-12">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  For Your Business
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Scale effortlessly without engineering overhead — just expose
+                  new data sets, and your clients handle the rest through
+                  self-service.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  For Your Clients
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  A modern, enterprise-grade experience — subscribe to and
+                  manage data access instantly, without waiting on support or
+                  custom integrations.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  The Result
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Faster, smoother data exchange that builds trust, reduces
+                  support overhead, and strengthens customer relationships.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <WaitlistButton size="lg" className={darkButtonClasses}>
+              See Data Dock Demo <ArrowRight className="ml-2 h-5 w-5" />
+            </WaitlistButton>
+          </div>
+        </div>
+      </section>
+
       {/* Enable Snowflake Data Shares Section */}
       <section id="snowflake-shares" className="py-24 bg-white">
         <div className="container mx-auto px-4">
