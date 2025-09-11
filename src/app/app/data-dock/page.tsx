@@ -60,26 +60,26 @@ const sampleDatasets = [
   {
     id: "customer-analytics",
     name: "Customer Analytics",
-    description: "Comprehensive customer behavior and transaction data",
-    tables: ["customers", "transactions", "sessions", "events"],
+    description: "Comprehensive customer behavior and interaction data",
+    tables: ["customers", "interactions", "sessions", "events"],
     size: "2.4 GB",
     rows: "12.5M",
   },
   {
-    id: "product-catalog",
-    name: "Product Catalog",
-    description: "Complete product information, pricing, and inventory",
-    tables: ["products", "categories", "pricing", "inventory"],
-    size: "850 MB",
-    rows: "2.8M",
+    id: "reviews",
+    name: "Customer Reviews",
+    description: "Customer feedback, ratings, and sentiment analysis",
+    tables: ["reviews", "ratings", "sentiment", "feedback"],
+    size: "1.2 GB",
+    rows: "8.7M",
   },
   {
-    id: "financial-reports",
-    name: "Financial Reports",
-    description: "Aggregated financial metrics and KPIs",
-    tables: ["revenue", "costs", "margins", "forecasts"],
-    size: "120 MB",
-    rows: "450K",
+    id: "support-tickets",
+    name: "Support Tickets",
+    description: "Customer support interactions and resolution data",
+    tables: ["tickets", "conversations", "resolutions", "agents"],
+    size: "950 MB",
+    rows: "3.2M",
   },
 ];
 
@@ -177,8 +177,8 @@ export default function DataDockPage() {
               <div className="text-center mb-6">
                 <div className="w-24 h-12 flex items-center justify-center mx-auto mb-4">
                   <Image
-                    src="/brands/momos.svg"
-                    alt="Momos"
+                    src="/brands/senti.png"
+                    alt="Senti"
                     width={144}
                     height={26}
                     className="h-auto"
