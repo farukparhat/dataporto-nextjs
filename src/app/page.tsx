@@ -154,8 +154,8 @@ export default function Home() {
               There&apos;s a smarter way to share data
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Connect your sources, configure governance policies, then deliver
-              to any platform with a single control plane.
+              Connect your sources, catalog your data, share with governance —
+              all from a single control plane.
             </p>
           </div>
 
@@ -352,7 +352,7 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <h4 className="font-semibold text-gray-900 mb-2">
-                  Developer API
+                  Developer API & Terraform Support
                 </h4>
                 <p className="text-sm text-gray-600">
                   Full automation for engineering-heavy teams
@@ -360,7 +360,7 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <h4 className="font-semibold text-gray-900 mb-2">
-                  White-label Portal
+                  White-label Data Portal
                 </h4>
                 <p className="text-sm text-gray-600">
                   Let clients self-serve through a branded UI
@@ -485,10 +485,10 @@ export default function Home() {
               Enable Snowflake Data Shares
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Many vendors today store data in Databricks, Postgres, BigQuery,
-              or other platforms, but their enterprise clients increasingly
-              demand Snowflake Data Shares. With Dataporto, vendors can meet
-              this demand — even if they don&apos;t have a Snowflake account.
+              You might store data in Databricks, Postgres, BigQuery, or other
+              platforms, but your enterprise clients increasingly demand
+              Snowflake Data Shares. With Dataporto, you can meet this demand —
+              even if you don&apos;t have a Snowflake account.
             </p>
             <div className="mt-6">
               <span className="inline-flex items-center border border-gray-200 bg-gray-50 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">

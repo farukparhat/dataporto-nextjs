@@ -50,7 +50,7 @@ const deploymentOptions: TabOption[] = [
   {
     id: "private",
     title: "Customer-Managed",
-    subtitle: "Bring your own cloud",
+    subtitle: "Run in your cloud or on-premise",
     icon: <Lock className="h-6 w-6" />,
     description:
       "For the most regulated industries — total control in your cloud.",
