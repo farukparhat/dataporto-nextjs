@@ -76,7 +76,9 @@ export default function DataDockEmbedWidget({
   brandName = "Senti",
   className = "",
 }: DataDockEmbedWidgetProps) {
-  const [selectedDatasets, setSelectedDatasets] = useState<string[]>([]);
+  const [selectedDatasets, setSelectedDatasets] = useState<string[]>([
+    sampleDatasets[0].id,
+  ]);
   const [selectedConnectionType, setSelectedConnectionType] = useState<
     "snowflake" | "databricks" | "sftp"
   >("snowflake");
@@ -369,7 +371,7 @@ export default function DataDockEmbedWidget({
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                       <IconFolder className="h-3 w-3 text-slate-500" />
-                      <span className="text-xs font-medium">
+                      <span className="text-xs font-medium whitespace-nowrap">
                         {dataset.name}
                       </span>
                       <Badge variant="outline" className="text-xs px-1 py-0">
