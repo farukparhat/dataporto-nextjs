@@ -3,12 +3,14 @@ import { multiPlatformDataSharingGuide } from "./multi-platform-data-sharing-gui
 import { enterpriseSecurityCompliance } from "./enterprise-security-compliance";
 import { howToShareDataWithClients } from "./how-to-share-data-with-clients";
 import { snowflakeFromDatabricks } from "./snowflake-data-shares-from-databricks";
+import { whatAreDataContracts } from "./what-are-data-contracts";
 
 export const blogPosts = {
   [multiPlatformDataSharingGuide.id]: multiPlatformDataSharingGuide,
   [enterpriseSecurityCompliance.id]: enterpriseSecurityCompliance,
   [howToShareDataWithClients.id]: howToShareDataWithClients,
   [snowflakeFromDatabricks.id]: snowflakeFromDatabricks,
+  [whatAreDataContracts.id]: whatAreDataContracts,
 };
 
 export type BlogPost = typeof multiPlatformDataSharingGuide & {
