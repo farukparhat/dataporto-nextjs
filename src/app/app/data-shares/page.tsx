@@ -45,6 +45,8 @@ import {
   SftpIcon,
 } from "@/components/brand-icons";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { getTenantConfig } from "@/config/tenants";
+import Image from "next/image";
 
 // Sample data for data shares
 const dataShares = [
@@ -234,6 +236,7 @@ function formatExpirationDate(expiresAt: string): string {
 }
 
 export default function DataSharesPage() {
+  const tenantConfig = getTenantConfig();
   const activeShares = dataShares.filter(
     share => share.status === "active"
   ).length;
@@ -264,9 +267,25 @@ export default function DataSharesPage() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <SidebarTrigger className="md:hidden" />
+            {tenantConfig.id !== "default" && (
+              <div className="flex items-center justify-center w-20 h-10 mr-2">
+                <Image
+                  src={tenantConfig.logo}
+                  alt={tenantConfig.name}
+                  width={80}
+                  height={40}
+                  className="h-auto max-h-10 w-auto"
+                />
+              </div>
+            )}
             <div>
               <h1 className="text-2xl font-semibold text-slate-900">
                 Data Shares
+                {tenantConfig.id !== "default" && (
+                  <span className="text-slate-400 ml-2">
+                    • {tenantConfig.name}
+                  </span>
+                )}
               </h1>
               <p className="text-slate-600">
                 Manage your outgoing data shares across all platforms

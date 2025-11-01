@@ -26,8 +26,9 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarSeparator,
 } from "@/components/ui/sidebar";
+import { getTenantConfig } from "@/config/tenants";
+import { NavUser } from "@/components/nav-user";
 
 const navigationItems = [
   {
@@ -88,6 +89,14 @@ const navigationItems = [
 
 export function AppSidebar() {
   const pathname = usePathname();
+  const tenantConfig = getTenantConfig();
+
+  // User data - uses tenant config if available, otherwise defaults
+  const user = {
+    name: tenantConfig.user?.name || "Demo User",
+    email: tenantConfig.user?.email || "demo@dataporto.com",
+    avatar: tenantConfig.id !== "default" ? tenantConfig.logo : "/icon.png",
+  };
 
   return (
     <Sidebar collapsible="icon">
@@ -147,17 +156,7 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter>
-        <SidebarSeparator />
-        <div className="p-3">
-          <div className="rounded-lg bg-slate-50/50 border border-slate-100 p-4">
-            <p className="text-xs text-slate-600 leading-relaxed font-medium">
-              Multi‑Platform Data Sharing as a Service
-            </p>
-            <p className="mt-2 text-xs font-semibold text-slate-800 tracking-wide">
-              v1.0.0
-            </p>
-          </div>
-        </div>
+        <NavUser user={user} />
       </SidebarFooter>
     </Sidebar>
   );

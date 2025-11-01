@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { IconSettings, IconCheck } from "@tabler/icons-react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import DataDockEmbedWidget from "@/components/data-dock-embed-widget";
+import { getTenantConfig } from "@/config/tenants";
+import Image from "next/image";
 
 export default function DataDockPage() {
+  const tenantConfig = getTenantConfig();
   return (
     <>
       {/* Header */}
@@ -14,10 +17,26 @@ export default function DataDockPage() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <SidebarTrigger className="md:hidden" />
+            {tenantConfig.id !== "default" && (
+              <div className="flex items-center justify-center w-20 h-10 mr-2">
+                <Image
+                  src={tenantConfig.logo}
+                  alt={tenantConfig.name}
+                  width={80}
+                  height={40}
+                  className="h-auto max-h-10 w-auto"
+                />
+              </div>
+            )}
             <div className="flex items-center space-x-3">
               <div>
                 <h1 className="text-2xl font-semibold text-slate-900">
                   Data Dock
+                  {tenantConfig.id !== "default" && (
+                    <span className="text-slate-400 ml-2">
+                      • {tenantConfig.name}
+                    </span>
+                  )}
                 </h1>
                 <p className="text-slate-600">
                   Self-serve data sharing portal for your enterprise clients
@@ -50,7 +69,11 @@ export default function DataDockPage() {
               <div className="w-full h-px bg-slate-300"></div>
             </div>
 
-            <DataDockEmbedWidget />
+            <DataDockEmbedWidget
+              brandLogo={tenantConfig.logo}
+              brandName={tenantConfig.name}
+              datasets={tenantConfig.datasets}
+            />
           </div>
         </div>
       </main>

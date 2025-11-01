@@ -37,7 +37,9 @@ const connectionOptions = [
   },
 ];
 
-// Sample datasets that clients can subscribe to
+import { Dataset } from "@/config/tenants";
+
+// Sample datasets that clients can subscribe to (default fallback)
 const sampleDatasets = [
   {
     id: "customer-analytics",
@@ -68,16 +70,19 @@ const sampleDatasets = [
 interface DataDockEmbedWidgetProps {
   brandLogo?: string;
   brandName?: string;
+  datasets?: Dataset[];
   className?: string;
 }
 
 export default function DataDockEmbedWidget({
   brandLogo = "/brands/senti.png",
   brandName = "Senti",
+  datasets,
   className = "",
 }: DataDockEmbedWidgetProps) {
+  const displayDatasets = datasets || sampleDatasets;
   const [selectedDatasets, setSelectedDatasets] = useState<string[]>([
-    sampleDatasets[0].id,
+    displayDatasets[0].id,
   ]);
   const [selectedConnectionType, setSelectedConnectionType] = useState<
     "snowflake" | "databricks" | "sftp"
@@ -134,7 +139,7 @@ export default function DataDockEmbedWidget({
             alt={brandName}
             width={144}
             height={26}
-            className="h-auto"
+            className="h-auto p-2"
           />
         </div>
         <p className="text-xs text-slate-600">
@@ -357,7 +362,7 @@ export default function DataDockEmbedWidget({
 
           {/* Hierarchical Schema/Table View */}
           <div className="space-y-1">
-            {sampleDatasets.map(dataset => (
+            {displayDatasets.map(dataset => (
               <div key={dataset.id} className="space-y-1">
                 {/* Schema Level */}
                 <div

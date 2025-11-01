@@ -40,6 +40,8 @@ import {
   IconShare,
 } from "@tabler/icons-react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { getTenantConfig } from "@/config/tenants";
+import Image from "next/image";
 
 // Mock data for the catalog tables
 const catalogTables = [
@@ -199,6 +201,7 @@ function getTypeIcon(type: string) {
 }
 
 export default function DataCatalogPage() {
+  const tenantConfig = getTenantConfig();
   const totalTables = catalogTables.length;
   const activeTables = catalogTables.filter(
     table => table.status === "active"
@@ -230,9 +233,25 @@ export default function DataCatalogPage() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <SidebarTrigger className="md:hidden" />
+            {tenantConfig.id !== "default" && (
+              <div className="flex items-center justify-center w-20 h-10 mr-2">
+                <Image
+                  src={tenantConfig.logo}
+                  alt={tenantConfig.name}
+                  width={80}
+                  height={40}
+                  className="h-auto max-h-10 w-auto"
+                />
+              </div>
+            )}
             <div>
               <h1 className="text-2xl font-semibold text-slate-900">
                 Data Catalog
+                {tenantConfig.id !== "default" && (
+                  <span className="text-slate-400 ml-2">
+                    • {tenantConfig.name}
+                  </span>
+                )}
               </h1>
               <p className="text-slate-600">
                 Know what you have and control it
