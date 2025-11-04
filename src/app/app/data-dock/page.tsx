@@ -60,7 +60,7 @@ export default function DataDockPage() {
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto p-6">
         {/* Embedded Data Dock Widget */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="border-2 border-dashed border-slate-300 rounded-xl p-6 bg-slate-50/50">
             <div className="text-center mb-4">
               <p className="text-sm text-slate-500 mb-2">

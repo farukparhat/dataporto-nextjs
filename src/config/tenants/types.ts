@@ -2,9 +2,14 @@ export interface Dataset {
   id: string;
   name: string;
   description: string;
+  tagline?: string;
   tables: string[];
   size: string;
   rows: string;
+  tier?: number;
+  locked?: boolean;
+  pricing?: string;
+  refreshRate?: string;
 }
 
 export interface TenantBranding {

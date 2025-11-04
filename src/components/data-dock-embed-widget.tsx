@@ -9,6 +9,7 @@ import {
   IconDatabase,
   IconCheck,
   IconDownload,
+  IconLock,
 } from "@tabler/icons-react";
 import {
   SnowflakeIcon,
@@ -40,7 +41,7 @@ const connectionOptions = [
 import { Dataset } from "@/config/tenants";
 
 // Sample datasets that clients can subscribe to (default fallback)
-const sampleDatasets = [
+const sampleDatasets: Dataset[] = [
   {
     id: "customer-analytics",
     name: "Customer Analytics",
@@ -48,6 +49,7 @@ const sampleDatasets = [
     tables: ["customers", "interactions", "sessions", "events"],
     size: "2.4 GB",
     rows: "12.5M",
+    locked: false,
   },
   {
     id: "reviews",
@@ -56,6 +58,7 @@ const sampleDatasets = [
     tables: ["reviews", "ratings", "sentiment", "feedback"],
     size: "1.2 GB",
     rows: "8.7M",
+    locked: false,
   },
   {
     id: "support-tickets",
@@ -64,6 +67,7 @@ const sampleDatasets = [
     tables: ["tickets", "conversations", "resolutions", "agents"],
     size: "950 MB",
     rows: "3.2M",
+    locked: false,
   },
 ];
 
@@ -84,6 +88,7 @@ export default function DataDockEmbedWidget({
   const [selectedDatasets, setSelectedDatasets] = useState<string[]>([
     displayDatasets[0].id,
   ]);
+  const [expandedDatasets, setExpandedDatasets] = useState<string[]>([]);
   const [selectedConnectionType, setSelectedConnectionType] = useState<
     "snowflake" | "databricks" | "sftp"
   >("snowflake");
@@ -110,7 +115,19 @@ export default function DataDockEmbedWidget({
   });
 
   const toggleDatasetSelection = (datasetId: string) => {
+    const dataset = displayDatasets.find(d => d.id === datasetId);
+    // Don't allow selecting locked datasets
+    if (dataset?.locked) return;
+
     setSelectedDatasets(prev =>
+      prev.includes(datasetId)
+        ? prev.filter(id => id !== datasetId)
+        : [...prev, datasetId]
+    );
+  };
+
+  const toggleDatasetExpansion = (datasetId: string) => {
+    setExpandedDatasets(prev =>
       prev.includes(datasetId)
         ? prev.filter(id => id !== datasetId)
         : [...prev, datasetId]
@@ -362,57 +379,107 @@ export default function DataDockEmbedWidget({
 
           {/* Hierarchical Schema/Table View */}
           <div className="space-y-1">
-            {displayDatasets.map(dataset => (
-              <div key={dataset.id} className="space-y-1">
-                {/* Schema Level */}
-                <div
-                  className={`p-2 border rounded cursor-pointer transition-all ${
-                    selectedDatasets.includes(dataset.id)
-                      ? "border-blue-500 bg-blue-50"
-                      : "border-slate-200 hover:border-slate-300"
-                  }`}
-                  onClick={() => toggleDatasetSelection(dataset.id)}
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <IconFolder className="h-3 w-3 text-slate-500" />
-                      <span className="text-xs font-medium whitespace-nowrap">
-                        {dataset.name}
-                      </span>
-                      <Badge variant="outline" className="text-xs px-1 py-0">
-                        {dataset.rows} rows
-                      </Badge>
-                      <Badge variant="secondary" className="text-xs px-1 py-0">
-                        {dataset.size}
-                      </Badge>
-                    </div>
-                    <div className="flex items-center">
-                      {selectedDatasets.includes(dataset.id) ? (
-                        <IconCheck className="h-3 w-3 text-blue-600" />
-                      ) : (
-                        <div className="h-3 w-3 border rounded border-slate-300" />
-                      )}
-                    </div>
-                  </div>
-                </div>
+            {displayDatasets.map(dataset => {
+              const isLocked = dataset.locked === true;
+              const isExpanded = expandedDatasets.includes(dataset.id);
+              const isSelected = selectedDatasets.includes(dataset.id);
 
-                {/* Tables Level (shown when schema is selected or expanded) */}
-                {selectedDatasets.includes(dataset.id) && (
-                  <div className="ml-4 space-y-1">
-                    {dataset.tables.map(table => (
+              return (
+                <div key={dataset.id} className="space-y-1">
+                  {/* Schema Level */}
+                  <div
+                    className={`p-2 border rounded transition-all ${
+                      isLocked
+                        ? "border-slate-200 bg-slate-50 opacity-60"
+                        : isSelected
+                          ? "border-blue-500 bg-blue-50"
+                          : "border-slate-200 hover:border-slate-300"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
                       <div
-                        key={table}
-                        className="flex items-center space-x-2 p-1 rounded hover:bg-slate-50"
+                        className="flex flex-col flex-1 cursor-pointer"
+                        onClick={() =>
+                          isLocked
+                            ? toggleDatasetExpansion(dataset.id)
+                            : toggleDatasetSelection(dataset.id)
+                        }
                       >
-                        <IconDatabase className="h-3 w-3 text-slate-400" />
-                        <span className="text-xs text-slate-600">{table}</span>
-                        <IconCheck className="h-3 w-3 text-green-600 ml-auto" />
+                        <div className="flex items-center space-x-2">
+                          <IconFolder
+                            className={`h-3 w-3 ${isLocked ? "text-slate-400" : "text-slate-500"}`}
+                          />
+                          <span
+                            className={`text-xs font-medium whitespace-nowrap ${isLocked ? "text-slate-500" : ""}`}
+                          >
+                            {dataset.name}
+                          </span>
+                          <Badge
+                            variant="outline"
+                            className="text-xs px-1 py-0"
+                          >
+                            {dataset.rows} rows
+                          </Badge>
+                        </div>
+                        {dataset.tagline && (
+                          <p className="text-xs text-slate-500 mt-1 ml-5">
+                            {dataset.tagline}
+                          </p>
+                        )}
                       </div>
-                    ))}
+                      <div className="flex items-center">
+                        {isLocked ? (
+                          <IconLock className="h-3 w-3 text-slate-400" />
+                        ) : isSelected ? (
+                          <IconCheck className="h-3 w-3 text-blue-600" />
+                        ) : (
+                          <div className="h-3 w-3 border rounded border-slate-300" />
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Unlock button for locked datasets */}
+                    {isLocked && isExpanded && (
+                      <div className="mt-2 pt-2 border-t border-slate-200">
+                        <Button
+                          size="sm"
+                          className="w-full h-6 text-xs"
+                          style={{ backgroundColor: "#2970ff" }}
+                          onClick={e => {
+                            e.stopPropagation();
+                            // Handle unlock/upgrade action
+                            console.log(`Request unlock for ${dataset.id}`);
+                          }}
+                        >
+                          <IconLock className="h-3 w-3 mr-1" />
+                          Unlock Access
+                        </Button>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            ))}
+
+                  {/* Tables Level (shown when schema is selected or expanded) */}
+                  {(isSelected || isExpanded) && (
+                    <div className="ml-4 space-y-1">
+                      {dataset.tables.map(table => (
+                        <div
+                          key={table}
+                          className={`flex items-center space-x-2 p-1 rounded ${isLocked ? "opacity-60" : "hover:bg-slate-50"}`}
+                        >
+                          <IconDatabase className="h-3 w-3 text-slate-400" />
+                          <span className="text-xs text-slate-600">
+                            {table}
+                          </span>
+                          {!isLocked && (
+                            <IconCheck className="h-3 w-3 text-green-600 ml-auto" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           {selectedDatasets.length > 0 && (
