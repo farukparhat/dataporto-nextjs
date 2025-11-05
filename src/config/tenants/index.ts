@@ -1,10 +1,12 @@
 import { TenantConfig } from "./types";
 import { defaultConfig } from "./default";
 import { momosConfig } from "./momos";
+import { hangConfig } from "./hang";
 
 const tenantConfigs: Record<string, TenantConfig> = {
   default: defaultConfig,
   momos: momosConfig,
+  hang: hangConfig,
 };
 
 export function getTenantConfig(): TenantConfig {
@@ -24,6 +26,6 @@ export function getTenantConfig(): TenantConfig {
   return config;
 }
 
-export { defaultConfig, momosConfig };
+export { defaultConfig, momosConfig, hangConfig };
 export * from "./types";
 
