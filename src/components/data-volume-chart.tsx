@@ -21,9 +21,6 @@ interface DataVolumeChartProps {
 }
 
 export function DataVolumeChart({ data, className }: DataVolumeChartProps) {
-  // Debug: Log the data to console
-  console.log("Chart data:", data);
-
   return (
     <div className={className || "h-64 w-full"}>
       {/* Legend */}
