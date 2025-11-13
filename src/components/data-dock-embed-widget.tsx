@@ -156,7 +156,7 @@ export default function DataDockEmbedWidget({
             alt={brandName}
             width={144}
             height={26}
-            className="h-auto p-2"
+            className="h-auto p-4"
           />
         </div>
         <p className="text-xs text-slate-600">
