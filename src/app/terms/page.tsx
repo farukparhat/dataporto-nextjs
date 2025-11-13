@@ -21,11 +21,11 @@ export default function TermsPage() {
             <CardContent className="space-y-8 text-slate-700 leading-relaxed">
               <div>
                 <p className="mb-4">
-                  Welcome to DataPorto! These Terms and Conditions
+                  Welcome to dataporto! These Terms and Conditions
                   (&quot;Terms&quot;) govern your access to and use of the
-                  DataPorto platform, products, and services
+                  dataporto platform, products, and services
                   (&quot;Services&quot;). Please read these Terms carefully
-                  before using our Services. By accessing or using DataPorto,
+                  before using our Services. By accessing or using dataporto,
                   you agree to be bound by these Terms. If you do not agree, you
                   may not use our Services.
                 </p>
@@ -35,10 +35,10 @@ export default function TermsPage() {
 
               <section>
                 <h2 className="text-2xl font-semibold text-slate-900 mb-4">
-                  1. About DataPorto
+                  1. About dataporto
                 </h2>
                 <p>
-                  DataPorto (&quot;Company,&quot; &quot;we,&quot;
+                  dataporto (&quot;Company,&quot; &quot;we,&quot;
                   &quot;us,&quot; &quot;our&quot;) provides Data Sharing as a
                   Service (DSaaS), enabling vendors to securely share data with
                   their clients through platforms such as Snowflake, Databricks,
@@ -119,11 +119,11 @@ export default function TermsPage() {
                 </h2>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    You retain all rights to your data. DataPorto does not claim
+                    You retain all rights to your data. dataporto does not claim
                     ownership over customer data.
                   </li>
                   <li>
-                    By using the Services, you grant DataPorto a limited right
+                    By using the Services, you grant dataporto a limited right
                     to process, store, and transfer your data solely to deliver
                     the Services.
                   </li>
@@ -194,7 +194,7 @@ export default function TermsPage() {
                 </h2>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    DataPorto owns all rights, titles, and interests in the
+                    dataporto owns all rights, titles, and interests in the
                     Services, including software, designs, and branding.
                   </li>
                   <li>
@@ -222,7 +222,7 @@ export default function TermsPage() {
                   </li>
                   <li>
                     Use the Services in a way that could disrupt or harm
-                    DataPorto&apos;s systems or other customers.
+                    dataporto&apos;s systems or other customers.
                   </li>
                 </ul>
               </section>
@@ -259,7 +259,7 @@ export default function TermsPage() {
                 <p className="mb-4">To the fullest extent permitted by law:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    DataPorto shall not be liable for any indirect, incidental,
+                    dataporto shall not be liable for any indirect, incidental,
                     or consequential damages.
                   </li>
                   <li>
@@ -277,7 +277,7 @@ export default function TermsPage() {
                   13. Indemnification
                 </h2>
                 <p className="mb-4">
-                  You agree to indemnify and hold harmless DataPorto, its
+                  You agree to indemnify and hold harmless dataporto, its
                   affiliates, and employees from any claims, damages, or
                   liabilities arising from:
                 </p>
@@ -351,7 +351,7 @@ export default function TermsPage() {
                 </p>
                 <div className="bg-slate-50 p-6 rounded-lg">
                   <p className="font-semibold">
-                    DataPorto (Wisp AI Labs, Inc.)
+                    dataporto (Wisp AI Labs, Inc.)
                   </p>
                   <p>
                     Email:{" "}

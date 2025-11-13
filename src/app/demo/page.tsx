@@ -28,7 +28,7 @@ export default function DemoPage() {
           Connect with Our Team
         </h1>
         <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-          Get a personalized consultation about how DataPorto can transform your
+          Get a personalized consultation about how dataporto can transform your
           data sharing operations. Our team will show you exactly how to
           eliminate custom pipelines and scale client data delivery.
         </p>
@@ -79,7 +79,7 @@ export default function DemoPage() {
                       Live Platform Walkthrough
                     </h3>
                     <p className="text-sm text-slate-600">
-                      See the DataPorto interface in action with real examples
+                      See the dataporto interface in action with real examples
                       of multi-platform data sharing.
                     </p>
                   </div>
@@ -153,7 +153,7 @@ export default function DemoPage() {
                 <p className="text-sm text-slate-600">
                   This is a no-pressure consultation focused on education and
                   understanding your specific use case. We&apos;ll help you
-                  evaluate if DataPorto is the right solution for your data
+                  evaluate if dataporto is the right solution for your data
                   sharing needs.
                 </p>
               </div>
@@ -169,7 +169,7 @@ export default function DemoPage() {
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Image
                 src="/icon.png"
-                alt="Dataporto"
+                alt="dataporto"
                 width={24}
                 height={24}
                 className="h-6 w-6"
@@ -193,7 +193,7 @@ export default function DemoPage() {
           </div>
           <Separator className="my-8 bg-slate-700" />
           <p className="text-center text-slate-400">
-            © 2025 Dataporto. All rights reserved. Multi‑Platform Data Sharing
+            © 2025 dataporto. All rights reserved. Multi‑Platform Data Sharing
             as a Service.
           </p>
         </div>

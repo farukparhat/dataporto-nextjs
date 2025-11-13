@@ -41,7 +41,7 @@ const dataSharingOptions: TabOption[] = [
     subtitle: "Open standard sharing",
     icon: <DatabricksIcon className="h-6 w-6" />,
     description:
-      "Enable seamless data delivery directly into your clients' Databricks warehouses. Dataporto provisions Delta Shares that appear natively in your clients' Unity Catalog, giving them zero-copy access to governed datasets without leaving their Databricks environment. Learn more about Delta Sharing capabilities.",
+      "Enable seamless data delivery directly into your clients' Databricks warehouses. dataporto provisions Delta Shares that appear natively in your clients' Unity Catalog, giving them zero-copy access to governed datasets without leaving their Databricks environment. Learn more about Delta Sharing capabilities.",
     features: [
       "Direct delivery to client Databricks workspaces",
       "Native Unity Catalog integration for recipients",

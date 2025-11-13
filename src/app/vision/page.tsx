@@ -40,7 +40,7 @@ export default function VisionPage() {
   const slides: Slide[] = [
     {
       id: "title",
-      title: "Dataporto",
+      title: "dataporto",
       icon: <IconPresentation className="h-6 w-6" />,
       content: (
         <div className="text-center space-y-6">
@@ -79,7 +79,7 @@ export default function VisionPage() {
               Data Sharing as a Service
             </Badge>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Dataporto enables SaaS companies to share governed, large-scale
+              dataporto enables SaaS companies to share governed, large-scale
               data with enterprise clients
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
@@ -181,7 +181,7 @@ export default function VisionPage() {
           <div className="text-center mb-8">
             <Badge variant="outline" className="mb-4">
               <IconBulb className="h-4 w-4 mr-2" />
-              Dataporto Solution
+              dataporto Solution
             </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Data Sharing as a Service
@@ -395,7 +395,7 @@ export default function VisionPage() {
                 </div>
                 <div className="bg-green-100 p-4 rounded-lg">
                   <p className="text-sm text-green-800 font-medium text-center">
-                    Dataporto can create an entirely new category
+                    dataporto can create an entirely new category
                   </p>
                 </div>
               </CardContent>
@@ -481,7 +481,7 @@ export default function VisionPage() {
           </div>
 
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-3">Dataporto Advantage</h3>
+            <h3 className="text-2xl font-bold mb-3">dataporto Advantage</h3>
             <p className="text-lg">
               Only end-to-end service for SaaS-to-enterprise governed data
               sharing
@@ -760,7 +760,7 @@ export default function VisionPage() {
                   Universal Data Sharing Fabric
                 </h3>
                 <p className="text-lg text-gray-700 text-center mb-6">
-                  Dataporto becomes the universal data sharing fabric for SaaS
+                  dataporto becomes the universal data sharing fabric for SaaS
                   vendors and data providers
                 </p>
 

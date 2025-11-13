@@ -7,9 +7,9 @@ import WaitlistButton from "@/components/waitlist-button";
 
 const faqData = [
   {
-    question: "Do I need a Snowflake account to use DataPorto?",
+    question: "Do I need a Snowflake account to use dataporto?",
     answer:
-      "No. That's the beauty of DataPorto — we run the Snowflake infrastructure for you. Your clients can receive data in their own Snowflake accounts or via Reader Accounts we provision for them.",
+      "No. That's the beauty of dataporto — we run the Snowflake infrastructure for you. Your clients can receive data in their own Snowflake accounts or via Reader Accounts we provision for them.",
   },
   {
     question: "What types of data sources can I connect?",
@@ -19,12 +19,12 @@ const faqData = [
   {
     question: "How is this different from just sending CSVs or APIs?",
     answer:
-      "CSV exports and APIs are brittle, slow, and hard to scale per client. DataPorto gives your clients live, zero-copy warehouse access — the format enterprises now expect. It's instant, governed, and always up to date.",
+      "CSV exports and APIs are brittle, slow, and hard to scale per client. dataporto gives your clients live, zero-copy warehouse access — the format enterprises now expect. It's instant, governed, and always up to date.",
   },
   {
     question: "Is the data secure?",
     answer:
-      "Yes. DataPorto is built with enterprise-grade security: encrypted at rest and in transit, strict IAM controls, row/column masking, and full audit logging. SOC 2 compliance is on our roadmap.",
+      "Yes. dataporto is built with enterprise-grade security: encrypted at rest and in transit, strict IAM controls, row/column masking, and full audit logging. SOC 2 compliance is on our roadmap.",
   },
   {
     question: "What if my client doesn't have Snowflake?",
@@ -34,7 +34,7 @@ const faqData = [
   {
     question: "How hard is onboarding?",
     answer:
-      "Onboarding is zero-code. Connect your source, define what data to share, and DataPorto takes care of staging, provisioning, and governance. Most vendors go live in hours, not weeks.",
+      "Onboarding is zero-code. Connect your source, define what data to share, and dataporto takes care of staging, provisioning, and governance. Most vendors go live in hours, not weeks.",
   },
   {
     question: "How much does it cost?",
@@ -42,14 +42,14 @@ const faqData = [
       "We price based on the number of clients you share data with and the volume of data processed. No upfront Snowflake contract or engineering overhead required.",
   },
   {
-    question: "Who is DataPorto for?",
+    question: "Who is dataporto for?",
     answer:
       "SaaS vendors who deliver analytics to enterprise customers, agencies providing client-specific metrics and dashboards, data providers selling curated datasets, and platforms that want governed, multi-client data access at scale.",
   },
   {
     question: "Can I revoke or update access once it's shared?",
     answer:
-      "Yes. You stay in full control. DataPorto makes it easy to update, revoke, or expire shares on a per-client basis at any time.",
+      "Yes. You stay in full control. dataporto makes it easy to update, revoke, or expire shares on a per-client basis at any time.",
   },
 ];
 
@@ -75,7 +75,7 @@ export default function FAQSection({ darkButtonClasses }: FAQSectionProps) {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Everything you need to know about DataPorto and how it can transform
+            Everything you need to know about dataporto and how it can transform
             your data sharing operations.
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function FAQSection({ darkButtonClasses }: FAQSectionProps) {
                 Still have questions?
               </h3>
               <p className="text-gray-600 mb-6">
-                Our team is here to help you understand how DataPorto can
+                Our team is here to help you understand how dataporto can
                 transform your data sharing operations.
               </p>
               <WaitlistButton size="lg" className={darkButtonClasses}>

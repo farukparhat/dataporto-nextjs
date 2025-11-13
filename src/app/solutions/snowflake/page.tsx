@@ -37,7 +37,7 @@ export default function SnowflakeDataShareSolution() {
             Snowflake Data Sharing Made Simple
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Dataporto makes it effortless to share governed data with your
+            dataporto makes it effortless to share governed data with your
             clients — even if you don't have Snowflake.
           </p>
           <WaitlistButton size="lg" className={darkButtonClasses}>
@@ -56,7 +56,7 @@ export default function SnowflakeDataShareSolution() {
               and complex.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              <strong>Dataporto gives you two easy paths:</strong>
+              <strong>dataporto gives you two easy paths:</strong>
             </p>
             <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
               <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
@@ -64,7 +64,7 @@ export default function SnowflakeDataShareSolution() {
                   No Snowflake?
                 </h3>
                 <p className="text-gray-600">
-                  Use Dataporto's managed Snowflake.
+                  Use dataporto's managed Snowflake.
                 </p>
               </div>
               <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
@@ -72,7 +72,7 @@ export default function SnowflakeDataShareSolution() {
                   Already on Snowflake?
                 </h3>
                 <p className="text-gray-600">
-                  Use Dataporto as your control plane.
+                  Use dataporto as your control plane.
                 </p>
               </div>
             </div>
@@ -95,13 +95,13 @@ export default function SnowflakeDataShareSolution() {
                     No Snowflake? No Problem.
                   </h2>
                   <p className="text-lg font-medium text-gray-600">
-                    Use Dataporto's Managed Snowflake
+                    Use dataporto's Managed Snowflake
                   </p>
                 </div>
               </div>
 
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Don't have a Snowflake account? Dataporto stages your data in
+                Don't have a Snowflake account? dataporto stages your data in
                 our secure, enterprise-grade Snowflake environment so you can
                 start sharing immediately.
               </p>
@@ -110,7 +110,7 @@ export default function SnowflakeDataShareSolution() {
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-green-600 mt-0.5 mr-3 flex-shrink-0" />
                   <span className="text-gray-700">
-                    Secure staging in Dataporto's managed Snowflake
+                    Secure staging in dataporto's managed Snowflake
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -146,13 +146,13 @@ export default function SnowflakeDataShareSolution() {
                     Bring Your Own Snowflake
                   </h2>
                   <p className="text-lg font-medium text-gray-600">
-                    Dataporto as Your Control Plane
+                    dataporto as Your Control Plane
                   </p>
                 </div>
               </div>
 
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Already using Snowflake? Dataporto simplifies client data
+                Already using Snowflake? dataporto simplifies client data
                 sharing by acting as your control plane for provisioning and
                 governance.
               </p>
@@ -181,7 +181,7 @@ export default function SnowflakeDataShareSolution() {
               <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
                 <p className="text-gray-700 text-sm font-medium">
                   <strong>Perfect for:</strong> Keep your Snowflake — let
-                  Dataporto handle the complexity.
+                  dataporto handle the complexity.
                 </p>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function SnowflakeDataShareSolution() {
               Ready to Share Data the Way Your Clients Expect?
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
-              Whether you have Snowflake or not, Dataporto makes enterprise data
+              Whether you have Snowflake or not, dataporto makes enterprise data
               sharing simple. Talk to our team to see how we can help you meet
               client demands immediately.
             </p>
@@ -292,7 +292,7 @@ export default function SnowflakeDataShareSolution() {
           </div>
           <Separator className="my-8 bg-gray-700" />
           <p className="text-center text-gray-400">
-            © 2025 Dataporto. All rights reserved. Snowflake Data Sharing Made
+            © 2025 dataporto. All rights reserved. Snowflake Data Sharing Made
             Simple.
           </p>
         </div>

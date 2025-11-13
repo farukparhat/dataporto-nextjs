@@ -160,7 +160,7 @@ export default function DataDockEmbedWidget({
           />
         </div>
         <p className="text-xs text-slate-600">
-          Self-Serve Data Access • Powered by Dataporto
+          Self-Serve Data Access • Powered by dataporto
         </p>
       </div>
 

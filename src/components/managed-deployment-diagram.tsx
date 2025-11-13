@@ -9,11 +9,11 @@ export default function ManagedDeploymentDiagram() {
       <div className="relative w-full max-w-2xl">
         {/* Main Architecture - Side by side layout */}
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-          {/* Dataporto Cloud Container */}
+          {/* dataporto Cloud Container */}
           <div className="border-2 border-white/20 rounded-xl p-4 bg-white/5 h-70">
             <div className="text-center mb-4">
               <div className="text-white text-sm font-medium">
-                Dataporto Cloud
+                dataporto Cloud
               </div>
             </div>
 

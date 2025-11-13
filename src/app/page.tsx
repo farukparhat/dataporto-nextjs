@@ -45,7 +45,7 @@ export default function Home() {
           Unlock Enterprise-Grade Data Sharing for Your Customers
         </h1>
         <p className="text-base sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-          With Dataporto, you can support Snowflake, Databricks, and sFTP data
+          With dataporto, you can support Snowflake, Databricks, and sFTP data
           sharing right away — for your biggest customers.
         </p>
 
@@ -106,7 +106,7 @@ export default function Home() {
               <div className="transform rotate-x-2 rotate-y-3 hover:rotate-x-1 hover:rotate-y-2 transition-transform duration-700 ease-out animate-[tiltIn_1.2s_ease-out_0.5s_both]">
                 <ScreenshotWindow
                   src="/screenshot-app-data-shares.png"
-                  alt="Dataporto Data Shares - Client data sharing management"
+                  alt="dataporto Data Shares - Client data sharing management"
                   url="dataporto.com/app/data-shares"
                   urlShort="data-shares"
                   priority
@@ -193,7 +193,7 @@ export default function Home() {
               <div className="mb-6">
                 <FeatureScreenshot
                   src="/screenshot-app-catalog.png"
-                  alt="Dataporto Data Catalog - Browse and manage all your data sources"
+                  alt="dataporto Data Catalog - Browse and manage all your data sources"
                 />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   1. Catalog
@@ -240,7 +240,7 @@ export default function Home() {
               <div className="mb-6">
                 <FeatureScreenshot
                   src="/screenshot-app-data-shares.png"
-                  alt="Dataporto Data Shares - Manage client data sharing configurations"
+                  alt="dataporto Data Shares - Manage client data sharing configurations"
                 />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   2. Share
@@ -286,7 +286,7 @@ export default function Home() {
               <div className="mb-6">
                 <FeatureScreenshot
                   src="/screenshot-app-govern.png"
-                  alt="Dataporto Governance - Control access and stay compliant"
+                  alt="dataporto Governance - Control access and stay compliant"
                 />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   3. Govern
@@ -387,7 +387,7 @@ export default function Home() {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Support your clients' preferred data consumption methods with a
               single platform. From zero-copy Snowflake shares to traditional
-              sFTP delivery, Dataporto adapts to each client's technical
+              sFTP delivery, dataporto adapts to each client's technical
               requirements and infrastructure.
             </p>
           </div>
@@ -487,7 +487,7 @@ export default function Home() {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               You might store data in Databricks, Postgres, BigQuery, or other
               platforms, but your enterprise clients increasingly demand
-              Snowflake Data Shares. With Dataporto, you can meet this demand —
+              Snowflake Data Shares. With dataporto, you can meet this demand —
               even if you don&apos;t have a Snowflake account.
             </p>
             <div className="mt-6">
@@ -544,7 +544,7 @@ export default function Home() {
                     1. Ingest & Stage Your Data
                   </h4>
                   <p className="text-gray-600">
-                    Connect Dataporto to your data source, whether its
+                    Connect dataporto to your data source, whether its
                     Databricks, AWS S3, or another data stack.
                   </p>
                 </div>
@@ -553,7 +553,7 @@ export default function Home() {
                     2. Provision Governed Shares
                   </h4>
                   <p className="text-gray-600">
-                    Use Dataporto to provision Snowflake Shares for your clients
+                    Use dataporto to provision Snowflake Shares for your clients
                   </p>
                 </div>
                 <div className="p-6 bg-gray-50 rounded-lg">
@@ -584,7 +584,7 @@ export default function Home() {
               Deployment Options
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Dataporto adapts to your security and compliance requirements.
+              dataporto adapts to your security and compliance requirements.
               Choose the setup that fits your business.
             </p>
           </div>
@@ -702,7 +702,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                    How Dataporto Replaces This
+                    How dataporto Replaces This
                   </h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
@@ -761,7 +761,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Teams Choose Dataporto
+              Why Teams Choose dataporto
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               The only platform that delivers governed, multi-platform data
@@ -948,7 +948,7 @@ export default function Home() {
             <div className="p-8 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-lg text-white">
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4">
-                  Dataporto: The Complete Solution
+                  dataporto: The Complete Solution
                 </h3>
                 <p className="text-lg text-blue-100 mb-6">
                   The only platform that orchestrates multi-source,
@@ -990,7 +990,7 @@ export default function Home() {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Free up your engineering team to focus on core product development
               instead of maintaining custom per-client data sharing
-              infrastructure. Dataporto handles the complexity so you can focus
+              infrastructure. dataporto handles the complexity so you can focus
               on innovation.
             </p>
           </div>
@@ -1007,7 +1007,7 @@ export default function Home() {
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Image
                 src="/icon.png"
-                alt="Dataporto"
+                alt="dataporto"
                 width={24}
                 height={24}
                 className="h-6 w-6"
@@ -1037,7 +1037,7 @@ export default function Home() {
           </div>
           <Separator className="my-8 bg-gray-700" />
           <p className="text-center text-gray-400">
-            © 2025 Dataporto. All rights reserved. Multi‑Platform Data Sharing
+            © 2025 dataporto. All rights reserved. Multi‑Platform Data Sharing
             as a Service.
           </p>
         </div>

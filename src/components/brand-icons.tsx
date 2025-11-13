@@ -8,7 +8,7 @@ import {
 export const DataportoIcon = ({ className }: { className?: string }) => (
   <Image
     src="/icon-transparent-white.png"
-    alt="Dataporto"
+    alt="dataporto"
     width={20}
     height={20}
     className={className}

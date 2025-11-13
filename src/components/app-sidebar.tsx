@@ -104,7 +104,7 @@ export function AppSidebar() {
         <div className="flex items-center space-x-3 px-3 py-3">
           <Image
             src="/icon.png"
-            alt="Dataporto"
+            alt="dataporto"
             width={28}
             height={28}
             className="h-7 w-7"

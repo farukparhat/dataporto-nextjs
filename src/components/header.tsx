@@ -35,7 +35,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/icon.png"
-              alt="Dataporto"
+              alt="dataporto"
               width={24}
               height={24}
               className="h-6 w-6"

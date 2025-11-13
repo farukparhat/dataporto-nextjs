@@ -165,7 +165,7 @@ export default function BlogPage() {
             <Link href="/" className="flex items-center space-x-2 mb-4 md:mb-0">
               <Image
                 src="/icon.png"
-                alt="Dataporto"
+                alt="dataporto"
                 width={24}
                 height={24}
                 className="h-6 w-6"
@@ -189,7 +189,7 @@ export default function BlogPage() {
           </div>
           <Separator className="my-8 bg-slate-700" />
           <p className="text-center text-slate-400">
-            © 2025 Dataporto. All rights reserved. Multi‑Platform Data Sharing
+            © 2025 dataporto. All rights reserved. Multi‑Platform Data Sharing
             as a Service.
           </p>
         </div>

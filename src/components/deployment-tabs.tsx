@@ -22,7 +22,7 @@ const deploymentOptions: TabOption[] = [
     metrics: {
       timeToValue: "1-2 business days",
       maintenanceHours: "~2 hours/month",
-      infrastructureManagement: "Fully managed by Dataporto",
+      infrastructureManagement: "Fully managed by dataporto",
     },
   },
   {
@@ -31,7 +31,7 @@ const deploymentOptions: TabOption[] = [
     subtitle: "Keep data in your environment",
     icon: <Shield className="h-6 w-6" />,
     description:
-      "Keep data in your environment — Dataporto handles the sharing.",
+      "Keep data in your environment — dataporto handles the sharing.",
     features: [
       "Data remains in your cloud environment",
       "Agent software runs in your VPC",
@@ -85,7 +85,7 @@ export default function DeploymentTabs() {
         <div className="flex items-center justify-center">
           <Check className="h-4 w-4 text-green-600 mr-2" />
           <span className="font-medium text-gray-900 text-sm">
-            No matter the setup, Dataporto ensures secure, governed, and
+            No matter the setup, dataporto ensures secure, governed, and
             enterprise-ready data sharing.
           </span>
         </div>

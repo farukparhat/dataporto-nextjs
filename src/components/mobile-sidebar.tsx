@@ -144,7 +144,7 @@ export default function MobileSidebar() {
             <div className="flex items-center space-x-3">
               <Image
                 src="/icon.png"
-                alt="Dataporto"
+                alt="dataporto"
                 width={32}
                 height={32}
                 className="h-8 w-8"

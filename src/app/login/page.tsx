@@ -19,10 +19,10 @@ export default function LoginPage() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-          Welcome Back to DataPorto
+          Welcome Back to dataporto
         </h1>
         <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-          Sign in to your DataPorto dashboard to manage your data sharing
+          Sign in to your dataporto dashboard to manage your data sharing
           operations, monitor client deliveries, and configure your platform
           settings.
         </p>
@@ -35,7 +35,7 @@ export default function LoginPage() {
             <CardHeader className="pb-6">
               <CardTitle className="text-2xl">Sign In</CardTitle>
               <CardDescription>
-                Enter your credentials to access your DataPorto account.
+                Enter your credentials to access your dataporto account.
               </CardDescription>
             </CardHeader>
             <CardContent>
