@@ -4,6 +4,7 @@ import { momosConfig } from "./momos";
 import { hangConfig } from "./hang";
 import { toastConfig } from "./toast";
 import { inceptaiConfig } from "./inceptai";
+import { vapiConfig } from "./vapi";
 
 const tenantConfigs: Record<string, TenantConfig> = {
   default: defaultConfig,
@@ -11,6 +12,7 @@ const tenantConfigs: Record<string, TenantConfig> = {
   hang: hangConfig,
   toast: toastConfig,
   inceptai: inceptaiConfig,
+  vapi: vapiConfig,
 };
 
 export function getTenantConfig(): TenantConfig {
@@ -32,5 +34,5 @@ export function getTenantConfig(): TenantConfig {
   return config;
 }
 
-export { defaultConfig, momosConfig, hangConfig, toastConfig, inceptaiConfig };
+export { defaultConfig, momosConfig, hangConfig, toastConfig, inceptaiConfig, vapiConfig };
 export * from "./types";
