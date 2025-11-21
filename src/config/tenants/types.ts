@@ -27,6 +27,8 @@ export interface TenantConfig {
   name: string;
   logo: string;
   datasets: Dataset[];
+  customerDatasets?: Dataset[];
+  enableBidirectional?: boolean;
   branding?: TenantBranding;
   user?: TenantUser;
 }

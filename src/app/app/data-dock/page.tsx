@@ -73,6 +73,12 @@ export default function DataDockPage() {
               brandLogo={tenantConfig.logo}
               brandName={tenantConfig.name}
               datasets={tenantConfig.datasets}
+              customerDatasets={tenantConfig.customerDatasets}
+              mode={
+                tenantConfig.enableBidirectional
+                  ? "bidirectional"
+                  : "unidirectional"
+              }
             />
           </div>
         </div>

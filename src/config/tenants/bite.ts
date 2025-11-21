@@ -4,6 +4,7 @@ export const biteConfig: TenantConfig = {
   id: "bite",
   name: "Bite",
   logo: "/brands/icons/bite.svg",
+  enableBidirectional: true,
   datasets: [
     // Tier 1: Core Transactional Data
     {
@@ -110,6 +111,94 @@ export const biteConfig: TenantConfig = {
       refreshRate: "Real-time",
     },
   ],
+  customerDatasets: [
+    {
+      id: "store-information",
+      name: "Store & Location Information",
+      description:
+        "Restaurant location details including address, operating hours, seating capacity, and store attributes",
+      tagline: "Complete store profile and operational data",
+      tables: [
+        "Stores",
+        "Operating Hours",
+        "Store Attributes",
+        "Location Details",
+      ],
+      size: "125 MB",
+      rows: "2.4K",
+      locked: false,
+    },
+    {
+      id: "menu-information",
+      name: "Menu Information",
+      description:
+        "Menu items, categories, pricing, ingredients, allergens, and nutritional information",
+      tagline: "Complete menu catalog with all item details",
+      tables: [
+        "Menu Items",
+        "Categories",
+        "Pricing",
+        "Ingredients",
+        "Allergens",
+        "Nutritional Info",
+      ],
+      size: "450 MB",
+      rows: "18.5K",
+      locked: false,
+    },
+    {
+      id: "marketing-campaigns",
+      name: "Marketing Campaigns",
+      description:
+        "Promotional campaigns, offers, discounts, and marketing performance data",
+      tagline: "Campaign details and promotional offers",
+      tables: [
+        "Campaigns",
+        "Offers",
+        "Discounts",
+        "Promotion Schedule",
+        "Campaign Performance",
+      ],
+      size: "280 MB",
+      rows: "8.2K",
+      locked: false,
+    },
+    {
+      id: "guest-loyalty",
+      name: "Guest Loyalty Data",
+      description:
+        "Customer loyalty program data including points, rewards, membership tiers, and redemptions",
+      tagline: "Loyalty program and rewards information",
+      tables: [
+        "Loyalty Members",
+        "Points Balance",
+        "Rewards Catalog",
+        "Redemptions",
+        "Member Tiers",
+      ],
+      size: "1.8 GB",
+      rows: "342K",
+      locked: false,
+    },
+    {
+      id: "guest-order-history",
+      name: "Guest Order History",
+      description:
+        "Historical order data including order details, items purchased, payment methods, and order frequency",
+      tagline: "Complete guest transaction history",
+      tables: [
+        "Orders",
+        "Order Items",
+        "Order Totals",
+        "Payment Methods",
+        "Order Frequency",
+        "Guest Preferences",
+      ],
+      size: "12.4 GB",
+      rows: "2.8M",
+      locked: false,
+    },
+  ],
   branding: {
     primaryColor: "#FF6B35",
     accentColor: "#FFF5F0",
@@ -119,4 +208,3 @@ export const biteConfig: TenantConfig = {
     email: "brandon@getbite.com",
   },
 };
-

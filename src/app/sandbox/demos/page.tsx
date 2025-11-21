@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { IconChevronDown } from "@tabler/icons-react";
+import { biteConfig } from "@/config/tenants/bite";
+import { Dataset } from "@/config/tenants";
 
 type BrandType =
   | "senti"
@@ -27,9 +29,19 @@ type BrandType =
   | "olo"
   | "rbi"
   | "cxconnect"
-  | "delta";
+  | "delta"
+  | "bite";
 
-const brands = {
+const brands: Record<
+  BrandType,
+  {
+    name: string;
+    logo: string;
+    datasets?: Dataset[];
+    customerDatasets?: Dataset[];
+    enableBidirectional?: boolean;
+  }
+> = {
   senti: {
     name: "Senti",
     logo: "/brands/senti.png",
@@ -94,6 +106,13 @@ const brands = {
     name: "Delta",
     logo: "/brands/delta.svg",
   },
+  bite: {
+    name: "Bite",
+    logo: "/brands/icons/bite.svg",
+    datasets: biteConfig.datasets,
+    customerDatasets: biteConfig.customerDatasets,
+    enableBidirectional: biteConfig.enableBidirectional,
+  },
 };
 
 export default function DemosPage() {
@@ -147,6 +166,13 @@ export default function DemosPage() {
           <DataDockEmbedWidget
             brandLogo={brands[selectedBrand].logo}
             brandName={brands[selectedBrand].name}
+            datasets={brands[selectedBrand].datasets}
+            customerDatasets={brands[selectedBrand].customerDatasets}
+            mode={
+              brands[selectedBrand].enableBidirectional
+                ? "bidirectional"
+                : "unidirectional"
+            }
           />
         </div>
       </div>
