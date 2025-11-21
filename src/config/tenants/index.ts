@@ -8,6 +8,7 @@ import { vapiConfig } from "./vapi";
 import { biteConfig } from "./bite";
 import { qualtricsConfig } from "./qualtrics";
 import { solinkConfig } from "./solink";
+import { hiautoConfig } from "./hiauto";
 
 const tenantConfigs: Record<string, TenantConfig> = {
   default: defaultConfig,
@@ -19,6 +20,7 @@ const tenantConfigs: Record<string, TenantConfig> = {
   bite: biteConfig,
   qualtrics: qualtricsConfig,
   solink: solinkConfig,
+  hiauto: hiautoConfig,
 };
 
 export function getTenantConfig(): TenantConfig {
@@ -40,5 +42,5 @@ export function getTenantConfig(): TenantConfig {
   return config;
 }
 
-export { defaultConfig, momosConfig, hangConfig, toastConfig, inceptaiConfig, vapiConfig, biteConfig, qualtricsConfig, solinkConfig };
+export { defaultConfig, momosConfig, hangConfig, toastConfig, inceptaiConfig, vapiConfig, biteConfig, qualtricsConfig, solinkConfig, hiautoConfig };
 export * from "./types";
