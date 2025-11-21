@@ -111,14 +111,34 @@ export const hiautoConfig: TenantConfig = {
       pricing: "+$6 / 1000 orders / month",
       refreshRate: "Hourly",
     },
+    {
+      id: "competitor-benchmarking",
+      name: "Competitor Benchmarking",
+      description:
+        "Multi-location performance comparison, industry benchmarks, AI completion rate rankings, service speed comparisons, and competitive positioning analytics",
+      tagline: "Cross-location and industry performance insights",
+      tables: [
+        "Location Rankings",
+        "Industry Benchmarks",
+        "Performance Comparisons",
+        "Best Practices",
+        "Market Position",
+        "Competitive Metrics",
+      ],
+      size: "42.8 GB",
+      rows: "187M",
+      tier: 2,
+      locked: true,
+      pricing: "+$8 / 1000 orders / month",
+      refreshRate: "Weekly",
+    },
   ],
   branding: {
     primaryColor: "#6B3FFF",
     accentColor: "#F3F0FF",
   },
   user: {
-    name: "Crystal Deaderick",
-    email: "crystal@hi.auto",
+    name: "Roy Baharav",
+    email: "roy@hi.auto",
   },
 };
-
