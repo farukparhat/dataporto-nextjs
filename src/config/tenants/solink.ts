@@ -26,26 +26,6 @@ export const solinkConfig: TenantConfig = {
       pricing: "$8 / location / month",
       refreshRate: "Real-time",
     },
-    {
-      id: "pos-integration",
-      name: "POS Transaction Data",
-      description:
-        "Point-of-sale data synced with video footage for transaction verification, void analysis, and exception reporting",
-      tagline: "Video-linked POS transactions and exception alerts",
-      tables: [
-        "POS Transactions",
-        "Transaction Items",
-        "Voids & Refunds",
-        "Video Correlations",
-        "Exception Reports",
-      ],
-      size: "89.6 GB",
-      rows: "456M",
-      tier: 1,
-      locked: false,
-      pricing: "$5 / location / month",
-      refreshRate: "Real-time",
-    },
     // Tier 2: Operational Intelligence
     {
       id: "occupancy-traffic",
