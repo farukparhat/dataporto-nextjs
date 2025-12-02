@@ -1,8 +1,8 @@
 # ❓ Frequently Asked Questions
 
-### Do I need a Snowflake account to use DataPorto?
+### Do I need a Snowflake account to use Dataporto?
 
-No. That’s the beauty of DataPorto — we run the Snowflake infrastructure for you. Your clients can receive data in their own Snowflake accounts or via Reader Accounts we provision for them.
+No. That’s the beauty of Dataporto — we run the Snowflake infrastructure for you. Your clients can receive data in their own Snowflake accounts or via Reader Accounts we provision for them.
 
 ---
 
@@ -14,13 +14,13 @@ You can connect databases (Postgres, MySQL, SQL Server, Redshift, BigQuery), clo
 
 ### How is this different from just sending CSVs or APIs?
 
-CSV exports and APIs are brittle, slow, and hard to scale per client. DataPorto gives your clients **live, zero-copy warehouse access** — the format enterprises now expect. It’s instant, governed, and always up to date.
+CSV exports and APIs are brittle, slow, and hard to scale per client. Dataporto gives your clients **live, zero-copy warehouse access** — the format enterprises now expect. It’s instant, governed, and always up to date.
 
 ---
 
 ### Is the data secure?
 
-Yes. DataPorto is built with enterprise-grade security: encrypted at rest and in transit, strict IAM controls, row/column masking, and full audit logging. SOC 2 compliance is on our roadmap.
+Yes. Dataporto is built with enterprise-grade security: encrypted at rest and in transit, strict IAM controls, row/column masking, and full audit logging. SOC 2 compliance is on our roadmap.
 
 ---
 
@@ -32,7 +32,7 @@ No problem. We can provision a free **Snowflake Reader Account** for them, or de
 
 ### How hard is onboarding?
 
-Onboarding is **zero-code**. Connect your source, define what data to share, and DataPorto takes care of staging, provisioning, and governance. Most vendors go live in hours, not weeks.
+Onboarding is **zero-code**. Connect your source, define what data to share, and Dataporto takes care of staging, provisioning, and governance. Most vendors go live in hours, not weeks.
 
 ---
 
@@ -42,7 +42,7 @@ We price based on the number of clients you share data with and the volume of da
 
 ---
 
-### Who is DataPorto for?
+### Who is Dataporto for?
 
 - SaaS vendors who deliver analytics to enterprise customers
 - Agencies providing client-specific metrics and dashboards
@@ -53,4 +53,4 @@ We price based on the number of clients you share data with and the volume of da
 
 ### Can I revoke or update access once it’s shared?
 
-Yes. You stay in full control. DataPorto makes it easy to update, revoke, or expire shares on a per-client basis at any time.
+Yes. You stay in full control. Dataporto makes it easy to update, revoke, or expire shares on a per-client basis at any time.

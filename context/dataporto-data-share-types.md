@@ -1,6 +1,6 @@
-# DataPorto Data Share Types
+# Dataporto Data Share Types
 
-This document outlines the different types of data sharing methods supported by DataPorto, enabling secure and efficient data exchange between organizations and their clients.
+This document outlines the different types of data sharing methods supported by Dataporto, enabling secure and efficient data exchange between organizations and their clients.
 
 ## Snowflake Data Sharing
 
@@ -52,7 +52,7 @@ sFTP (Secure File Transfer Protocol) provides a secure method for file-based dat
 
 ### Pull-Based File Delivery
 
-This method allows clients to securely download data files from DataPorto's managed file server infrastructure.
+This method allows clients to securely download data files from Dataporto's managed file server infrastructure.
 
 **Key Features:**
 
@@ -71,7 +71,7 @@ This method allows clients to securely download data files from DataPorto's mana
 
 ### Push-Based File Delivery
 
-This method involves DataPorto securely uploading data files directly to the client's designated sFTP server.
+This method involves Dataporto securely uploading data files directly to the client's designated sFTP server.
 
 **Key Features:**
 
@@ -113,7 +113,7 @@ All data sharing methods implement enterprise-grade security measures:
 
 To implement any of these data sharing methods:
 
-1. Contact the DataPorto team to discuss your requirements
+1. Contact the Dataporto team to discuss your requirements
 2. Complete the security and compliance assessment
 3. Configure the appropriate sharing method based on your use case
 4. Test the data sharing setup in a sandbox environment

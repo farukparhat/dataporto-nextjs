@@ -1,4 +1,4 @@
-# DataPorto Market Analysis
+# Dataporto Market Analysis
 
 ## 1. Market Context & Trends
 
@@ -24,7 +24,7 @@
 
 ---
 
-## 3. DataPorto’s Strategic Differentiators
+## 3. Dataporto’s Strategic Differentiators
 
 1. **No lock-in to one platform** — works even if the vendor doesn’t have Snowflake or Databricks.
 2. **Client-by-client governance** — granular permissions, masking, and row/column-level security per client.
@@ -36,19 +36,19 @@
 
 ## 4. Target Segments (High Pain, High Fit)
 
-| Segment                                     | Why They Need DataPorto                                                                               |
+| Segment                                     | Why They Need Dataporto                                                                               |
 | ------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | **Data providers & SaaS analytics vendors** | Multiple customers demanding different delivery methods; need to avoid maintaining separate pipelines |
 | **Agencies & platforms**                    | Share campaign / performance data securely with many clients without exposing full datasets           |
 
 ---
 
-## 6. Benefit of DataPorto
+## 6. Benefit of Dataporto
 
-DataPorto connects to any data source and automates secure, client-specific sharing in their preferred format—Snowflake, Databricks, or sFTP—freeing your engineering team from maintaining custom pipelines so they can focus on higher-value work.
+Dataporto connects to any data source and automates secure, client-specific sharing in their preferred format—Snowflake, Databricks, or sFTP—freeing your engineering team from maintaining custom pipelines so they can focus on higher-value work.
 
 ---
 
 ## 7. Market Gap in One Sentence
 
-> **Vendors can deliver data, but no existing solution lets them manage multi-source, multi-destination, client-specific sharing with built-in governance and automation—DataPorto fills that gap.**
+> **Vendors can deliver data, but no existing solution lets them manage multi-source, multi-destination, client-specific sharing with built-in governance and automation—Dataporto fills that gap.**

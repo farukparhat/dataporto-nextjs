@@ -1,4 +1,4 @@
-# 🌐 DataPorto Core Features
+# 🌐 Dataporto Core Features
 
 ## 1. Catalog — _Know what you have and control it_
 

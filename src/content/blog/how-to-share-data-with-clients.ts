@@ -4,7 +4,7 @@ export const howToShareDataWithClients = {
     "How to Share Data with Your Clients: sFTP, Databricks Delta Share, and Snowflake Data Sharing on AWS",
   excerpt:
     "A comprehensive guide to the three most popular client data sharing methods, their AWS implementations, and how to choose the right approach for your business needs.",
-  author: "DataPorto Team",
+  author: "Dataporto Team",
   date: "2025-01-15",
   readTime: "12 min read",
   category: "Technical Guide",
@@ -215,15 +215,15 @@ Many successful data providers use a hybrid approach, offering multiple sharing 
 
 The key is maintaining consistent data governance and quality across all sharing methods while providing flexibility in delivery mechanisms.
 
-## The DataPorto Solution
+## The Dataporto Solution
 
-Managing multiple data sharing methods, ensuring consistent governance, and scaling to hundreds of clients quickly becomes a complex operational challenge. This is where **DataPorto** provides significant value.
+Managing multiple data sharing methods, ensuring consistent governance, and scaling to hundreds of clients quickly becomes a complex operational challenge. This is where **Dataporto** provides significant value.
 
-### How DataPorto Simplifies Client Data Sharing
+### How Dataporto Simplifies Client Data Sharing
 
-**Unified Control Plane**: DataPorto provides a single interface to manage all your client data sharing needs, regardless of the underlying technology. You can offer sFTP, Delta Sharing, and Snowflake sharing from one platform.
+**Unified Control Plane**: Dataporto provides a single interface to manage all your client data sharing needs, regardless of the underlying technology. You can offer sFTP, Delta Sharing, and Snowflake sharing from one platform.
 
-**Automated Governance**: Apply consistent data governance policies across all sharing methods. Define rules once, and DataPorto automatically enforces them whether data goes via sFTP files, Delta shares, or Snowflake shares.
+**Automated Governance**: Apply consistent data governance policies across all sharing methods. Define rules once, and Dataporto automatically enforces them whether data goes via sFTP files, Delta shares, or Snowflake shares.
 
 **Client Self-Service**: Give your clients a portal where they can choose their preferred sharing method, configure delivery schedules, and monitor data quality—reducing your support overhead.
 
@@ -241,9 +241,9 @@ Managing multiple data sharing methods, ensuring consistent governance, and scal
 
 ## Ready to Streamline Your Client Data Sharing?
 
-Don't let complex data sharing infrastructure slow down your business growth. Whether your clients prefer the simplicity of sFTP, the power of Delta Sharing, or the performance of Snowflake sharing, DataPorto can help you deliver data reliably and securely at scale.
+Don't let complex data sharing infrastructure slow down your business growth. Whether your clients prefer the simplicity of sFTP, the power of Delta Sharing, or the performance of Snowflake sharing, Dataporto can help you deliver data reliably and securely at scale.
 
-**[Connect with Our Team Today](/demo)** and see how DataPorto can transform your client data sharing operations. Our team will show you how to:
+**[Connect with Our Team Today](/demo)** and see how Dataporto can transform your client data sharing operations. Our team will show you how to:
 
 - Set up all three sharing methods in one unified platform
 - Implement consistent governance across all delivery channels
@@ -252,6 +252,6 @@ Don't let complex data sharing infrastructure slow down your business growth. Wh
 
 **Ready to get started?** Contact our team at [hello@dataporto.com](mailto:hello@dataporto.com) or schedule a technical deep-dive session to discuss your specific requirements.
 
-*Transform your client data sharing from a technical challenge into a competitive advantage with DataPorto.*
+*Transform your client data sharing from a technical challenge into a competitive advantage with Dataporto.*
   `,
 };

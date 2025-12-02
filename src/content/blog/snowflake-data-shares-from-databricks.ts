@@ -5,7 +5,7 @@ export const snowflakeFromDatabricks = {
   title: "How to Enable Snowflake Data Shares from Databricks (AWS RDS Source)",
   excerpt:
     "Practical architectures to expose Databricks-managed data to Snowflake consumers when your system of record is AWS RDS—trade-offs, onboarding complexity, and a simpler alternative.",
-  author: "DataPorto Team",
+  author: "Dataporto Team",
   date: "2025-08-28",
   readTime: "11 min read",
   category: "Technical Guide",
@@ -148,9 +148,9 @@ If uncertain, pilot Option 3 to validate consumer needs, then graduate to Option
 
 ---
 
-## A Simpler Path with DataPorto
+## A Simpler Path with Dataporto
 
-Engineering teams often spend weeks stitching together replication jobs, external tables, governance policies, and onboarding runbooks. **DataPorto** removes this overhead:
+Engineering teams often spend weeks stitching together replication jobs, external tables, governance policies, and onboarding runbooks. **Dataporto** removes this overhead:
 
 - **One-click Snowflake share provisioning**: Automatically creates databases, schemas, secure views, masking, and share objects (or reader accounts) based on catalog policies.
 - **No-copy or replicated delivery**: Choose UniForm/Iceberg external tables or managed replication without writing glue code.

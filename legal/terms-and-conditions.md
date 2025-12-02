@@ -2,13 +2,13 @@
 
 _Last Updated: September 4, 2025_
 
-Welcome to DataPorto! These Terms and Conditions (“Terms”) govern your access to and use of the DataPorto platform, products, and services (“Services”). Please read these Terms carefully before using our Services. By accessing or using DataPorto, you agree to be bound by these Terms. If you do not agree, you may not use our Services.
+Welcome to Dataporto! These Terms and Conditions (“Terms”) govern your access to and use of the Dataporto platform, products, and services (“Services”). Please read these Terms carefully before using our Services. By accessing or using Dataporto, you agree to be bound by these Terms. If you do not agree, you may not use our Services.
 
 ---
 
-## 1. About DataPorto
+## 1. About Dataporto
 
-DataPorto (“Company,” “we,” “us,” “our”) provides Data Sharing as a Service (DSaaS), enabling vendors to securely share data with their clients through platforms such as Snowflake, Databricks, sFTP, and other supported methods.
+Dataporto (“Company,” “we,” “us,” “our”) provides Data Sharing as a Service (DSaaS), enabling vendors to securely share data with their clients through platforms such as Snowflake, Databricks, sFTP, and other supported methods.
 
 ## 2. Eligibility
 
@@ -34,8 +34,8 @@ You agree to:
 
 ## 5. Data Ownership and Sharing
 
-- You retain all rights to your data. DataPorto does not claim ownership over customer data.
-- By using the Services, you grant DataPorto a limited right to process, store, and transfer your data solely to deliver the Services.
+- You retain all rights to your data. Dataporto does not claim ownership over customer data.
+- By using the Services, you grant Dataporto a limited right to process, store, and transfer your data solely to deliver the Services.
 - Clients accessing your shared data through Snowflake or other supported platforms must comply with these Terms and any additional agreements you establish.
 
 ## 6. Privacy
@@ -55,7 +55,7 @@ Our handling of data is governed by our **Privacy Policy**. By using the Service
 
 ## 9. Intellectual Property
 
-- DataPorto owns all rights, titles, and interests in the Services, including software, designs, and branding.
+- Dataporto owns all rights, titles, and interests in the Services, including software, designs, and branding.
 - You may not copy, modify, distribute, or create derivative works of our intellectual property without written consent.
 
 ## 10. Compliance and Restrictions
@@ -64,7 +64,7 @@ You agree not to:
 
 - Use the Services to share unlawful, harmful, or infringing content.
 - Violate export control laws or other regulatory requirements.
-- Use the Services in a way that could disrupt or harm DataPorto’s systems or other customers.
+- Use the Services in a way that could disrupt or harm Dataporto’s systems or other customers.
 
 ## 11. Disclaimers
 
@@ -76,13 +76,13 @@ You agree not to:
 
 To the fullest extent permitted by law:
 
-- DataPorto shall not be liable for any indirect, incidental, or consequential damages.
+- Dataporto shall not be liable for any indirect, incidental, or consequential damages.
 
 - Our total liability for any claim related to the Services will not exceed the amount paid by you to us in the twelve (12) months prior to the claim.
 
 ## 13. Indemnification
 
-You agree to indemnify and hold harmless DataPorto, its affiliates, and employees from any claims, damages, or liabilities arising from:
+You agree to indemnify and hold harmless Dataporto, its affiliates, and employees from any claims, damages, or liabilities arising from:
 
 - Your use of the Services,
 - Your violation of these Terms, or
@@ -107,6 +107,6 @@ We may update these Terms from time to time. If we make material changes, we wil
 
 If you have questions about these Terms, please contact us at:
 
-**DataPorto (Wisp AI Labs, Inc.)**  
+**Dataporto (Wisp AI Labs, Inc.)**  
 Email: legal@dataporto.com  
 Website: [https://dataporto.com](https://dataporto.com)

@@ -2,9 +2,9 @@ Privacy Policy
 
 Last Updated: August, 27, 2025
 
-DataPorto (“we,” “our,” or “us”) is a Data Sharing as a Service platform operated by Wisp AI Labs, Inc. We are committed to protecting your privacy and handling your information responsibly. This Privacy Policy explains how we collect, use, disclose, and safeguard personal information when you use our services.
+Dataporto (“we,” “our,” or “us”) is a Data Sharing as a Service platform operated by Wisp AI Labs, Inc. We are committed to protecting your privacy and handling your information responsibly. This Privacy Policy explains how we collect, use, disclose, and safeguard personal information when you use our services.
 
-By using DataPorto, you agree to the practices described in this Privacy Policy.
+By using Dataporto, you agree to the practices described in this Privacy Policy.
 
 ⸻
 
@@ -12,7 +12,7 @@ By using DataPorto, you agree to the practices described in this Privacy Policy.
 
 We collect and process the following types of information:
 • Account Information: Name, email address, company, billing information.
-• Data Provided by Vendors: Customer data, reports, or tables shared through DataPorto, which may include personal data.
+• Data Provided by Vendors: Customer data, reports, or tables shared through Dataporto, which may include personal data.
 • Technical Data: IP address, device/browser type, operating system, log data, cookies, and service usage metrics.
 • Communications: Records of your correspondence with us (support requests, inquiries).
 
@@ -21,7 +21,7 @@ We collect and process the following types of information:
 2. How We Use Information
 
 We process personal data to:
-• Provide, operate, and improve DataPorto’s services.
+• Provide, operate, and improve Dataporto’s services.
 • Authenticate users and secure access.
 • Process transactions and provide customer support.
 • Monitor, audit, and analyze platform activity.
@@ -61,7 +61,7 @@ If we transfer personal data outside the EU/EEA, we implement safeguards such as
 
 We retain personal data only as long as necessary to fulfill the purposes outlined in this Privacy Policy, comply with legal obligations, resolve disputes, and enforce agreements.
 
-Vendors control the retention of their own client/customer data within DataPorto.
+Vendors control the retention of their own client/customer data within Dataporto.
 
 ⸻
 
@@ -89,7 +89,7 @@ We implement technical and organizational measures to protect personal data, inc
 
 9. Children’s Privacy
 
-DataPorto does not target or knowingly process information from individuals under 16 years old.
+Dataporto does not target or knowingly process information from individuals under 16 years old.
 
 ⸻
 
@@ -103,6 +103,6 @@ We may update this Privacy Policy from time to time. Material changes will be co
 
 If you have questions or concerns about this Privacy Policy, please contact us at:
 
-Wisp AI Labs, Inc. (operator of DataPorto)
+Wisp AI Labs, Inc. (operator of Dataporto)
 25180 Huston Street, Stevenson Ranch, California, 91381
 Email: hello@dataporto.com

@@ -1,15 +1,15 @@
-# DataPorto Company Page – LinkedIn Post Ideas
+# Dataporto Company Page – LinkedIn Post Ideas
 
 ## 1. Category Creation
 
 - **"Introducing DSaaS: Data Sharing as a Service"**
-  Position DataPorto as the first platform making governed data sharing simple and universal.
+  Position Dataporto as the first platform making governed data sharing simple and universal.
   Include a graphic with the tagline: _Your Data. Their Snowflake. Our Infrastructure._
 
 ## 2. Product Capability Highlight
 
 - **"One Platform. Multiple Delivery Methods."**
-  Show how DataPorto supports Snowflake Shares, Databricks Delta Sharing, and SFTP from a single source.
+  Show how Dataporto supports Snowflake Shares, Databricks Delta Sharing, and SFTP from a single source.
   Include a flow diagram.
 
 ## 3. Customer Pain Point
@@ -23,7 +23,7 @@
 - **"Enterprise Clients Expect Snowflake Shares"**
   Short, bold post:
   > If your clients are on Snowflake, they don’t want CSVs.
-  > DataPorto makes Snowflake-native sharing possible—even if you don’t use Snowflake.
+  > Dataporto makes Snowflake-native sharing possible—even if you don’t use Snowflake.
 
 ## 5. Governance & Security
 
@@ -34,14 +34,14 @@
 ## 6. Use Case Stories
 
 - **"From S3 to Snowflake in Minutes"**
-  Example story: A SaaS vendor with data in AWS S3 used DataPorto to provision governed Snowflake shares for their clients in under an hour.
+  Example story: A SaaS vendor with data in AWS S3 used Dataporto to provision governed Snowflake shares for their clients in under an hour.
   Position as frictionless onboarding.
 
 ## 7. Roadmap / Vision
 
 - **"The Future of Data Exchange"**
   Share vision that in 5 years, data will be traded like APIs.
-  Position DataPorto as the infrastructure that powers that future.
+  Position Dataporto as the infrastructure that powers that future.
 
 ## 8. Quick Wins / CTA
 

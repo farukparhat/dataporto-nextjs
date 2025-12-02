@@ -3,7 +3,7 @@ export const enterpriseSecurityCompliance = {
   title: "Enterprise Security and Compliance in Data Sharing",
   excerpt:
     "SOC 2, GDPR, and industry-specific compliance requirements for modern data sharing platforms.",
-  author: "DataPorto Team",
+  author: "Dataporto Team",
   date: "2025-06-12",
   readTime: "9 min read",
   category: "Security",

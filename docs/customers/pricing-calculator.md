@@ -1,4 +1,4 @@
-# 💰 DataPorto Pricing Calculator
+# 💰 Dataporto Pricing Calculator
 
 > Quick reference table for estimating annualized revenue across different pricing tiers and customer sizes.
 

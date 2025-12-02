@@ -43,9 +43,9 @@ When clients demand data in **their preferred method** (Snowflake share, Databri
 
 ---
 
-## 3. How DataPorto Replaces This
+## 3. How Dataporto Replaces This
 
-Instead of **dozens of custom-built, fragile delivery pipelines**, DataPorto offers:
+Instead of **dozens of custom-built, fragile delivery pipelines**, Dataporto offers:
 
 - **One connection to your source** (Snowflake, Databricks, Postgres, AWS, etc.)
 - **One control plane** for governance, masking, filtering, and client-by-client permissions.

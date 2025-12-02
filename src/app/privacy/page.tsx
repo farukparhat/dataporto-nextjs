@@ -21,7 +21,7 @@ export default function PrivacyPage() {
             <CardContent className="space-y-8 text-slate-700 leading-relaxed">
               <div>
                 <p className="mb-4">
-                  DataPorto (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;)
+                  Dataporto (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;)
                   is a Data Sharing as a Service platform operated by Wisp AI
                   Labs, Inc. We are committed to protecting your privacy and
                   handling your information responsibly. This Privacy Policy
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
                   information when you use our services.
                 </p>
                 <p>
-                  By using DataPorto, you agree to the practices described in
+                  By using Dataporto, you agree to the practices described in
                   this Privacy Policy.
                 </p>
               </div>
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
                   </li>
                   <li>
                     <strong>Data Provided by Vendors:</strong> Customer data,
-                    reports, or tables shared through DataPorto, which may
+                    reports, or tables shared through Dataporto, which may
                     include personal data.
                   </li>
                   <li>
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
                 <p className="mb-4">We process personal data to:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    Provide, operate, and improve DataPorto&apos;s services.
+                    Provide, operate, and improve Dataporto&apos;s services.
                   </li>
                   <li>Authenticate users and secure access.</li>
                   <li>Process transactions and provide customer support.</li>
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
                 </p>
                 <p>
                   Vendors control the retention of their own client/customer
-                  data within DataPorto.
+                  data within Dataporto.
                 </p>
               </section>
 
@@ -221,7 +221,7 @@ export default function PrivacyPage() {
                   9. Children&apos;s Privacy
                 </h2>
                 <p>
-                  DataPorto does not target or knowingly process information
+                  Dataporto does not target or knowingly process information
                   from individuals under 16 years old.
                 </p>
               </section>
@@ -251,7 +251,7 @@ export default function PrivacyPage() {
                 </p>
                 <div className="bg-slate-50 p-6 rounded-lg">
                   <p className="font-semibold">
-                    Wisp AI Labs, Inc. (operator of DataPorto)
+                    Wisp AI Labs, Inc. (operator of Dataporto)
                   </p>
                   <p>25180 Huston Street, Stevenson Ranch, California, 91381</p>
                   <p>

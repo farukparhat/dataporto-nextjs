@@ -56,7 +56,7 @@
 
 - 📌 Comment on 2–3 relevant posts per day (Snowflake, Databricks, VC firms).
 - 📌 Tag ICPs (Toast, Zendesk, Docebo, Circana) in company posts when relevant.
-- 📌 Use consistent hashtags: #DataSharing #Snowflake #Databricks #EnterpriseData #SaaS #DataPorto
+- 📌 Use consistent hashtags: #DataSharing #Snowflake #Databricks #EnterpriseData #SaaS #Dataporto
 
 ---
 

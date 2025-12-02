@@ -73,7 +73,7 @@ export async function joinWaitlist(
 
   // Send email notifications
   try {
-    // Send notification to DataPorto team
+    // Send notification to Dataporto team
     await sendWaitlistNotification({
       name,
       email,

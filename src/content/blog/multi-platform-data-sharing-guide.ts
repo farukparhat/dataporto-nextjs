@@ -3,7 +3,7 @@ export const multiPlatformDataSharingGuide = {
   title: "The Complete Guide to Multi-Platform Data Sharing",
   excerpt:
     "Learn how to implement governed data sharing across Snowflake, Databricks, and sFTP without building custom pipelines for each client.",
-  author: "DataPorto Team",
+  author: "Dataporto Team",
   date: "2025-08-15",
   readTime: "8 min read",
   category: "Best Practices",

@@ -3,7 +3,7 @@ export const whatAreDataContracts = {
   title: "What Are Data Contracts? The Foundation of Governed Data Sharing",
   excerpt:
     "Understand data contracts, why they matter, and how they transform client data sharing from ad-hoc pipelines into governed, scalable products.",
-  author: "DataPorto Team",
+  author: "Dataporto Team",
   date: "2025-09-15",
   readTime: "7 min read",
   category: "Concepts",
@@ -81,9 +81,9 @@ Good contracts are specific enough to be enforceable and flexible enough to evol
 
 ---
 
-## How It Works in DataPorto
+## How It Works in Dataporto
 
-In DataPorto, you write the contract once and let the platform enforce it across delivery mechanisms. Policies, access, and SLAs follow the contract—no copy‑pasting logic across systems.
+In Dataporto, you write the contract once and let the platform enforce it across delivery mechanisms. Policies, access, and SLAs follow the contract—no copy‑pasting logic across systems.
 
 1. **Define** the contract once (what, how, who, rules)
 2. **Enforce** consistently across Snowflake, Databricks Delta Sharing, sFTP, or API
@@ -102,6 +102,6 @@ You don’t need a full rewrite to begin. Start with one high‑value dataset an
 3. Map delivery options (Snowflake, Delta Sharing, sFTP) to the same spec
 4. Roll out versioning, change management, and monitoring
 
-Ready to turn client data sharing into a product? **[Talk to our team](/demo)** and see DataPorto’s data contracts in action.
+Ready to turn client data sharing into a product? **[Talk to our team](/demo)** and see Dataporto’s data contracts in action.
   `,
 };

@@ -1,6 +1,6 @@
-# 🧩 Momos → RBI Data Share Catalog (Powered by DataPorto)
+# 🧩 Momos → RBI Data Share Catalog (Powered by Dataporto)
 
-> A simplified tiered catalog showing how Momos can monetize their customer-experience data via Snowflake Data Sharing — securely managed by **DataPorto**.
+> A simplified tiered catalog showing how Momos can monetize their customer-experience data via Snowflake Data Sharing — securely managed by **Dataporto**.
 
 ---
 
@@ -113,5 +113,5 @@
 - SKU-level data introduces a **new commercial lens** — aligning guest feedback to menu performance and product quality.
 - Each tier can be its own **Snowflake schema** (`MOMOS_BASE`, `MOMOS_ENRICHED`, `MOMOS_PREMIUM`).
 - RBI can start with **Base**, upgrade to **Enriched**, and unlock **Premium** later.
-- DataPorto manages **sharing, governance, usage metering, and billing**.
+- Dataporto manages **sharing, governance, usage metering, and billing**.
 - This SKU framework can be replicated for other QSR clients — enabling product-level feedback monetization.
