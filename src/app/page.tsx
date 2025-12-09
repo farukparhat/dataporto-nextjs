@@ -50,9 +50,9 @@ export default function Home() {
         </p>
         <p className="text-base sm:text-xl md:text-xl text-gray-600 mb-6 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
           Turn enterprise data delivery into a product feature. Enable instant,
-          self-serve, one-click warehouse native data sharing for your customers
-          on Snowflake, Databricks, BigQuery, Redshift, and Fabric with zero
-          engineering overhead.
+          one click native warehouse syncing for your customers on Snowflake,
+          Databricks, BigQuery, Redshift, and Fabric with zero engineering
+          overhead.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12">
