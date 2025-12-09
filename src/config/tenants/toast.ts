@@ -176,13 +176,13 @@ export const toastConfig: TenantConfig = {
       refreshRate: "Daily",
     },
     {
-      id: "multi-location-benchmarks",
-      name: "Multi-Location Benchmarks",
+      id: "competitor-benchmarks",
+      name: "Competitor Benchmarking",
       description:
-        "Performance comparison across all locations with rankings, trends, and best practice insights",
-      tagline: "Cross-location performance benchmarking",
+        "Performance comparison against industry competitors with rankings, trends, and best practice insights",
+      tagline: "Competitive performance benchmarking",
       tables: [
-        "Location Rankings",
+        "Competitor Rankings",
         "Performance Metrics",
         "Comparative Trends",
         "Best Practices",
