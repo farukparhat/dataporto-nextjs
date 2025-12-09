@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import WaitlistModal from "@/components/waitlist-modal";
 import {
   SnowflakeIcon,
@@ -12,6 +12,57 @@ import {
 
 export default function WarehouseTrustBar() {
   const [open, setOpen] = useState(false);
+  const [highlightIndex, setHighlightIndex] = useState(-1);
+
+  useEffect(() => {
+    // Initial delay before starting the loop
+    const startTimeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        let i = 0;
+        const wave = setInterval(() => {
+          setHighlightIndex(i);
+          i++;
+          if (i > 5) {
+            clearInterval(wave);
+            setHighlightIndex(-1);
+          }
+        }, 600);
+      }, 10000);
+
+      // Run once immediately
+      let i = 0;
+      const wave = setInterval(() => {
+        setHighlightIndex(i);
+        i++;
+        if (i > 5) {
+          clearInterval(wave);
+          setHighlightIndex(-1);
+        }
+      }, 600);
+
+      return () => clearInterval(interval);
+    }, 2000);
+
+    return () => clearTimeout(startTimeout);
+  }, []);
+
+  const getIconClass = (index: number) => {
+    const isHighlighted = highlightIndex === index;
+    const baseClass =
+      "h-5 w-5 transition-all duration-1000 ease-in-out group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110";
+    const highlightClass = isHighlighted
+      ? "grayscale-0 opacity-100 scale-105"
+      : "grayscale opacity-60";
+    return `${baseClass} ${highlightClass}`;
+  };
+
+  const getTextClass = (index: number) => {
+    const isHighlighted = highlightIndex === index;
+    const baseClass =
+      "ml-2 text-sm text-gray-600 font-medium transition-opacity duration-1000 ease-in-out group-hover:opacity-100";
+    const highlightClass = isHighlighted ? "opacity-100" : "opacity-60";
+    return `${baseClass} ${highlightClass}`;
+  };
 
   return (
     <>
@@ -19,53 +70,43 @@ export default function WarehouseTrustBar() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
             <span className="text-sm text-gray-600 font-medium opacity-60">
-              Works with
+              Built on
             </span>
             <div className="flex items-center gap-6 flex-wrap justify-center">
               <div
                 className="flex items-center group cursor-pointer"
                 onClick={() => setOpen(true)}
               >
-                <SnowflakeIcon className="h-5 w-5 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                <span className="ml-2 text-sm text-gray-600 font-medium opacity-60 group-hover:opacity-100 transition-opacity">
-                  Snowflake
-                </span>
+                <SnowflakeIcon className={getIconClass(0)} />
+                <span className={getTextClass(0)}>Snowflake</span>
               </div>
               <div
                 className="flex items-center group cursor-pointer"
                 onClick={() => setOpen(true)}
               >
-                <DatabricksIcon className="h-5 w-5 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                <span className="ml-2 text-sm text-gray-600 font-medium opacity-60 group-hover:opacity-100 transition-opacity">
-                  Databricks
-                </span>
+                <DatabricksIcon className={getIconClass(1)} />
+                <span className={getTextClass(1)}>Databricks</span>
               </div>
               <div
                 className="flex items-center group cursor-pointer"
                 onClick={() => setOpen(true)}
               >
-                <BigQueryIcon className="h-5 w-5 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                <span className="ml-2 text-sm text-gray-600 font-medium opacity-60 group-hover:opacity-100 transition-opacity">
-                  BigQuery
-                </span>
+                <BigQueryIcon className={getIconClass(2)} />
+                <span className={getTextClass(2)}>BigQuery</span>
               </div>
               <div
                 className="flex items-center group cursor-pointer"
                 onClick={() => setOpen(true)}
               >
-                <RedshiftIcon className="h-5 w-5 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                <span className="ml-2 text-sm text-gray-600 font-medium opacity-60 group-hover:opacity-100 transition-opacity">
-                  Redshift
-                </span>
+                <RedshiftIcon className={getIconClass(3)} />
+                <span className={getTextClass(3)}>Redshift</span>
               </div>
               <div
                 className="flex items-center group cursor-pointer"
                 onClick={() => setOpen(true)}
               >
-                <FabricIcon className="h-5 w-5 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
-                <span className="ml-2 text-sm text-gray-600 font-medium opacity-60 group-hover:opacity-100 transition-opacity">
-                  Fabric
-                </span>
+                <FabricIcon className={getIconClass(4)} />
+                <span className={getTextClass(4)}>Fabric</span>
               </div>
             </div>
           </div>
