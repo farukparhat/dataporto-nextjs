@@ -18,11 +18,16 @@ import {
   AwsSvg,
   DataBricksSvg,
   PostgresSvg,
+  BigQueryIcon,
+  RedshiftIcon,
+  FabricIcon,
 } from "@/components/brand-icons";
 import DemoSignupForm from "@/components/demo-signup-form";
 import DeploymentTabs from "@/components/deployment-tabs";
 import DataSharingMethods from "@/components/data-sharing-methods";
 import FAQSection from "@/components/faq-section";
+
+import WarehouseTrustBar from "@/components/warehouse-trust-bar";
 
 export default function Home() {
   // Standardized button styles
@@ -37,16 +42,21 @@ export default function Home() {
       <section className="container mx-auto px-4 py-12 sm:py-24 text-center">
         <div className="container mx-auto px-4 pt-4 sm:pt-8 text-center">
           <Badge variant="outline" className="text-gray-600 ">
-            <IconShare className="h-4 w-4 mr-2" /> Multi-Platform Data Sharing
+            <IconShare className="h-4 w-4 mr-2" /> Native Warehouse Data Sharing
             as a Service
           </Badge>
         </div>
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 sm:mb-8 leading-tight tracking-tight max-w-5xl mx-auto">
-          Unlock Enterprise-Grade Data Sharing for Your Customers
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight tracking-tight max-w-5xl mx-auto">
+          Unlock the Best Enterprise Data Experience for Your Largest Customers
         </h1>
-        <p className="text-base sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-          With dataporto, you can support Snowflake, Databricks, and sFTP data
-          sharing right away — for your biggest customers.
+        <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-800 mb-4 sm:mb-6 max-w-3xl mx-auto">
+          Empower data teams. Drive revenue. Win enterprise.
+        </p>
+        <p className="text-base sm:text-xl md:text-xl text-gray-600 mb-6 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
+          Turn enterprise data delivery into a product feature. Enable instant,
+          one click native warehouse syncing for your customers on Snowflake,
+          Databricks, BigQuery, Redshift, and Fabric with zero engineering
+          overhead.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12">
@@ -64,35 +74,7 @@ export default function Home() {
         </div>
 
         {/* Trust Bar */}
-        <div className="w-full border-t border-b border-gray-200 py-4 mb-8 sm:mb-16 bg-gray-50/50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 opacity-60">
-              <span className="text-sm text-gray-600 font-medium">
-                Built on
-              </span>
-              <div className="flex items-center gap-8 flex-wrap justify-center">
-                <div className="flex items-center">
-                  <SnowflakeIcon className="h-5 w-5 grayscale brightness-0 opacity-60" />
-                  <span className="ml-2 text-sm text-gray-600 font-medium">
-                    Snowflake
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <DataBricksSvg className="h-5 w-5 grayscale brightness-0 opacity-60" />
-                  <span className="ml-2 text-sm text-gray-600 font-medium">
-                    Databricks
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <AwsSvg className="h-5 w-5 grayscale brightness-0 opacity-60" />
-                  <span className="ml-2 text-sm text-gray-600 font-medium">
-                    AWS
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <WarehouseTrustBar />
 
         {/* Hero Screenshot */}
         <div className="max-w-6xl mx-auto mt-8 sm:mt-16 sm:px-4">
@@ -124,24 +106,41 @@ export default function Home() {
         </div>
 
         {/* Platform Integration Logos */}
-        <div className="flex justify-center items-center gap-12 mt-16 opacity-60">
-          <div className="flex flex-col items-center w-16">
-            <SnowflakeIcon className="h-8 w-8 mb-2" />
-            <span className="text-sm text-gray-500 font-medium text-center">
-              Snowflake
-            </span>
-          </div>
-          <div className="flex flex-col items-center w-16">
-            <DatabricksIcon className="h-8 w-8 mb-2" />
-            <span className="text-sm text-gray-500 font-medium text-center">
-              Databricks
-            </span>
-          </div>
-          <div className="flex flex-col items-center w-16">
-            <SftpIcon className="h-8 w-8 mb-2" />
-            <span className="text-sm text-gray-500 font-medium text-center">
-              sFTP
-            </span>
+        <div className="mt-16">
+          <p className="text-sm text-gray-500 font-medium mb-6">
+            Instant support for every major warehouse
+          </p>
+          <div className="flex justify-center items-center gap-8 flex-wrap opacity-60">
+            <div className="flex flex-col items-center w-20">
+              <SnowflakeIcon className="h-7 w-7 mb-2" />
+              <span className="text-xs text-gray-500 font-medium text-center">
+                Snowflake
+              </span>
+            </div>
+            <div className="flex flex-col items-center w-20">
+              <DatabricksIcon className="h-7 w-7 mb-2" />
+              <span className="text-xs text-gray-500 font-medium text-center">
+                Databricks
+              </span>
+            </div>
+            <div className="flex flex-col items-center w-20">
+              <BigQueryIcon className="h-7 w-7 mb-2" />
+              <span className="text-xs text-gray-500 font-medium text-center">
+                BigQuery
+              </span>
+            </div>
+            <div className="flex flex-col items-center w-20">
+              <RedshiftIcon className="h-7 w-7 mb-2" />
+              <span className="text-xs text-gray-500 font-medium text-center">
+                Redshift
+              </span>
+            </div>
+            <div className="flex flex-col items-center w-20">
+              <FabricIcon className="h-7 w-7 mb-2" />
+              <span className="text-xs text-gray-500 font-medium text-center">
+                Fabric
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -151,11 +150,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              There&apos;s a smarter way to share data
+              The Enterprise Standard for Direct-to-Warehouse Sharing
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Connect your sources, catalog your data, share with governance —
-              all from a single control plane.
+              Connect your sources once. Enable one-click warehouse syncing for
+              every customer from day one — all governed from a single control
+              plane.
             </p>
           </div>
 
@@ -165,9 +165,9 @@ export default function Home() {
 
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-600 leading-relaxed">
-              Provision per-client access across Snowflake, Databricks, or sFTP
-              with secure, isolated data delivery — no custom pipelines
-              required.
+              Provision per-client access across Snowflake, Databricks,
+              BigQuery, Redshift, and Fabric with secure, isolated delivery — no
+              custom pipelines required.
             </p>
           </div>
         </div>
