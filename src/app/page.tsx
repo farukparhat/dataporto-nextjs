@@ -1037,8 +1037,8 @@ export default function Home() {
           </div>
           <Separator className="my-8 bg-gray-700" />
           <p className="text-center text-gray-400">
-            © 2025 dataporto. All rights reserved. Multi‑Platform Data Sharing
-            as a Service.
+            © 2025 Dataporto Inc. All rights reserved. Multi‑Platform Data
+            Sharing as a Service.
           </p>
         </div>
       </footer>
