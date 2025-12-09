@@ -14,10 +14,6 @@ import { IconShare } from "@tabler/icons-react";
 import {
   SnowflakeIcon,
   DatabricksIcon,
-  SftpIcon,
-  AwsSvg,
-  DataBricksSvg,
-  PostgresSvg,
   BigQueryIcon,
   RedshiftIcon,
   FabricIcon,
@@ -42,7 +38,7 @@ export default function Home() {
       <section className="container mx-auto px-4 py-12 sm:py-24 text-center">
         <div className="container mx-auto px-4 pt-4 sm:pt-8 text-center">
           <Badge variant="outline" className="text-gray-600 ">
-            <IconShare className="h-4 w-4 mr-2" /> Native Warehouse Data Sharing
+            <IconShare className="h-4 w-4 mr-2" /> Warehouse Native Data Sharing
             as a Service
           </Badge>
         </div>
@@ -50,13 +46,13 @@ export default function Home() {
           Unlock the Best Enterprise Data Experience for Your Largest Customers
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-800 mb-4 sm:mb-6 max-w-3xl mx-auto">
-          Empower data teams. Drive revenue. Win enterprise.
+          Empower customer data teams. Drive revenue. Win enterprise.
         </p>
         <p className="text-base sm:text-xl md:text-xl text-gray-600 mb-6 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
           Turn enterprise data delivery into a product feature. Enable instant,
-          one click native warehouse syncing for your customers on Snowflake,
-          Databricks, BigQuery, Redshift, and Fabric with zero engineering
-          overhead.
+          self-serve, one-click warehouse native data sharing for your customers
+          on Snowflake, Databricks, BigQuery, Redshift, and Fabric with zero
+          engineering overhead.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12">
@@ -108,7 +104,7 @@ export default function Home() {
         {/* Platform Integration Logos */}
         <div className="mt-16">
           <p className="text-sm text-gray-500 font-medium mb-6">
-            Instant support for every major warehouse
+            Support every current and future customer
           </p>
           <div className="flex justify-center items-center gap-8 flex-wrap opacity-60">
             <div className="flex flex-col items-center w-20">
