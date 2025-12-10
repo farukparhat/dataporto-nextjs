@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface LinkedInPostGraphicProps {
   title: string;
@@ -8,6 +9,7 @@ interface LinkedInPostGraphicProps {
   highlight?: string;
   footer?: string;
   theme?: "dark" | "light";
+  logos?: Array<{ src: string; alt: string }>;
 }
 
 export function LinkedInPostGraphic({
@@ -16,6 +18,7 @@ export function LinkedInPostGraphic({
   highlight,
   footer = "dataporto.com",
   theme = "light",
+  logos = [],
 }: LinkedInPostGraphicProps) {
   const isDark = theme === "dark";
 
@@ -29,6 +32,30 @@ export function LinkedInPostGraphic({
           : "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
       }}
     >
+      {/* Animated border trace SVG */}
+      <svg
+        className="absolute inset-0 pointer-events-none"
+        width="1080"
+        height="1080"
+        style={{ overflow: "visible" }}
+      >
+        <rect
+          x="2"
+          y="2"
+          width="1076"
+          height="1076"
+          fill="none"
+          stroke="#2970ff"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeDasharray="800 3520"
+          strokeDashoffset="0"
+          opacity="0.7"
+          style={{
+            animation: "traceBorder 10s linear infinite",
+          }}
+        />
+      </svg>
       <style jsx>{`
         @keyframes dataFlow1 {
           0% {
@@ -111,6 +138,47 @@ export function LinkedInPostGraphic({
         .data-pulse {
           animation: pulse 3s ease-in-out infinite;
         }
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+        @keyframes fadeInScale {
+          0% {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .logo-float {
+          animation: float 4s ease-in-out infinite;
+        }
+        .logo-fade-in {
+          animation: fadeInScale 1.5s ease-out forwards;
+        }
+        @keyframes traceBorder {
+          0% {
+            stroke-dashoffset: 0;
+          }
+          100% {
+            stroke-dashoffset: -4320;
+          }
+        }
+        @keyframes traceBorderSmall {
+          0% {
+            stroke-dashoffset: 0;
+          }
+          100% {
+            stroke-dashoffset: -720;
+          }
+        }
       `}</style>
       {/* Subtle background pattern */}
       <div
@@ -187,6 +255,33 @@ export function LinkedInPostGraphic({
           }}
         />
       </div>
+
+      {/* Animated logos */}
+      {logos.length > 0 && (
+        <div className="absolute top-16 right-16 flex items-center gap-6">
+          {logos.map((logo, index) => (
+            <div
+              key={logo.alt}
+              className="logo-fade-in logo-float bg-white rounded-2xl shadow-xl p-4 border border-slate-200 relative"
+              style={{
+                animationDelay: `${index * 0.3}s`,
+                animationDelay: `${index * 0.5}s`,
+              }}
+            >
+              <div className="w-20 h-20 flex items-center justify-center relative z-10">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={80}
+                  height={80}
+                  className="object-contain w-full h-full"
+                  style={{ maxWidth: "80px", maxHeight: "80px" }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Content container */}
       <div className="relative h-full flex flex-col justify-center px-20 py-16">

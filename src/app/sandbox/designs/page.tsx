@@ -59,6 +59,10 @@ export default function SandboxDesignsPage() {
                   subtitle="Use this to your advantage."
                   footer=""
                   theme="light"
+                  logos={[
+                    { src: "/snowflake.svg", alt: "Snowflake" },
+                    { src: "/databricks.svg", alt: "Databricks" },
+                  ]}
                 />
               </div>
             </div>
