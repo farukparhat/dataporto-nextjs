@@ -7,6 +7,7 @@ import { LucideIcon, Folder, Users } from "lucide-react";
 import {
   AwsSvg,
   DatabricksIcon,
+  PostgresSvg,
   SnowflakeIcon,
 } from "@/components/brand-icons";
 import Image from "next/image";
@@ -236,18 +237,18 @@ const initialNodes: Node[] = [
     type: "dataSource",
     position: { x: 50, y: 50 },
     data: {
-      label: "S3, RDS",
-      icon: AwsSvg,
+      label: "Postgres",
+      icon: PostgresSvg,
       iconColor: "text-blue-600",
     },
   },
   {
-    id: "snowflake-source",
+    id: "aws-source",
     type: "dataSource",
     position: { x: 50, y: 110 },
     data: {
-      label: "Snowflake",
-      icon: SnowflakeIcon,
+      label: "S3, RDS",
+      icon: AwsSvg,
       iconColor: "text-blue-500",
     },
   },
@@ -345,8 +346,8 @@ const initialEdges: Edge[] = [
     style: { stroke: "#6b7280" },
   },
   {
-    id: "snowflake-source-dataporto",
-    source: "snowflake-source",
+    id: "aws-source-dataporto",
+    source: "aws-source",
     target: "dataporto",
     animated: true,
     style: { stroke: "#6b7280" },
