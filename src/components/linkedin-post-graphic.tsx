@@ -265,7 +265,6 @@ export function LinkedInPostGraphic({
               className="logo-fade-in logo-float bg-white rounded-2xl shadow-xl p-4 border border-slate-200 relative"
               style={{
                 animationDelay: `${index * 0.3}s`,
-                animationDelay: `${index * 0.5}s`,
               }}
             >
               <div className="w-20 h-20 flex items-center justify-center relative z-10">
