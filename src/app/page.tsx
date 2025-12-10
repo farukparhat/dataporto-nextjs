@@ -104,7 +104,8 @@ export default function Home() {
         {/* Platform Integration Logos */}
         <div className="mt-16">
           <p className="text-sm text-gray-500 font-medium mb-6">
-            Support every current and future customer
+            Create data shares for hundreds of customers, with zero engineering
+            overhead
           </p>
           <div className="flex justify-center items-center gap-8 flex-wrap opacity-60">
             <div className="flex flex-col items-center w-20">
@@ -146,12 +147,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              The Enterprise Standard for Direct-to-Warehouse Sharing
+              Support every customer's data stack
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Connect your sources once. Enable one-click warehouse syncing for
-              every customer from day one — all governed from a single control
-              plane.
+              Connect your sources once. Enable one-click warehouse data shares
+              for every customer from day one, all governed from a single
+              control plane.
             </p>
           </div>
 
@@ -161,9 +162,9 @@ export default function Home() {
 
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-600 leading-relaxed">
-              Provision per-client access across Snowflake, Databricks,
-              BigQuery, Redshift, and Fabric with secure, isolated delivery — no
-              custom pipelines required.
+              Provision per-client data shares across Snowflake, Databricks,
+              BigQuery, Redshift, and Fabric with secure, compliant and tenant
+              isolated delivery, with zero engineering overhead.
             </p>
           </div>
         </div>

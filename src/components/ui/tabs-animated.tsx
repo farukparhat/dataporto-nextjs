@@ -218,7 +218,7 @@ export default function AnimatedTabs({
             <button
               key={option.id}
               onClick={() => handleTabClick(option.id)}
-              className={`relative px-4 sm:px-8 py-3 text-center transition-all duration-200 flex-1 ${
+              className={`relative cursor-pointer px-4 sm:px-8 py-3 text-center transition-all duration-200 flex-1 ${
                 activeTab === option.id
                   ? "border-b-2 border-gray-900 bg-white -mb-px"
                   : "text-gray-600 hover:text-gray-900"
