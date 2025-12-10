@@ -20,12 +20,17 @@ export default function SandboxDesignsPage() {
             Dimensions: 1080px × 1080px (Square format)
           </p>
 
-          <div className="space-y-8">
-            {/* AI & Data Quality Post */}
-            <div>
-              <h2 className="text-lg font-semibold text-white mb-3">
-                AI & Data Quality
-              </h2>
+          <div className="space-y-12">
+            {/* Post 1: AI & Data Quality */}
+            <div className="border border-slate-800 rounded-xl p-6 bg-slate-900/50">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold text-white">
+                  Post 1: AI & Data Quality
+                </h2>
+                <span className="text-xs text-slate-500 font-mono">
+                  #ai-data-quality
+                </span>
+              </div>
               <div className="bg-white rounded-lg p-4 inline-block">
                 <LinkedInPostGraphic
                   highlight="Intelligence lives downstream of quality"
@@ -36,15 +41,43 @@ export default function SandboxDesignsPage() {
                 />
               </div>
             </div>
+
+            {/* Post 2: Data Warehouse OS */}
+            <div className="border border-slate-800 rounded-xl p-6 bg-slate-900/50">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold text-white">
+                  Post 2: Data Warehouse as OS
+                </h2>
+                <span className="text-xs text-slate-500 font-mono">
+                  #data-warehouse-os
+                </span>
+              </div>
+              <div className="bg-white rounded-lg p-4 inline-block">
+                <LinkedInPostGraphic
+                  highlight="Snowflake ($80B) + Databricks ($100B)"
+                  title="The Data Warehouse is the new enterprise operating system."
+                  subtitle="Use this to your advantage."
+                  footer=""
+                  theme="light"
+                />
+              </div>
+            </div>
           </div>
 
-          <div className="mt-6 space-y-2">
-            <p className="text-slate-400 text-sm">
-              To download: Right-click on the design above and "Save as PNG" or
-              take a screenshot
+          <div className="mt-8 space-y-2 p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+            <p className="text-slate-300 text-sm font-semibold">
+              📥 How to download:
             </p>
             <p className="text-slate-400 text-sm">
-              To use in LinkedIn: Create a post → Add media → Upload the image
+              Right-click on the design above and "Save as PNG" or take a
+              screenshot
+            </p>
+            <p className="text-slate-300 text-sm font-semibold mt-3">
+              🎬 For GIF animation:
+            </p>
+            <p className="text-slate-400 text-sm">
+              Use ScreenToGif, Gifox, or Kap to record 8-11 seconds of the
+              animation
             </p>
           </div>
         </div>
