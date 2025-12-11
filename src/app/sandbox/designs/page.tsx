@@ -86,24 +86,80 @@ export default function SandboxDesignsPage() {
           </div>
         </div>
 
-        {/* LinkedIn Cover */}
+        {/* LinkedIn Cover Variations */}
         <div className="pt-8 border-t border-slate-800">
           <h1 className="text-2xl font-bold text-white mb-2">
-            LinkedIn Cover Design
+            LinkedIn Cover Designs
           </h1>
-          <p className="text-slate-400 text-sm mb-4">
-            Dimensions: 1584px × 396px (LinkedIn standard)
+          <p className="text-slate-400 text-sm mb-6">
+            Two variations optimized for different LinkedIn page types
           </p>
-          <div className="bg-white rounded-lg p-4 inline-block">
-            <LinkedInCover />
+
+          <div className="space-y-8">
+            {/* Company Page Cover */}
+            <div className="border border-slate-800 rounded-xl p-6 bg-slate-900/50">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h2 className="text-lg font-semibold text-white">
+                    Company Page Cover
+                  </h2>
+                  <p className="text-slate-400 text-sm mt-1">
+                    Dimensions: 1584px × 275px (~5.76:1 aspect ratio)
+                  </p>
+                </div>
+                <span className="text-xs text-slate-500 font-mono">
+                  #company-page
+                </span>
+              </div>
+              <div className="bg-white rounded-lg p-4 inline-block">
+                <LinkedInCover variant="company" />
+              </div>
+              <div className="mt-4 space-y-1">
+                <p className="text-slate-400 text-sm">
+                  Use for: LinkedIn Company Pages
+                </p>
+              </div>
+            </div>
+
+            {/* Personal Profile Cover */}
+            <div className="border border-slate-800 rounded-xl p-6 bg-slate-900/50">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h2 className="text-lg font-semibold text-white">
+                    Personal Profile Cover
+                  </h2>
+                  <p className="text-slate-400 text-sm mt-1">
+                    Dimensions: 1584px × 396px (4:1 aspect ratio)
+                  </p>
+                </div>
+                <span className="text-xs text-slate-500 font-mono">
+                  #personal-profile
+                </span>
+              </div>
+              <div className="bg-white rounded-lg p-4 inline-block">
+                <LinkedInCover variant="personal" />
+              </div>
+              <div className="mt-4 space-y-1">
+                <p className="text-slate-400 text-sm">
+                  Use for: LinkedIn Personal Profiles
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="mt-4 space-y-2">
-            <p className="text-slate-400 text-sm">
-              To download: Right-click on the design above and "Save as PNG" or
-              take a screenshot
+
+          <div className="mt-6 space-y-2 p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+            <p className="text-slate-300 text-sm font-semibold">
+              📥 How to download:
             </p>
             <p className="text-slate-400 text-sm">
-              Upload to LinkedIn: Profile → Edit cover photo → Upload the image
+              Right-click on the design above and "Save as PNG" or take a
+              screenshot
+            </p>
+            <p className="text-slate-300 text-sm font-semibold mt-3">
+              📤 How to upload:
+            </p>
+            <p className="text-slate-400 text-sm">
+              LinkedIn Profile/Page → Edit cover photo → Upload the image
             </p>
           </div>
         </div>
