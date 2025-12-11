@@ -45,12 +45,12 @@ export function LinkedInCover({ variant = "company" }: LinkedInCoverProps) {
         className={`relative h-full flex items-center justify-end ${isCompany ? "px-20" : "px-20"}`}
       >
         <div
-          className={`flex flex-col items-end ${isCompany ? "space-y-4" : "space-y-6"}`}
+          className={`flex flex-col items-end ${isCompany ? "space-y-4" : "space-y-5"}`}
         >
           {/* Logo/Brand name - right aligned */}
           <div className="flex items-center gap-3">
             <div
-              className={`${isCompany ? "w-14 h-14" : "w-16 h-16"} rounded-lg shadow-md overflow-hidden flex items-center justify-center`}
+              className={`${isCompany ? "w-14 h-14" : "w-13 h-13"} rounded-lg shadow-md overflow-hidden flex items-center justify-center`}
               style={{ backgroundColor: "#2970ff" }}
             >
               <img
@@ -60,7 +60,7 @@ export function LinkedInCover({ variant = "company" }: LinkedInCoverProps) {
               />
             </div>
             <h1
-              className={`${isCompany ? "text-6xl" : "text-7xl"} font-bold tracking-tight text-slate-900`}
+              className={`${isCompany ? "text-6xl" : "text-6xl"} font-bold tracking-tight text-slate-900`}
             >
               dataporto
             </h1>
@@ -69,7 +69,7 @@ export function LinkedInCover({ variant = "company" }: LinkedInCoverProps) {
           {/* Tagline - right aligned */}
           <div className="text-right">
             <p
-              className={`${isCompany ? "text-4xl" : "text-5xl"} font-bold text-slate-800 leading-tight capitalize`}
+              className={`${isCompany ? "text-4xl" : "text-[2.25rem]"} font-bold text-slate-800 leading-tight capitalize`}
             >
               Empower customer data teams. Drive revenue. Win enterprise.
             </p>
@@ -77,56 +77,56 @@ export function LinkedInCover({ variant = "company" }: LinkedInCoverProps) {
 
           {/* Platform icons */}
           <div
-            className={`flex items-center gap-5 ${isCompany ? "pt-2" : "pt-4"}`}
+            className={`flex items-center gap-5 ${isCompany ? "pt-2" : "pt-3"}`}
           >
             <div
-              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-4"} border border-slate-200`}
+              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-3"} border border-slate-200`}
             >
               <Image
                 src="/snowflake.svg"
                 alt="Snowflake"
-                width={isCompany ? 44 : 52}
-                height={isCompany ? 44 : 52}
+                width={isCompany ? 44 : 42}
+                height={isCompany ? 44 : 42}
               />
             </div>
             <div
-              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-4"} border border-slate-200`}
+              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-3"} border border-slate-200`}
             >
               <Image
                 src="/databricks.svg"
                 alt="Databricks"
-                width={isCompany ? 44 : 52}
-                height={isCompany ? 44 : 52}
+                width={isCompany ? 44 : 42}
+                height={isCompany ? 44 : 42}
               />
             </div>
             <div
-              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-4"} border border-slate-200`}
+              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-3"} border border-slate-200`}
             >
               <Image
                 src="/big-query.svg"
                 alt="BigQuery"
-                width={isCompany ? 44 : 52}
-                height={isCompany ? 44 : 52}
+                width={isCompany ? 44 : 42}
+                height={isCompany ? 44 : 42}
               />
             </div>
             <div
-              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-4"} border border-slate-200`}
+              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-3"} border border-slate-200`}
             >
               <Image
                 src="/redshift.png"
                 alt="Redshift"
-                width={isCompany ? 44 : 52}
-                height={isCompany ? 44 : 52}
+                width={isCompany ? 44 : 42}
+                height={isCompany ? 44 : 42}
               />
             </div>
             <div
-              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-4"} border border-slate-200`}
+              className={`bg-white rounded-xl shadow-lg ${isCompany ? "p-3" : "p-3"} border border-slate-200`}
             >
               <Image
                 src="/microsoft-fabric.png"
                 alt="Microsoft Fabric"
-                width={isCompany ? 44 : 52}
-                height={isCompany ? 44 : 52}
+                width={isCompany ? 44 : 42}
+                height={isCompany ? 44 : 42}
               />
             </div>
           </div>
