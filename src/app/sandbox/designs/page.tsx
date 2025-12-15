@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { LinkedInCover } from "@/components/linkedin-cover";
 import { LinkedInPostGraphic } from "@/components/linkedin-post-graphic";
+import { WarehouseSolarSystem } from "@/components/warehouse-solar-system";
 
 export default function SandboxDesignsPage() {
   // Redirect to / if not in dev environment
@@ -64,6 +65,50 @@ export default function SandboxDesignsPage() {
                     { src: "/databricks.svg", alt: "Databricks" },
                   ]}
                 />
+              </div>
+            </div>
+
+            {/* Post 3: Warehouse-Native Solar System */}
+            <div className="border border-slate-800 rounded-xl p-6 bg-slate-900/50">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold text-white">
+                  Post 3: Warehouse-Native Solar System
+                </h2>
+                <span className="text-xs text-slate-500 font-mono">
+                  #warehouse-native-ecosystem
+                </span>
+              </div>
+              <div className="inline-block">
+                <WarehouseSolarSystem />
+              </div>
+              <div className="mt-4 p-4 bg-slate-800/50 rounded-lg">
+                <p className="text-slate-300 text-sm font-semibold mb-2">
+                  Post Caption:
+                </p>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Warehouse-native software is the future of enterprise B2B
+                  SaaS.
+                  <br />
+                  <br />
+                  The sun at the center represents your data warehouse
+                  (Snowflake, Databricks, BigQuery).
+                  <br />
+                  <br />
+                  Each orbit represents a category of warehouse-native tools
+                  that work directly with your data infrastructure:
+                  <br />
+                  📊 BI & Analytics | 📈 Product Analytics | 📢 Customer Data &
+                  Marketing | 💰 Finance & Ops | 🛡️ Data Quality & AI
+                  <br />
+                  <br />
+                  When your vendor ecosystem aligns around your data
+                  infrastructure, you get:
+                  <br />
+                  ✓ Single source of truth
+                  <br />
+                  ✓ Faster implementation
+                  <br />✓ Consistent governance
+                </p>
               </div>
             </div>
           </div>
