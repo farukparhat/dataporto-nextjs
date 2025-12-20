@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { LinkedInCover } from "@/components/linkedin-cover";
 import { LinkedInPostGraphic } from "@/components/linkedin-post-graphic";
 import { WarehouseSolarSystem } from "@/components/warehouse-solar-system";
+import { DatabricksValuationGraphic } from "@/components/databricks-valuation-graphic";
 
 export default function SandboxDesignsPage() {
   // Redirect to / if not in dev environment
@@ -108,6 +109,44 @@ export default function SandboxDesignsPage() {
                   <br />
                   ✓ Faster implementation
                   <br />✓ Consistent governance
+                </p>
+              </div>
+            </div>
+
+            {/* Post 4: Databricks Valuation */}
+            <div className="border border-slate-800 rounded-xl p-6 bg-slate-900/50">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold text-white">
+                  Post 4: Databricks $134B Valuation
+                </h2>
+                <span className="text-xs text-slate-500 font-mono">
+                  #warehouse-native-future
+                </span>
+              </div>
+              <div className="inline-block">
+                <DatabricksValuationGraphic />
+              </div>
+              <div className="mt-4 p-4 bg-slate-800/50 rounded-lg">
+                <p className="text-slate-300 text-sm font-semibold mb-2">
+                  Post Caption:
+                </p>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Databricks Just Hit $134B. If You're Building Enterprise
+                  Software, Pay Attention to What Comes Next.
+                  <br />
+                  <br />
+                  The data platform is no longer just background infrastructure.
+                  It is where enterprise analytics, decisions, and increasingly
+                  AI live.
+                  <br />
+                  <br />
+                  The best enterprise products going forward will feel like a
+                  natural extension of the customer's data platform, not a
+                  competing destination.
+                  <br />
+                  <br />
+                  Build WITH the platform your customer has already chosen, not
+                  against it.
                 </p>
               </div>
             </div>
