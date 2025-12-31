@@ -3,6 +3,7 @@ import { LinkedInCover } from "@/components/linkedin-cover";
 import { LinkedInPostGraphic } from "@/components/linkedin-post-graphic";
 import { WarehouseSolarSystem } from "@/components/warehouse-solar-system";
 import { DatabricksValuationGraphic } from "@/components/databricks-valuation-graphic";
+import { DataIndustry2025Graphic } from "@/components/data-industry-2025-graphic";
 
 export default function SandboxDesignsPage() {
   // Redirect to / if not in dev environment
@@ -147,6 +148,42 @@ export default function SandboxDesignsPage() {
                   <br />
                   Build WITH the platform your customer has already chosen, not
                   against it.
+                </p>
+              </div>
+            </div>
+
+            {/* Post 5: 2025 Data Industry Review */}
+            <div className="border border-slate-800 rounded-xl p-6 bg-slate-900/50">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold text-white">
+                  Post 5: 2025 Data Industry Year in Review
+                </h2>
+                <span className="text-xs text-slate-500 font-mono">
+                  #data-industry-2025
+                </span>
+              </div>
+              <div className="inline-block">
+                <DataIndustry2025Graphic />
+              </div>
+              <div className="mt-4 p-4 bg-slate-800/50 rounded-lg">
+                <p className="text-slate-300 text-sm font-semibold mb-2">
+                  Post Caption:
+                </p>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  2025 was a defining year for the data industry.
+                  <br />
+                  <br />
+                  From major partnerships (Snowflake + Anthropic, Databricks +
+                  OpenAI) to billion-dollar acquisitions (IBM → Confluent,
+                  Salesforce → Informatica), the landscape has fundamentally
+                  shifted.
+                  <br />
+                  <br />
+                  The fastest-growing companies (Airbyte, Firebolt, Sigma,
+                  Starburst) are redefining how enterprises work with data.
+                  <br />
+                  <br />
+                  This is just the beginning.
                 </p>
               </div>
             </div>
